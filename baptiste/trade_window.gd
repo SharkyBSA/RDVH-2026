@@ -1,6 +1,7 @@
 extends Control
 
 var trade_amount := 0
+var guard_amount := 0
 
 func _ready():
 	for town in %TownManager.get_children():
@@ -18,6 +19,7 @@ func popup(town_name : String, res : int):
 	$VBoxContainer/Title.text = "Lancement d'expédition vers %s" % town_name
 	trade_amount = 0
 	%TradeLabel.text = "0"
+	
 
 # Closes the windw
 func _on_exit_button_pressed():

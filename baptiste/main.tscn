@@ -12,20 +12,13 @@
 [ext_resource type="Script" uid="uid://8gf4q40bt0ms" path="res://baptiste/trade_window.gd" id="4_pdaul"]
 [ext_resource type="Texture2D" uid="uid://cnvf8yuxfkx0o" path="res://assets/transport/boat.png" id="5_pdaul"]
 
-[sub_resource type="Resource" id="Resource_iunt3"]
-script = ExtResource("2_ekwjs")
-target_town = 2
-type = 3
-turn = 1
-metadata/_custom_type_script = "uid://dji1gvea14ls8"
-
 [sub_resource type="Resource" id="Resource_wj50k"]
 script = ExtResource("3_n0y6q")
-events = Array[ExtResource("2_ekwjs")]([SubResource("Resource_iunt3")])
 metadata/_custom_type_script = "uid://drfbg3jb0nf5x"
 
 [sub_resource type="Resource" id="Resource_5iygx"]
 script = ExtResource("4_ekwjs")
+town = 1
 metadata/_custom_type_script = "uid://76olk5l6av78"
 
 [sub_resource type="Resource" id="Resource_ekwjs"]
