@@ -52,7 +52,7 @@ func apply_delta(key : int, delta: float)->void:
 
 func update_ui()->void:
 	gold_amount.text= "Gold: " + str(floori(player.get_gold_amount()))
-	pepper_amount.text= "Pepper: " + str(floori(player.get_resource_amount(1)))
+	pepper_amount.text= "Pepper: " + str(floori(player.get_resource_amount(Merchandise.Type.PEPPER)))
 	golddelta.text= "Gold Delta: " + str(floori(delta_gold))
 	pepperdelta.text= "Pepper delta: " + str(floori(delta_pepper))
 	

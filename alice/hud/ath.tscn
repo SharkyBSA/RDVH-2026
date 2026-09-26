@@ -1,0 +1,225 @@
+[gd_scene format=3 uid="uid://diq8sdq1y3pbn"]
+
+[ext_resource type="Script" uid="uid://bg3jo52m7mdnw" path="res://alice/hud/ath.gd" id="1_0hjve"]
+[ext_resource type="Texture2D" uid="uid://dxvqldpv5c6pn" path="res://assets/icons/placeholder.png" id="1_i1xc2"]
+[ext_resource type="Texture2D" uid="uid://ctc8vk8o605qm" path="res://icon.svg" id="2_wnc24"]
+[ext_resource type="Texture2D" uid="uid://bqn70ylniojqd" path="res://assets/town.png" id="4_ix3pw"]
+
+[node name="Ath" type="Control" unique_id=2026785200]
+layout_mode = 3
+anchor_left = 0.02
+anchor_top = 0.02
+anchor_right = 0.98
+anchor_bottom = 0.12
+script = ExtResource("1_0hjve")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1628380618]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=235776302]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer10" type="HBoxContainer" parent="HBoxContainer" unique_id=851274021]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 9.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/HBoxContainer10" unique_id=1564983372]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/HBoxContainer10/HBoxContainer" unique_id=224629672]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("2_wnc24")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Gold" type="Label" parent="HBoxContainer/HBoxContainer10/HBoxContainer" unique_id=851840837]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "20"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="HBoxContainer/HBoxContainer10" unique_id=249919889]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/HBoxContainer10/HBoxContainer2" unique_id=269240108]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("2_wnc24")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Pepper" type="Label" parent="HBoxContainer/HBoxContainer10/HBoxContainer2" unique_id=1887426698]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "20"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="HBoxContainer/HBoxContainer10" unique_id=134295826]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/HBoxContainer10/HBoxContainer3" unique_id=1401905078]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("2_wnc24")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Silk" type="Label" parent="HBoxContainer/HBoxContainer10/HBoxContainer3" unique_id=1219201374]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "20"
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="HBoxContainer/HBoxContainer10" unique_id=1372179886]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/HBoxContainer10/HBoxContainer4" unique_id=526324126]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("2_wnc24")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Ivory" type="Label" parent="HBoxContainer/HBoxContainer10/HBoxContainer4" unique_id=305107659]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "20"
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="HBoxContainer/HBoxContainer10" unique_id=1667210344]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/HBoxContainer10/HBoxContainer5" unique_id=2076701254]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("2_wnc24")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Coton" type="Label" parent="HBoxContainer/HBoxContainer10/HBoxContainer5" unique_id=554616454]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "20"
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="HBoxContainer/HBoxContainer10" unique_id=268560119]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/HBoxContainer10/HBoxContainer6" unique_id=2062314619]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("2_wnc24")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Gems" type="Label" parent="HBoxContainer/HBoxContainer10/HBoxContainer6" unique_id=582708633]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "20"
+
+[node name="HBoxContainer7" type="HBoxContainer" parent="HBoxContainer/HBoxContainer10" unique_id=746204766]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/HBoxContainer10/HBoxContainer7" unique_id=1146644205]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("2_wnc24")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Spice" type="Label" parent="HBoxContainer/HBoxContainer10/HBoxContainer7" unique_id=81912201]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "20"
+
+[node name="HBoxContainer8" type="HBoxContainer" parent="HBoxContainer/HBoxContainer10" unique_id=1383007523]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/HBoxContainer10/HBoxContainer8" unique_id=13382411]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("2_wnc24")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Animals" type="Label" parent="HBoxContainer/HBoxContainer10/HBoxContainer8" unique_id=1030398021]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "20"
+
+[node name="HBoxContainer9" type="HBoxContainer" parent="HBoxContainer/HBoxContainer10" unique_id=537425302]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/HBoxContainer10/HBoxContainer9" unique_id=1505942747]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("2_wnc24")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Porcelain" type="Label" parent="HBoxContainer/HBoxContainer10/HBoxContainer9" unique_id=780786226]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "20"
+
+[node name="NextTurnBtn" type="TextureButton" parent="HBoxContainer" unique_id=1003132224]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("1_i1xc2")
+texture_pressed = ExtResource("1_i1xc2")
+texture_hover = ExtResource("1_i1xc2")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer" unique_id=1995052107]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="YearLbl" type="Label" parent="HBoxContainer/VBoxContainer" unique_id=1654105715]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+text = "Year : 2026"
+
+[node name="TurnLbl" type="Label" parent="HBoxContainer/VBoxContainer" unique_id=61636118]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+text = "Turn : 5986"
+
+[node name="Pausebtn" type="TextureButton" parent="HBoxContainer" unique_id=1356520887]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("4_ix3pw")
+texture_pressed = ExtResource("4_ix3pw")
+ignore_texture_size = true
+stretch_mode = 5
