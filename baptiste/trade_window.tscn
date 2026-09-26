@@ -273,7 +273,7 @@ layout_mode = 2
 text = "Durée de l'expédition :"
 horizontal_alignment = 1
 
-[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer/ColorRect3/VBoxContainer" unique_id=1861312440]
+[node name="LaunchExpedition" type="Button" parent="VBoxContainer/HBoxContainer/ColorRect3/VBoxContainer" unique_id=1861312440]
 layout_mode = 2
 text = "Lancer l'expédition"
 
@@ -295,4 +295,5 @@ text = "X"
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/ColorRect/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer/TradeButtonAdd" to="." method="_on_button_trade_pressed" binds= [1]]
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/ColorRect2/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer/GuardButtonSubtract" to="." method="_on_button_guard_pressed" binds= [-1]]
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/ColorRect2/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer/GuardButtonAdd" to="." method="_on_button_guard_pressed" binds= [1]]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/ColorRect3/VBoxContainer/LaunchExpedition" to="." method="_on_launch_expedition_pressed"]
 [connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]

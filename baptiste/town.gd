@@ -6,10 +6,11 @@ class_name Town
 @export var transport_turn := 1
 @export var transport_threat := 0
 @export var threat_level := 0
+@export var index := 0
 var res_type := 0
 var res_amount := 0
 var added_threat := 0
-signal clicked(display_name, resource, amount, threat)
+signal clicked(display_name, town_index, resource, amount, threat)
 
 func _ready():
 	$VBoxContainer/TownName.text = town_name
@@ -20,7 +21,7 @@ func _process(_delta):
 	if Input.is_action_just_pressed("escape"): get_tree().free()
 
 func _on_texture_button_pressed():
-	emit_signal("clicked", town_name, res_type, res_amount, added_threat, transport_turn)
+	emit_signal("clicked", town_name, index, res_type, res_amount, added_threat, transport_turn)
 
 ## Show the popup to start a trade. If type is 0, hides the down. 1, hides the up. 2, show both.
 func popup(type := 0):
@@ -36,3 +37,4 @@ func popup(type := 0):
 func hide_popup():
 	var tween = create_tween()
 	tween.tween_property($TradeHBox, "modulate:a", 0, 0.5)
+	await tween.finished

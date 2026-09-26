@@ -36,6 +36,18 @@ script = ExtResource("2_wbs85")
 town_offers = Array[ExtResource("3_5iygx")]([SubResource("Resource_wbs85"), null])
 metadata/_custom_type_script = "uid://bu7cj6yg78hg2"
 
+[sub_resource type="Curve2D" id="Curve2D_wj50k"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 49, 36, -5.1315804, 8.210528, 5.1315804, -8.210528, 88, -23, -9.72975, 19.088125, 9.72975, -19.088125, 78, -76, -1.4044304, 22.065796, 1.4044304, -22.065796, 108, -106, -0.12625861, 29.17572, 0.12625861, -29.17572, 82, -156, 9.209836, 34.42885, -9.209836, -34.42885, 88, -203, 0, 0, 0, 0, 57, -231)
+}
+point_count = 7
+
+[sub_resource type="Curve2D" id="Curve2D_iunt3"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 974, 499, 12.828951, 43.61843, -12.828951, -43.61843, 907, 483, 0, 0, 0, 0, 942, 416)
+}
+point_count = 3
+
 [node name="Main" type="Node" unique_id=2072706222]
 script = ExtResource("1_5iygx")
 
@@ -44,9 +56,13 @@ unique_name_in_owner = true
 events = SubResource("Resource_wj50k")
 town_offers = SubResource("Resource_n0y6q")
 
-[node name="ExpeditionManager" type="Node" parent="." unique_id=1149136519]
+[node name="ExpeditionManager" type="Node" parent="." unique_id=1149136519 node_paths=PackedStringArray("destination_paths")]
 unique_name_in_owner = true
 script = ExtResource("8_wj50k")
+destination_paths = {
+1: NodePath("../UI/PathDelhi"),
+2: NodePath("../UI/PathGoa")
+}
 metadata/_custom_type_script = "uid://bcgsmqa8d0mih"
 
 [node name="Player" type="Node" parent="." unique_id=1163566768]
@@ -71,6 +87,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_08s08")
 expand_mode = 1
+metadata/_edit_lock_ = true
 
 [node name="TownManager" type="Node" parent="UI" unique_id=1207062910]
 unique_name_in_owner = true
@@ -88,7 +105,9 @@ offset_top = 191.0
 offset_right = 1030.0
 offset_bottom = 242.0
 town_name = "Dehli"
+transport_turn = 3
 threat_level = 5
+index = 1
 
 [node name="Goa" parent="UI/TownManager" unique_id=811356729 instance=ExtResource("2_eos35")]
 offset_left = 890.0
@@ -96,6 +115,15 @@ offset_top = 379.0
 offset_right = 992.0
 offset_bottom = 430.0
 town_name = "Goa"
+transport_turn = 2
+index = 2
+
+[node name="PathDelhi" type="Path2D" parent="UI" unique_id=1045680458]
+position = Vector2(924, 461)
+curve = SubResource("Curve2D_wj50k")
+
+[node name="PathGoa" type="Path2D" parent="UI" unique_id=1294451910]
+curve = SubResource("Curve2D_iunt3")
 
 [node name="Ath" parent="UI" unique_id=2026785200 instance=ExtResource("11_ekwjs")]
 unique_name_in_owner = true
