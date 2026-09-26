@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://dydp6htr0lt8i"]
+
+[ext_resource type="Script" uid="uid://boacrbl1ru5vb" path="res://tests/turn_manager/test_turn_manager.gd" id="1_xu5jy"]
+[ext_resource type="PackedScene" uid="uid://dgfv6e3vip0a4" path="res://alice/turn_manager.tscn" id="2_025q3"]
+
+[node name="TestTurnManager" type="Control" unique_id=544450310]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xu5jy")
+
+[node name="TurnManager" parent="." unique_id=610062439 instance=ExtResource("2_025q3")]
+unique_name_in_owner = true
+
+[node name="NextTurn" type="Button" parent="." unique_id=2084557768]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 191.0
+offset_top = 261.0
+offset_right = 318.0
+offset_bottom = 292.0
+text = "Nouveau tour "
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=841948911]
+layout_mode = 0
+offset_left = 177.0
+offset_top = 176.0
+offset_right = 330.0
+offset_bottom = 226.0
+
+[node name="Event" type="Label" parent="VBoxContainer" unique_id=1408298904]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Event: "
+
+[node name="Proposition" type="Label" parent="VBoxContainer" unique_id=2136585157]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Proposition ce tour:"
