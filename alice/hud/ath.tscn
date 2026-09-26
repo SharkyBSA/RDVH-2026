@@ -7,10 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://b0ia4v6q6fy5w" path="res://assets/icons/Coton.png" id="7_ewyhu"]
 [ext_resource type="Texture2D" uid="uid://b5rmm4jjpy87i" path="res://assets/ivoire.png" id="8_0app3"]
 [ext_resource type="Texture2D" uid="uid://c43tnkh5eynky" path="res://assets/icons/epices.png" id="9_dd0do"]
-[ext_resource type="Texture2D" path="res://assets/pierres.png" id="9_ox5tf"]
 [ext_resource type="Texture2D" uid="uid://c1u3ttcjq46em" path="res://assets/icons/chevaux.png" id="10_c2fmi"]
 [ext_resource type="Texture2D" uid="uid://dvn2brlf1hbce" path="res://assets/poivre.png" id="10_uchpa"]
-[ext_resource type="Texture2D" path="res://assets/sucre.png" id="11_gctdb"]
 [ext_resource type="Texture2D" uid="uid://co8rr00k4the8" path="res://assets/Trading_interface/TimerV1.png" id="12_3yqlp"]
 [ext_resource type="Texture2D" uid="uid://cgcgodju812pw" path="res://assets/Trading_interface/OptionV1.png" id="13_7kn40"]
 
@@ -190,7 +188,6 @@ layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 0
 mouse_force_pass_scroll_events = false
-texture = ExtResource("9_ox5tf")
 expand_mode = 1
 stretch_mode = 5
 
@@ -262,7 +259,6 @@ size_flags_horizontal = 3
 size_flags_vertical = 4
 mouse_filter = 0
 mouse_force_pass_scroll_events = false
-texture = ExtResource("11_gctdb")
 expand_mode = 1
 stretch_mode = 5
 
