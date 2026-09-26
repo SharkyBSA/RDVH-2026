@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dhmjmf3wfdx4t"]
+
+[ext_resource type="Script" uid="uid://nxftifd5x0g8" path="res://alice/player/player.gd" id="1_ye75c"]
+
+[node name="Player" type="Node" unique_id=1057124744]
+script = ExtResource("1_ye75c")
