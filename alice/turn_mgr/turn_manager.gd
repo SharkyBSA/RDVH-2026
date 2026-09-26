@@ -1,8 +1,8 @@
 extends Node
 class_name TurnManager
 
-@export var events : Array[Event] = []
-@export var town_offers : Array[TownOffer] = []
+@export var events : GameEvents 
+@export var town_offers : GameTownOffers
 
 var current_turn : int = 0
 signal next_turned
@@ -12,19 +12,8 @@ func next_turn() -> void:
 	next_turned.emit()
 
 func get_turn_event()->Event:
-	if current_turn<0 or current_turn>=events.size():
-		return Event.new()
-	var turn_event : Event = events[current_turn]
-	if turn_event == null:
-		turn_event = Event.new()
-	
-	return turn_event
+	return events.get_event_of_turn(current_turn)
 
-func get_turn_town_offers()->TownOffer:
-	if current_turn<0 or current_turn>=town_offers.size():
-		return TownOffer.new()
-	var turn_offer: TownOffer = town_offers[current_turn]
-	if turn_offer == null:
-		turn_offer = TownOffer.new()
+func get_turn_town_offers()->Array[TownOffer]:
+	return town_offers.get_town_offers_of_turn(current_turn)
 	
-	return turn_offer
