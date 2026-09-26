@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dvn2brlf1hbce"
-path="res://.godot/imported/poivre.png-ff15a0dcef314d5bfccd2ce6d32814e0.ctex"
+uid="uid://c1u3ttcjq46em"
+path="res://.godot/imported/chevaux.png-a10f6707cabc4f5db9cfaca43b0e4395.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/poivre.png"
-dest_files=["res://.godot/imported/poivre.png-ff15a0dcef314d5bfccd2ce6d32814e0.ctex"]
+source_file="res://assets/icons/chevaux.png"
+dest_files=["res://.godot/imported/chevaux.png-a10f6707cabc4f5db9cfaca43b0e4395.ctex"]
 
 [params]
 

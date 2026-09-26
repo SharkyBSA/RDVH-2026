@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bol2c7cehqiey"
+path="res://.godot/imported/UI_ClickBulle.mp3-e39e91f2c67a90fab51bd2588f4a0367.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/SFX PLACEHOLDERS/UI_ClickBulle.mp3"
+dest_files=["res://.godot/imported/UI_ClickBulle.mp3-e39e91f2c67a90fab51bd2588f4a0367.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

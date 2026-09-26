@@ -8,9 +8,16 @@
 [ext_resource type="Script" uid="uid://bu7cj6yg78hg2" path="res://alice/turn_mgr/town_offer/game_town_offers.gd" id="2_wbs85"]
 [ext_resource type="Script" uid="uid://0lvj1rsiyhjb" path="res://alice/turn_mgr/town_offer/array_town_offers.gd" id="3_5iygx"]
 [ext_resource type="Script" uid="uid://drfbg3jb0nf5x" path="res://alice/turn_mgr/events/game_events.gd" id="3_n0y6q"]
+[ext_resource type="AudioStream" uid="uid://b2n4cs3se2cw8" path="res://assets/audio/Stingers/Stinger_Comptoir_Inde_01.mp3" id="4_4hl6o"]
 [ext_resource type="Script" uid="uid://76olk5l6av78" path="res://alice/turn_mgr/town_offer/town_proposition.gd" id="4_ekwjs"]
+[ext_resource type="AudioStream" uid="uid://cco7pwrxvqbj7" path="res://assets/audio/Stingers/Stinger_Comptoir_Inde_02.mp3" id="5_2vfub"]
+[ext_resource type="AudioStream" uid="uid://d23r314k2ibyn" path="res://assets/audio/Stingers/Stinger_Comptoir_Inde_03.mp3" id="6_ui1tf"]
+[ext_resource type="AudioStream" uid="uid://deh7ar8hpcw73" path="res://assets/audio/Stingers/Stinger_Comptoir_Inde_04.mp3" id="7_m42f4"]
 [ext_resource type="PackedScene" uid="uid://dytuqo3dprrvw" path="res://baptiste/trade_window.tscn" id="9_wbs85"]
 [ext_resource type="PackedScene" uid="uid://diq8sdq1y3pbn" path="res://alice/hud/ath.tscn" id="11_ekwjs"]
+[ext_resource type="PackedScene" uid="uid://m0dstgxyqa1g" path="res://alice/expedition_mgr/expedition_mgr.tscn" id="12_n0y6q"]
+[ext_resource type="PackedScene" uid="uid://dhmjmf3wfdx4t" path="res://alice/player/player.tscn" id="12_wj50k"]
+[ext_resource type="AudioStream" uid="uid://b6uucac0mcno7" path="res://assets/audio/Musique/Musique_de_Fond_01.mp3" id="18_2vfub"]
 
 [sub_resource type="Resource" id="Resource_wj50k"]
 script = ExtResource("3_n0y6q")
@@ -36,10 +43,6 @@ metadata/_custom_type_script = "uid://bu7cj6yg78hg2"
 
 [node name="Main" type="Node" unique_id=2072706222]
 script = ExtResource("1_5iygx")
-
-[node name="TurnManager" parent="." unique_id=610062439 instance=ExtResource("1_olmnm")]
-events = SubResource("Resource_wj50k")
-town_offers = SubResource("Resource_n0y6q")
 
 [node name="UI" type="Control" parent="." unique_id=1370429011]
 layout_mode = 3
@@ -68,6 +71,7 @@ offset_top = 461.0
 offset_right = 1026.0
 offset_bottom = 512.0
 town_name = "Calicut"
+start_town = true
 
 [node name="Dehli" parent="UI/TownManager" unique_id=2084830226 instance=ExtResource("2_eos35")]
 offset_left = 928.0
@@ -76,6 +80,7 @@ offset_right = 1030.0
 offset_bottom = 242.0
 town_name = "Dehli"
 threat_level = 5
+sfx = Array[AudioStreamMP3]([ExtResource("4_4hl6o"), ExtResource("5_2vfub"), ExtResource("6_ui1tf"), ExtResource("7_m42f4")])
 
 [node name="Goa" parent="UI/TownManager" unique_id=811356729 instance=ExtResource("2_eos35")]
 offset_left = 890.0
@@ -89,5 +94,18 @@ layout_mode = 1
 
 [node name="TradeWindow" parent="UI" unique_id=304652504 instance=ExtResource("9_wbs85")]
 layout_mode = 1
+
+[node name="TurnManager" parent="." unique_id=610062439 instance=ExtResource("1_olmnm")]
+events = SubResource("Resource_wj50k")
+town_offers = SubResource("Resource_n0y6q")
+
+[node name="Player" parent="." unique_id=1057124744 instance=ExtResource("12_wj50k")]
+
+[node name="ExpeditionMgr" parent="." unique_id=1818811447 instance=ExtResource("12_n0y6q")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=401592327]
+stream = ExtResource("18_2vfub")
+volume_db = -3.0
+autoplay = true
 
 [connection signal="next_turned" from="TurnManager" to="." method="_on_turn_manager_next_turned"]

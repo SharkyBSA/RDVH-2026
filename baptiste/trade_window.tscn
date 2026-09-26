@@ -1,298 +1,384 @@
 [gd_scene format=3 uid="uid://dytuqo3dprrvw"]
 
 [ext_resource type="Script" uid="uid://8gf4q40bt0ms" path="res://baptiste/trade_window.gd" id="1_b0sl5"]
+[ext_resource type="Texture2D" uid="uid://cw0pnnacod8pm" path="res://assets/Trading_interface/Trading_interfaceV1.png" id="2_3re3h"]
 [ext_resource type="Texture2D" uid="uid://v5v7ahwfgyfd" path="res://assets/banners/placeholder.png" id="2_t3w7d"]
 [ext_resource type="Texture2D" uid="uid://cnvf8yuxfkx0o" path="res://assets/transport/boat.png" id="3_6oyyx"]
+[ext_resource type="Texture2D" uid="uid://bs228p0d77lpg" path="res://assets/Trading_interface/CrossV1.png" id="3_psq4g"]
+[ext_resource type="FontFile" uid="uid://c3v83r2x1hqbg" path="res://assets/Indira_K.ttf" id="4_68gga"]
+[ext_resource type="Texture2D" uid="uid://bed2n8wr3efyo" path="res://assets/Trading_interface/SoldierV1.png" id="6_psq4g"]
+[ext_resource type="Texture2D" uid="uid://ufou6mh12ds3" path="res://assets/Trading_interface/CheckV1.png" id="7_68gga"]
 
 [node name="TradeWindow" type="Control" unique_id=304652504]
 z_index = 3
 layout_mode = 3
-anchor_left = 0.1
 anchor_top = 1.1
-anchor_right = 0.9
+anchor_right = 0.978
 anchor_bottom = 1.9
 offset_right = 40.0
 offset_bottom = 40.0
-script = ExtResource("1_b0sl5")
-
-[node name="ColorRect" type="ColorRect" parent="." unique_id=347983844]
-z_index = 3
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.22352941, 0.3882353, 0.42352942, 1)
+mouse_filter = 1
+script = ExtResource("1_b0sl5")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1048637396]
+z_index = 3
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -960.0
+offset_top = -540.0
+offset_right = 960.0
+offset_bottom = 540.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_3re3h")
+
+[node name="Title" type="Label" parent="." unique_id=545669907]
+z_index = 3
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.055
+anchor_top = 0.13
+anchor_right = 0.167
+anchor_bottom = 0.132
+offset_left = 78.79999
+offset_top = 45.19989
+offset_right = 1496.8
+offset_bottom = 114.19989
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_68gga")
+theme_override_font_sizes/font_size = 20
+text = "Lancement d'expédition vers X"
+horizontal_alignment = 1
+
+[node name="ExitButton" type="TextureButton" parent="." unique_id=1013153709]
+z_index = 3
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.95
+anchor_top = 0.07
+anchor_right = 0.95
+anchor_bottom = 0.07
+offset_left = -100.0
+offset_top = 3.0517578e-05
+offset_bottom = 100.00003
+grow_horizontal = 0
+texture_normal = ExtResource("3_psq4g")
+
+[node name="TradeBox" type="VBoxContainer" parent="." unique_id=2027834466]
+z_index = 5
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.167
+anchor_top = 0.689
+anchor_right = 0.289
+anchor_bottom = 0.845
+offset_left = -146.0
+offset_top = -140.00006
+offset_right = 145.99994
+offset_bottom = 139.99994
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="TradeBox" unique_id=1694346265]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_68gga")
+text = "
+Marchandises"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TradeBox" unique_id=1982301636]
+custom_minimum_size = Vector2(0, 374.49)
+layout_mode = 2
+theme_override_constants/separation = 68
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TradeBox/HBoxContainer" unique_id=833672229]
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="TradeBox/HBoxContainer/VBoxContainer" unique_id=1002310653]
+custom_maximum_size = Vector2(200, 200)
+propagate_maximum_size = true
+layout_mode = 2
+texture = ExtResource("3_6oyyx")
+
+[node name="ColorRect" type="ColorRect" parent="TradeBox/HBoxContainer/VBoxContainer" unique_id=1979831400]
+visible = false
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+color = Color(0.20152658, 0.20152658, 0.20152658, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TradeBox/HBoxContainer/VBoxContainer" unique_id=1087824696]
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="TradeButtonSubtract" type="Button" parent="TradeBox/HBoxContainer/VBoxContainer/HBoxContainer" unique_id=981870014]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+disabled = true
+text = "-"
+
+[node name="TradeLabel" type="Label" parent="TradeBox/HBoxContainer/VBoxContainer/HBoxContainer" unique_id=1809637862]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(20, 0)
+custom_maximum_size = Vector2(20, -1)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_68gga")
+text = "0"
+horizontal_alignment = 1
+
+[node name="TradeButtonAdd" type="Button" parent="TradeBox/HBoxContainer/VBoxContainer/HBoxContainer" unique_id=2002089403]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+text = "+"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="TradeBox/HBoxContainer" unique_id=1143487439]
+custom_minimum_size = Vector2(147.995, 0)
+layout_mode = 2
+alignment = 1
+
+[node name="LabelStock" type="Label" parent="TradeBox/HBoxContainer/VBoxContainer2" unique_id=1408802304]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_68gga")
+text = "X à vendre"
+horizontal_alignment = 1
+
+[node name="TradeProgressBar" type="ProgressBar" parent="TradeBox/HBoxContainer/VBoxContainer2" unique_id=708568457]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(50.43, 160)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+fill_mode = 3
+show_percentage = false
+
+[node name="LabelShipping" type="Label" parent="TradeBox/HBoxContainer/VBoxContainer2" unique_id=1695163082]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_68gga")
+text = "
+Cargo 0"
+horizontal_alignment = 1
+
+[node name="GuardBox" type="VBoxContainer" parent="." unique_id=1738735893]
+z_index = 5
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.478
+anchor_top = 0.689
+anchor_right = 0.61
+anchor_bottom = 0.845
+offset_left = -144.5
+offset_top = -143.48798
+offset_right = 144.5
+offset_bottom = 143.48804
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="GuardBox" unique_id=426572053]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_68gga")
+text = "
+Protection"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GuardBox" unique_id=2036593839]
+custom_minimum_size = Vector2(0, 388.72)
+layout_mode = 2
+theme_override_constants/separation = 119
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GuardBox/HBoxContainer" unique_id=304889740]
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="GuardBox/HBoxContainer/VBoxContainer" unique_id=922002620]
+custom_maximum_size = Vector2(200, 200)
+propagate_maximum_size = true
+layout_mode = 2
+texture = ExtResource("6_psq4g")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GuardBox/HBoxContainer/VBoxContainer" unique_id=1169433591]
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="GuardButtonSubtract" type="Button" parent="GuardBox/HBoxContainer/VBoxContainer/HBoxContainer" unique_id=1544828079]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+disabled = true
+text = "-"
+
+[node name="GuardLabel" type="Label" parent="GuardBox/HBoxContainer/VBoxContainer/HBoxContainer" unique_id=310208307]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(20, 0)
+custom_maximum_size = Vector2(20, -1)
+layout_mode = 2
+text = "0"
+horizontal_alignment = 1
+
+[node name="GuardButtonAdd" type="Button" parent="GuardBox/HBoxContainer/VBoxContainer/HBoxContainer" unique_id=1447179862]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+text = "+"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="GuardBox/HBoxContainer" unique_id=1301366177]
+custom_minimum_size = Vector2(137.075, 0)
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="GuardBox/HBoxContainer/VBoxContainer2" unique_id=972238137]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_68gga")
+text = "Risque du voyage
+
+"
+horizontal_alignment = 1
+
+[node name="GuardProgressBar" type="ProgressBar" parent="GuardBox/HBoxContainer/VBoxContainer2" unique_id=135482900]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(50, 200)
+custom_maximum_size = Vector2(50, -1)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+fill_mode = 3
+show_percentage = false
+
+[node name="PercentLabel" type="Label" parent="GuardBox/HBoxContainer/VBoxContainer2" unique_id=1219920792]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_68gga")
+text = "
+%"
+horizontal_alignment = 1
+
+[node name="InfoBox" type="VBoxContainer" parent="." unique_id=1997404143]
+z_index = 5
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.775
+anchor_top = 0.689
+anchor_right = 0.856
+anchor_bottom = 0.845
+offset_left = -95.0
+offset_top = -145.0
+offset_right = 95.0
+offset_bottom = 145.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 85
+alignment = 1
+
+[node name="Title" type="Label" parent="InfoBox" unique_id=1047836098]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_68gga")
+text = "Résumé de l'expédition"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="InfoBox" unique_id=238386618]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="CostLabel" type="Label" parent="InfoBox/VBoxContainer" unique_id=1359020255]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_68gga")
+text = "Coût de l'expédition :"
+horizontal_alignment = 1
+
+[node name="DurationLabel" type="Label" parent="InfoBox/VBoxContainer" unique_id=1004725088]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_68gga")
+text = "Durée de l'expédition :"
+horizontal_alignment = 1
+
+[node name="Button" type="TextureButton" parent="InfoBox" unique_id=2073307076]
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("7_68gga")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=571649577]
+visible = false
+z_index = 3
+layout_mode = 0
+offset_left = 98.0
+offset_top = 556.11206
+offset_right = 1862.0
+offset_bottom = 844.11206
+theme_override_constants/separation = 100
+alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="HBoxContainer" unique_id=1047976630]
+z_index = 3
+custom_minimum_size = Vector2(305.265, 287.13)
+layout_mode = 2
+color = Color(0.32544094, 0.32544088, 0.32544088, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="HBoxContainer" unique_id=231629017]
+z_index = 3
+custom_minimum_size = Vector2(305.265, 287.13)
+layout_mode = 2
+color = Color(0.32544094, 0.32544088, 0.32544088, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="HBoxContainer" unique_id=2098303232]
+z_index = 3
+custom_minimum_size = Vector2(305.265, 287.13)
+layout_mode = 2
+color = Color(0.32544094, 0.32544088, 0.32544088, 1)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1650293921]
+visible = false
 z_index = 3
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.05
-anchor_top = 0.05
+anchor_top = 0.228
 anchor_right = 0.95
 anchor_bottom = 0.95
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 50
 
-[node name="Title" type="Label" parent="VBoxContainer" unique_id=545669907]
-z_index = 3
-layout_mode = 2
-theme_override_font_sizes/font_size = 50
-text = "Lancement d'expédition vers X"
-horizontal_alignment = 1
-
 [node name="Banner" type="TextureRect" parent="VBoxContainer" unique_id=1797806314]
+visible = false
 z_index = 3
 custom_maximum_size = Vector2(-1, 300)
 layout_mode = 2
 texture = ExtResource("2_t3w7d")
 expand_mode = 4
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=571649577]
-z_index = 3
-layout_mode = 2
-theme_override_constants/separation = 100
-alignment = 1
-
-[node name="ColorRect" type="ColorRect" parent="VBoxContainer/HBoxContainer" unique_id=1047976630]
-z_index = 3
-custom_minimum_size = Vector2(305.265, 287.13)
-layout_mode = 2
-color = Color(0.32544094, 0.32544088, 0.32544088, 1)
-
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/ColorRect" unique_id=2027834466]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Title" type="Label" parent="VBoxContainer/HBoxContainer/ColorRect/VBoxContainer" unique_id=1694346265]
-layout_mode = 2
-text = "Marchandises"
-horizontal_alignment = 1
-
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/ColorRect/VBoxContainer" unique_id=1982301636]
-layout_mode = 2
-theme_override_constants/separation = 10
-alignment = 1
-
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/ColorRect/VBoxContainer/HBoxContainer" unique_id=833672229]
-layout_mode = 2
-theme_override_constants/separation = 20
-alignment = 1
-
-[node name="ColorRect" type="ColorRect" parent="VBoxContainer/HBoxContainer/ColorRect/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1979831400]
-custom_minimum_size = Vector2(200, 200)
-layout_mode = 2
-color = Color(0.20152658, 0.20152658, 0.20152658, 1)
-
-[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HBoxContainer/ColorRect/VBoxContainer/HBoxContainer/VBoxContainer/ColorRect" unique_id=1002310653]
-custom_maximum_size = Vector2(200, 200)
-propagate_maximum_size = true
-layout_mode = 0
-offset_top = 4.0
-offset_right = 200.0
-offset_bottom = 204.0
-texture = ExtResource("3_6oyyx")
-
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/ColorRect/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1087824696]
-layout_mode = 2
-theme_override_constants/separation = 20
-alignment = 1
-
-[node name="TradeButtonSubtract" type="Button" parent="VBoxContainer/HBoxContainer/ColorRect/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer" unique_id=981870014]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(30, 0)
-layout_mode = 2
-disabled = true
-text = "-"
-
-[node name="TradeLabel" type="Label" parent="VBoxContainer/HBoxContainer/ColorRect/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer" unique_id=1809637862]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(20, 0)
-custom_maximum_size = Vector2(20, -1)
-layout_mode = 2
-text = "0"
-horizontal_alignment = 1
-
-[node name="TradeButtonAdd" type="Button" parent="VBoxContainer/HBoxContainer/ColorRect/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer" unique_id=2002089403]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(30, 0)
-layout_mode = 2
-text = "+"
-
-[node name="VBoxContainer2" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/ColorRect/VBoxContainer/HBoxContainer" unique_id=1143487439]
-layout_mode = 2
-alignment = 1
-
-[node name="LabelStock" type="Label" parent="VBoxContainer/HBoxContainer/ColorRect/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=1408802304]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(0, 50)
-layout_mode = 2
-text = "X à vendre"
-horizontal_alignment = 1
-
-[node name="TradeProgressBar" type="ProgressBar" parent="VBoxContainer/HBoxContainer/ColorRect/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=708568457]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(0, 145)
-layout_mode = 2
-fill_mode = 3
-
-[node name="LabelShipping" type="Label" parent="VBoxContainer/HBoxContainer/ColorRect/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=1695163082]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(0, 50)
-layout_mode = 2
-text = "
-"
-horizontal_alignment = 1
-
-[node name="ColorRect2" type="ColorRect" parent="VBoxContainer/HBoxContainer" unique_id=231629017]
-z_index = 3
-custom_minimum_size = Vector2(305.265, 287.13)
-layout_mode = 2
-color = Color(0.32544094, 0.32544088, 0.32544088, 1)
-
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/ColorRect2" unique_id=1738735893]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Title" type="Label" parent="VBoxContainer/HBoxContainer/ColorRect2/VBoxContainer" unique_id=426572053]
-layout_mode = 2
-text = "Protection"
-horizontal_alignment = 1
-
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/ColorRect2/VBoxContainer" unique_id=2036593839]
-layout_mode = 2
-theme_override_constants/separation = 10
-alignment = 1
-
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/ColorRect2/VBoxContainer/HBoxContainer" unique_id=304889740]
-layout_mode = 2
-theme_override_constants/separation = 20
-alignment = 1
-
-[node name="ColorRect" type="ColorRect" parent="VBoxContainer/HBoxContainer/ColorRect2/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=269821510]
-custom_minimum_size = Vector2(200, 200)
-layout_mode = 2
-color = Color(0.20152658, 0.20152658, 0.20152658, 1)
-
-[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HBoxContainer/ColorRect2/VBoxContainer/HBoxContainer/VBoxContainer/ColorRect" unique_id=922002620]
-custom_maximum_size = Vector2(200, 200)
-propagate_maximum_size = true
-layout_mode = 0
-offset_top = 4.0
-offset_right = 200.0
-offset_bottom = 204.0
-texture = ExtResource("3_6oyyx")
-
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/ColorRect2/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1169433591]
-layout_mode = 2
-theme_override_constants/separation = 20
-alignment = 1
-
-[node name="GuardButtonSubtract" type="Button" parent="VBoxContainer/HBoxContainer/ColorRect2/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer" unique_id=1544828079]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(30, 0)
-layout_mode = 2
-disabled = true
-text = "-"
-
-[node name="GuardLabel" type="Label" parent="VBoxContainer/HBoxContainer/ColorRect2/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer" unique_id=310208307]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(20, 0)
-custom_maximum_size = Vector2(20, -1)
-layout_mode = 2
-text = "0"
-horizontal_alignment = 1
-
-[node name="GuardButtonAdd" type="Button" parent="VBoxContainer/HBoxContainer/ColorRect2/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer" unique_id=1447179862]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(30, 0)
-layout_mode = 2
-text = "+"
-
-[node name="VBoxContainer2" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/ColorRect2/VBoxContainer/HBoxContainer" unique_id=1301366177]
-layout_mode = 2
-alignment = 1
-
-[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/ColorRect2/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=972238137]
-layout_mode = 2
-text = "Risque 
-du voyage"
-horizontal_alignment = 1
-
-[node name="GuardProgressBar" type="ProgressBar" parent="VBoxContainer/HBoxContainer/ColorRect2/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=135482900]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(50, 200)
-layout_mode = 2
-fill_mode = 3
-
-[node name="ColorRect3" type="ColorRect" parent="VBoxContainer/HBoxContainer" unique_id=2098303232]
-z_index = 3
-custom_minimum_size = Vector2(305.265, 287.13)
-layout_mode = 2
-color = Color(0.32544094, 0.32544088, 0.32544088, 1)
-
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/ColorRect3" unique_id=1997404143]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/separation = 85
-alignment = 1
-
-[node name="Title" type="Label" parent="VBoxContainer/HBoxContainer/ColorRect3/VBoxContainer" unique_id=1047836098]
-layout_mode = 2
-text = "Résultats de l'expédition"
-horizontal_alignment = 1
-
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/ColorRect3/VBoxContainer" unique_id=238386618]
-layout_mode = 2
-theme_override_constants/separation = 20
-
-[node name="CostLabel" type="Label" parent="VBoxContainer/HBoxContainer/ColorRect3/VBoxContainer/VBoxContainer" unique_id=1359020255]
-unique_name_in_owner = true
-layout_mode = 2
-text = "Coût de l'expédition :"
-horizontal_alignment = 1
-
-[node name="DurationLabel" type="Label" parent="VBoxContainer/HBoxContainer/ColorRect3/VBoxContainer/VBoxContainer" unique_id=1004725088]
-unique_name_in_owner = true
-layout_mode = 2
-text = "Durée de l'expédition :"
-horizontal_alignment = 1
-
-[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer/ColorRect3/VBoxContainer" unique_id=1861312440]
-layout_mode = 2
-text = "Lancer l'expédition"
-
-[node name="ExitButton" type="Button" parent="." unique_id=402203025]
-z_index = 3
-custom_minimum_size = Vector2(30, 30)
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.975
-anchor_top = 0.01
-anchor_right = 0.995
-anchor_bottom = 0.05
-offset_left = -8.0
-offset_bottom = 8.0
-grow_horizontal = 0
-text = "X"
-
-[connection signal="pressed" from="VBoxContainer/HBoxContainer/ColorRect/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer/TradeButtonSubtract" to="." method="_on_button_trade_pressed" binds= [-1]]
-[connection signal="pressed" from="VBoxContainer/HBoxContainer/ColorRect/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer/TradeButtonAdd" to="." method="_on_button_trade_pressed" binds= [1]]
-[connection signal="pressed" from="VBoxContainer/HBoxContainer/ColorRect2/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer/GuardButtonSubtract" to="." method="_on_button_guard_pressed" binds= [-1]]
-[connection signal="pressed" from="VBoxContainer/HBoxContainer/ColorRect2/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer/GuardButtonAdd" to="." method="_on_button_guard_pressed" binds= [1]]
 [connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="TradeBox/HBoxContainer/VBoxContainer/HBoxContainer/TradeButtonSubtract" to="." method="_on_button_trade_pressed" binds= [-1]]
+[connection signal="pressed" from="TradeBox/HBoxContainer/VBoxContainer/HBoxContainer/TradeButtonAdd" to="." method="_on_button_trade_pressed" binds= [1]]
+[connection signal="pressed" from="GuardBox/HBoxContainer/VBoxContainer/HBoxContainer/GuardButtonSubtract" to="." method="_on_button_guard_pressed" binds= [-1]]
+[connection signal="pressed" from="GuardBox/HBoxContainer/VBoxContainer/HBoxContainer/GuardButtonAdd" to="." method="_on_button_guard_pressed" binds= [1]]

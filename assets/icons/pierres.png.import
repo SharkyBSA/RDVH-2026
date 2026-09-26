@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dvn2brlf1hbce"
-path="res://.godot/imported/poivre.png-ff15a0dcef314d5bfccd2ce6d32814e0.ctex"
+uid="uid://cnn0einm4gjus"
+path="res://.godot/imported/pierres.png-d128f061a015e6e6209971a277c980e8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/poivre.png"
-dest_files=["res://.godot/imported/poivre.png-ff15a0dcef314d5bfccd2ce6d32814e0.ctex"]
+source_file="res://assets/icons/pierres.png"
+dest_files=["res://.godot/imported/pierres.png-d128f061a015e6e6209971a277c980e8.ctex"]
 
 [params]
 
