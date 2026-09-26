@@ -1,0 +1,119 @@
+[gd_scene format=3 uid="uid://dydp6htr0lt8i"]
+
+[ext_resource type="Script" uid="uid://boacrbl1ru5vb" path="res://tests/turn_manager/test_turn_manager.gd" id="1_xu5jy"]
+[ext_resource type="PackedScene" uid="uid://dgfv6e3vip0a4" path="res://alice/turn_mgr/turn_manager.tscn" id="2_025q3"]
+[ext_resource type="Script" uid="uid://dji1gvea14ls8" path="res://alice/turn_mgr/events/turn_event.gd" id="3_5q858"]
+[ext_resource type="Script" uid="uid://76olk5l6av78" path="res://alice/turn_mgr/town_offer/town_proposition.gd" id="4_jnm51"]
+[ext_resource type="Script" uid="uid://0lvj1rsiyhjb" path="res://alice/turn_mgr/town_offer/array_town_offers.gd" id="4_kxg4w"]
+[ext_resource type="Script" uid="uid://drfbg3jb0nf5x" path="res://alice/turn_mgr/events/game_events.gd" id="4_xmld7"]
+[ext_resource type="Script" uid="uid://bu7cj6yg78hg2" path="res://alice/turn_mgr/town_offer/game_town_offers.gd" id="5_xmld7"]
+
+[sub_resource type="Resource" id="Resource_fbhm1"]
+script = ExtResource("3_5q858")
+metadata/_custom_type_script = "uid://dji1gvea14ls8"
+
+[sub_resource type="Resource" id="Resource_ly3m4"]
+script = ExtResource("3_5q858")
+type = 1
+metadata/_custom_type_script = "uid://dji1gvea14ls8"
+
+[sub_resource type="Resource" id="Resource_r5eff"]
+script = ExtResource("3_5q858")
+target_town = 1
+type = 2
+metadata/_custom_type_script = "uid://dji1gvea14ls8"
+
+[sub_resource type="Resource" id="Resource_cw7wy"]
+script = ExtResource("4_xmld7")
+events = Array[ExtResource("3_5q858")]([SubResource("Resource_fbhm1"), null, SubResource("Resource_ly3m4"), SubResource("Resource_r5eff")])
+metadata/_custom_type_script = "uid://drfbg3jb0nf5x"
+
+[sub_resource type="Resource" id="Resource_sun0j"]
+script = ExtResource("4_jnm51")
+metadata/_custom_type_script = "uid://76olk5l6av78"
+
+[sub_resource type="Resource" id="Resource_uyalp"]
+script = ExtResource("4_jnm51")
+town = 0
+res_to_send = "gold"
+send_amount = 20.0
+res_to_receive = "pepper"
+receive_amount = 50.0
+metadata/_custom_type_script = "uid://76olk5l6av78"
+
+[sub_resource type="Resource" id="Resource_66gdv"]
+script = ExtResource("4_kxg4w")
+offers = Array[ExtResource("4_jnm51")]([SubResource("Resource_sun0j"), SubResource("Resource_uyalp")])
+metadata/_custom_type_script = "uid://0lvj1rsiyhjb"
+
+[sub_resource type="Resource" id="Resource_6g2ix"]
+script = ExtResource("4_kxg4w")
+metadata/_custom_type_script = "uid://0lvj1rsiyhjb"
+
+[sub_resource type="Resource" id="Resource_rpy0l"]
+script = ExtResource("4_jnm51")
+town = 1
+res_to_send = "gold"
+send_amount = 50.0
+res_to_receive = "pepper"
+receive_amount = 10.0
+metadata/_custom_type_script = "uid://76olk5l6av78"
+
+[sub_resource type="Resource" id="Resource_cwkhc"]
+script = ExtResource("4_jnm51")
+town = 0
+res_to_send = "pepper"
+send_amount = 10.0
+res_to_receive = "gold"
+receive_amount = 4.0
+metadata/_custom_type_script = "uid://76olk5l6av78"
+
+[sub_resource type="Resource" id="Resource_agltg"]
+script = ExtResource("4_kxg4w")
+offers = Array[ExtResource("4_jnm51")]([SubResource("Resource_rpy0l"), SubResource("Resource_cwkhc")])
+metadata/_custom_type_script = "uid://0lvj1rsiyhjb"
+
+[sub_resource type="Resource" id="Resource_3h3dk"]
+script = ExtResource("5_xmld7")
+town_offers = Array[ExtResource("4_kxg4w")]([null, SubResource("Resource_66gdv"), SubResource("Resource_6g2ix"), SubResource("Resource_agltg")])
+metadata/_custom_type_script = "uid://bu7cj6yg78hg2"
+
+[node name="TestTurnManager" type="Control" unique_id=544450310]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xu5jy")
+
+[node name="TurnManager" parent="." unique_id=610062439 instance=ExtResource("2_025q3")]
+unique_name_in_owner = true
+events = SubResource("Resource_cw7wy")
+town_offers = SubResource("Resource_3h3dk")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=841948911]
+layout_mode = 0
+offset_left = 177.0
+offset_top = 176.0
+offset_right = 330.0
+offset_bottom = 226.0
+
+[node name="Event" type="Label" parent="VBoxContainer" unique_id=1408298904]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Event: "
+
+[node name="Proposition" type="Label" parent="VBoxContainer" unique_id=2136585157]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Proposition ce tour:"
+
+[node name="NextTurn" type="Button" parent="." unique_id=2084557768]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 169.0
+offset_top = 119.0
+offset_right = 322.0
+offset_bottom = 150.0
+text = "Nouveau tour "
