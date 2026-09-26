@@ -10,6 +10,7 @@
 [ext_resource type="Script" uid="uid://drfbg3jb0nf5x" path="res://alice/turn_mgr/events/game_events.gd" id="3_n0y6q"]
 [ext_resource type="Script" uid="uid://76olk5l6av78" path="res://alice/turn_mgr/town_offer/town_proposition.gd" id="4_ekwjs"]
 [ext_resource type="PackedScene" uid="uid://dytuqo3dprrvw" path="res://baptiste/trade_window.tscn" id="9_wbs85"]
+[ext_resource type="PackedScene" uid="uid://diq8sdq1y3pbn" path="res://alice/hud/ath.tscn" id="11_ekwjs"]
 
 [sub_resource type="Resource" id="Resource_wj50k"]
 script = ExtResource("3_n0y6q")
@@ -69,10 +70,10 @@ offset_bottom = 512.0
 town_name = "Calicut"
 
 [node name="Dehli" parent="UI/TownManager" unique_id=2084830226 instance=ExtResource("2_eos35")]
-offset_left = 926.0
-offset_top = 156.0
-offset_right = 1028.0
-offset_bottom = 207.0
+offset_left = 928.0
+offset_top = 191.0
+offset_right = 1030.0
+offset_bottom = 242.0
 town_name = "Dehli"
 threat_level = 5
 
@@ -82,6 +83,9 @@ offset_top = 379.0
 offset_right = 992.0
 offset_bottom = 430.0
 town_name = "Goa"
+
+[node name="Ath" parent="UI" unique_id=2026785200 instance=ExtResource("11_ekwjs")]
+layout_mode = 1
 
 [node name="TradeWindow" parent="UI" unique_id=304652504 instance=ExtResource("9_wbs85")]
 layout_mode = 1

@@ -1,9 +1,18 @@
 [gd_scene format=3 uid="uid://diq8sdq1y3pbn"]
 
 [ext_resource type="Script" uid="uid://bg3jo52m7mdnw" path="res://alice/hud/ath.gd" id="1_0hjve"]
-[ext_resource type="Texture2D" uid="uid://dxvqldpv5c6pn" path="res://assets/icons/placeholder.png" id="1_i1xc2"]
-[ext_resource type="Texture2D" uid="uid://ctc8vk8o605qm" path="res://icon.svg" id="2_wnc24"]
-[ext_resource type="Texture2D" uid="uid://bqn70ylniojqd" path="res://assets/town.png" id="4_ix3pw"]
+[ext_resource type="Texture2D" uid="uid://d14cdrck17eci" path="res://assets/Trading_interface/Materials_interfaceV1.png" id="2_k5d8j"]
+[ext_resource type="Texture2D" uid="uid://c3ds0yfqaqo" path="res://assets/or.png" id="3_g56sb"]
+[ext_resource type="Texture2D" uid="uid://2dkq4r3p0n3s" path="res://assets/chevaux.png" id="4_ewyhu"]
+[ext_resource type="Texture2D" uid="uid://b0ia4v6q6fy5w" path="res://assets/Coton.png" id="5_dd0do"]
+[ext_resource type="Texture2D" uid="uid://c43tnkh5eynky" path="res://assets/epices.png" id="6_c2fmi"]
+[ext_resource type="Texture2D" uid="uid://bi4qxrsdb24gk" path="res://assets/ettoffe.png" id="7_aasan"]
+[ext_resource type="Texture2D" uid="uid://b5rmm4jjpy87i" path="res://assets/ivoire.png" id="8_0app3"]
+[ext_resource type="Texture2D" uid="uid://ugh6836p00un" path="res://assets/pierres.png" id="9_ox5tf"]
+[ext_resource type="Texture2D" uid="uid://c2a58cx0d3cgs" path="res://assets/poivre.png" id="10_uchpa"]
+[ext_resource type="Texture2D" uid="uid://dh1ucbidtjgat" path="res://assets/sucre.png" id="11_gctdb"]
+[ext_resource type="Texture2D" uid="uid://co8rr00k4the8" path="res://assets/Trading_interface/TimerV1.png" id="12_3yqlp"]
+[ext_resource type="Texture2D" uid="uid://cgcgodju812pw" path="res://assets/Trading_interface/OptionV1.png" id="13_7kn40"]
 
 [node name="Ath" type="Control" unique_id=2026785200]
 layout_mode = 3
@@ -11,6 +20,7 @@ anchor_left = 0.02
 anchor_top = 0.02
 anchor_right = 0.98
 anchor_bottom = 0.12
+mouse_force_pass_scroll_events = false
 script = ExtResource("1_0hjve")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1628380618]
@@ -20,6 +30,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 0
+mouse_force_pass_scroll_events = false
+texture = ExtResource("2_k5d8j")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=235776302]
 layout_mode = 1
@@ -28,20 +41,36 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 0
+mouse_force_pass_scroll_events = false
+alignment = 1
+
+[node name="Control" type="Control" parent="HBoxContainer" unique_id=1966045322]
+custom_minimum_size = Vector2(39.17, 0)
+layout_mode = 2
+mouse_force_pass_scroll_events = false
 
 [node name="HBoxContainer10" type="HBoxContainer" parent="HBoxContainer" unique_id=851274021]
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_stretch_ratio = 9.0
+size_flags_stretch_ratio = 6.68
+mouse_filter = 0
+mouse_force_pass_scroll_events = false
+theme_override_constants/separation = 0
+alignment = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/HBoxContainer10" unique_id=1564983372]
 layout_mode = 2
 size_flags_horizontal = 3
+mouse_filter = 0
+mouse_force_pass_scroll_events = false
 
 [node name="TextureRect" type="TextureRect" parent="HBoxContainer/HBoxContainer10/HBoxContainer" unique_id=224629672]
 layout_mode = 2
 size_flags_horizontal = 3
-texture = ExtResource("2_wnc24")
+mouse_filter = 0
+mouse_force_pass_scroll_events = false
+texture = ExtResource("3_g56sb")
 expand_mode = 1
 stretch_mode = 5
 
@@ -49,16 +78,22 @@ stretch_mode = 5
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
+mouse_filter = 0
+mouse_force_pass_scroll_events = false
 text = "20"
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="HBoxContainer/HBoxContainer10" unique_id=249919889]
 layout_mode = 2
 size_flags_horizontal = 3
+mouse_filter = 0
+mouse_force_pass_scroll_events = false
 
 [node name="TextureRect" type="TextureRect" parent="HBoxContainer/HBoxContainer10/HBoxContainer2" unique_id=269240108]
 layout_mode = 2
 size_flags_horizontal = 3
-texture = ExtResource("2_wnc24")
+mouse_filter = 0
+mouse_force_pass_scroll_events = false
+texture = ExtResource("10_uchpa")
 expand_mode = 1
 stretch_mode = 5
 
@@ -66,16 +101,22 @@ stretch_mode = 5
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
+mouse_filter = 0
+mouse_force_pass_scroll_events = false
 text = "20"
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="HBoxContainer/HBoxContainer10" unique_id=134295826]
 layout_mode = 2
 size_flags_horizontal = 3
+mouse_filter = 0
+mouse_force_pass_scroll_events = false
 
 [node name="TextureRect" type="TextureRect" parent="HBoxContainer/HBoxContainer10/HBoxContainer3" unique_id=1401905078]
 layout_mode = 2
 size_flags_horizontal = 3
-texture = ExtResource("2_wnc24")
+mouse_filter = 0
+mouse_force_pass_scroll_events = false
+texture = ExtResource("7_aasan")
 expand_mode = 1
 stretch_mode = 5
 
@@ -83,16 +124,22 @@ stretch_mode = 5
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
+mouse_filter = 0
+mouse_force_pass_scroll_events = false
 text = "20"
 
 [node name="HBoxContainer4" type="HBoxContainer" parent="HBoxContainer/HBoxContainer10" unique_id=1372179886]
 layout_mode = 2
 size_flags_horizontal = 3
+mouse_filter = 0
+mouse_force_pass_scroll_events = false
 
 [node name="TextureRect" type="TextureRect" parent="HBoxContainer/HBoxContainer10/HBoxContainer4" unique_id=526324126]
 layout_mode = 2
 size_flags_horizontal = 3
-texture = ExtResource("2_wnc24")
+mouse_filter = 0
+mouse_force_pass_scroll_events = false
+texture = ExtResource("8_0app3")
 expand_mode = 1
 stretch_mode = 5
 
@@ -100,16 +147,22 @@ stretch_mode = 5
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
+mouse_filter = 0
+mouse_force_pass_scroll_events = false
 text = "20"
 
 [node name="HBoxContainer5" type="HBoxContainer" parent="HBoxContainer/HBoxContainer10" unique_id=1667210344]
 layout_mode = 2
 size_flags_horizontal = 3
+mouse_filter = 0
+mouse_force_pass_scroll_events = false
 
 [node name="TextureRect" type="TextureRect" parent="HBoxContainer/HBoxContainer10/HBoxContainer5" unique_id=2076701254]
 layout_mode = 2
 size_flags_horizontal = 3
-texture = ExtResource("2_wnc24")
+mouse_filter = 0
+mouse_force_pass_scroll_events = false
+texture = ExtResource("5_dd0do")
 expand_mode = 1
 stretch_mode = 5
 
@@ -117,16 +170,22 @@ stretch_mode = 5
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
+mouse_filter = 0
+mouse_force_pass_scroll_events = false
 text = "20"
 
 [node name="HBoxContainer6" type="HBoxContainer" parent="HBoxContainer/HBoxContainer10" unique_id=268560119]
 layout_mode = 2
 size_flags_horizontal = 3
+mouse_filter = 0
+mouse_force_pass_scroll_events = false
 
 [node name="TextureRect" type="TextureRect" parent="HBoxContainer/HBoxContainer10/HBoxContainer6" unique_id=2062314619]
 layout_mode = 2
 size_flags_horizontal = 3
-texture = ExtResource("2_wnc24")
+mouse_filter = 0
+mouse_force_pass_scroll_events = false
+texture = ExtResource("9_ox5tf")
 expand_mode = 1
 stretch_mode = 5
 
@@ -134,16 +193,22 @@ stretch_mode = 5
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
+mouse_filter = 0
+mouse_force_pass_scroll_events = false
 text = "20"
 
 [node name="HBoxContainer7" type="HBoxContainer" parent="HBoxContainer/HBoxContainer10" unique_id=746204766]
 layout_mode = 2
 size_flags_horizontal = 3
+mouse_filter = 0
+mouse_force_pass_scroll_events = false
 
 [node name="TextureRect" type="TextureRect" parent="HBoxContainer/HBoxContainer10/HBoxContainer7" unique_id=1146644205]
 layout_mode = 2
 size_flags_horizontal = 3
-texture = ExtResource("2_wnc24")
+mouse_filter = 0
+mouse_force_pass_scroll_events = false
+texture = ExtResource("6_c2fmi")
 expand_mode = 1
 stretch_mode = 5
 
@@ -151,16 +216,22 @@ stretch_mode = 5
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
+mouse_filter = 0
+mouse_force_pass_scroll_events = false
 text = "20"
 
 [node name="HBoxContainer8" type="HBoxContainer" parent="HBoxContainer/HBoxContainer10" unique_id=1383007523]
 layout_mode = 2
 size_flags_horizontal = 3
+mouse_filter = 0
+mouse_force_pass_scroll_events = false
 
 [node name="TextureRect" type="TextureRect" parent="HBoxContainer/HBoxContainer10/HBoxContainer8" unique_id=13382411]
 layout_mode = 2
 size_flags_horizontal = 3
-texture = ExtResource("2_wnc24")
+mouse_filter = 0
+mouse_force_pass_scroll_events = false
+texture = ExtResource("4_ewyhu")
 expand_mode = 1
 stretch_mode = 5
 
@@ -168,16 +239,24 @@ stretch_mode = 5
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
+mouse_filter = 0
+mouse_force_pass_scroll_events = false
 text = "20"
 
 [node name="HBoxContainer9" type="HBoxContainer" parent="HBoxContainer/HBoxContainer10" unique_id=537425302]
 layout_mode = 2
 size_flags_horizontal = 3
+mouse_filter = 0
+mouse_force_pass_scroll_events = false
 
 [node name="TextureRect" type="TextureRect" parent="HBoxContainer/HBoxContainer10/HBoxContainer9" unique_id=1505942747]
+custom_minimum_size = Vector2(0, 64.77)
 layout_mode = 2
 size_flags_horizontal = 3
-texture = ExtResource("2_wnc24")
+size_flags_vertical = 4
+mouse_filter = 0
+mouse_force_pass_scroll_events = false
+texture = ExtResource("11_gctdb")
 expand_mode = 1
 stretch_mode = 5
 
@@ -185,41 +264,50 @@ stretch_mode = 5
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
+mouse_filter = 0
+mouse_force_pass_scroll_events = false
 text = "20"
 
 [node name="NextTurnBtn" type="TextureButton" parent="HBoxContainer" unique_id=1003132224]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
-texture_normal = ExtResource("1_i1xc2")
-texture_pressed = ExtResource("1_i1xc2")
-texture_hover = ExtResource("1_i1xc2")
+mouse_force_pass_scroll_events = false
+texture_normal = ExtResource("12_3yqlp")
 ignore_texture_size = true
 stretch_mode = 5
 
 [node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer" unique_id=1995052107]
 layout_mode = 2
 size_flags_horizontal = 3
+mouse_filter = 0
+mouse_force_pass_scroll_events = false
+theme_override_constants/separation = -50
 
 [node name="YearLbl" type="Label" parent="HBoxContainer/VBoxContainer" unique_id=1654105715]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 6
-text = "Year : 2026"
+mouse_filter = 0
+mouse_force_pass_scroll_events = false
+text = "Année : 1490"
 
 [node name="TurnLbl" type="Label" parent="HBoxContainer/VBoxContainer" unique_id=61636118]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 6
-text = "Turn : 5986"
+mouse_filter = 0
+mouse_force_pass_scroll_events = false
+text = "Tour : 0"
 
 [node name="Pausebtn" type="TextureButton" parent="HBoxContainer" unique_id=1356520887]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
-texture_normal = ExtResource("4_ix3pw")
-texture_pressed = ExtResource("4_ix3pw")
+mouse_force_pass_scroll_events = false
+texture_normal = ExtResource("13_7kn40")
+texture_pressed = ExtResource("13_7kn40")
 ignore_texture_size = true
 stretch_mode = 5
