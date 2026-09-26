@@ -1,0 +1,8 @@
+[gd_resource type="Resource" format=3 uid="uid://ddvidwjw4oste"]
+
+[sub_resource type="GDScript" id="GDScript_odvti"]
+script/source = "Array = [[]]
+"
+
+[resource]
+script = SubResource("GDScript_odvti")

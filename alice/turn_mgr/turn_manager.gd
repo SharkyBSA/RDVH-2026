@@ -4,8 +4,11 @@ class_name TurnManager
 @export var events : GameEvents 
 @export var town_offers : GameTownOffers
 
-var current_turn := 0
+var current_turn := -1
 signal next_turned
+
+func _ready():
+	next_turn()
 
 func next_turn() -> void:
 	current_turn += 1
