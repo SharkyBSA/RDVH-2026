@@ -1,7 +1,47 @@
 [gd_scene format=3 uid="uid://dydp6htr0lt8i"]
 
 [ext_resource type="Script" uid="uid://boacrbl1ru5vb" path="res://tests/turn_manager/test_turn_manager.gd" id="1_xu5jy"]
-[ext_resource type="PackedScene" uid="uid://dgfv6e3vip0a4" path="res://alice/turn_manager.tscn" id="2_025q3"]
+[ext_resource type="PackedScene" uid="uid://dgfv6e3vip0a4" path="res://alice/turn_mgr/turn_manager.tscn" id="2_025q3"]
+[ext_resource type="Script" uid="uid://dji1gvea14ls8" path="res://alice/turn_mgr/turn_event.gd" id="3_5q858"]
+[ext_resource type="Script" uid="uid://76olk5l6av78" path="res://alice/turn_mgr/town_proposition.gd" id="4_jnm51"]
+
+[sub_resource type="Resource" id="Resource_5q858"]
+script = ExtResource("3_5q858")
+target_town = 0
+type = 1
+metadata/_custom_type_script = "uid://dji1gvea14ls8"
+
+[sub_resource type="Resource" id="Resource_kxg4w"]
+script = ExtResource("3_5q858")
+metadata/_custom_type_script = "uid://dji1gvea14ls8"
+
+[sub_resource type="Resource" id="Resource_jnm51"]
+script = ExtResource("3_5q858")
+target_town = 0
+type = 2
+metadata/_custom_type_script = "uid://dji1gvea14ls8"
+
+[sub_resource type="Resource" id="Resource_xmld7"]
+script = ExtResource("4_jnm51")
+town = 0
+res_to_send = "pepper"
+send_amount = 10.0
+res_to_receive = "gold"
+receive_amount = 50.0
+metadata/_custom_type_script = "uid://76olk5l6av78"
+
+[sub_resource type="Resource" id="Resource_d61yf"]
+script = ExtResource("4_jnm51")
+metadata/_custom_type_script = "uid://76olk5l6av78"
+
+[sub_resource type="Resource" id="Resource_gw6dx"]
+script = ExtResource("4_jnm51")
+town = 1
+res_to_send = "gold"
+send_amount = 20.0
+res_to_receive = "pepper"
+receive_amount = 2.0
+metadata/_custom_type_script = "uid://76olk5l6av78"
 
 [node name="TestTurnManager" type="Control" unique_id=544450310]
 layout_mode = 3
@@ -14,6 +54,8 @@ script = ExtResource("1_xu5jy")
 
 [node name="TurnManager" parent="." unique_id=610062439 instance=ExtResource("2_025q3")]
 unique_name_in_owner = true
+events = Array[ExtResource("3_5q858")]([null, SubResource("Resource_5q858"), SubResource("Resource_kxg4w"), SubResource("Resource_jnm51")])
+town_offers = Array[ExtResource("4_jnm51")]([null, SubResource("Resource_xmld7"), SubResource("Resource_d61yf"), SubResource("Resource_gw6dx")])
 
 [node name="NextTurn" type="Button" parent="." unique_id=2084557768]
 unique_name_in_owner = true

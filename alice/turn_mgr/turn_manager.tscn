@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dgfv6e3vip0a4"]
 
-[ext_resource type="Script" uid="uid://canbyt122h5nj" path="res://alice/turn_manager.gd" id="1_o5ojq"]
+[ext_resource type="Script" uid="uid://canbyt122h5nj" path="res://alice/turn_mgr/turn_manager.gd" id="1_o5ojq"]
 
 [node name="TurnManager" type="Node" unique_id=610062439]
 script = ExtResource("1_o5ojq")
