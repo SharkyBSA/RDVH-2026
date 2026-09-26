@@ -35,7 +35,6 @@ func popup(type := 0):
 	# Animation
 	$TradeHBox.position.y = 0
 	$TradeHBox.modulate.a = 1
-	$TradeHBox.show()
 	var tween = create_tween()
 	var new_pos = -80 if !reverse_popup else 45
 	tween.tween_property($TradeHBox, "position:y", new_pos, 0.5).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_SPRING)
@@ -44,5 +43,6 @@ func popup(type := 0):
 		0:	$TradeHBox/TextureButton/TextureRect.texture = load("res://assets/poivre.png")
 
 func hide_popup():
-	var tween = create_tween()
-	tween.tween_property($TradeHBox, "modulate:a", 0, 0.5)
+	if $TradeHBox.modulate.a != 0:
+		var tween = create_tween()
+		tween.tween_property($TradeHBox, "modulate:a", 0, 0.5)

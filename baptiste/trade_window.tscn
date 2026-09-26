@@ -6,7 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://cnvf8yuxfkx0o" path="res://assets/transport/boat.png" id="3_6oyyx"]
 [ext_resource type="Texture2D" uid="uid://bs228p0d77lpg" path="res://assets/Trading_interface/CrossV1.png" id="3_psq4g"]
 [ext_resource type="FontFile" uid="uid://c3v83r2x1hqbg" path="res://assets/Indira_K.ttf" id="4_68gga"]
+[ext_resource type="Texture2D" uid="uid://df626egv7sblw" path="res://assets/Trading_interface/DownV1.png" id="6_1qqc7"]
 [ext_resource type="Texture2D" uid="uid://bed2n8wr3efyo" path="res://assets/Trading_interface/SoldierV1.png" id="6_psq4g"]
+[ext_resource type="Texture2D" uid="uid://cdj0b3vya178i" path="res://assets/Trading_interface/UpV1.png" id="7_2npcg"]
 [ext_resource type="Texture2D" uid="uid://ufou6mh12ds3" path="res://assets/Trading_interface/CheckV1.png" id="7_68gga"]
 
 [node name="TradeWindow" type="Control" unique_id=304652504]
@@ -119,16 +121,18 @@ layout_mode = 2
 color = Color(0.20152658, 0.20152658, 0.20152658, 1)
 
 [node name="HBoxContainer" type="HBoxContainer" parent="TradeBox/HBoxContainer/VBoxContainer" unique_id=1087824696]
+custom_maximum_size = Vector2(-1, 40)
 layout_mode = 2
 theme_override_constants/separation = 20
 alignment = 1
 
-[node name="TradeButtonSubtract" type="Button" parent="TradeBox/HBoxContainer/VBoxContainer/HBoxContainer" unique_id=981870014]
+[node name="TradeButtonSubtract" type="TextureButton" parent="TradeBox/HBoxContainer/VBoxContainer/HBoxContainer" unique_id=2133919507]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(30, 0)
 layout_mode = 2
 disabled = true
-text = "-"
+texture_normal = ExtResource("6_1qqc7")
+stretch_mode = 4
 
 [node name="TradeLabel" type="Label" parent="TradeBox/HBoxContainer/VBoxContainer/HBoxContainer" unique_id=1809637862]
 unique_name_in_owner = true
@@ -140,11 +144,12 @@ theme_override_fonts/font = ExtResource("4_68gga")
 text = "0"
 horizontal_alignment = 1
 
-[node name="TradeButtonAdd" type="Button" parent="TradeBox/HBoxContainer/VBoxContainer/HBoxContainer" unique_id=2002089403]
+[node name="TradeButtonAdd" type="TextureButton" parent="TradeBox/HBoxContainer/VBoxContainer/HBoxContainer" unique_id=1070030961]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(30, 0)
 layout_mode = 2
-text = "+"
+texture_normal = ExtResource("7_2npcg")
+stretch_mode = 4
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="TradeBox/HBoxContainer" unique_id=1143487439]
 custom_minimum_size = Vector2(147.995, 0)
@@ -220,16 +225,18 @@ layout_mode = 2
 texture = ExtResource("6_psq4g")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="GuardBox/HBoxContainer/VBoxContainer" unique_id=1169433591]
+custom_maximum_size = Vector2(-1, 40)
 layout_mode = 2
 theme_override_constants/separation = 20
 alignment = 1
 
-[node name="GuardButtonSubtract" type="Button" parent="GuardBox/HBoxContainer/VBoxContainer/HBoxContainer" unique_id=1544828079]
+[node name="GuardButtonSubtract" type="TextureButton" parent="GuardBox/HBoxContainer/VBoxContainer/HBoxContainer" unique_id=2036115534]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(30, 0)
 layout_mode = 2
 disabled = true
-text = "-"
+texture_normal = ExtResource("6_1qqc7")
+stretch_mode = 4
 
 [node name="GuardLabel" type="Label" parent="GuardBox/HBoxContainer/VBoxContainer/HBoxContainer" unique_id=310208307]
 unique_name_in_owner = true
@@ -239,11 +246,12 @@ layout_mode = 2
 text = "0"
 horizontal_alignment = 1
 
-[node name="GuardButtonAdd" type="Button" parent="GuardBox/HBoxContainer/VBoxContainer/HBoxContainer" unique_id=1447179862]
+[node name="GuardButtonAdd" type="TextureButton" parent="GuardBox/HBoxContainer/VBoxContainer/HBoxContainer" unique_id=1537727318]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(30, 0)
 layout_mode = 2
-text = "+"
+texture_normal = ExtResource("7_2npcg")
+stretch_mode = 4
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="GuardBox/HBoxContainer" unique_id=1301366177]
 custom_minimum_size = Vector2(137.075, 0)

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://gebyhljdrb4c"]
 
 [ext_resource type="Script" uid="uid://b2018yrpiqsbb" path="res://baptiste/town.gd" id="1_isdnv"]
+[ext_resource type="FontFile" uid="uid://c3v83r2x1hqbg" path="res://assets/Indira_K.ttf" id="2_aq5wb"]
 [ext_resource type="Texture2D" uid="uid://bqn70ylniojqd" path="res://assets/icons/town.png" id="2_ghyft"]
 [ext_resource type="Texture2D" uid="uid://btm2fjme7qloh" path="res://assets/icons/arrow.png" id="3_5wbrl"]
 [ext_resource type="Texture2D" uid="uid://dxvqldpv5c6pn" path="res://assets/icons/placeholder.png" id="4_ghyft"]
@@ -21,6 +22,7 @@ offset_bottom = 51.0
 [node name="TownName" type="Label" parent="VBoxContainer" unique_id=398786862]
 layout_mode = 2
 size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_aq5wb")
 text = "Lorem ipsum"
 
 [node name="Icon" type="TextureRect" parent="VBoxContainer" unique_id=526331112]
@@ -32,7 +34,7 @@ texture = ExtResource("2_ghyft")
 expand_mode = 2
 
 [node name="TradeHBox" type="VBoxContainer" parent="." unique_id=1617168093]
-visible = false
+modulate = Color(1, 1, 1, 0)
 z_index = 1
 layout_mode = 1
 anchors_preset = 8

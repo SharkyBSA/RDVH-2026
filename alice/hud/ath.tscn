@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bg3jo52m7mdnw" path="res://alice/hud/ath.gd" id="1_0hjve"]
 [ext_resource type="Texture2D" uid="uid://d14cdrck17eci" path="res://assets/Trading_interface/Materials_interfaceV1.png" id="2_k5d8j"]
 [ext_resource type="Texture2D" uid="uid://c3ds0yfqaqo" path="res://assets/icons/or.png" id="3_k5d8j"]
+[ext_resource type="FontFile" uid="uid://c3v83r2x1hqbg" path="res://assets/Indira_K.ttf" id="4_g56sb"]
 [ext_resource type="Texture2D" uid="uid://bi4qxrsdb24gk" path="res://assets/icons/ettoffe.png" id="5_g56sb"]
 [ext_resource type="Texture2D" uid="uid://b0ia4v6q6fy5w" path="res://assets/icons/Coton.png" id="7_ewyhu"]
 [ext_resource type="Texture2D" uid="uid://b5rmm4jjpy87i" path="res://assets/ivoire.png" id="8_0app3"]
@@ -84,7 +85,10 @@ layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 0
 mouse_force_pass_scroll_events = false
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_g56sb")
 text = "20"
+horizontal_alignment = 1
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="HBoxContainer/HBoxContainer10" unique_id=249919889]
 layout_mode = 2
@@ -107,7 +111,10 @@ layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 0
 mouse_force_pass_scroll_events = false
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_g56sb")
 text = "20"
+horizontal_alignment = 1
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="HBoxContainer/HBoxContainer10" unique_id=134295826]
 layout_mode = 2
@@ -130,7 +137,10 @@ layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 0
 mouse_force_pass_scroll_events = false
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_g56sb")
 text = "20"
+horizontal_alignment = 1
 
 [node name="HBoxContainer4" type="HBoxContainer" parent="HBoxContainer/HBoxContainer10" unique_id=1372179886]
 layout_mode = 2
@@ -153,7 +163,10 @@ layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 0
 mouse_force_pass_scroll_events = false
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_g56sb")
 text = "20"
+horizontal_alignment = 1
 
 [node name="HBoxContainer5" type="HBoxContainer" parent="HBoxContainer/HBoxContainer10" unique_id=1667210344]
 layout_mode = 2
@@ -176,7 +189,10 @@ layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 0
 mouse_force_pass_scroll_events = false
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_g56sb")
 text = "20"
+horizontal_alignment = 1
 
 [node name="HBoxContainer6" type="HBoxContainer" parent="HBoxContainer/HBoxContainer10" unique_id=268560119]
 visible = false
@@ -223,7 +239,10 @@ layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 0
 mouse_force_pass_scroll_events = false
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_g56sb")
 text = "20"
+horizontal_alignment = 1
 
 [node name="HBoxContainer8" type="HBoxContainer" parent="HBoxContainer/HBoxContainer10" unique_id=1383007523]
 layout_mode = 2
@@ -246,7 +265,10 @@ layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 0
 mouse_force_pass_scroll_events = false
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_g56sb")
 text = "20"
+horizontal_alignment = 1
 
 [node name="HBoxContainer9" type="HBoxContainer" parent="HBoxContainer/HBoxContainer10" unique_id=537425302]
 visible = false
@@ -278,6 +300,7 @@ text = "20"
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
+tooltip_text = "Passer au tour suivant"
 mouse_force_pass_scroll_events = false
 texture_normal = ExtResource("12_3yqlp")
 ignore_texture_size = true
@@ -297,6 +320,8 @@ size_flags_horizontal = 4
 size_flags_vertical = 6
 mouse_filter = 0
 mouse_force_pass_scroll_events = false
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_g56sb")
 text = "Année : 1490"
 
 [node name="TurnLbl" type="Label" parent="HBoxContainer/VBoxContainer" unique_id=61636118]
@@ -306,6 +331,8 @@ size_flags_horizontal = 4
 size_flags_vertical = 6
 mouse_filter = 0
 mouse_force_pass_scroll_events = false
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_g56sb")
 text = "Tour : 0"
 
 [node name="Pausebtn" type="TextureButton" parent="HBoxContainer" unique_id=1356520887]
@@ -317,3 +344,5 @@ texture_normal = ExtResource("13_7kn40")
 texture_pressed = ExtResource("13_7kn40")
 ignore_texture_size = true
 stretch_mode = 5
+
+[connection signal="pressed" from="HBoxContainer/NextTurnBtn" to="." method="_on_next_turn_btn_pressed"]

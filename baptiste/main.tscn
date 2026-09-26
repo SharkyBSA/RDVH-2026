@@ -196,13 +196,14 @@ sfx = Array[AudioStreamMP3]([ExtResource("21_jhded"), ExtResource("22_fp81k"), E
 color = Color(0.34509805, 0.3254902, 0, 1)
 
 [node name="Ormuz" parent="UI/TownManager" unique_id=725774517 instance=ExtResource("2_eos35")]
-offset_left = 581.0
-offset_top = 115.0
-offset_right = 683.0
-offset_bottom = 166.0
+offset_left = 577.0
+offset_top = 124.0
+offset_right = 679.0
+offset_bottom = 175.0
 town_name = "Ormuz"
 sfx = Array[AudioStreamMP3]([ExtResource("21_jhded"), ExtResource("22_fp81k"), ExtResource("23_3xgaf"), ExtResource("24_upuqf")])
 color = Color(0.34509805, 0.3254902, 0, 1)
+reverse_popup = true
 
 [node name="Debal" parent="UI/TownManager" unique_id=1930254467 instance=ExtResource("2_eos35")]
 offset_left = 764.0
@@ -224,6 +225,16 @@ events = SubResource("Resource_wj50k")
 town_offers = SubResource("Resource_n0y6q")
 
 [node name="Player" parent="." unique_id=1057124744 instance=ExtResource("12_wj50k")]
+inventory = Dictionary[int, float]({
+0: 100.0,
+1: 20.0,
+2: 0.0,
+3: 0.0,
+4: 0.0,
+5: 0.0,
+6: 0.0,
+7: 0.0
+})
 
 [node name="ExpeditionMgr" parent="." unique_id=1818811447 instance=ExtResource("12_n0y6q")]
 
@@ -232,4 +243,6 @@ stream = ExtResource("18_2vfub")
 volume_db = -3.0
 autoplay = true
 
+[connection signal="next_turn" from="UI/Ath" to="TurnManager" method="next_turn"]
 [connection signal="next_turned" from="TurnManager" to="." method="_on_turn_manager_next_turned"]
+[connection signal="updated" from="Player" to="." method="_on_player_updated"]

@@ -1,9 +1,15 @@
 extends Node
 class_name Player
 
-@export var inventory : Dictionary[int,float] = {}
+@export var inventory : Dictionary[int,float] = {}:
+	set(value):
+		inventory = value
+		emit_signal("updated", value)
 
+signal updated(inv)
 signal game_over
+
+func _ready(): emit_signal("updated", inventory)
 
 ##Add (or substract if delta<0) the amount delta to the inventory. resource_key 
 ##identifies the resource to modify
