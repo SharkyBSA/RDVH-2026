@@ -4,15 +4,12 @@ class_name TurnManager
 @export var events : GameEvents 
 @export var town_offers : GameTownOffers
 
-var current_turn := -1
-signal next_turned
-
-func _ready():
-	next_turn()
+var current_turn := 0
+signal next_turned(current_turn: int)
 
 func next_turn() -> void:
 	current_turn += 1
-	next_turned.emit()
+	next_turned.emit(current_turn)
 
 ##Permet de recuper l'event de ce tour
 func get_turn_event() -> Event:
