@@ -13,11 +13,28 @@
 [ext_resource type="AudioStream" uid="uid://cco7pwrxvqbj7" path="res://assets/audio/Stingers/Stinger_Comptoir_Inde_02.mp3" id="5_2vfub"]
 [ext_resource type="AudioStream" uid="uid://d23r314k2ibyn" path="res://assets/audio/Stingers/Stinger_Comptoir_Inde_03.mp3" id="6_ui1tf"]
 [ext_resource type="AudioStream" uid="uid://deh7ar8hpcw73" path="res://assets/audio/Stingers/Stinger_Comptoir_Inde_04.mp3" id="7_m42f4"]
+[ext_resource type="AudioStream" uid="uid://dq1wkf47tehce" path="res://assets/audio/Stingers/Stinger_Comptoir_SriLanka_01.mp3" id="8_51cql"]
+[ext_resource type="AudioStream" uid="uid://b6pqjaef13l3" path="res://assets/audio/Stingers/Stinger_Comptoir_Indonesie_01.mp3" id="8_o3h7a"]
+[ext_resource type="AudioStream" uid="uid://cg772ddcq1lj4" path="res://assets/audio/Stingers/Stinger_Comptoir_Indonesie_02.mp3" id="9_eubu7"]
 [ext_resource type="PackedScene" uid="uid://dytuqo3dprrvw" path="res://baptiste/trade_window.tscn" id="9_wbs85"]
+[ext_resource type="AudioStream" uid="uid://bnckoj0gb1tir" path="res://assets/audio/Stingers/Stinger_Comptoir_Indonesie_03.mp3" id="10_hm3xc"]
 [ext_resource type="PackedScene" uid="uid://diq8sdq1y3pbn" path="res://alice/hud/ath.tscn" id="11_ekwjs"]
+[ext_resource type="AudioStream" uid="uid://lp8xdhxmp05h" path="res://assets/audio/Stingers/Stinger_Comptoir_Indonesie_04.mp3" id="11_vvw5h"]
 [ext_resource type="PackedScene" uid="uid://m0dstgxyqa1g" path="res://alice/expedition_mgr/expedition_mgr.tscn" id="12_n0y6q"]
 [ext_resource type="PackedScene" uid="uid://dhmjmf3wfdx4t" path="res://alice/player/player.tscn" id="12_wj50k"]
+[ext_resource type="AudioStream" uid="uid://70mh8n8dcv7q" path="res://assets/audio/Stingers/Stinger_Comptoir_Siam_01.mp3" id="13_5bulh"]
+[ext_resource type="AudioStream" uid="uid://cwvuxvc1lth10" path="res://assets/audio/Stingers/Stinger_Comptoir_Siam_02.mp3" id="14_i3sme"]
+[ext_resource type="AudioStream" uid="uid://cateykxapphe4" path="res://assets/audio/Stingers/Stinger_Comptoir_Siam_03.mp3" id="15_5bbsv"]
+[ext_resource type="AudioStream" uid="uid://bs6o6a3flhwys" path="res://assets/audio/Stingers/Stinger_Comptoir_Siam_04.mp3" id="16_7s21p"]
+[ext_resource type="AudioStream" uid="uid://ui6lu4dfbjbp" path="res://assets/audio/Stingers/Stinger_Comptoir_AfriqueEst_01.mp3" id="17_igymv"]
 [ext_resource type="AudioStream" uid="uid://b6uucac0mcno7" path="res://assets/audio/Musique/Musique_de_Fond_01.mp3" id="18_2vfub"]
+[ext_resource type="AudioStream" uid="uid://dcwoltrpk5cl2" path="res://assets/audio/Stingers/Stinger_Comptoir_AfriqueEst_02.mp3" id="18_sp1y7"]
+[ext_resource type="AudioStream" uid="uid://qwht0rtcm74h" path="res://assets/audio/Stingers/Stinger_Comptoir_AfriqueEst_03.mp3" id="19_brh71"]
+[ext_resource type="AudioStream" uid="uid://bu5f1a83tdcq1" path="res://assets/audio/Stingers/Stinger_Comptoir_AfriqueEst_04.mp3" id="20_x23lb"]
+[ext_resource type="AudioStream" uid="uid://37cckiwm6rd5" path="res://assets/audio/Stingers/Stinger_Comptoir_MoyenOrient_01.mp3" id="21_jhded"]
+[ext_resource type="AudioStream" uid="uid://b700mpb348bog" path="res://assets/audio/Stingers/Stinger_Comptoir_MoyenOrient_02.mp3" id="22_fp81k"]
+[ext_resource type="AudioStream" uid="uid://d13ny2grvo7tl" path="res://assets/audio/Stingers/Stinger_Comptoir_MoyenOrient_03.mp3" id="23_3xgaf"]
+[ext_resource type="AudioStream" uid="uid://biyuvp1wcros5" path="res://assets/audio/Stingers/Stinger_Comptoir_MoyenOrient_04.mp3" id="24_upuqf"]
 
 [sub_resource type="Resource" id="Resource_wj50k"]
 script = ExtResource("3_n0y6q")
@@ -72,12 +89,13 @@ offset_right = 1026.0
 offset_bottom = 512.0
 town_name = "Calicut"
 start_town = true
+color = Color(0, 0, 0.7, 1)
 
 [node name="Dehli" parent="UI/TownManager" unique_id=2084830226 instance=ExtResource("2_eos35")]
-offset_left = 928.0
-offset_top = 191.0
-offset_right = 1030.0
-offset_bottom = 242.0
+offset_left = 952.0
+offset_top = 188.0
+offset_right = 1054.0
+offset_bottom = 239.0
 town_name = "Dehli"
 threat_level = 5
 sfx = Array[AudioStreamMP3]([ExtResource("4_4hl6o"), ExtResource("5_2vfub"), ExtResource("6_ui1tf"), ExtResource("7_m42f4")])
@@ -88,6 +106,112 @@ offset_top = 379.0
 offset_right = 992.0
 offset_bottom = 430.0
 town_name = "Goa"
+sfx = Array[AudioStreamMP3]([ExtResource("4_4hl6o"), ExtResource("5_2vfub"), ExtResource("6_ui1tf"), ExtResource("7_m42f4")])
+
+[node name="Colombo" parent="UI/TownManager" unique_id=6411554 instance=ExtResource("2_eos35")]
+offset_left = 993.0
+offset_top = 519.0
+offset_right = 1095.0
+offset_bottom = 570.0
+town_name = "Colomba"
+sfx = Array[AudioStreamMP3]([ExtResource("8_51cql")])
+
+[node name="Patna" parent="UI/TownManager" unique_id=85137416 instance=ExtResource("2_eos35")]
+offset_left = 1085.0
+offset_top = 192.0
+offset_right = 1187.0
+offset_bottom = 243.0
+town_name = "Patna"
+sfx = Array[AudioStreamMP3]([ExtResource("4_4hl6o"), ExtResource("5_2vfub"), ExtResource("6_ui1tf"), ExtResource("7_m42f4")])
+
+[node name="Chaul" parent="UI/TownManager" unique_id=1721095960 instance=ExtResource("2_eos35")]
+offset_left = 864.0
+offset_top = 313.0
+offset_right = 966.0
+offset_bottom = 364.0
+town_name = "Chaul"
+sfx = Array[AudioStreamMP3]([ExtResource("4_4hl6o"), ExtResource("5_2vfub"), ExtResource("6_ui1tf"), ExtResource("7_m42f4")])
+
+[node name="Malacca" parent="UI/TownManager" unique_id=135587927 instance=ExtResource("2_eos35")]
+offset_left = 1422.0
+offset_top = 604.0
+offset_right = 1524.0
+offset_bottom = 655.0
+town_name = "Malacca"
+sfx = Array[AudioStreamMP3]([ExtResource("8_o3h7a"), ExtResource("9_eubu7"), ExtResource("10_hm3xc"), ExtResource("11_vvw5h")])
+color = Color(0, 0.39607844, 0, 1)
+
+[node name="Timor" parent="UI/TownManager" unique_id=520961299 instance=ExtResource("2_eos35")]
+offset_left = 1819.0
+offset_top = 843.0
+offset_right = 1921.0
+offset_bottom = 894.0
+town_name = "Timor"
+sfx = Array[AudioStreamMP3]([ExtResource("8_o3h7a"), ExtResource("9_eubu7"), ExtResource("10_hm3xc"), ExtResource("11_vvw5h")])
+color = Color(0, 0.39607844, 0, 1)
+
+[node name="Syriam" parent="UI/TownManager" unique_id=1318445323 instance=ExtResource("2_eos35")]
+offset_left = 1259.0
+offset_top = 326.0
+offset_right = 1361.0
+offset_bottom = 377.0
+town_name = "Syriam"
+sfx = Array[AudioStreamMP3]([ExtResource("13_5bulh"), ExtResource("14_i3sme"), ExtResource("15_5bbsv"), ExtResource("16_7s21p")])
+color = Color(0, 0.39607844, 0, 1)
+
+[node name="Chatigaon" parent="UI/TownManager" unique_id=1687683668 instance=ExtResource("2_eos35")]
+offset_left = 1209.0
+offset_top = 220.0
+offset_right = 1311.0
+offset_bottom = 271.0
+town_name = "Chatigaon"
+sfx = Array[AudioStreamMP3]([ExtResource("13_5bulh"), ExtResource("14_i3sme"), ExtResource("15_5bbsv"), ExtResource("16_7s21p")])
+color = Color(0, 0.39607844, 0, 1)
+
+[node name="Soffala" parent="UI/TownManager" unique_id=1945968804 instance=ExtResource("2_eos35")]
+offset_left = 178.0
+offset_top = 1033.0
+offset_right = 280.0
+offset_bottom = 1084.0
+town_name = "Soffala"
+sfx = Array[AudioStreamMP3]([ExtResource("17_igymv"), ExtResource("18_sp1y7"), ExtResource("19_brh71"), ExtResource("20_x23lb")])
+color = Color(0.34509805, 0.3254902, 0, 1)
+
+[node name="Zanzibar" parent="UI/TownManager" unique_id=1036590766 instance=ExtResource("2_eos35")]
+offset_left = 214.0
+offset_top = 760.0
+offset_right = 316.0
+offset_bottom = 811.0
+town_name = "Zanzibar"
+sfx = Array[AudioStreamMP3]([ExtResource("17_igymv"), ExtResource("18_sp1y7"), ExtResource("19_brh71"), ExtResource("20_x23lb")])
+color = Color(0.34509805, 0.3254902, 0, 1)
+
+[node name="Aden" parent="UI/TownManager" unique_id=376978946 instance=ExtResource("2_eos35")]
+offset_left = 349.0
+offset_top = 377.0
+offset_right = 451.0
+offset_bottom = 428.0
+town_name = "Aden"
+sfx = Array[AudioStreamMP3]([ExtResource("21_jhded"), ExtResource("22_fp81k"), ExtResource("23_3xgaf"), ExtResource("24_upuqf")])
+color = Color(0.34509805, 0.3254902, 0, 1)
+
+[node name="Ormuz" parent="UI/TownManager" unique_id=725774517 instance=ExtResource("2_eos35")]
+offset_left = 581.0
+offset_top = 115.0
+offset_right = 683.0
+offset_bottom = 166.0
+town_name = "Ormuz"
+sfx = Array[AudioStreamMP3]([ExtResource("21_jhded"), ExtResource("22_fp81k"), ExtResource("23_3xgaf"), ExtResource("24_upuqf")])
+color = Color(0.34509805, 0.3254902, 0, 1)
+
+[node name="Debal" parent="UI/TownManager" unique_id=1930254467 instance=ExtResource("2_eos35")]
+offset_left = 764.0
+offset_top = 178.0
+offset_right = 866.0
+offset_bottom = 229.0
+town_name = "Debal"
+sfx = Array[AudioStreamMP3]([ExtResource("21_jhded"), ExtResource("22_fp81k"), ExtResource("23_3xgaf"), ExtResource("24_upuqf")])
+color = Color(0.34509805, 0.3254902, 0, 1)
 
 [node name="Ath" parent="UI" unique_id=2026785200 instance=ExtResource("11_ekwjs")]
 layout_mode = 1

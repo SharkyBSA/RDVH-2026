@@ -8,6 +8,8 @@ class_name Town
 @export var threat_level := 0
 @export var sfx : Array[AudioStreamMP3] = []
 @export var start_town := false
+@export var color : Color = Color(0.7, 0, 0)
+@export var reverse_popup := false
 var res_type := 0
 var res_amount := 0
 var added_threat := 0
@@ -15,8 +17,8 @@ signal clicked(display_name, resource, amount, threat)
 
 func _ready():
 	$VBoxContainer/TownName.text = town_name
-	$VBoxContainer/TownName.modulate = Color(0.7, 0, 0) if !start_town else Color(0, 0, 0.7)
-	$VBoxContainer/Icon.modulate = Color(0.7, 0, 0) if !start_town else Color(0, 0, 0.7)
+	$VBoxContainer/TownName.modulate = color
+	$VBoxContainer/Icon.modulate = color
 
 func _process(_delta):
 	if Input.is_action_just_pressed("escape"): get_tree().free()
@@ -35,7 +37,8 @@ func popup(type := 0):
 	$TradeHBox.modulate.a = 1
 	$TradeHBox.show()
 	var tween = create_tween()
-	tween.tween_property($TradeHBox, "position:y", -80, 0.5).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_SPRING)
+	var new_pos = -80 if !reverse_popup else 45
+	tween.tween_property($TradeHBox, "position:y", new_pos, 0.5).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_SPRING)
 	
 	match type:
 		0:	$TradeHBox/TextureButton/TextureRect.texture = load("res://assets/poivre.png")
