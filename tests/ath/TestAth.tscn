@@ -1,0 +1,95 @@
+[gd_scene format=3 uid="uid://b4u805ghehbq0"]
+
+[ext_resource type="Script" uid="uid://dasusg8vde336" path="res://tests/ath/test_ath.gd" id="1_phf8c"]
+[ext_resource type="PackedScene" uid="uid://diq8sdq1y3pbn" path="res://alice/hud/ath.tscn" id="2_82spe"]
+
+[node name="TestAth" type="Control" unique_id=2085525497]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_phf8c")
+
+[node name="Ath" parent="." unique_id=2026785200 instance=ExtResource("2_82spe")]
+unique_name_in_owner = true
+layout_mode = 1
+
+[node name="next_turn" type="Label" parent="." unique_id=727178816]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 192.0
+offset_top = 246.0
+offset_right = 232.0
+offset_bottom = 269.0
+text = "Next_turn_pressed : 0"
+
+[node name="pause" type="Label" parent="." unique_id=1393383404]
+layout_mode = 0
+offset_left = 196.0
+offset_top = 288.0
+offset_right = 236.0
+offset_bottom = 311.0
+text = "Paused: false"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=720699574]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 124.0
+offset_right = 1412.0
+offset_bottom = 164.0
+
+[node name="Button" type="Button" parent="HBoxContainer" unique_id=1746631138]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Increment"
+
+[node name="Button2" type="Button" parent="HBoxContainer" unique_id=580550892]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Increment"
+
+[node name="Button3" type="Button" parent="HBoxContainer" unique_id=1475356117]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Increment"
+
+[node name="Button4" type="Button" parent="HBoxContainer" unique_id=1259103307]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Increment"
+
+[node name="Button5" type="Button" parent="HBoxContainer" unique_id=1839057405]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Increment"
+
+[node name="Button6" type="Button" parent="HBoxContainer" unique_id=2043757498]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Increment"
+
+[node name="Button7" type="Button" parent="HBoxContainer" unique_id=1616762173]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Increment"
+
+[node name="Button8" type="Button" parent="HBoxContainer" unique_id=1160240632]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Increment"
+
+[node name="Button9" type="Button" parent="HBoxContainer" unique_id=886582390]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Increment"
