@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://copbp3gwvrjgf"]
+
+[ext_resource type="Script" uid="uid://bk8301egkjjjd" path="res://tests/expedition_mgr/test_expedition_mgr.gd" id="1_o3t3a"]
+[ext_resource type="PackedScene" uid="uid://m0dstgxyqa1g" path="res://alice/expedition_mgr/expedition_mgr.tscn" id="2_u6rvu"]
+
+[node name="TestExpeditionMgr" type="Control" unique_id=1364237832]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_o3t3a")
+metadata/_edit_lock_ = true
+
+[node name="ExpeditionMgr" parent="." unique_id=1818811447 instance=ExtResource("2_u6rvu")]
+unique_name_in_owner = true
+
+[node name="next_turn" type="Button" parent="ExpeditionMgr" unique_id=1841535515]
+unique_name_in_owner = true
+offset_left = 345.0
+offset_top = 187.0
+offset_right = 436.0
+offset_bottom = 218.0
+text = "Next turnz"
