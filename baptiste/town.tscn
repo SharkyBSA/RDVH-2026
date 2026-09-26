@@ -1,0 +1,137 @@
+[gd_scene format=3 uid="uid://gebyhljdrb4c"]
+
+[ext_resource type="Texture2D" uid="uid://bqn70ylniojqd" path="res://assets/town.png" id="1_40qig"]
+[ext_resource type="Script" uid="uid://b2018yrpiqsbb" path="res://baptiste/town.gd" id="1_isdnv"]
+[ext_resource type="Texture2D" uid="uid://btm2fjme7qloh" path="res://assets/arrow.png" id="3_5wbrl"]
+[ext_resource type="Texture2D" uid="uid://dxvqldpv5c6pn" path="res://assets/icons/placeholder.png" id="4_ghyft"]
+
+[node name="Town" type="Control" unique_id=2064836468]
+z_index = 2
+layout_mode = 3
+anchors_preset = 0
+offset_right = 102.0
+offset_bottom = 51.0
+script = ExtResource("1_isdnv")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=588350294]
+layout_mode = 0
+offset_right = 102.0
+offset_bottom = 51.0
+
+[node name="TownName" type="Label" parent="VBoxContainer" unique_id=398786862]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Lorem ipsum"
+
+[node name="Icon" type="TextureRect" parent="VBoxContainer" unique_id=526331112]
+custom_minimum_size = Vector2(20, 20)
+custom_maximum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("1_40qig")
+expand_mode = 2
+
+[node name="TradeHBox" type="HBoxContainer" parent="." unique_id=285110623]
+z_index = 1
+layout_mode = 0
+offset_top = 20.0
+offset_right = 102.0
+offset_bottom = 60.0
+alignment = 1
+
+[node name="UpVBox" type="VBoxContainer" parent="TradeHBox" unique_id=841393989]
+layout_mode = 2
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="ArrowUp" type="TextureRect" parent="TradeHBox/UpVBox" unique_id=2067189434]
+modulate = Color(0, 1, 0, 1)
+custom_minimum_size = Vector2(40, 10)
+custom_maximum_size = Vector2(20, 10)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("3_5wbrl")
+
+[node name="TextureButton" type="TextureButton" parent="TradeHBox/UpVBox" unique_id=160291219]
+custom_minimum_size = Vector2(40, 20)
+custom_maximum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("1_40qig")
+stretch_mode = 0
+
+[node name="TextureRect" type="TextureRect" parent="TradeHBox/UpVBox/TextureButton" unique_id=1850787545]
+custom_minimum_size = Vector2(5, 5)
+custom_maximum_size = Vector2(5, 5)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -81.0
+offset_top = -81.0
+offset_right = 81.0
+offset_bottom = 81.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_ghyft")
+
+[node name="ArrowDown" type="TextureRect" parent="TradeHBox/UpVBox" unique_id=1777700589]
+modulate = Color(1, 0, 0, 0)
+custom_minimum_size = Vector2(40, 10)
+custom_maximum_size = Vector2(20, 10)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("3_5wbrl")
+flip_v = true
+
+[node name="DownVBox" type="VBoxContainer" parent="TradeHBox" unique_id=1031098427]
+layout_mode = 2
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="ArrowUp" type="TextureRect" parent="TradeHBox/DownVBox" unique_id=721953880]
+modulate = Color(0, 1, 0, 0)
+custom_minimum_size = Vector2(40, 10)
+custom_maximum_size = Vector2(20, 10)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("3_5wbrl")
+
+[node name="TextureButton" type="TextureButton" parent="TradeHBox/DownVBox" unique_id=328394318]
+custom_minimum_size = Vector2(40, 20)
+custom_maximum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("1_40qig")
+stretch_mode = 0
+
+[node name="TextureRect" type="TextureRect" parent="TradeHBox/DownVBox/TextureButton" unique_id=1447915287]
+custom_minimum_size = Vector2(5, 5)
+custom_maximum_size = Vector2(5, 5)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -81.0
+offset_top = -81.0
+offset_right = 81.0
+offset_bottom = 81.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_ghyft")
+
+[node name="ArrowDown" type="TextureRect" parent="TradeHBox/DownVBox" unique_id=2036918227]
+modulate = Color(1, 0, 0, 1)
+custom_minimum_size = Vector2(40, 10)
+custom_maximum_size = Vector2(20, 10)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("3_5wbrl")
+flip_v = true
+
+[connection signal="pressed" from="TradeHBox/UpVBox/TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="TradeHBox/DownVBox/TextureButton" to="." method="_on_texture_button_pressed"]
