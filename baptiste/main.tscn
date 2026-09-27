@@ -5,11 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://dgfv6e3vip0a4" path="res://alice/turn_mgr/turn_manager.tscn" id="1_olmnm"]
 [ext_resource type="Script" uid="uid://dji1gvea14ls8" path="res://alice/turn_mgr/events/turn_event.gd" id="2_ekwjs"]
 [ext_resource type="PackedScene" uid="uid://gebyhljdrb4c" path="res://baptiste/town.tscn" id="2_eos35"]
-[ext_resource type="Script" uid="uid://bu7cj6yg78hg2" path="res://alice/turn_mgr/town_offer/game_town_offers.gd" id="2_wbs85"]
-[ext_resource type="Script" uid="uid://0lvj1rsiyhjb" path="res://alice/turn_mgr/town_offer/array_town_offers.gd" id="3_5iygx"]
 [ext_resource type="Script" uid="uid://drfbg3jb0nf5x" path="res://alice/turn_mgr/events/game_events.gd" id="3_n0y6q"]
 [ext_resource type="AudioStream" uid="uid://b2n4cs3se2cw8" path="res://assets/audio/Stingers/Stinger_Comptoir_Inde_01.mp3" id="4_4hl6o"]
-[ext_resource type="Script" uid="uid://76olk5l6av78" path="res://alice/turn_mgr/town_offer/town_proposition.gd" id="4_ekwjs"]
 [ext_resource type="AudioStream" uid="uid://cco7pwrxvqbj7" path="res://assets/audio/Stingers/Stinger_Comptoir_Inde_02.mp3" id="5_2vfub"]
 [ext_resource type="AudioStream" uid="uid://d23r314k2ibyn" path="res://assets/audio/Stingers/Stinger_Comptoir_Inde_03.mp3" id="6_ui1tf"]
 [ext_resource type="AudioStream" uid="uid://deh7ar8hpcw73" path="res://assets/audio/Stingers/Stinger_Comptoir_Inde_04.mp3" id="7_m42f4"]
@@ -35,28 +32,11 @@
 [ext_resource type="AudioStream" uid="uid://b700mpb348bog" path="res://assets/audio/Stingers/Stinger_Comptoir_MoyenOrient_02.mp3" id="22_fp81k"]
 [ext_resource type="AudioStream" uid="uid://d13ny2grvo7tl" path="res://assets/audio/Stingers/Stinger_Comptoir_MoyenOrient_03.mp3" id="23_3xgaf"]
 [ext_resource type="AudioStream" uid="uid://biyuvp1wcros5" path="res://assets/audio/Stingers/Stinger_Comptoir_MoyenOrient_04.mp3" id="24_upuqf"]
+[ext_resource type="Resource" uid="uid://dx8aug05s0qor" path="res://assets/trading/GameOffers1.tres" id="30_m20qg"]
 
 [sub_resource type="Resource" id="Resource_wj50k"]
 script = ExtResource("3_n0y6q")
 metadata/_custom_type_script = "uid://drfbg3jb0nf5x"
-
-[sub_resource type="Resource" id="Resource_sp1y7"]
-script = ExtResource("4_ekwjs")
-town = 1
-is_buying = true
-merchadise = 1
-amount = 10.0
-metadata/_custom_type_script = "uid://76olk5l6av78"
-
-[sub_resource type="Resource" id="Resource_igymv"]
-script = ExtResource("3_5iygx")
-offers = Array[ExtResource("4_ekwjs")]([SubResource("Resource_sp1y7")])
-metadata/_custom_type_script = "uid://0lvj1rsiyhjb"
-
-[sub_resource type="Resource" id="Resource_n0y6q"]
-script = ExtResource("2_wbs85")
-town_offers = Array[ExtResource("3_5iygx")]([SubResource("Resource_igymv")])
-metadata/_custom_type_script = "uid://bu7cj6yg78hg2"
 
 [sub_resource type="Curve2D" id="Curve2D_igymv"]
 _data = {
@@ -239,7 +219,7 @@ layout_mode = 1
 [node name="TurnManager" parent="." unique_id=610062439 instance=ExtResource("1_olmnm")]
 unique_name_in_owner = true
 events = SubResource("Resource_wj50k")
-town_offers = SubResource("Resource_n0y6q")
+town_offers = ExtResource("30_m20qg")
 
 [node name="Player" parent="." unique_id=1057124744 instance=ExtResource("12_wj50k")]
 unique_name_in_owner = true
