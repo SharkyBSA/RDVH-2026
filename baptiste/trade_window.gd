@@ -21,6 +21,8 @@ var destination : int = 0
 var cost := 0
 var buy := false
 var merc := 0
+var by_sea := false
+var town : Town
 signal launch_expedition(expedition: Expedition)
 
 func _ready():
@@ -28,11 +30,30 @@ func _ready():
 		town.clicked.connect(popup)
 
 func update_cost()->void:
-	cost=turn * 5 + trade_amount * 3 + guard_amount * 2
+	var turn_cost := 0
+	var unit_size := 0
+	match town.transport_mode:
+		0:
+			turn_cost = 5
+			unit_size = 20
+		1:
+			turn_cost = 17
+			unit_size = 60
+		2:
+			turn = 30
+			unit_size = 100
+	#cost = turn * turn_cost + trade_amount * Merchandise.prices[merc] * int(buy) + guard_amount * 5
+	cost = trade_amount * Merchandise.prices[merc] * 0.5 + \
+		ceil(float(trade_amount) / unit_size) * turn_cost * turn + guard_amount * turn if buy else\
+		ceil(float(trade_amount) / unit_size) * turn_cost * turn + guard_amount * turn
 	%CostLabel.text = "Coût de l'expédition : "+str(cost)
+	print(ceil(float(trade_amount) / unit_size))
 
 ## Shows the trade window
-func popup(town_name : String, town_offer : TownOffer, transport_turn := 1):
+func popup(trade_town : Town, town_offer : TownOffer, transport_turn := 1):
+	$TradeBox/HBoxContainer/VBoxContainer/TextureRect.texture = load("res://assets/transport/boat.png") \
+		if by_sea else load("res://assets/Trading_interface/Chariot_V1.png")
+	town = trade_town
 	# Animation
 	var tween = create_tween()
 	tween.set_parallel()
@@ -40,7 +61,7 @@ func popup(town_name : String, town_offer : TownOffer, transport_turn := 1):
 	tween.tween_property(self, "anchor_bottom", 0.9, 1).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_EXPO)
 	
 	# Setups all base values
-	$Title.text = "Lancement d'expédition vers %s" % town_name
+	$Title.text = "Lancement d'expédition vers %s" % town.town_name
 	trade_amount = 0
 	%TradeLabel.text = "0"
 	%LabelShipping.text = "\nCargo 0"
@@ -59,11 +80,14 @@ func popup(town_name : String, town_offer : TownOffer, transport_turn := 1):
 	%GuardButtonAdd.disabled = true if %GuardProgressBar.value <= 0 else false
 	%GuardButtonAdd.modulate = Color(0.6, 0.6, 0.6) if %GuardButtonAdd.disabled else Color.WHITE
 	
-	%CostLabel.text = "Coût de l'expédition : %d" % [turn * 5]
+	%CostLabel.text = "Coût de l'expédition : 0"
 	%DurationLabel.text = "Durée de l'expédition : %d %s" % [turn, "tour" if turn <= 1 else "tours"]
 	
 	buy = town_offer.is_buying
 	merc = town_offer.merchadise
+	
+	_on_button_guard_pressed(0)
+	_on_button_trade_pressed(0)
 # Hide the window
 func disapear()->void:
 	var tween = create_tween()
@@ -81,7 +105,7 @@ func _on_button_trade_pressed(amount : int):
 	%TradeButtonSubtract.disabled = false if trade_amount >= 1 else true
 	%TradeButtonSubtract.modulate = Color(0.6, 0.6, 0.6) if %TradeButtonSubtract.disabled else Color.WHITE
 	%TradeLabel.text = str(trade_amount)
-	var new_amount = trade_amount * 2
+	var new_amount = trade_amount
 	if new_amount > %TradeProgressBar.max_value: new_amount = %TradeProgressBar.max_value
 	%LabelShipping.text = "\nCargo %d" % new_amount
 	%TradeProgressBar.value = new_amount
@@ -105,7 +129,7 @@ func _on_button_guard_pressed(amount : int):
 
 # Checks if enough gold or resources to trade. Min 1 trade cart/boat to trade.
 func check_legality():
-	if trade_amount == 0 or cost > %Player.get_resource_amount(0) or buy and trade_amount * 2 > %Player.get_resource_amount(merch_type):
+	if trade_amount == 0 or cost > %Player.get_resource_amount(0) or buy and trade_amount > %Player.get_resource_amount(merch_type):
 		%LaunchExpedition.disabled = true
 		%LaunchExpedition.modulate = Color(0.6, 0.6, 0.6)
 	else:

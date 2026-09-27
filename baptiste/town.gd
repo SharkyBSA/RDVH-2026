@@ -2,7 +2,7 @@ extends Control
 class_name Town
 
 @export var town_name := ""
-@export var transport_on_sea := false
+@export var transport_mode := 0
 @export var transport_turn := 1
 @export var transport_threat := 0
 @export var threat_level := 0
@@ -27,7 +27,7 @@ func _ready():
 
 func _on_texture_button_pressed():
 	if $TradeHBox.modulate.a == 1:
-		emit_signal("clicked", town_name, current_offer, transport_turn)
+		emit_signal("clicked", self, current_offer, transport_turn)
 		$AudioStreamPlayer.stream = sfx[randi_range(0, sfx.size()-1)]
 		%Music.volume_db = -15
 		$AudioStreamPlayer.play()
