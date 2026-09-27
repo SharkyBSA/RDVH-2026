@@ -19,6 +19,17 @@ func _ready() -> void:
 
 func set_text(text : String)->void:
 	text_lbl.text=text
+	if event_type == Event.Type.GAME_OVER:
+		var player : Player = %Player
+		text_lbl.text=text+"\n Merci d'avoir joue ! Score: "+str(calcul_score())
+
+func calcul_score()->int:
+	var player : Player = %Player
+	var score : int =0;
+	for res in player.inventory:
+		score+=player.inventory[res]*Merchandise.prices[res]
+	return score
+
 
 func set_type(type : Event.Type)->void:
 	event_type = type
