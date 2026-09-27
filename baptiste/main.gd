@@ -44,12 +44,19 @@ func prepare_turn()->void:
 
 func apply_event(event : Event) ->void:
 	if not event.text.is_empty():
+		event_win.set_type(event.type)
 		pop_event_win(event.text)
 	var town : Town = town_manager.get_child(event.target_town)
 	if town == null:
 		return
-	town.min_guards+= event.increase_min_guards
-	town.threat_level += event.threat_increase
+	
+	if event.type == Event.Type.CHANTAGE:
+		for town_a in town_manager.get_children():
+			town_a.min_guards+= event.increase_min_guards
+			
+	#elif event.type == Event.Type.ATTACK && event.target_town == 0:
+		#for town_a in town_manager.get_children():
+			#town_a.threat_level+= event.threat_increase
 
 func pop_event_win(text: String)->void:
 	event_win.set_text(text)
