@@ -318,7 +318,7 @@ mouse_filter = 0
 mouse_force_pass_scroll_events = false
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_g56sb")
-text = "Année : 1490"
+text = "Année : 1501"
 
 [node name="TurnLbl" type="Label" parent="HBoxContainer/VBoxContainer" unique_id=61636118]
 unique_name_in_owner = true
