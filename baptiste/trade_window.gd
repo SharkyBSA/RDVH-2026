@@ -21,7 +21,6 @@ var destination : int = 0
 var cost := 0
 var buy := false
 var merc := 0
-var by_sea := false
 var town : Town
 signal launch_expedition(expedition: Expedition)
 
@@ -40,7 +39,7 @@ func update_cost()->void:
 			turn_cost = 17
 			unit_size = 60
 		2:
-			turn = 30
+			turn_cost = 30
 			unit_size = 100
 	#cost = turn * turn_cost + trade_amount * Merchandise.prices[merc] * int(buy) + guard_amount * 5
 	cost = trade_amount * Merchandise.prices.get(merc) * 0.5 + \
@@ -51,9 +50,9 @@ func update_cost()->void:
 	
 ## Shows the trade window
 func popup(trade_town : Town, town_offer : TownOffer, transport_turn := 1):
-	$TradeBox/HBoxContainer/VBoxContainer/TextureRect.texture = load("res://assets/transport/boat.png") \
-		if by_sea else load("res://assets/Trading_interface/Chariot_V1.png")
 	town = trade_town
+	$TradeBox/HBoxContainer/VBoxContainer/TextureRect.texture = load("res://assets/transport/boat.png") \
+		if town.transport_mode else load("res://assets/Trading_interface/Chariot_V1.png")
 	# Animation
 	var tween = create_tween()
 	tween.set_parallel()
@@ -84,12 +83,13 @@ func popup(trade_town : Town, town_offer : TownOffer, transport_turn := 1):
 	%DurationLabel.text = "Durée de l'expédition : %d %s" % [turn, "tour" if turn <= 1 else "tours"]
 	
 	buy = !town_offer.is_buying
-	merc = town_offer.merchadise
 	
 	_on_button_guard_pressed(0)
 	_on_button_trade_pressed(0)
 	
 	%GainLabel.visible = !buy
+	
+	merc = town_offer.merchadise
 # Hide the window
 func disapear()->void:
 	var tween = create_tween()
@@ -131,7 +131,7 @@ func _on_button_guard_pressed(amount : int):
 
 # Checks if enough gold or resources to trade. Min 1 trade cart/boat to trade.
 func check_legality():
-	if trade_amount == 0 or cost > %Player.get_resource_amount(0) or buy and trade_amount > %Player.get_resource_amount(merch_type):
+	if trade_amount == 0 or cost > %Player.get_resource_amount(0) or !buy and trade_amount > %Player.get_resource_amount(merc):
 		%LaunchExpedition.disabled = true
 		%LaunchExpedition.modulate = Color(0.6, 0.6, 0.6)
 	else:

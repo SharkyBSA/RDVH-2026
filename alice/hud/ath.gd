@@ -18,12 +18,12 @@ class_name Ath
 
 @onready var resource_labels : Dictionary[int, Label]={
 	0:gold,
-	1:pepper,
-	2:silk,
-	3:ivory,
-	4:coton,
-	6:spice,
-	7:animals}
+	7:pepper,
+	1:silk,
+	2:ivory,
+	3:coton,
+	4:spice,
+	5:animals}
 
 signal next_turn
 signal pause_btn_pressed

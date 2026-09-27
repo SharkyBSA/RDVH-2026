@@ -3,6 +3,14 @@
 [ext_resource type="Script" uid="uid://dji1gvea14ls8" path="res://alice/turn_mgr/events/turn_event.gd" id="1_pmwtw"]
 [ext_resource type="Script" uid="uid://drfbg3jb0nf5x" path="res://alice/turn_mgr/events/game_events.gd" id="2_j6330"]
 
+[sub_resource type="Resource" id="Resource_hinea"]
+script = ExtResource("1_pmwtw")
+target_town = 7
+type = 2
+text = "L'océan est agité, rendant le transport maritime plus difficile."
+threat_increase = 25
+metadata/_custom_type_script = "uid://dji1gvea14ls8"
+
 [sub_resource type="Resource" id="Resource_0lpg8"]
 script = ExtResource("1_pmwtw")
 target_town = 9
@@ -13,5 +21,5 @@ metadata/_custom_type_script = "uid://dji1gvea14ls8"
 
 [resource]
 script = ExtResource("2_j6330")
-events = Array[ExtResource("1_pmwtw")]([null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, SubResource("Resource_0lpg8"), null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null])
+events = Array[ExtResource("1_pmwtw")]([null, null, null, null, null, null, null, null, null, null, SubResource("Resource_hinea"), null, null, null, null, null, SubResource("Resource_0lpg8"), null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null])
 metadata/_custom_type_script = "uid://drfbg3jb0nf5x"

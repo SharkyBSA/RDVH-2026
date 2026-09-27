@@ -43,13 +43,13 @@ func popup(type := 0, res := 0):
 	tween.tween_property($TradeHBox, "position:y", new_pos, 0.5).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_SPRING)
 	_bubble_displayed=true
 	match res:
-		1:	$TradeHBox/TextureButton/TextureRect.texture = load("res://assets/poivre.png")
-		2:	$TradeHBox/TextureButton/TextureRect.texture = load("res://assets/icons/ettoffe.png")
-		3:	$TradeHBox/TextureButton/TextureRect.texture = load("res://assets/ivoire.png")
-		4:	$TradeHBox/TextureButton/TextureRect.texture = load("res://assets/icons/Coton.png")
-		5:	$TradeHBox/TextureButton/TextureRect.texture = load("res://assets/icons/pierres.png")
-		6:	$TradeHBox/TextureButton/TextureRect.texture = load("res://assets/icons/epices.png")
-		7:	$TradeHBox/TextureButton/TextureRect.texture = load("res://assets/icons/chevaux.png")
+		Merchandise.Type.PEPPER:	$TradeHBox/TextureButton/TextureRect.texture = load("res://assets/poivre.png")
+		Merchandise.Type.SILK:	$TradeHBox/TextureButton/TextureRect.texture = load("res://assets/icons/ettoffe.png")
+		Merchandise.Type.IVORY:	$TradeHBox/TextureButton/TextureRect.texture = load("res://assets/ivoire.png")
+		Merchandise.Type.COTON:	$TradeHBox/TextureButton/TextureRect.texture = load("res://assets/icons/Coton.png")
+		Merchandise.Type.GEMS:	$TradeHBox/TextureButton/TextureRect.texture = load("res://assets/icons/pierres.png")
+		Merchandise.Type.SPICE:	$TradeHBox/TextureButton/TextureRect.texture = load("res://assets/icons/epices.png")
+		Merchandise.Type.ANIMALS:	$TradeHBox/TextureButton/TextureRect.texture = load("res://assets/icons/chevaux.png")
 
 func hide_popup():
 	if not _bubble_displayed:

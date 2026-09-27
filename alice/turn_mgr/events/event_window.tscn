@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://u2bpiwo7445n" path="res://alice/turn_mgr/events/event_window.gd" id="2_py3il"]
 [ext_resource type="Texture2D" uid="uid://6sfivald5ieo" path="res://assets/BoxEvent.png" id="3_py3il"]
 [ext_resource type="Texture2D" uid="uid://bs228p0d77lpg" path="res://assets/Trading_interface/CrossV1.png" id="3_tmb3a"]
+[ext_resource type="FontFile" uid="uid://c3v83r2x1hqbg" path="res://assets/Indira_K.ttf" id="4_5q70d"]
 
 [sub_resource type="Theme" id="Theme_ox55c"]
 Label/font_sizes/font_size = 26
@@ -31,6 +32,7 @@ stretch_mode = 5
 
 [node name="TextLbl" type="Label" parent="." unique_id=1527092959]
 unique_name_in_owner = true
+custom_maximum_size = Vector2(670, -1)
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.15
@@ -39,7 +41,10 @@ anchor_right = 0.85
 anchor_bottom = 0.7
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_5q70d")
 text = "Lorem Ipsum"
+autowrap_mode = 2
 
 [node name="ExitBtn" type="TextureButton" parent="." unique_id=1160621341]
 unique_name_in_owner = true

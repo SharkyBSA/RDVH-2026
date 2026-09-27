@@ -271,6 +271,7 @@ offset_top = 519.0
 offset_right = 1095.0
 offset_bottom = 570.0
 town_name = "Colomba"
+transport_mode = 1
 index = 4
 sfx = Array[AudioStreamMP3]([ExtResource("8_51cql")])
 
@@ -292,6 +293,7 @@ offset_top = 377.0
 offset_right = 451.0
 offset_bottom = 428.0
 town_name = "Aden"
+transport_mode = 2
 transport_turn = 3
 index = 6
 sfx = Array[AudioStreamMP3]([ExtResource("21_jhded"), ExtResource("22_fp81k"), ExtResource("23_3xgaf"), ExtResource("24_upuqf")])
@@ -304,6 +306,7 @@ offset_top = 122.0
 offset_right = 679.0
 offset_bottom = 173.0
 town_name = "Ormuz"
+transport_mode = 1
 transport_turn = 3
 index = 7
 sfx = Array[AudioStreamMP3]([ExtResource("21_jhded"), ExtResource("22_fp81k"), ExtResource("23_3xgaf"), ExtResource("24_upuqf")])
@@ -317,6 +320,7 @@ offset_top = 179.0
 offset_right = 866.0
 offset_bottom = 230.0
 town_name = "Debal"
+transport_mode = 1
 transport_turn = 2
 index = 8
 sfx = Array[AudioStreamMP3]([ExtResource("21_jhded"), ExtResource("22_fp81k"), ExtResource("23_3xgaf"), ExtResource("24_upuqf")])
@@ -329,6 +333,7 @@ offset_top = 1033.0
 offset_right = 280.0
 offset_bottom = 1084.0
 town_name = "Soffala"
+transport_mode = 2
 transport_turn = 5
 index = 9
 sfx = Array[AudioStreamMP3]([ExtResource("17_igymv"), ExtResource("18_sp1y7"), ExtResource("19_brh71"), ExtResource("20_x23lb")])
@@ -341,6 +346,7 @@ offset_top = 760.0
 offset_right = 316.0
 offset_bottom = 811.0
 town_name = "Zanzibar"
+transport_mode = 2
 transport_turn = 4
 index = 10
 sfx = Array[AudioStreamMP3]([ExtResource("17_igymv"), ExtResource("18_sp1y7"), ExtResource("19_brh71"), ExtResource("20_x23lb")])
@@ -353,6 +359,7 @@ offset_top = 604.0
 offset_right = 1524.0
 offset_bottom = 655.0
 town_name = "Malacca"
+transport_mode = 2
 transport_turn = 4
 index = 11
 sfx = Array[AudioStreamMP3]([ExtResource("8_o3h7a"), ExtResource("9_eubu7"), ExtResource("10_hm3xc"), ExtResource("11_vvw5h")])
@@ -365,6 +372,7 @@ offset_top = 843.0
 offset_right = 1921.0
 offset_bottom = 894.0
 town_name = "Timor"
+transport_mode = 2
 transport_turn = 5
 index = 12
 sfx = Array[AudioStreamMP3]([ExtResource("8_o3h7a"), ExtResource("9_eubu7"), ExtResource("10_hm3xc"), ExtResource("11_vvw5h")])
@@ -377,6 +385,7 @@ offset_top = 220.0
 offset_right = 1311.0
 offset_bottom = 271.0
 town_name = "Chatigaon"
+transport_mode = 1
 transport_turn = 3
 index = 13
 sfx = Array[AudioStreamMP3]([ExtResource("13_5bulh"), ExtResource("14_i3sme"), ExtResource("15_5bbsv"), ExtResource("16_7s21p")])
@@ -389,6 +398,7 @@ offset_top = 326.0
 offset_right = 1361.0
 offset_bottom = 377.0
 town_name = "Syriam"
+transport_mode = 2
 transport_turn = 3
 index = 14
 sfx = Array[AudioStreamMP3]([ExtResource("13_5bulh"), ExtResource("14_i3sme"), ExtResource("15_5bbsv"), ExtResource("16_7s21p")])
@@ -396,6 +406,7 @@ color = Color(0, 0.39607844, 0, 1)
 
 [node name="EventWindow" parent="UI" unique_id=678875500 instance=ExtResource("28_0lpg8")]
 unique_name_in_owner = true
+visible = false
 z_index = 3
 layout_mode = 1
 offset_left = -8.0
@@ -417,13 +428,13 @@ town_offers = ExtResource("30_m20qg")
 unique_name_in_owner = true
 inventory = Dictionary[int, float]({
 0: 2500.0,
-1: 20.0,
+1: 0.0,
 2: 0.0,
 3: 0.0,
 4: 0.0,
 5: 0.0,
 6: 0.0,
-7: 0.0
+7: 20.0
 })
 
 [node name="ExpeditionMgr" parent="." unique_id=1818811447 node_paths=PackedStringArray("destination_paths") instance=ExtResource("12_n0y6q")]
