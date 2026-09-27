@@ -293,10 +293,11 @@ sfx = Array[AudioStreamMP3]([ExtResource("8_51cql")])
 
 [node name="Patna" parent="UI/TownManager" unique_id=85137416 instance=ExtResource("2_eos35")]
 layout_mode = 1
-offset_left = 1085.0
-offset_top = 192.0
-offset_right = 1187.0
-offset_bottom = 243.0
+anchors_preset = -1
+anchor_left = 0.567
+anchor_top = 0.173
+anchor_right = 0.567
+anchor_bottom = 0.173
 town_name = "Patna"
 transport_turn = 2
 threat_level = 5
