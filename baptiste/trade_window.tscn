@@ -635,8 +635,8 @@ grow_horizontal = 0
 text = "X"
 
 [connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]
-[connection signal="pressed" from="TradeBox/HBoxContainer/VBoxContainer/HBoxContainer/TradeButtonSubtract" to="." method="_on_button_trade_pressed" binds= [-1]]
-[connection signal="pressed" from="TradeBox/HBoxContainer/VBoxContainer/HBoxContainer/TradeButtonAdd" to="." method="_on_button_trade_pressed" binds= [1]]
+[connection signal="pressed" from="TradeBox/HBoxContainer/VBoxContainer/HBoxContainer/TradeButtonSubtract" to="." method="_on_button_trade_pressed" binds= [-10]]
+[connection signal="pressed" from="TradeBox/HBoxContainer/VBoxContainer/HBoxContainer/TradeButtonAdd" to="." method="_on_button_trade_pressed" binds= [10]]
 [connection signal="pressed" from="GuardBox/HBoxContainer/VBoxContainer/HBoxContainer/GuardButtonSubtract" to="." method="_on_button_guard_pressed" binds= [-1]]
 [connection signal="pressed" from="GuardBox/HBoxContainer/VBoxContainer/HBoxContainer/GuardButtonAdd" to="." method="_on_button_guard_pressed" binds= [1]]
 [connection signal="pressed" from="InfoBox/LaunchExpedition" to="." method="_on_launch_expedition_pressed"]
