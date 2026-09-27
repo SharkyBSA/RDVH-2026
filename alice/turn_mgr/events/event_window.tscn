@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://c4x4okwk05cym"]
+
+[ext_resource type="FontFile" uid="uid://vaw6peo6gunr" path="res://assets/CharpentierRenRed-Demi.ttf" id="1_xx5ed"]
+[ext_resource type="Texture2D" uid="uid://bftdwlrbfropx" path="res://assets/Mer.png" id="2_tmb3a"]
+[ext_resource type="Texture2D" uid="uid://bs228p0d77lpg" path="res://assets/Trading_interface/CrossV1.png" id="3_tmb3a"]
+
+[sub_resource type="Theme" id="Theme_ox55c"]
+Label/font_sizes/font_size = 26
+Label/fonts/font = ExtResource("1_xx5ed")
+
+[node name="EventWindow" type="Control" unique_id=678875500]
+layout_mode = 3
+anchor_left = 0.25
+anchor_top = 0.2
+anchor_right = 0.75
+anchor_bottom = 0.8
+theme = SubResource("Theme_ox55c")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1963721651]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_tmb3a")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextLbl" type="Label" parent="." unique_id=1527092959]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Lorem Ipsum"
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=1160621341]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture_normal = ExtResource("3_tmb3a")
+texture_pressed = ExtResource("3_tmb3a")
