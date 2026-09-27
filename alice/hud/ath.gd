@@ -41,7 +41,7 @@ func set_ressource_amount(res_key :int , amount: float)->void:
 
 func set_turn(turn : int)->void:
 	turn_lbl.text = "Tour : "+str(turn)
-	year_lbl.text = "Année : "+str(1490+floori(turn/4.0))
+	year_lbl.text = "Année : "+str(1501+floori(turn/4.0))
 
 func _on_next_turn_btn_pressed():
 	emit_signal("next_turn")
