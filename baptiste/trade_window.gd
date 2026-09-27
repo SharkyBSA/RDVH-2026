@@ -19,10 +19,12 @@ var threat := 0
 var turn := 0
 var destination : int = 0
 var cost := 0
+var buy := false
+var merc := 0
 signal launch_expedition(expedition: Expedition)
 
 func _ready():
-	for town in %TownManager.get_children():
+	for town : Town in %TownManager.get_children():
 		town.clicked.connect(popup)
 
 func update_cost()->void:
@@ -55,10 +57,14 @@ func popup(town_name : String, town_offer : TownOffer, transport_turn := 1):
 	destination=town_offer.town
 	%PercentLabel.text = "\n%d%%" % [($%GuardProgressBar.value / 100) * 100]
 	%GuardButtonAdd.disabled = true if %GuardProgressBar.value <= 0 else false
+	%GuardButtonAdd.modulate = Color(0.6, 0.6, 0.6) if %GuardButtonAdd.disabled else Color.WHITE
 	
 	%CostLabel.text = "Coût de l'expédition : %d" % [turn * 5]
 	%DurationLabel.text = "Durée de l'expédition : %d %s" % [turn, "tour" if turn <= 1 else "tours"]
-
+	
+	buy = town_offer.is_buying
+	merc = town_offer.merchadise
+# Hide the window
 func disapear()->void:
 	var tween = create_tween()
 	tween.set_parallel()
@@ -73,21 +79,38 @@ func _on_exit_button_pressed():
 func _on_button_trade_pressed(amount : int):
 	trade_amount += amount
 	%TradeButtonSubtract.disabled = false if trade_amount >= 1 else true
+	%TradeButtonSubtract.modulate = Color(0.6, 0.6, 0.6) if %TradeButtonSubtract.disabled else Color.WHITE
 	%TradeLabel.text = str(trade_amount)
 	var new_amount = trade_amount * 2
 	if new_amount > %TradeProgressBar.max_value: new_amount = %TradeProgressBar.max_value
 	%LabelShipping.text = "\nCargo %d" % new_amount
 	%TradeProgressBar.value = new_amount
 	%TradeButtonAdd.disabled = true if %TradeProgressBar.value >= %TradeProgressBar.max_value else false
+	%TradeButtonAdd.modulate = Color(0.6, 0.6, 0.6) if %TradeButtonAdd.disabled else Color.WHITE
+	
+	check_legality()
 
 func _on_button_guard_pressed(amount : int):
 	guard_amount += amount
 	%GuardButtonSubtract.disabled = false if guard_amount > min_guard else true
+	%GuardButtonSubtract.modulate = Color(0.6, 0.6, 0.6) if %GuardButtonSubtract.disabled else Color.WHITE
 	%GuardLabel.text = str(guard_amount)
 	threat += -amount * 5
 	%GuardProgressBar.value = threat
 	%GuardButtonAdd.disabled = true if %GuardProgressBar.value <= 0 else false
+	%GuardButtonAdd.modulate = Color(0.6, 0.6, 0.6) if %GuardButtonAdd.disabled else Color.WHITE
 	%PercentLabel.text = "\n%d%%" % [($%GuardProgressBar.value / 100) * 100]
+	
+	check_legality()
+
+# Checks if enough gold or resources to trade. Min 1 trade cart/boat to trade.
+func check_legality():
+	if trade_amount == 0 or cost > %Player.get_resource_amount(0) or buy and trade_amount * 2 > %Player.get_resource_amount(merch_type):
+		%LaunchExpedition.disabled = true
+		%LaunchExpedition.modulate = Color(0.6, 0.6, 0.6)
+	else:
+		%LaunchExpedition.disabled = false
+		%LaunchExpedition.modulate = Color.WHITE
 
 func _on_launch_expedition_pressed() -> void:
 	var expedition := Expedition.new() 
@@ -98,4 +121,3 @@ func _on_launch_expedition_pressed() -> void:
 	expedition.draw_fail()
 	launch_expedition.emit(expedition)
 	disapear()
-	print("lauched")
