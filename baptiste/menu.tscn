@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://butqtwn5ae3u3"]
+[gd_scene format=3 uid="uid://bnu1q44kxpr2f"]
 
 [ext_resource type="Script" uid="uid://c55ypskftqjaf" path="res://baptiste/menu.gd" id="1_ry2f6"]
 [ext_resource type="AudioStream" uid="uid://biev2ff5uyoav" path="res://assets/audio/Musique/Musique_Menu.mp3" id="2_hd5j0"]

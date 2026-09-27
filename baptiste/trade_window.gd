@@ -69,7 +69,7 @@ func popup(trade_town : Town, town_offer : TownOffer, transport_turn := 1):
 	%LabelStock.text = "%d %s %s" % [town_offer.amount, Merchandise.names.get(town_offer.merchadise),\
 		"à vendre" if town_offer.is_buying else "à acheter"]
 	
-	guard_amount = min_guard
+	guard_amount = town_offer.min_gards
 	%GuardLabel.text = str(min_guard)
 	%GuardProgressBar.value = town_offer.threat_level
 	threat = town_offer.threat_level
