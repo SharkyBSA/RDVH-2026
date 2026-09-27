@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bk8301egkjjjd" path="res://tests/expedition_mgr/test_expedition_mgr.gd" id="1_o3t3a"]
 [ext_resource type="PackedScene" uid="uid://m0dstgxyqa1g" path="res://alice/expedition_mgr/expedition_mgr.tscn" id="2_u6rvu"]
+[ext_resource type="Script" uid="uid://dpup24da6v5sc" path="res://alice/expedition_mgr/expedition_path.gd" id="3_slsq3"]
 
 [sub_resource type="Curve2D" id="Curve2D_u6rvu"]
 _data = {
@@ -40,9 +41,13 @@ offset_right = 436.0
 offset_bottom = 218.0
 text = "Next turnz"
 
-[node name="Path2D" type="Path2D" parent="." unique_id=228144411]
+[node name="Path2D" type="Path2D" parent="." unique_id=1614462211]
 position = Vector2(251, 270)
 curve = SubResource("Curve2D_u6rvu")
+script = ExtResource("3_slsq3")
+metadata/_custom_type_script = "uid://dpup24da6v5sc"
 
-[node name="Path2D2" type="Path2D" parent="." unique_id=942427886]
+[node name="Path2D2" type="Path2D" parent="." unique_id=401322981]
 curve = SubResource("Curve2D_slsq3")
+script = ExtResource("3_slsq3")
+metadata/_custom_type_script = "uid://dpup24da6v5sc"
