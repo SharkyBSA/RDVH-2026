@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://bnu1q44kxpr2f"]
+
+[ext_resource type="Script" path="res://baptiste/menu.gd" id="1_ry2f6"]
+[ext_resource type="AudioStream" uid="uid://biev2ff5uyoav" path="res://assets/audio/Musique/Musique_Menu.mp3" id="2_hd5j0"]
+[ext_resource type="AudioStream" uid="uid://b6topf0pwuldv" path="res://assets/audio/SFX PLACEHOLDERS/UI_Menu_Bouton_Start.mp3" id="2_kq56l"]
+[ext_resource type="Texture2D" uid="uid://bymfblm4fsmp6" path="res://assets/Logo.png" id="2_o1tj0"]
+[ext_resource type="AudioStream" uid="uid://eyjxu7dofdm6" path="res://assets/audio/SFX PLACEHOLDERS/UI_Menu_Bouton_Quitter.mp3" id="3_rsnaj"]
+
+[node name="Menu" type="Control" unique_id=861258635]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ry2f6")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1886144821]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.1
+anchor_right = 0.5
+anchor_bottom = 0.1
+offset_left = -500.0
+offset_right = 500.0
+offset_bottom = 653.0
+grow_horizontal = 2
+theme_override_constants/separation = 20
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer" unique_id=598767064]
+custom_maximum_size = Vector2(1000, 500)
+layout_mode = 2
+texture = ExtResource("2_o1tj0")
+
+[node name="Play" type="Button" parent="VBoxContainer" unique_id=760363419]
+custom_minimum_size = Vector2(100, 0)
+custom_maximum_size = Vector2(100, -1)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Jouer"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="VBoxContainer/Play" unique_id=1506782469]
+stream = ExtResource("2_kq56l")
+volume_db = -2.0
+
+[node name="Credit" type="Button" parent="VBoxContainer" unique_id=1950465978]
+custom_minimum_size = Vector2(100, 0)
+custom_maximum_size = Vector2(100, -1)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Crédits"
+
+[node name="Quit" type="Button" parent="VBoxContainer" unique_id=1587821310]
+custom_minimum_size = Vector2(100, 0)
+custom_maximum_size = Vector2(100, -1)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Quitter"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="VBoxContainer/Quit" unique_id=1750046930]
+stream = ExtResource("3_rsnaj")
+volume_db = -2.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1027247965]
+stream = ExtResource("2_hd5j0")
+volume_db = -5.0
+autoplay = true
+
+[connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]

@@ -25,16 +25,16 @@ func _ready():
 	$VBoxContainer/TownName.modulate = color
 	$VBoxContainer/Icon.modulate = color
 
-#func _process(_delta):
-	#if Input.is_action_just_pressed("escape"): get_tree().free()
-
 func _on_texture_button_pressed():
 	emit_signal("clicked", town_name, current_offer, transport_turn)
 	$AudioStreamPlayer.stream = sfx[randi_range(0, sfx.size()-1)]
+	%Music.volume_db = -15
 	$AudioStreamPlayer.play()
+	await $AudioStreamPlayer.finished
+	%Music.volume_db = -5
 
 ## Show the popup to start a trade. If type is 0, hides the down. 1, hides the up. 2, show both.
-func popup(type := 0):
+func popup(type := 0, res := 0):
 	$TradeHBox/ArrowUp.visible = true if type == 0 else false
 	$TradeHBox/ArrowDown.visible = true if type == 1 else false
 	# Animation
@@ -44,8 +44,14 @@ func popup(type := 0):
 	var new_pos = -80 if !reverse_popup else 45
 	tween.tween_property($TradeHBox, "position:y", new_pos, 0.5).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_SPRING)
 	_bubble_displayed=true
-	match type:
-		0:	$TradeHBox/TextureButton/TextureRect.texture = load("res://assets/poivre.png")
+	match res:
+		1:	$TradeHBox/TextureButton/TextureRect.texture = load("res://assets/poivre.png")
+		2:	$TradeHBox/TextureButton/TextureRect.texture = load("res://assets/icons/ettoffe.png")
+		3:	$TradeHBox/TextureButton/TextureRect.texture = load("res://assets/ivoire.png")
+		4:	$TradeHBox/TextureButton/TextureRect.texture = load("res://assets/icons/Coton.png")
+		5:	$TradeHBox/TextureButton/TextureRect.texture = load("res://assets/icons/pierres.png")
+		6:	$TradeHBox/TextureButton/TextureRect.texture = load("res://assets/icons/epices.png")
+		7:	$TradeHBox/TextureButton/TextureRect.texture = load("res://assets/icons/chevaux.png")
 
 func hide_popup():
 	if not _bubble_displayed:

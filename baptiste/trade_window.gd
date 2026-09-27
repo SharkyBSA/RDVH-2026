@@ -13,7 +13,8 @@ var guard_amount := 0:
 		update_cost()
 		
 var min_guard := 0
-var res_strings : Array = ["poivre"]
+var res_strings : Array = ["", "unités de poivre", "unités de soie", "unités d'ivoire", "unités de coton",\
+	"", "unités d'épice", "animaux", ""]
 var threat := 0
 var turn := 0
 var destination : int = 0
@@ -43,7 +44,8 @@ func popup(town_name : String, town_offer : TownOffer, transport_turn := 1):
 	%LabelShipping.text = "\nCargo 0"
 	%TradeProgressBar.max_value = town_offer.amount
 	%TradeProgressBar.value = 0
-	%LabelStock.text = "%d de %s à vendre" % [town_offer.amount, Merchandise.names[town_offer.merchadise]]
+	%LabelStock.text = "%d %s %s" % [town_offer.amount, res_strings[town_offer.merchadise],\
+		"à vendre" if town_offer.is_buying else "à acheter"]
 	
 	guard_amount = min_guard
 	%GuardLabel.text = str(min_guard)
@@ -52,6 +54,7 @@ func popup(town_name : String, town_offer : TownOffer, transport_turn := 1):
 	turn = transport_turn
 	destination=town_offer.town
 	%PercentLabel.text = "\n%d%%" % [($%GuardProgressBar.value / 100) * 100]
+	%GuardButtonAdd.disabled = true if %GuardProgressBar.value <= 0 else false
 	
 	%CostLabel.text = "Coût de l'expédition : %d" % [turn * 5]
 	%DurationLabel.text = "Durée de l'expédition : %d %s" % [turn, "tour" if turn <= 1 else "tours"]
@@ -72,6 +75,7 @@ func _on_button_trade_pressed(amount : int):
 	%TradeButtonSubtract.disabled = false if trade_amount >= 1 else true
 	%TradeLabel.text = str(trade_amount)
 	var new_amount = trade_amount * 2
+	if new_amount > %TradeProgressBar.max_value: new_amount = %TradeProgressBar.max_value
 	%LabelShipping.text = "\nCargo %d" % new_amount
 	%TradeProgressBar.value = new_amount
 	%TradeButtonAdd.disabled = true if %TradeProgressBar.value >= %TradeProgressBar.max_value else false

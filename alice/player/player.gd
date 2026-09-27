@@ -12,6 +12,10 @@ signal inventory_modified(key : Merchandise.Type, updated_amount : float)
 
 func _ready(): emit_signal("updated", inventory)
 
+# Escape to exit quickly
+func _process(_delta):
+	if Input.is_action_just_pressed("escape"): get_tree().quit()
+
 ##Add (or substract if delta<0) the amount delta to the inventory. resource_key 
 ##identifies the resource to modify
 func modify_inventory(resource_key : int, delta:float) ->void :

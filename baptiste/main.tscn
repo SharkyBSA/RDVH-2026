@@ -3,9 +3,7 @@
 [ext_resource type="Script" uid="uid://bx3l5pmr7unao" path="res://baptiste/main.gd" id="1_5iygx"]
 [ext_resource type="Texture2D" uid="uid://1jk6g70q232y" path="res://assets/map.png" id="1_08s08"]
 [ext_resource type="PackedScene" uid="uid://dgfv6e3vip0a4" path="res://alice/turn_mgr/turn_manager.tscn" id="1_olmnm"]
-[ext_resource type="Script" uid="uid://dji1gvea14ls8" path="res://alice/turn_mgr/events/turn_event.gd" id="2_ekwjs"]
 [ext_resource type="PackedScene" uid="uid://gebyhljdrb4c" path="res://baptiste/town.tscn" id="2_eos35"]
-[ext_resource type="Script" uid="uid://drfbg3jb0nf5x" path="res://alice/turn_mgr/events/game_events.gd" id="3_n0y6q"]
 [ext_resource type="AudioStream" uid="uid://b2n4cs3se2cw8" path="res://assets/audio/Stingers/Stinger_Comptoir_Inde_01.mp3" id="4_4hl6o"]
 [ext_resource type="AudioStream" uid="uid://cco7pwrxvqbj7" path="res://assets/audio/Stingers/Stinger_Comptoir_Inde_02.mp3" id="5_2vfub"]
 [ext_resource type="AudioStream" uid="uid://d23r314k2ibyn" path="res://assets/audio/Stingers/Stinger_Comptoir_Inde_03.mp3" id="6_ui1tf"]
@@ -33,10 +31,6 @@
 [ext_resource type="AudioStream" uid="uid://d13ny2grvo7tl" path="res://assets/audio/Stingers/Stinger_Comptoir_MoyenOrient_03.mp3" id="23_3xgaf"]
 [ext_resource type="AudioStream" uid="uid://biyuvp1wcros5" path="res://assets/audio/Stingers/Stinger_Comptoir_MoyenOrient_04.mp3" id="24_upuqf"]
 [ext_resource type="Resource" uid="uid://dx8aug05s0qor" path="res://assets/trading/GameOffers1.tres" id="30_m20qg"]
-
-[sub_resource type="Resource" id="Resource_wj50k"]
-script = ExtResource("3_n0y6q")
-metadata/_custom_type_script = "uid://drfbg3jb0nf5x"
 
 [sub_resource type="Curve2D" id="Curve2D_igymv"]
 _data = {
@@ -96,9 +90,9 @@ sfx = Array[AudioStreamMP3]([ExtResource("4_4hl6o"), ExtResource("5_2vfub"), Ext
 
 [node name="Goa" parent="UI/TownManager" unique_id=811356729 instance=ExtResource("2_eos35")]
 offset_left = 890.0
-offset_top = 379.0
+offset_top = 381.0
 offset_right = 992.0
-offset_bottom = 430.0
+offset_bottom = 432.0
 town_name = "Goa"
 sfx = Array[AudioStreamMP3]([ExtResource("4_4hl6o"), ExtResource("5_2vfub"), ExtResource("6_ui1tf"), ExtResource("7_m42f4")])
 
@@ -137,9 +131,9 @@ color = Color(0, 0.39607844, 0, 1)
 
 [node name="Timor" parent="UI/TownManager" unique_id=520961299 instance=ExtResource("2_eos35")]
 offset_left = 1819.0
-offset_top = 843.0
+offset_top = 840.0
 offset_right = 1921.0
-offset_bottom = 894.0
+offset_bottom = 891.0
 town_name = "Timor"
 sfx = Array[AudioStreamMP3]([ExtResource("8_o3h7a"), ExtResource("9_eubu7"), ExtResource("10_hm3xc"), ExtResource("11_vvw5h")])
 color = Color(0, 0.39607844, 0, 1)
@@ -191,9 +185,9 @@ color = Color(0.34509805, 0.3254902, 0, 1)
 
 [node name="Ormuz" parent="UI/TownManager" unique_id=725774517 instance=ExtResource("2_eos35")]
 offset_left = 577.0
-offset_top = 124.0
+offset_top = 122.0
 offset_right = 679.0
-offset_bottom = 175.0
+offset_bottom = 173.0
 town_name = "Ormuz"
 sfx = Array[AudioStreamMP3]([ExtResource("21_jhded"), ExtResource("22_fp81k"), ExtResource("23_3xgaf"), ExtResource("24_upuqf")])
 color = Color(0.34509805, 0.3254902, 0, 1)
@@ -218,7 +212,6 @@ layout_mode = 1
 
 [node name="TurnManager" parent="." unique_id=610062439 instance=ExtResource("1_olmnm")]
 unique_name_in_owner = true
-events = SubResource("Resource_wj50k")
 town_offers = ExtResource("30_m20qg")
 
 [node name="Player" parent="." unique_id=1057124744 instance=ExtResource("12_wj50k")]
@@ -241,9 +234,10 @@ destination_paths = {
 2: NodePath("../Path2D")
 }
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=401592327]
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=401592327]
+unique_name_in_owner = true
 stream = ExtResource("18_2vfub")
-volume_db = -3.0
+volume_db = -5.0
 autoplay = true
 
 [node name="Path2D2" type="Path2D" parent="." unique_id=1047106249]
