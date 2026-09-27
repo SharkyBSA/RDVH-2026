@@ -139,13 +139,15 @@ func check_legality():
 		%LaunchExpedition.modulate = Color.WHITE
 
 func _on_launch_expedition_pressed() -> void:
-	%Player.modify_inventory(0, -cost)
+	%Player.modify_inventory(Merchandise.Type.GOLD, -cost)
 	if !buy: %Player.modify_inventory(merc, -trade_amount)
 	var expedition := Expedition.new() 
 	expedition.fail_risk=threat/100.0
 	expedition.destination=destination
-	expedition.delta_res[merch_type] = trade_amount
-	if !buy: expedition.delta_res[Merchandise.Type.GOLD] = cost
+	if buy:
+		expedition.delta_res[merch_type] = trade_amount
+	else:
+		expedition.delta_res[Merchandise.Type.GOLD]= int(trade_amount * Merchandise.prices[merc] * 1.5)
 	expedition.success_duration = turn
 	expedition.draw_fail()
 	launch_expedition.emit(expedition)
