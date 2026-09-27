@@ -20,3 +20,5 @@ const names : Dictionary[Type,String] = {
 	Type.SPICE:"SPICE",
 	Type.ANIMALS:"ANIMALS",
 	Type.PORCELAIN:"PORCELAIN"}
+
+const prices : Array[float] = [1, 20, 4, 0.2, 0.5, 0, 20, 100]

@@ -9,7 +9,7 @@ extends Node
 @onready var town_manager: Node = %TownManager
 @onready var ath: Ath = %Ath
 @onready var trade_window: TradeWindow = %TradeWindow
-
+@onready var event_win: EventWindow = %EventWindow
 
 func _ready() -> void:
 	player.inventory_modified.connect(ath.set_ressource_amount)
@@ -52,7 +52,8 @@ func apply_event(event : Event) ->void:
 	town.threat_level += event.threat_increase
 
 func pop_event_win(text: String)->void:
-	pass
+	event_win.set_text(text)
+	event_win.appear()
 
 func pop_offer_bubbles(town_offers: Array[TownOffer])->void:
 	for trade : TownOffer in town_offers:

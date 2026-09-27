@@ -31,6 +31,7 @@
 [ext_resource type="AudioStream" uid="uid://d13ny2grvo7tl" path="res://assets/audio/Stingers/Stinger_Comptoir_MoyenOrient_03.mp3" id="23_3xgaf"]
 [ext_resource type="AudioStream" uid="uid://biyuvp1wcros5" path="res://assets/audio/Stingers/Stinger_Comptoir_MoyenOrient_04.mp3" id="24_upuqf"]
 [ext_resource type="Script" uid="uid://dpup24da6v5sc" path="res://alice/expedition_mgr/expedition_path.gd" id="25_0lpg8"]
+[ext_resource type="PackedScene" uid="uid://c4x4okwk05cym" path="res://alice/turn_mgr/events/event_window.tscn" id="28_0lpg8"]
 [ext_resource type="Resource" uid="uid://blb71cw7hx5ap" path="res://GameEvents.tres" id="29_m20qg"]
 [ext_resource type="Resource" uid="uid://dx8aug05s0qor" path="res://assets/trading/GameOffers1.tres" id="30_m20qg"]
 
@@ -379,6 +380,15 @@ layout_mode = 1
 [node name="TradeWindow" parent="UI" unique_id=304652504 instance=ExtResource("9_wbs85")]
 unique_name_in_owner = true
 layout_mode = 1
+
+[node name="EventWindow" parent="UI" unique_id=678875500 instance=ExtResource("28_0lpg8")]
+unique_name_in_owner = true
+z_index = 4
+layout_mode = 1
+offset_left = -8.0
+offset_right = -8.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="TurnManager" parent="." unique_id=610062439 instance=ExtResource("1_olmnm")]
 unique_name_in_owner = true

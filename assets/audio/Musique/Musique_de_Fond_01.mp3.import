@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/Musique_de_Fond_01.mp3-64dd3909926dbfbc66f9d2
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0
