@@ -2,7 +2,7 @@ extends Node
 class_name ExpeditionManager
 
 const MARITIME_TOKEN = preload("uid://bb7cgqp22fgvx")
-const TERRESTRIAL_TOKEN = preload("uid://bb7cgqp22fgvx")
+const TERRESTRIAL_TOKEN = preload("uid://c45ii7ibuubkg")
 
 @export var destination_paths : Dictionary[int,ExpeditionPath]={}
 
