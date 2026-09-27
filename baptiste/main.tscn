@@ -137,9 +137,88 @@ texture = ExtResource("1_08s08")
 expand_mode = 1
 metadata/_edit_lock_ = true
 
+[node name="Paths" type="Control" parent="UI" unique_id=2111951668]
+anchors_preset = 0
+
+[node name="ExpeditionPath" type="Path2D" parent="UI/Paths" unique_id=1075346388]
+curve = SubResource("Curve2D_sp1y7")
+script = ExtResource("25_0lpg8")
+metadata/_custom_type_script = "uid://dpup24da6v5sc"
+
+[node name="Goa2" type="Path2D" parent="UI/Paths" unique_id=898544559]
+curve = SubResource("Curve2D_igymv")
+script = ExtResource("25_0lpg8")
+metadata/_custom_type_script = "uid://dpup24da6v5sc"
+
+[node name="Chaul3" type="Path2D" parent="UI/Paths" unique_id=321107174]
+curve = SubResource("Curve2D_brh71")
+script = ExtResource("25_0lpg8")
+metadata/_custom_type_script = "uid://dpup24da6v5sc"
+
+[node name="Colombo4" type="Path2D" parent="UI/Paths" unique_id=1506187603]
+curve = SubResource("Curve2D_x23lb")
+script = ExtResource("25_0lpg8")
+metadata/_custom_type_script = "uid://dpup24da6v5sc"
+
+[node name="Patna5" type="Path2D" parent="UI/Paths" unique_id=2123908017]
+curve = SubResource("Curve2D_jhded")
+script = ExtResource("25_0lpg8")
+maritime_path = false
+metadata/_custom_type_script = "uid://dpup24da6v5sc"
+
+[node name="Aden6" type="Path2D" parent="UI/Paths" unique_id=1263215928]
+curve = SubResource("Curve2D_fp81k")
+script = ExtResource("25_0lpg8")
+metadata/_custom_type_script = "uid://dpup24da6v5sc"
+
+[node name="Ormuz7" type="Path2D" parent="UI/Paths" unique_id=1571871185]
+curve = SubResource("Curve2D_0lpg8")
+script = ExtResource("25_0lpg8")
+metadata/_custom_type_script = "uid://dpup24da6v5sc"
+
+[node name="Debal8" type="Path2D" parent="UI/Paths" unique_id=1490935104]
+curve = SubResource("Curve2D_3xgaf")
+script = ExtResource("25_0lpg8")
+metadata/_custom_type_script = "uid://dpup24da6v5sc"
+
+[node name="Soffala9" type="Path2D" parent="UI/Paths" unique_id=612647956]
+curve = SubResource("Curve2D_upuqf")
+script = ExtResource("25_0lpg8")
+metadata/_custom_type_script = "uid://dpup24da6v5sc"
+
+[node name="Zanzibar10" type="Path2D" parent="UI/Paths" unique_id=277415020]
+curve = SubResource("Curve2D_fbong")
+script = ExtResource("25_0lpg8")
+metadata/_custom_type_script = "uid://dpup24da6v5sc"
+
+[node name="Malacca11" type="Path2D" parent="UI/Paths" unique_id=283714538]
+curve = SubResource("Curve2D_2b1kv")
+script = ExtResource("25_0lpg8")
+metadata/_custom_type_script = "uid://dpup24da6v5sc"
+
+[node name="Timor12" type="Path2D" parent="UI/Paths" unique_id=1293742541]
+curve = SubResource("Curve2D_b75uj")
+script = ExtResource("25_0lpg8")
+metadata/_custom_type_script = "uid://dpup24da6v5sc"
+
+[node name="Chatigaon13" type="Path2D" parent="UI/Paths" unique_id=1968060032]
+curve = SubResource("Curve2D_rf2kd")
+script = ExtResource("25_0lpg8")
+metadata/_custom_type_script = "uid://dpup24da6v5sc"
+
+[node name="Syriam14" type="Path2D" parent="UI/Paths" unique_id=84582373]
+curve = SubResource("Curve2D_cma0m")
+script = ExtResource("25_0lpg8")
+metadata/_custom_type_script = "uid://dpup24da6v5sc"
+
+[node name="Ath" parent="UI" unique_id=2026785200 instance=ExtResource("11_ekwjs")]
+unique_name_in_owner = true
+layout_mode = 1
+
 [node name="TownManager" type="Control" parent="UI" unique_id=1948921763]
 unique_name_in_owner = true
 anchors_preset = 0
+mouse_filter = 2
 
 [node name="Dehli" parent="UI/TownManager" unique_id=2084830226 instance=ExtResource("2_eos35")]
 layout_mode = 0
@@ -234,9 +313,9 @@ reverse_popup = true
 [node name="Debal" parent="UI/TownManager" unique_id=1930254467 instance=ExtResource("2_eos35")]
 layout_mode = 0
 offset_left = 764.0
-offset_top = 178.0
+offset_top = 179.0
 offset_right = 866.0
-offset_bottom = 229.0
+offset_bottom = 230.0
 town_name = "Debal"
 transport_turn = 2
 index = 8
@@ -315,96 +394,18 @@ index = 14
 sfx = Array[AudioStreamMP3]([ExtResource("13_5bulh"), ExtResource("14_i3sme"), ExtResource("15_5bbsv"), ExtResource("16_7s21p")])
 color = Color(0, 0.39607844, 0, 1)
 
-[node name="Paths" type="Control" parent="UI" unique_id=2111951668]
-anchors_preset = 0
-
-[node name="ExpeditionPath" type="Path2D" parent="UI/Paths" unique_id=1075346388]
-curve = SubResource("Curve2D_sp1y7")
-script = ExtResource("25_0lpg8")
-metadata/_custom_type_script = "uid://dpup24da6v5sc"
-
-[node name="Goa2" type="Path2D" parent="UI/Paths" unique_id=898544559]
-curve = SubResource("Curve2D_igymv")
-script = ExtResource("25_0lpg8")
-metadata/_custom_type_script = "uid://dpup24da6v5sc"
-
-[node name="Chaul3" type="Path2D" parent="UI/Paths" unique_id=321107174]
-curve = SubResource("Curve2D_brh71")
-script = ExtResource("25_0lpg8")
-metadata/_custom_type_script = "uid://dpup24da6v5sc"
-
-[node name="Colombo4" type="Path2D" parent="UI/Paths" unique_id=1506187603]
-curve = SubResource("Curve2D_x23lb")
-script = ExtResource("25_0lpg8")
-metadata/_custom_type_script = "uid://dpup24da6v5sc"
-
-[node name="Patna5" type="Path2D" parent="UI/Paths" unique_id=2123908017]
-curve = SubResource("Curve2D_jhded")
-script = ExtResource("25_0lpg8")
-maritime_path = false
-metadata/_custom_type_script = "uid://dpup24da6v5sc"
-
-[node name="Aden6" type="Path2D" parent="UI/Paths" unique_id=1263215928]
-curve = SubResource("Curve2D_fp81k")
-script = ExtResource("25_0lpg8")
-metadata/_custom_type_script = "uid://dpup24da6v5sc"
-
-[node name="Ormuz7" type="Path2D" parent="UI/Paths" unique_id=1571871185]
-curve = SubResource("Curve2D_0lpg8")
-script = ExtResource("25_0lpg8")
-metadata/_custom_type_script = "uid://dpup24da6v5sc"
-
-[node name="Debal8" type="Path2D" parent="UI/Paths" unique_id=1490935104]
-curve = SubResource("Curve2D_3xgaf")
-script = ExtResource("25_0lpg8")
-metadata/_custom_type_script = "uid://dpup24da6v5sc"
-
-[node name="Soffala9" type="Path2D" parent="UI/Paths" unique_id=612647956]
-curve = SubResource("Curve2D_upuqf")
-script = ExtResource("25_0lpg8")
-metadata/_custom_type_script = "uid://dpup24da6v5sc"
-
-[node name="Zanzibar10" type="Path2D" parent="UI/Paths" unique_id=277415020]
-curve = SubResource("Curve2D_fbong")
-script = ExtResource("25_0lpg8")
-metadata/_custom_type_script = "uid://dpup24da6v5sc"
-
-[node name="Malacca11" type="Path2D" parent="UI/Paths" unique_id=283714538]
-curve = SubResource("Curve2D_2b1kv")
-script = ExtResource("25_0lpg8")
-metadata/_custom_type_script = "uid://dpup24da6v5sc"
-
-[node name="Timor12" type="Path2D" parent="UI/Paths" unique_id=1293742541]
-curve = SubResource("Curve2D_b75uj")
-script = ExtResource("25_0lpg8")
-metadata/_custom_type_script = "uid://dpup24da6v5sc"
-
-[node name="Chatigaon13" type="Path2D" parent="UI/Paths" unique_id=1968060032]
-curve = SubResource("Curve2D_rf2kd")
-script = ExtResource("25_0lpg8")
-metadata/_custom_type_script = "uid://dpup24da6v5sc"
-
-[node name="Syriam14" type="Path2D" parent="UI/Paths" unique_id=84582373]
-curve = SubResource("Curve2D_cma0m")
-script = ExtResource("25_0lpg8")
-metadata/_custom_type_script = "uid://dpup24da6v5sc"
-
-[node name="Ath" parent="UI" unique_id=2026785200 instance=ExtResource("11_ekwjs")]
-unique_name_in_owner = true
-layout_mode = 1
-
 [node name="TradeWindow" parent="UI" unique_id=304652504 instance=ExtResource("9_wbs85")]
 unique_name_in_owner = true
 layout_mode = 1
 
 [node name="EventWindow" parent="UI" unique_id=678875500 instance=ExtResource("28_0lpg8")]
 unique_name_in_owner = true
-z_index = 4
 layout_mode = 1
 offset_left = -8.0
 offset_right = -8.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 
 [node name="TurnManager" parent="." unique_id=610062439 instance=ExtResource("1_olmnm")]
 unique_name_in_owner = true
