@@ -16,6 +16,9 @@ func _ready() -> void:
 	turn_manager.next_turned.connect(ath.set_turn)
 	ath.next_turn.connect(go_to_next_turn)
 	trade_window.launch_expedition.connect(_on_launch_expedition)
+	event_win.game_over.connect(func()->void:
+		get_tree().change_scene_to_file("res://baptiste/menu.tscn")
+		)
 	prepare_turn()
 
 func _on_player_updated(inv):
