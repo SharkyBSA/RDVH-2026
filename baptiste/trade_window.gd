@@ -145,7 +145,7 @@ func _on_launch_expedition_pressed() -> void:
 	expedition.fail_risk=threat/100.0
 	expedition.destination=destination
 	if buy:
-		expedition.delta_res[merch_type] = trade_amount
+		expedition.delta_res[merc] = trade_amount
 	else:
 		expedition.delta_res[Merchandise.Type.GOLD]= int(trade_amount * Merchandise.prices[merc] * 1.5)
 	expedition.success_duration = turn

@@ -77,4 +77,7 @@ func _on_launch_expedition(expedition : Expedition)->void:
 	var town : Town = town_manager.get_child(expedition.destination)
 	if town != null:
 		town.hide_popup()
+	if expedition.success_duration==0:
+		process_expeditions_results(expedition.delta_res)
+		return
 	expedition_manager.add_expedition(expedition)
