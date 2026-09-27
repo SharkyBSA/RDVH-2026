@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c4x4okwk05cym"]
 
 [ext_resource type="FontFile" uid="uid://vaw6peo6gunr" path="res://assets/CharpentierRenRed-Demi.ttf" id="1_xx5ed"]
+[ext_resource type="Script" uid="uid://u2bpiwo7445n" path="res://alice/turn_mgr/events/event_window.gd" id="2_py3il"]
 [ext_resource type="Texture2D" uid="uid://bftdwlrbfropx" path="res://assets/Mer.png" id="2_tmb3a"]
 [ext_resource type="Texture2D" uid="uid://bs228p0d77lpg" path="res://assets/Trading_interface/CrossV1.png" id="3_tmb3a"]
 
@@ -15,6 +16,7 @@ anchor_top = 0.2
 anchor_right = 0.75
 anchor_bottom = 0.8
 theme = SubResource("Theme_ox55c")
+script = ExtResource("2_py3il")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1963721651]
 layout_mode = 1
@@ -28,6 +30,7 @@ expand_mode = 1
 stretch_mode = 5
 
 [node name="TextLbl" type="Label" parent="." unique_id=1527092959]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -42,9 +45,13 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "Lorem Ipsum"
 
-[node name="TextureButton" type="TextureButton" parent="." unique_id=1160621341]
+[node name="ExitBtn" type="TextureButton" parent="." unique_id=1160621341]
+unique_name_in_owner = true
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 416.0
+offset_top = 432.0
+offset_right = 516.0
+offset_bottom = 539.0
 texture_normal = ExtResource("3_tmb3a")
 texture_pressed = ExtResource("3_tmb3a")
+texture_hover = ExtResource("3_tmb3a")
