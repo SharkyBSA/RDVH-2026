@@ -1,8 +1,10 @@
 extends Node
 class_name ExpeditionManager
 
-const EXPEDITION_TOKEN = preload("uid://bb7cgqp22fgvx")
-@export var destination_paths : Dictionary[int,Path2D]={}
+const MARITIME_TOKEN = preload("uid://bb7cgqp22fgvx")
+const TERRESTRIAL_TOKEN = preload("uid://bb7cgqp22fgvx")
+
+@export var destination_paths : Dictionary[int,ExpeditionPath]={}
 
 ##Dictionnary storing an Expedition and its corresponding PathFollow (its visual represenation)
 var _ongoing_expeditions : Dictionary[Expedition,ExpeditionPathFollow2D] = {}
@@ -12,9 +14,13 @@ func add_expedition(new_expedition: Expedition)->void:
 		print("WARNING: cant find destination",str(new_expedition.destination),"in destinations")
 		return 
 		
-	var path : Path2D = destination_paths[new_expedition.destination]
+	var path : ExpeditionPath = destination_paths[new_expedition.destination]
 	var path_follow := ExpeditionPathFollow2D.new()
-	var expedition_token : Node2D = EXPEDITION_TOKEN.instantiate()
+	var expedition_token : Node2D
+	if path.maritime_path:
+		expedition_token = MARITIME_TOKEN.instantiate()
+	else:
+		expedition_token = TERRESTRIAL_TOKEN.instantiate()
 	
 	path_follow.add_child(expedition_token)
 	path.add_child(path_follow)
