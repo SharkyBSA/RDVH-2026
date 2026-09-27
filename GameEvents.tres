@@ -3,15 +3,15 @@
 [ext_resource type="Script" uid="uid://dji1gvea14ls8" path="res://alice/turn_mgr/events/turn_event.gd" id="1_pmwtw"]
 [ext_resource type="Script" uid="uid://drfbg3jb0nf5x" path="res://alice/turn_mgr/events/game_events.gd" id="2_j6330"]
 
-[sub_resource type="Resource" id="Resource_f100b"]
+[sub_resource type="Resource" id="Resource_0lpg8"]
 script = ExtResource("1_pmwtw")
-metadata/_custom_type_script = "uid://dji1gvea14ls8"
-
-[sub_resource type="Resource" id="Resource_byyj6"]
-script = ExtResource("1_pmwtw")
+target_town = 9
+type = 2
+text = "Un message de l'est. Des hommes en armes sont venus, et on pris la ville de Solafa. Ils en ont fais une forteresse, et interdit a tout navire d'y entrer. Il sera beaucoup plus risque de faire du commerce la-bas.."
+threat_increase = 25
 metadata/_custom_type_script = "uid://dji1gvea14ls8"
 
 [resource]
 script = ExtResource("2_j6330")
-events = Array[ExtResource("1_pmwtw")]([SubResource("Resource_f100b"), SubResource("Resource_byyj6"), null, null, null])
+events = Array[ExtResource("1_pmwtw")]([null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, SubResource("Resource_0lpg8"), null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null])
 metadata/_custom_type_script = "uid://drfbg3jb0nf5x"
