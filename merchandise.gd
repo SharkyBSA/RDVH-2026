@@ -13,12 +13,12 @@ enum Type {	GOLD=0,
 
 const names : Dictionary[Type,String] = {
 	Type.GOLD:"or",
-	Type.PEPPER:"pepper",
-	Type.SILK:"soie",
-	Type.IVORY:"ivoire",
-	Type.COTON:"cotons",
+	Type.PEPPER:"unités de poivre",
+	Type.SILK:"unités de soie",
+	Type.IVORY:"unité d'ivoire",
+	Type.COTON:"unité de cotons",
 	Type.GEMS:"gemmes",
-	Type.SPICE:"epices",
+	Type.SPICE:"unités d'épices",
 	Type.ANIMALS:"chevaux",
 	Type.PORCELAIN:"porcelaine",
 	Type.SLAVES:"esclaves"}

@@ -43,7 +43,7 @@ func update_cost()->void:
 			turn = 30
 			unit_size = 100
 	#cost = turn * turn_cost + trade_amount * Merchandise.prices[merc] * int(buy) + guard_amount * 5
-	cost = trade_amount * Merchandise.prices[merc] * 0.5 + \
+	cost = trade_amount * Merchandise.prices.get(merc) * 0.5 + \
 		ceil(float(trade_amount) / unit_size) * turn_cost * turn + guard_amount * turn if buy else\
 		ceil(float(trade_amount) / unit_size) * turn_cost * turn + guard_amount * turn
 	%CostLabel.text = "Coût de l'expédition : "+str(cost)
@@ -67,7 +67,7 @@ func popup(trade_town : Town, town_offer : TownOffer, transport_turn := 1):
 	%LabelShipping.text = "\nCargo 0"
 	%TradeProgressBar.max_value = town_offer.amount
 	%TradeProgressBar.value = 0
-	%LabelStock.text = "%d %s %s" % [town_offer.amount, res_strings[town_offer.merchadise],\
+	%LabelStock.text = "%d %s %s" % [town_offer.amount, Merchandise.names.get(town_offer.merchadise),\
 		"à vendre" if town_offer.is_buying else "à acheter"]
 	
 	guard_amount = min_guard
