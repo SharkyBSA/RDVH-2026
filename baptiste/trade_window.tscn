@@ -339,6 +339,14 @@ theme_override_fonts/font = ExtResource("4_68gga")
 text = "Durée de l'expédition :"
 horizontal_alignment = 1
 
+[node name="GainLabel" type="Label" parent="InfoBox/VBoxContainer" unique_id=395390991]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_68gga")
+text = "Argent remporté :"
+horizontal_alignment = 1
+
 [node name="LaunchExpedition" type="TextureButton" parent="InfoBox" unique_id=2073307076]
 unique_name_in_owner = true
 modulate = Color(0.6, 0.6, 0.6, 1)

@@ -47,8 +47,8 @@ func update_cost()->void:
 		ceil(float(trade_amount) / unit_size) * turn_cost * turn + guard_amount * turn if buy else\
 		ceil(float(trade_amount) / unit_size) * turn_cost * turn + guard_amount * turn
 	%CostLabel.text = "Coût de l'expédition : "+str(cost)
-	print(ceil(float(trade_amount) / unit_size))
-
+	%GainLabel.text = "Argent remporté : " + str(int(trade_amount * Merchandise.prices[merc] * 1.5))
+	
 ## Shows the trade window
 func popup(trade_town : Town, town_offer : TownOffer, transport_turn := 1):
 	$TradeBox/HBoxContainer/VBoxContainer/TextureRect.texture = load("res://assets/transport/boat.png") \
@@ -83,11 +83,13 @@ func popup(trade_town : Town, town_offer : TownOffer, transport_turn := 1):
 	%CostLabel.text = "Coût de l'expédition : 0"
 	%DurationLabel.text = "Durée de l'expédition : %d %s" % [turn, "tour" if turn <= 1 else "tours"]
 	
-	buy = town_offer.is_buying
+	buy = !town_offer.is_buying
 	merc = town_offer.merchadise
 	
 	_on_button_guard_pressed(0)
 	_on_button_trade_pressed(0)
+	
+	%GainLabel.visible = !buy
 # Hide the window
 func disapear()->void:
 	var tween = create_tween()
@@ -137,10 +139,13 @@ func check_legality():
 		%LaunchExpedition.modulate = Color.WHITE
 
 func _on_launch_expedition_pressed() -> void:
+	%Player.modify_inventory(0, -cost)
+	if !buy: %Player.modify_inventory(merc, -trade_amount)
 	var expedition := Expedition.new() 
 	expedition.fail_risk=threat/100.0
 	expedition.destination=destination
-	expedition.delta_res[merch_type]=trade_amount
+	expedition.delta_res[merch_type] = trade_amount
+	if !buy: expedition.delta_res[Merchandise.Type.GOLD] = cost
 	expedition.success_duration = turn
 	expedition.draw_fail()
 	launch_expedition.emit(expedition)
