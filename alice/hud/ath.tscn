@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://diq8sdq1y3pbn"]
 
 [ext_resource type="Script" uid="uid://bg3jo52m7mdnw" path="res://alice/hud/ath.gd" id="1_0hjve"]
+[ext_resource type="FontFile" uid="uid://vaw6peo6gunr" path="res://assets/CharpentierRenRed-Demi.ttf" id="1_g56sb"]
 [ext_resource type="Texture2D" uid="uid://d14cdrck17eci" path="res://assets/Trading_interface/Materials_interfaceV1.png" id="2_k5d8j"]
 [ext_resource type="Texture2D" uid="uid://c3ds0yfqaqo" path="res://assets/icons/or.png" id="3_k5d8j"]
 [ext_resource type="FontFile" uid="uid://c3v83r2x1hqbg" path="res://assets/Indira_K.ttf" id="4_g56sb"]
@@ -11,7 +12,12 @@
 [ext_resource type="Texture2D" uid="uid://c1u3ttcjq46em" path="res://assets/icons/chevaux.png" id="10_c2fmi"]
 [ext_resource type="Texture2D" uid="uid://dvn2brlf1hbce" path="res://assets/poivre.png" id="10_uchpa"]
 [ext_resource type="Texture2D" uid="uid://co8rr00k4the8" path="res://assets/Trading_interface/TimerV1.png" id="12_3yqlp"]
+[ext_resource type="Texture2D" uid="uid://coklit0uuntf5" path="res://assets/icons/esclave.png" id="12_ewyhu"]
 [ext_resource type="Texture2D" uid="uid://cgcgodju812pw" path="res://assets/Trading_interface/OptionV1.png" id="13_7kn40"]
+
+[sub_resource type="Theme" id="Theme_pmwtw"]
+Label/font_sizes/font_size = 22
+Label/fonts/font = ExtResource("1_g56sb")
 
 [node name="Ath" type="Control" unique_id=2026785200]
 layout_mode = 3
@@ -20,6 +26,7 @@ anchor_top = 0.02
 anchor_right = 0.98
 anchor_bottom = 0.12
 mouse_force_pass_scroll_events = false
+theme = SubResource("Theme_pmwtw")
 script = ExtResource("1_0hjve")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1628380618]
@@ -268,7 +275,6 @@ mouse_force_pass_scroll_events = false
 text = "20"
 
 [node name="HBoxContainer9" type="HBoxContainer" parent="HBoxContainer/HBoxContainer10" unique_id=537425302]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 0
@@ -281,16 +287,20 @@ size_flags_horizontal = 3
 size_flags_vertical = 4
 mouse_filter = 0
 mouse_force_pass_scroll_events = false
+texture = ExtResource("12_ewyhu")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Porcelain" type="Label" parent="HBoxContainer/HBoxContainer10/HBoxContainer9" unique_id=780786226]
+[node name="Slaves" type="Label" parent="HBoxContainer/HBoxContainer10/HBoxContainer9" unique_id=442707159]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 0
 mouse_force_pass_scroll_events = false
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_g56sb")
 text = "20"
+horizontal_alignment = 1
 
 [node name="NextTurnBtn" type="TextureButton" parent="HBoxContainer" unique_id=1003132224]
 unique_name_in_owner = true

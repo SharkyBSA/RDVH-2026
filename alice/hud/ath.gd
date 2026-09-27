@@ -9,7 +9,7 @@ class_name Ath
 @onready var gems: Label = %Gems
 @onready var spice: Label = %Spice
 @onready var animals: Label = %Animals
-@onready var porcelain: Label = %Porcelain
+@onready var slaves: Label = %Slaves
 
 @onready var next_turn_btn: TextureButton = %NextTurnBtn
 @onready var year_lbl: Label = %YearLbl
@@ -17,13 +17,16 @@ class_name Ath
 @onready var pausebtn: TextureButton = %Pausebtn
 
 @onready var resource_labels : Dictionary[int, Label]={
-	0:gold,
-	7:pepper,
-	1:silk,
-	2:ivory,
-	3:coton,
-	4:spice,
-	5:animals}
+
+	Merchandise.Type.GOLD:gold,
+	Merchandise.Type.PEPPER:pepper,
+	Merchandise.Type.SILK:silk,
+	Merchandise.Type.IVORY:ivory,
+	Merchandise.Type.COTON:coton,
+	Merchandise.Type.SPICE:spice,
+	Merchandise.Type.ANIMALS:animals,
+	Merchandise.Type.SLAVES:slaves}
+
 
 signal next_turn
 signal pause_btn_pressed
@@ -34,7 +37,7 @@ func _ready() -> void:
 func update_all(inventory : Dictionary):
 	for i in range(0, 8): set_ressource_amount(i, inventory.get(i))
 
-func set_ressource_amount(res_key :int , amount: float)->void:
+func set_ressource_amount(res_key :Merchandise.Type, amount: float)->void:
 	if not resource_labels.has(res_key):
 		return
 	resource_labels[res_key].text=str(floori(amount))

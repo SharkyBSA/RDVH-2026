@@ -50,7 +50,7 @@ func popup(type := 0, res := 0):
 		Merchandise.Type.GEMS:	$TradeHBox/TextureButton/TextureRect.texture = load("res://assets/icons/pierres.png")
 		Merchandise.Type.SPICE:	$TradeHBox/TextureButton/TextureRect.texture = load("res://assets/icons/epices.png")
 		Merchandise.Type.ANIMALS:	$TradeHBox/TextureButton/TextureRect.texture = load("res://assets/icons/chevaux.png")
-
+		Merchandise.Type.SLAVES:	$TradeHBox/TextureButton/TextureRect.texture = load("res://assets/icons/esclave.png")
 func hide_popup():
 	if not _bubble_displayed:
 		return

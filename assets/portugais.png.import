@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://tth5im45vk82"
-path="res://.godot/imported/Bagarre.png-43e2d5644dff8829d3807793d1f66824.ctex"
+uid="uid://dqq7dpnqlgge4"
+path="res://.godot/imported/portugais.png-47fbfd5271d7020f70a69a96dd65c075.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Trading_interface/Bagarre.png"
-dest_files=["res://.godot/imported/Bagarre.png-43e2d5644dff8829d3807793d1f66824.ctex"]
+source_file="res://assets/portugais.png"
+dest_files=["res://.godot/imported/portugais.png-47fbfd5271d7020f70a69a96dd65c075.ctex"]
 
 [params]
 
