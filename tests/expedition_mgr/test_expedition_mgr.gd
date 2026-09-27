@@ -10,8 +10,8 @@ func _ready() -> void:
 	var expedition1:=Expedition.new()
 	var expedition2:=Expedition.new()
 	
-	expedition1.success_duration=4
-	expedition2.success_duration=6
+	expedition1.success_duration=2
+	expedition2.success_duration=3
 	expedition1.start_turn=0
 	expedition2.start_turn=0
 	expedition1.current_turn=0
@@ -35,3 +35,4 @@ func _ready() -> void:
 func next_turn()->void:
 	current_turn+=1
 	print(expedition_mgr.update_expeditions(current_turn))
+	print(expedition_mgr._ongoing_expeditions.size())
