@@ -67,10 +67,10 @@ z_index = 3
 custom_minimum_size = Vector2(30, 30)
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.95
-anchor_top = 0.07
-anchor_right = 0.95
-anchor_bottom = 0.07
+anchor_left = 0.96
+anchor_top = 0.065
+anchor_right = 0.96
+anchor_bottom = 0.065
 offset_left = -100.0
 offset_top = 3.0517578e-05
 offset_bottom = 100.00003
@@ -131,6 +131,7 @@ alignment = 1
 
 [node name="TradeButtonSubtract" type="TextureButton" parent="TradeBox/HBoxContainer/VBoxContainer/HBoxContainer" unique_id=2133919507]
 unique_name_in_owner = true
+modulate = Color(0.6, 0.6, 0.6, 1)
 custom_minimum_size = Vector2(30, 0)
 custom_maximum_size = Vector2(40, -1)
 layout_mode = 2
@@ -237,6 +238,7 @@ alignment = 1
 
 [node name="GuardButtonSubtract" type="TextureButton" parent="GuardBox/HBoxContainer/VBoxContainer/HBoxContainer" unique_id=2036115534]
 unique_name_in_owner = true
+modulate = Color(0.6, 0.6, 0.6, 1)
 custom_minimum_size = Vector2(30, 0)
 custom_maximum_size = Vector2(40, -1)
 layout_mode = 2
@@ -338,8 +340,11 @@ text = "Durée de l'expédition :"
 horizontal_alignment = 1
 
 [node name="LaunchExpedition" type="TextureButton" parent="InfoBox" unique_id=2073307076]
+unique_name_in_owner = true
+modulate = Color(0.6, 0.6, 0.6, 1)
 layout_mode = 2
 size_flags_horizontal = 4
+disabled = true
 texture_normal = ExtResource("7_68gga")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=571649577]

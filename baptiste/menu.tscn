@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://bnu1q44kxpr2f"]
+[gd_scene format=3 uid="uid://butqtwn5ae3u3"]
 
-[ext_resource type="Script" path="res://baptiste/menu.gd" id="1_ry2f6"]
+[ext_resource type="Script" uid="uid://c55ypskftqjaf" path="res://baptiste/menu.gd" id="1_ry2f6"]
 [ext_resource type="AudioStream" uid="uid://biev2ff5uyoav" path="res://assets/audio/Musique/Musique_Menu.mp3" id="2_hd5j0"]
 [ext_resource type="AudioStream" uid="uid://b6topf0pwuldv" path="res://assets/audio/SFX PLACEHOLDERS/UI_Menu_Bouton_Start.mp3" id="2_kq56l"]
 [ext_resource type="Texture2D" uid="uid://bymfblm4fsmp6" path="res://assets/Logo.png" id="2_o1tj0"]

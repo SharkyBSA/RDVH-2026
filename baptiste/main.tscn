@@ -157,6 +157,7 @@ offset_bottom = 512.0
 town_name = "Calicut"
 transport_turn = 0
 index = 1
+sfx = Array[AudioStreamMP3]([ExtResource("4_4hl6o"), ExtResource("5_2vfub"), ExtResource("6_ui1tf"), ExtResource("7_m42f4")])
 start_town = true
 color = Color(0, 0, 0.7, 1)
 
@@ -171,9 +172,9 @@ sfx = Array[AudioStreamMP3]([ExtResource("4_4hl6o"), ExtResource("5_2vfub"), Ext
 
 [node name="Chaul" parent="UI/TownManager" unique_id=1721095960 instance=ExtResource("2_eos35")]
 offset_left = 864.0
-offset_top = 313.0
+offset_top = 314.0
 offset_right = 966.0
-offset_bottom = 364.0
+offset_bottom = 365.0
 town_name = "Chaul"
 index = 3
 sfx = Array[AudioStreamMP3]([ExtResource("4_4hl6o"), ExtResource("5_2vfub"), ExtResource("6_ui1tf"), ExtResource("7_m42f4")])
@@ -387,7 +388,7 @@ town_offers = ExtResource("30_m20qg")
 [node name="Player" parent="." unique_id=1057124744 instance=ExtResource("12_wj50k")]
 unique_name_in_owner = true
 inventory = Dictionary[int, float]({
-0: 100.0,
+0: 20.0,
 1: 20.0,
 2: 0.0,
 3: 0.0,

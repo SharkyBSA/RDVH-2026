@@ -26,12 +26,13 @@ func _ready():
 	$VBoxContainer/Icon.modulate = color
 
 func _on_texture_button_pressed():
-	emit_signal("clicked", town_name, current_offer, transport_turn)
-	$AudioStreamPlayer.stream = sfx[randi_range(0, sfx.size()-1)]
-	%Music.volume_db = -15
-	$AudioStreamPlayer.play()
-	await $AudioStreamPlayer.finished
-	%Music.volume_db = -5
+	if $TradeHBox.modulate.a == 1:
+		emit_signal("clicked", town_name, current_offer, transport_turn)
+		$AudioStreamPlayer.stream = sfx[randi_range(0, sfx.size()-1)]
+		%Music.volume_db = -15
+		$AudioStreamPlayer.play()
+		await $AudioStreamPlayer.finished
+		%Music.volume_db = -5
 
 ## Show the popup to start a trade. If type is 0, hides the down. 1, hides the up. 2, show both.
 func popup(type := 0, res := 0):
