@@ -8,6 +8,7 @@ class_name Player
 
 signal updated(inv)
 signal game_over
+signal inventory_modified(key : Merchandise.Type, updated_amount : float)
 
 func _ready(): emit_signal("updated", inventory)
 
@@ -24,6 +25,7 @@ func modify_inventory(resource_key : int, delta:float) ->void :
 		return
 	
 	inventory[resource_key]= maxf(0.0,inventory[resource_key])
+	inventory_modified.emit(resource_key,inventory[resource_key])
 
 ##Return the amount of a given ressource. If resource doesnt exist, return -1.0
 func get_resource_amount(resource_key : int) -> float:
