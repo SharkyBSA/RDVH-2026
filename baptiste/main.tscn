@@ -363,9 +363,95 @@ script = ExtResource("3_5iygx")
 offers = Array[ExtResource("4_ekwjs")]([SubResource("Resource_j8y0p"), SubResource("Resource_e7uov"), SubResource("Resource_0fgq5"), SubResource("Resource_dll0i"), SubResource("Resource_3ri1f")])
 metadata/_custom_type_script = "uid://0lvj1rsiyhjb"
 
+[sub_resource type="Resource" id="Resource_4084y"]
+script = ExtResource("4_ekwjs")
+town = 7
+is_buying = true
+merchadise = 2
+amount = 75.0
+metadata/_custom_type_script = "uid://76olk5l6av78"
+
+[sub_resource type="Resource" id="Resource_l6cun"]
+script = ExtResource("4_ekwjs")
+town = 6
+merchadise = 5
+amount = 40.0
+metadata/_custom_type_script = "uid://76olk5l6av78"
+
+[sub_resource type="Resource" id="Resource_pdew6"]
+script = ExtResource("4_ekwjs")
+town = 12
+is_buying = true
+merchadise = 7
+amount = 120.0
+metadata/_custom_type_script = "uid://76olk5l6av78"
+
+[sub_resource type="Resource" id="Resource_qjyun"]
+script = ExtResource("4_ekwjs")
+town = 14
+merchadise = 3
+amount = 200.0
+metadata/_custom_type_script = "uid://76olk5l6av78"
+
+[sub_resource type="Resource" id="Resource_spam8"]
+script = ExtResource("4_ekwjs")
+town = 1
+is_buying = true
+merchadise = 4
+amount = 75.0
+metadata/_custom_type_script = "uid://76olk5l6av78"
+
+[sub_resource type="Resource" id="Resource_ybhy0"]
+script = ExtResource("3_5iygx")
+offers = Array[ExtResource("4_ekwjs")]([SubResource("Resource_4084y"), SubResource("Resource_l6cun"), SubResource("Resource_pdew6"), SubResource("Resource_qjyun"), SubResource("Resource_spam8")])
+metadata/_custom_type_script = "uid://0lvj1rsiyhjb"
+
+[sub_resource type="Resource" id="Resource_80b2i"]
+script = ExtResource("4_ekwjs")
+town = 9
+is_buying = true
+merchadise = 4
+amount = 100.0
+metadata/_custom_type_script = "uid://76olk5l6av78"
+
+[sub_resource type="Resource" id="Resource_s4uxu"]
+script = ExtResource("4_ekwjs")
+town = 4
+is_buying = true
+merchadise = 5
+amount = 10.0
+metadata/_custom_type_script = "uid://76olk5l6av78"
+
+[sub_resource type="Resource" id="Resource_s4hpe"]
+script = ExtResource("4_ekwjs")
+town = 7
+merchadise = 1
+amount = 300.0
+metadata/_custom_type_script = "uid://76olk5l6av78"
+
+[sub_resource type="Resource" id="Resource_cp6g2"]
+script = ExtResource("4_ekwjs")
+town = 8
+merchadise = 4
+amount = 200.0
+metadata/_custom_type_script = "uid://76olk5l6av78"
+
+[sub_resource type="Resource" id="Resource_6ggcl"]
+script = ExtResource("4_ekwjs")
+town = 13
+is_buying = true
+merchadise = 3
+amount = 120.0
+metadata/_custom_type_script = "uid://76olk5l6av78"
+
+[sub_resource type="Resource" id="Resource_4u64r"]
+script = ExtResource("3_5iygx")
+offers = Array[ExtResource("4_ekwjs")]([SubResource("Resource_80b2i"), SubResource("Resource_s4uxu"), SubResource("Resource_s4hpe"), SubResource("Resource_cp6g2"), SubResource("Resource_6ggcl")])
+metadata/_custom_type_script = "uid://0lvj1rsiyhjb"
+
 [sub_resource type="Resource" id="Resource_n0y6q"]
 script = ExtResource("2_wbs85")
-town_offers = Array[ExtResource("3_5iygx")]([SubResource("Resource_wbs85"), SubResource("Resource_x23lb"), SubResource("Resource_fbong"), SubResource("Resource_2b1kv"), SubResource("Resource_b75uj"), SubResource("Resource_rf2kd"), SubResource("Resource_cma0m"), SubResource("Resource_ckryg"), SubResource("Resource_0knmg"), SubResource("Resource_vok8r")])
+town_offers = Array[ExtResource("3_5iygx")]([SubResource("Resource_wbs85"), SubResource("Resource_x23lb"), SubResource("Resource_fbong"), SubResource("Resource_2b1kv"), SubResource("Resource_b75uj"), SubResource("Resource_rf2kd"), SubResource("Resource_cma0m"), SubResource("Resource_ckryg"), SubResource("Resource_0knmg"), SubResource("Resource_vok8r"), SubResource("Resource_ybhy0"), SubResource("Resource_4u64r")])
 metadata/_custom_type_script = "uid://bu7cj6yg78hg2"
 
 [node name="Main" type="Node" unique_id=2072706222]
