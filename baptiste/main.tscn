@@ -258,6 +258,8 @@ anchor_left = 0.467
 anchor_top = 0.356
 anchor_right = 0.467
 anchor_bottom = 0.356
+offset_top = -3.0
+offset_bottom = 48.0
 grow_horizontal = 2
 grow_vertical = 2
 town_name = "Goa"
@@ -281,10 +283,11 @@ sfx = Array[AudioStreamMP3]([ExtResource("4_4hl6o"), ExtResource("5_2vfub"), Ext
 
 [node name="Colombo" parent="UI/TownManager" unique_id=6411554 instance=ExtResource("2_eos35")]
 layout_mode = 1
-offset_left = 993.0
-offset_top = 519.0
-offset_right = 1095.0
-offset_bottom = 570.0
+anchors_preset = -1
+anchor_left = 0.515
+anchor_top = 0.48
+anchor_right = 0.515
+anchor_bottom = 0.48
 town_name = "Colomba"
 transport_mode = 1
 threat_level = 5
@@ -306,10 +309,11 @@ sfx = Array[AudioStreamMP3]([ExtResource("4_4hl6o"), ExtResource("5_2vfub"), Ext
 
 [node name="Aden" parent="UI/TownManager" unique_id=376978946 instance=ExtResource("2_eos35")]
 layout_mode = 1
-offset_left = 349.0
-offset_top = 377.0
-offset_right = 451.0
-offset_bottom = 428.0
+anchors_preset = -1
+anchor_left = 0.183
+anchor_top = 0.344
+anchor_right = 0.183
+anchor_bottom = 0.344
 town_name = "Aden"
 transport_mode = 2
 transport_turn = 3
@@ -320,10 +324,11 @@ color = Color(0.34509805, 0.3254902, 0, 1)
 
 [node name="Ormuz" parent="UI/TownManager" unique_id=725774517 instance=ExtResource("2_eos35")]
 layout_mode = 1
-offset_left = 577.0
-offset_top = 122.0
-offset_right = 679.0
-offset_bottom = 173.0
+anchors_preset = -1
+anchor_left = 0.3
+anchor_top = 0.11
+anchor_right = 0.3
+anchor_bottom = 0.11
 town_name = "Ormuz"
 transport_mode = 1
 transport_turn = 3
@@ -335,10 +340,11 @@ reverse_popup = true
 
 [node name="Debal" parent="UI/TownManager" unique_id=1930254467 instance=ExtResource("2_eos35")]
 layout_mode = 1
-offset_left = 764.0
-offset_top = 179.0
-offset_right = 866.0
-offset_bottom = 230.0
+anchors_preset = -1
+anchor_left = 0.4
+anchor_top = 0.165
+anchor_right = 0.4
+anchor_bottom = 0.165
 town_name = "Debal"
 transport_mode = 1
 transport_turn = 2
@@ -349,10 +355,11 @@ color = Color(0.34509805, 0.3254902, 0, 1)
 
 [node name="Soffala" parent="UI/TownManager" unique_id=1945968804 instance=ExtResource("2_eos35")]
 layout_mode = 1
-offset_left = 178.0
-offset_top = 1033.0
-offset_right = 280.0
-offset_bottom = 1084.0
+anchors_preset = -1
+anchor_left = 0.09
+anchor_top = 0.955
+anchor_right = 0.09
+anchor_bottom = 0.955
 town_name = "Soffala"
 transport_mode = 2
 transport_turn = 5
@@ -363,10 +370,11 @@ color = Color(0.34509805, 0.3254902, 0, 1)
 
 [node name="Zanzibar2" parent="UI/TownManager" unique_id=1036590766 instance=ExtResource("2_eos35")]
 layout_mode = 1
-offset_left = 214.0
-offset_top = 760.0
-offset_right = 316.0
-offset_bottom = 811.0
+anchors_preset = -1
+anchor_left = 0.111
+anchor_top = 0.7
+anchor_right = 0.111
+anchor_bottom = 0.7
 town_name = "Zanzibar"
 transport_mode = 2
 transport_turn = 4
@@ -377,10 +385,11 @@ color = Color(0.34509805, 0.3254902, 0, 1)
 
 [node name="Malacca" parent="UI/TownManager" unique_id=135587927 instance=ExtResource("2_eos35")]
 layout_mode = 1
-offset_left = 1422.0
-offset_top = 604.0
-offset_right = 1524.0
-offset_bottom = 655.0
+anchors_preset = -1
+anchor_left = 0.74
+anchor_top = 0.555
+anchor_right = 0.744
+anchor_bottom = 0.555
 town_name = "Malacca"
 transport_mode = 2
 transport_turn = 4
@@ -391,10 +400,11 @@ color = Color(0, 0.39607844, 0, 1)
 
 [node name="Timor2" parent="UI/TownManager" unique_id=520961299 instance=ExtResource("2_eos35")]
 layout_mode = 1
-offset_left = 1819.0
-offset_top = 843.0
-offset_right = 1921.0
-offset_bottom = 894.0
+anchors_preset = -1
+anchor_left = 0.944
+anchor_top = 0.789
+anchor_right = 0.944
+anchor_bottom = 0.789
 town_name = "Timor"
 transport_mode = 2
 transport_turn = 5
@@ -405,10 +415,11 @@ color = Color(0, 0.39607844, 0, 1)
 
 [node name="Chatigaon2" parent="UI/TownManager" unique_id=1687683668 instance=ExtResource("2_eos35")]
 layout_mode = 1
-offset_left = 1209.0
-offset_top = 220.0
-offset_right = 1311.0
-offset_bottom = 271.0
+anchors_preset = -1
+anchor_left = 0.63
+anchor_top = 0.211
+anchor_right = 0.65
+anchor_bottom = 0.211
 town_name = "Chatigaon"
 transport_mode = 1
 transport_turn = 3
@@ -419,10 +430,11 @@ color = Color(0, 0.39607844, 0, 1)
 
 [node name="Syriam2" parent="UI/TownManager" unique_id=1318445323 instance=ExtResource("2_eos35")]
 layout_mode = 1
-offset_left = 1259.0
-offset_top = 326.0
-offset_right = 1361.0
-offset_bottom = 377.0
+anchors_preset = -1
+anchor_left = 0.656
+anchor_top = 0.305
+anchor_right = 0.656
+anchor_bottom = 0.305
 town_name = "Syriam"
 transport_mode = 2
 transport_turn = 3
