@@ -33,6 +33,7 @@ signal pause_btn_pressed
 
 func _ready() -> void:
 	pausebtn.pressed.connect(pause_btn_pressed.emit)
+	pass_button_animation()
 
 func update_all(inventory : Dictionary):
 	for i in range(0, 8): set_ressource_amount(i, inventory.get(i))
@@ -52,3 +53,12 @@ func _on_next_turn_btn_pressed():
 
 func _on_pausebtn_pressed():
 	get_tree().change_scene_to_file("res://baptiste/menu.tscn")
+
+func pass_button_animation():
+	var tween = create_tween()
+	tween.tween_property(%NextTurnBtn, "modulate", Color(1, 1, 0.8), 1)
+	await tween.finished
+	var tween2 = create_tween()
+	tween2.tween_property(%NextTurnBtn, "modulate", Color(1, 1, 1), 1)
+	await tween2.finished
+	pass_button_animation()
