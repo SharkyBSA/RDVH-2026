@@ -22,29 +22,26 @@ class_name Ath
 	2:silk,
 	3:ivory,
 	4:coton,
-	5:gems,
 	6:spice,
-	7:animals,
-	8:porcelain}
+	7:animals}
 
 signal next_turn
 signal pause_btn_pressed
 
 func _ready() -> void:
-	next_turn_btn.pressed.connect(next_turn.emit)
 	pausebtn.pressed.connect(pause_btn_pressed.emit)
+
+func update_all(inventory : Dictionary):
+	for i in range(0, 8): set_ressource_amount(i, inventory.get(i))
 
 func set_ressource_amount(res_key :int , amount: float)->void:
 	if not resource_labels.has(res_key):
 		return
 	resource_labels[res_key].text=str(floori(amount))
 
-func set_turn(turn :int)->void:
-	turn_lbl.text = "Tour: "+str(turn)
-	year_lbl.text = "Annee: "+str(1490+floori(turn/4.0))
+func set_turn(turn : int)->void:
+	turn_lbl.text = "Tour : "+str(turn)
+	year_lbl.text = "Année : "+str(1490+floori(turn/4.0))
 
-
-
-		
-		
-		
+func _on_next_turn_btn_pressed():
+	emit_signal("next_turn")

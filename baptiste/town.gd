@@ -7,6 +7,10 @@ class_name Town
 @export var transport_threat := 0
 @export var threat_level := 0
 @export var index := 0
+@export var sfx : Array[AudioStreamMP3] = []
+@export var start_town := false
+@export var color : Color = Color(0.7, 0, 0)
+@export var reverse_popup := false
 var res_type := 0
 var res_amount := 0
 var added_threat := 0
@@ -14,14 +18,16 @@ signal clicked(display_name, town_index, resource, amount, threat)
 
 func _ready():
 	$VBoxContainer/TownName.text = town_name
-	$VBoxContainer/TownName.modulate = Color(0.7, 0, 0)
-	$VBoxContainer/Icon.modulate = Color(0.7, 0, 0)
+	$VBoxContainer/TownName.modulate = color
+	$VBoxContainer/Icon.modulate = color
 
 func _process(_delta):
 	if Input.is_action_just_pressed("escape"): get_tree().free()
 
 func _on_texture_button_pressed():
-	emit_signal("clicked", town_name, index, res_type, res_amount, added_threat, transport_turn)
+	emit_signal("clicked", town_name, res_type, res_amount, added_threat, transport_turn)
+	$AudioStreamPlayer.stream = sfx[randi_range(0, sfx.size()-1)]
+	$AudioStreamPlayer.play()
 
 ## Show the popup to start a trade. If type is 0, hides the down. 1, hides the up. 2, show both.
 func popup(type := 0):
@@ -30,9 +36,12 @@ func popup(type := 0):
 	# Animation
 	$TradeHBox.position.y = 0
 	$TradeHBox.modulate.a = 1
-	$TradeHBox.show()
 	var tween = create_tween()
-	tween.tween_property($TradeHBox, "position:y", -80, 0.5).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_SPRING)
+	var new_pos = -80 if !reverse_popup else 45
+	tween.tween_property($TradeHBox, "position:y", new_pos, 0.5).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_SPRING)
+	
+	match type:
+		0:	$TradeHBox/TextureButton/TextureRect.texture = load("res://assets/poivre.png")
 
 func hide_popup():
 	var tween = create_tween()

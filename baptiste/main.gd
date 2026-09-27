@@ -1,7 +1,7 @@
 extends Node
 
-var resources : Dictionary = {0:["Poivre", load("res://assets/icons/placeholder.png")]}
-var events : Array = [[0]]
+var resources : Dictionary = {1:["Poivre", load("res://assets/icons/placeholder.png")]}
+var events : Array = [[1]]
 
 @onready var turn_manager: TurnManager = %TurnManager
 @onready var expedition_manager: ExpeditionManager = %ExpeditionManager

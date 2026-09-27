@@ -37,13 +37,13 @@ func popup(town_name : String, town_index : int, res_type : int, res_amount : in
 	tween.tween_property(self, "anchor_bottom", 0.9, 1).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_EXPO)
 	
 	# Setups all base values
-	$VBoxContainer/Title.text = "Lancement d'expédition vers %s" % town_name
+	$Title.text = "Lancement d'expédition vers %s" % town_name
 	trade_amount = 0
 	%TradeLabel.text = "0"
-	%LabelShipping.text = "Cargo 0"
+	%LabelShipping.text = "\nCargo 0"
 	%TradeProgressBar.max_value = res_amount
 	%TradeProgressBar.value = 0
-	%LabelStock.text = "%d de %s\n à vendre" % [res_amount, res_strings[res_type]]
+	%LabelStock.text = "%d de %s à vendre" % [res_amount, res_strings[res_type]]
 	
 	guard_amount = min_guard
 	%GuardLabel.text = str(min_guard)
@@ -51,6 +51,7 @@ func popup(town_name : String, town_index : int, res_type : int, res_amount : in
 	threat = threat_level
 	turn = transport_turn
 	destination=town_index
+	%PercentLabel.text = "\n%d%%" % [($%GuardProgressBar.value / 100) * 100]
 	
 	%CostLabel.text = "Coût de l'expédition : %d" % [turn * 5]
 	%DurationLabel.text = "Durée de l'expédition : %d %s" % [turn, "tour" if turn <= 1 else "tours"]
@@ -71,7 +72,7 @@ func _on_button_trade_pressed(amount : int):
 	%TradeButtonSubtract.disabled = false if trade_amount >= 1 else true
 	%TradeLabel.text = str(trade_amount)
 	var new_amount = trade_amount * 2
-	%LabelShipping.text = "Cargo %d" % new_amount
+	%LabelShipping.text = "\nCargo %d" % new_amount
 	%TradeProgressBar.value = new_amount
 	%TradeButtonAdd.disabled = true if %TradeProgressBar.value >= %TradeProgressBar.max_value else false
 
@@ -82,6 +83,8 @@ func _on_button_guard_pressed(amount : int):
 	threat += -amount * 5
 	%GuardProgressBar.value = threat
 	%GuardButtonAdd.disabled = true if %GuardProgressBar.value <= 0 else false
+	%PercentLabel.text = "\n%d%%" % [($%GuardProgressBar.value / 100) * 100]
+
 
 func _on_launch_expedition_pressed() -> void:
 	var expedition := Expedition.new() 

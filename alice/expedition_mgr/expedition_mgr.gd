@@ -19,7 +19,8 @@ func add_expedition(new_expedition: Expedition)->void:
 	path_follow.add_child(expedition_token)
 	path.add_child(path_follow)
 	_ongoing_expeditions[new_expedition]= path_follow
-	
+
+
 func update_expeditions(turn : int)->Dictionary[Merchandise.Type,float]:
 	var results:Dictionary[Merchandise.Type,float]= {}
 	

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://hf13x41rqswe"
+path="res://.godot/imported/UI_Ressource_Soie.mp3-88430978f041d97f4954e77057d2d440.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/SFX PLACEHOLDERS/UI_Ressource_Soie.mp3"
+dest_files=["res://.godot/imported/UI_Ressource_Soie.mp3-88430978f041d97f4954e77057d2d440.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
