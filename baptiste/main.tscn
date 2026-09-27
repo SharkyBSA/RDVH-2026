@@ -217,22 +217,29 @@ layout_mode = 1
 
 [node name="TownManager" type="Control" parent="UI" unique_id=1948921763]
 unique_name_in_owner = true
-anchors_preset = 0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 mouse_filter = 2
 
 [node name="Dehli" parent="UI/TownManager" unique_id=2084830226 instance=ExtResource("2_eos35")]
-layout_mode = 0
-offset_left = 952.0
-offset_top = 188.0
-offset_right = 1054.0
-offset_bottom = 239.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.488
+anchor_top = 0.15
+anchor_right = 0.515
+anchor_bottom = 0.15
 town_name = "Dehli"
 transport_turn = 3
 threat_level = 5
 sfx = Array[AudioStreamMP3]([ExtResource("4_4hl6o"), ExtResource("5_2vfub"), ExtResource("6_ui1tf"), ExtResource("7_m42f4")])
 
 [node name="StartingTown" parent="UI/TownManager" unique_id=2064836468 instance=ExtResource("2_eos35")]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = -1
 offset_left = 924.0
 offset_top = 461.0
 offset_right = 1026.0
@@ -245,7 +252,7 @@ start_town = true
 color = Color(0, 0, 0.7, 1)
 
 [node name="Goa" parent="UI/TownManager" unique_id=811356729 instance=ExtResource("2_eos35")]
-layout_mode = 0
+layout_mode = 1
 offset_left = 890.0
 offset_top = 381.0
 offset_right = 992.0
@@ -255,7 +262,7 @@ index = 2
 sfx = Array[AudioStreamMP3]([ExtResource("4_4hl6o"), ExtResource("5_2vfub"), ExtResource("6_ui1tf"), ExtResource("7_m42f4")])
 
 [node name="Chaul" parent="UI/TownManager" unique_id=1721095960 instance=ExtResource("2_eos35")]
-layout_mode = 0
+layout_mode = 1
 offset_left = 864.0
 offset_top = 314.0
 offset_right = 966.0
@@ -265,7 +272,7 @@ index = 3
 sfx = Array[AudioStreamMP3]([ExtResource("4_4hl6o"), ExtResource("5_2vfub"), ExtResource("6_ui1tf"), ExtResource("7_m42f4")])
 
 [node name="Colombo" parent="UI/TownManager" unique_id=6411554 instance=ExtResource("2_eos35")]
-layout_mode = 0
+layout_mode = 1
 offset_left = 993.0
 offset_top = 519.0
 offset_right = 1095.0
@@ -276,7 +283,7 @@ index = 4
 sfx = Array[AudioStreamMP3]([ExtResource("8_51cql")])
 
 [node name="Patna" parent="UI/TownManager" unique_id=85137416 instance=ExtResource("2_eos35")]
-layout_mode = 0
+layout_mode = 1
 offset_left = 1085.0
 offset_top = 192.0
 offset_right = 1187.0
@@ -287,7 +294,7 @@ index = 5
 sfx = Array[AudioStreamMP3]([ExtResource("4_4hl6o"), ExtResource("5_2vfub"), ExtResource("6_ui1tf"), ExtResource("7_m42f4")])
 
 [node name="Aden" parent="UI/TownManager" unique_id=376978946 instance=ExtResource("2_eos35")]
-layout_mode = 0
+layout_mode = 1
 offset_left = 349.0
 offset_top = 377.0
 offset_right = 451.0
@@ -300,7 +307,7 @@ sfx = Array[AudioStreamMP3]([ExtResource("21_jhded"), ExtResource("22_fp81k"), E
 color = Color(0.34509805, 0.3254902, 0, 1)
 
 [node name="Ormuz" parent="UI/TownManager" unique_id=725774517 instance=ExtResource("2_eos35")]
-layout_mode = 0
+layout_mode = 1
 offset_left = 577.0
 offset_top = 122.0
 offset_right = 679.0
@@ -314,7 +321,7 @@ color = Color(0.34509805, 0.3254902, 0, 1)
 reverse_popup = true
 
 [node name="Debal" parent="UI/TownManager" unique_id=1930254467 instance=ExtResource("2_eos35")]
-layout_mode = 0
+layout_mode = 1
 offset_left = 764.0
 offset_top = 179.0
 offset_right = 866.0
@@ -327,7 +334,7 @@ sfx = Array[AudioStreamMP3]([ExtResource("21_jhded"), ExtResource("22_fp81k"), E
 color = Color(0.34509805, 0.3254902, 0, 1)
 
 [node name="Soffala" parent="UI/TownManager" unique_id=1945968804 instance=ExtResource("2_eos35")]
-layout_mode = 0
+layout_mode = 1
 offset_left = 178.0
 offset_top = 1033.0
 offset_right = 280.0
@@ -340,7 +347,7 @@ sfx = Array[AudioStreamMP3]([ExtResource("17_igymv"), ExtResource("18_sp1y7"), E
 color = Color(0.34509805, 0.3254902, 0, 1)
 
 [node name="Zanzibar2" parent="UI/TownManager" unique_id=1036590766 instance=ExtResource("2_eos35")]
-layout_mode = 0
+layout_mode = 1
 offset_left = 214.0
 offset_top = 760.0
 offset_right = 316.0
@@ -353,7 +360,7 @@ sfx = Array[AudioStreamMP3]([ExtResource("17_igymv"), ExtResource("18_sp1y7"), E
 color = Color(0.34509805, 0.3254902, 0, 1)
 
 [node name="Malacca" parent="UI/TownManager" unique_id=135587927 instance=ExtResource("2_eos35")]
-layout_mode = 0
+layout_mode = 1
 offset_left = 1422.0
 offset_top = 604.0
 offset_right = 1524.0
@@ -366,7 +373,7 @@ sfx = Array[AudioStreamMP3]([ExtResource("8_o3h7a"), ExtResource("9_eubu7"), Ext
 color = Color(0, 0.39607844, 0, 1)
 
 [node name="Timor2" parent="UI/TownManager" unique_id=520961299 instance=ExtResource("2_eos35")]
-layout_mode = 0
+layout_mode = 1
 offset_left = 1819.0
 offset_top = 843.0
 offset_right = 1921.0
@@ -379,7 +386,7 @@ sfx = Array[AudioStreamMP3]([ExtResource("8_o3h7a"), ExtResource("9_eubu7"), Ext
 color = Color(0, 0.39607844, 0, 1)
 
 [node name="Chatigaon2" parent="UI/TownManager" unique_id=1687683668 instance=ExtResource("2_eos35")]
-layout_mode = 0
+layout_mode = 1
 offset_left = 1209.0
 offset_top = 220.0
 offset_right = 1311.0
@@ -392,7 +399,7 @@ sfx = Array[AudioStreamMP3]([ExtResource("13_5bulh"), ExtResource("14_i3sme"), E
 color = Color(0, 0.39607844, 0, 1)
 
 [node name="Syriam2" parent="UI/TownManager" unique_id=1318445323 instance=ExtResource("2_eos35")]
-layout_mode = 0
+layout_mode = 1
 offset_left = 1259.0
 offset_top = 326.0
 offset_right = 1361.0

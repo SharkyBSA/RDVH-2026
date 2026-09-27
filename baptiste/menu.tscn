@@ -4,7 +4,10 @@
 [ext_resource type="AudioStream" uid="uid://biev2ff5uyoav" path="res://assets/audio/Musique/Musique_Menu.mp3" id="2_hd5j0"]
 [ext_resource type="AudioStream" uid="uid://b6topf0pwuldv" path="res://assets/audio/SFX PLACEHOLDERS/UI_Menu_Bouton_Start.mp3" id="2_kq56l"]
 [ext_resource type="Texture2D" uid="uid://bymfblm4fsmp6" path="res://assets/Logo.png" id="2_o1tj0"]
+[ext_resource type="Texture2D" uid="uid://3io6jv6rkatb" path="res://assets/Trading_interface/illu_menu.png" id="2_osric"]
+[ext_resource type="FontFile" uid="uid://c3v83r2x1hqbg" path="res://assets/Indira_K.ttf" id="3_jf0sb"]
 [ext_resource type="AudioStream" uid="uid://eyjxu7dofdm6" path="res://assets/audio/SFX PLACEHOLDERS/UI_Menu_Bouton_Quitter.mp3" id="3_rsnaj"]
+[ext_resource type="Texture2D" uid="uid://dp2pg4k3oecxl" path="res://assets/Trading_interface/button_menu.png" id="4_osric"]
 
 [node name="Menu" type="Control" unique_id=861258635]
 layout_mode = 3
@@ -15,30 +18,74 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ry2f6")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1886144821]
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=1480024980]
+z_index = -1
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("2_osric")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=598767064]
+custom_maximum_size = Vector2(750, 375)
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
-anchor_top = 0.1
+anchor_top = 0.256
 anchor_right = 0.5
-anchor_bottom = 0.1
+anchor_bottom = 0.256
 offset_left = -500.0
+offset_top = -250.0
 offset_right = 500.0
-offset_bottom = 653.0
+offset_bottom = 250.0
 grow_horizontal = 2
-theme_override_constants/separation = 20
-
-[node name="TextureRect" type="TextureRect" parent="VBoxContainer" unique_id=598767064]
-custom_maximum_size = Vector2(1000, 500)
-layout_mode = 2
+grow_vertical = 2
 texture = ExtResource("2_o1tj0")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1886144821]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -500.0
+offset_top = -653.0
+offset_right = 500.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 98
+alignment = 1
 
 [node name="Play" type="Button" parent="VBoxContainer" unique_id=760363419]
 custom_minimum_size = Vector2(100, 0)
-custom_maximum_size = Vector2(100, -1)
+custom_maximum_size = Vector2(100.295, -1)
 layout_mode = 2
 size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_jf0sb")
+theme_override_font_sizes/font_size = 32
 text = "Jouer"
+flat = true
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Play" unique_id=370694202]
+z_index = -1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -180.0
+offset_top = -80.0
+offset_right = 180.0
+offset_bottom = 80.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_osric")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="VBoxContainer/Play" unique_id=1506782469]
 stream = ExtResource("2_kq56l")
@@ -46,21 +93,69 @@ volume_db = -2.0
 
 [node name="Credit" type="Button" parent="VBoxContainer" unique_id=1950465978]
 custom_minimum_size = Vector2(100, 0)
-custom_maximum_size = Vector2(100, -1)
+custom_maximum_size = Vector2(100.295, -1)
 layout_mode = 2
 size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_jf0sb")
+theme_override_font_sizes/font_size = 32
 text = "Crédits"
+flat = true
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Credit" unique_id=927380468]
+z_index = -1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -180.0
+offset_top = -80.0
+offset_right = 180.0
+offset_bottom = 80.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_osric")
 
 [node name="Quit" type="Button" parent="VBoxContainer" unique_id=1587821310]
 custom_minimum_size = Vector2(100, 0)
-custom_maximum_size = Vector2(100, -1)
+custom_maximum_size = Vector2(100.295, -1)
 layout_mode = 2
 size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_jf0sb")
+theme_override_font_sizes/font_size = 32
 text = "Quitter"
+flat = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="VBoxContainer/Quit" unique_id=1750046930]
 stream = ExtResource("3_rsnaj")
 volume_db = -2.0
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Quit" unique_id=1446421702]
+z_index = -1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -180.0
+offset_top = -80.0
+offset_right = 180.0
+offset_bottom = 80.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_osric")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1027247965]
 stream = ExtResource("2_hd5j0")
