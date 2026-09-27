@@ -29,7 +29,7 @@ func update_cost()->void:
 	%CostLabel.text = "Coût de l'expédition : "+str(cost)
 
 ## Shows the trade window
-func popup(town_name : String, town_index : int, res_type : int, res_amount : int, threat_level : int, transport_turn := 1):
+func popup(town_name : String, town_offer : TownOffer, transport_turn := 1):
 	# Animation
 	var tween = create_tween()
 	tween.set_parallel()
@@ -41,16 +41,16 @@ func popup(town_name : String, town_index : int, res_type : int, res_amount : in
 	trade_amount = 0
 	%TradeLabel.text = "0"
 	%LabelShipping.text = "\nCargo 0"
-	%TradeProgressBar.max_value = res_amount
+	%TradeProgressBar.max_value = town_offer.amount
 	%TradeProgressBar.value = 0
-	%LabelStock.text = "%d de %s à vendre" % [res_amount, res_strings[res_type]]
+	%LabelStock.text = "%d de %s à vendre" % [town_offer.amount, Merchandise.names[town_offer.merchadise]]
 	
 	guard_amount = min_guard
 	%GuardLabel.text = str(min_guard)
-	%GuardProgressBar.value = threat_level
-	threat = threat_level
+	%GuardProgressBar.value = town_offer.threat_level
+	threat = town_offer.threat_level
 	turn = transport_turn
-	destination=town_index
+	destination=town_offer.town
 	%PercentLabel.text = "\n%d%%" % [($%GuardProgressBar.value / 100) * 100]
 	
 	%CostLabel.text = "Coût de l'expédition : %d" % [turn * 5]
@@ -85,13 +85,13 @@ func _on_button_guard_pressed(amount : int):
 	%GuardButtonAdd.disabled = true if %GuardProgressBar.value <= 0 else false
 	%PercentLabel.text = "\n%d%%" % [($%GuardProgressBar.value / 100) * 100]
 
-
 func _on_launch_expedition_pressed() -> void:
 	var expedition := Expedition.new() 
-	expedition.fail_risk=threat
+	expedition.fail_risk=threat/100.0
 	expedition.destination=destination
 	expedition.delta_res[merch_type]=trade_amount
 	expedition.success_duration = turn
 	expedition.draw_fail()
 	launch_expedition.emit(expedition)
 	disapear()
+	print("lauched")

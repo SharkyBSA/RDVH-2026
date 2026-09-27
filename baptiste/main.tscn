@@ -40,33 +40,33 @@
 script = ExtResource("3_n0y6q")
 metadata/_custom_type_script = "uid://drfbg3jb0nf5x"
 
-[sub_resource type="Resource" id="Resource_odvti"]
+[sub_resource type="Resource" id="Resource_sp1y7"]
 script = ExtResource("4_ekwjs")
 town = 1
-res_to_send = 0
-send_amount = 10.0
-threat_level = 3
+is_buying = true
+merchadise = 1
+amount = 10.0
 metadata/_custom_type_script = "uid://76olk5l6av78"
 
-[sub_resource type="Resource" id="Resource_wbs85"]
+[sub_resource type="Resource" id="Resource_igymv"]
 script = ExtResource("3_5iygx")
-offers = Array[ExtResource("4_ekwjs")]([SubResource("Resource_odvti")])
+offers = Array[ExtResource("4_ekwjs")]([SubResource("Resource_sp1y7")])
 metadata/_custom_type_script = "uid://0lvj1rsiyhjb"
 
 [sub_resource type="Resource" id="Resource_n0y6q"]
 script = ExtResource("2_wbs85")
-town_offers = Array[ExtResource("3_5iygx")]([SubResource("Resource_wbs85"), null])
+town_offers = Array[ExtResource("3_5iygx")]([SubResource("Resource_igymv")])
 metadata/_custom_type_script = "uid://bu7cj6yg78hg2"
 
-[sub_resource type="Curve2D" id="Curve2D_wj50k"]
+[sub_resource type="Curve2D" id="Curve2D_igymv"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 49, 36, -5.1315804, 8.210528, 5.1315804, -8.210528, 88, -23, -9.72975, 19.088125, 9.72975, -19.088125, 78, -76, -1.4044304, 22.065796, 1.4044304, -22.065796, 108, -106, -0.12625861, 29.17572, 0.12625861, -29.17572, 82, -156, 9.209836, 34.42885, -9.209836, -34.42885, 88, -203, 0, 0, 0, 0, 57, -231)
+"points": PackedVector2Array(0, 0, 0, 0, 971, 489, 0, 0, 0, 0, 1060, 292, 0, 0, 0, 0, 1006, 215)
 }
-point_count = 7
+point_count = 3
 
-[sub_resource type="Curve2D" id="Curve2D_iunt3"]
+[sub_resource type="Curve2D" id="Curve2D_sp1y7"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 974, 499, 12.828951, 43.61843, -12.828951, -43.61843, 907, 483, 0, 0, 0, 0, 942, 416)
+"points": PackedVector2Array(0, 0, 0, 0, 968, 492, 0, 0, 0, 0, 902, 472, 0, 0, 0, 0, 943, 415)
 }
 point_count = 3
 
@@ -237,10 +237,12 @@ unique_name_in_owner = true
 layout_mode = 1
 
 [node name="TurnManager" parent="." unique_id=610062439 instance=ExtResource("1_olmnm")]
+unique_name_in_owner = true
 events = SubResource("Resource_wj50k")
 town_offers = SubResource("Resource_n0y6q")
 
 [node name="Player" parent="." unique_id=1057124744 instance=ExtResource("12_wj50k")]
+unique_name_in_owner = true
 inventory = Dictionary[int, float]({
 0: 100.0,
 1: 20.0,
@@ -252,13 +254,22 @@ inventory = Dictionary[int, float]({
 7: 0.0
 })
 
-[node name="ExpeditionMgr" parent="." unique_id=1818811447 instance=ExtResource("12_n0y6q")]
+[node name="ExpeditionMgr" parent="." unique_id=1818811447 node_paths=PackedStringArray("destination_paths") instance=ExtResource("12_n0y6q")]
+unique_name_in_owner = true
+destination_paths = {
+1: NodePath("../Path2D2"),
+2: NodePath("../Path2D")
+}
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=401592327]
 stream = ExtResource("18_2vfub")
 volume_db = -3.0
 autoplay = true
 
-[connection signal="next_turn" from="UI/Ath" to="TurnManager" method="next_turn"]
-[connection signal="next_turned" from="TurnManager" to="." method="_on_turn_manager_next_turned"]
+[node name="Path2D2" type="Path2D" parent="." unique_id=1047106249]
+curve = SubResource("Curve2D_igymv")
+
+[node name="Path2D" type="Path2D" parent="." unique_id=305337181]
+curve = SubResource("Curve2D_sp1y7")
+
 [connection signal="updated" from="Player" to="." method="_on_player_updated"]
