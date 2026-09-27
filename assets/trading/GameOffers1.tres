@@ -1196,7 +1196,298 @@ script = ExtResource("2_j3jgy")
 offers = Array[ExtResource("3_a6sa6")]([SubResource("Resource_3j6vb"), SubResource("Resource_vgafj"), SubResource("Resource_c4w34"), SubResource("Resource_juv75"), SubResource("Resource_jcbk6")])
 metadata/_custom_type_script = "uid://0lvj1rsiyhjb"
 
+[sub_resource type="Resource" id="Resource_2h34a"]
+script = ExtResource("3_a6sa6")
+town = 13
+is_buying = true
+merchadise = 4
+threat_level = 15
+amount = 80.0
+metadata/_custom_type_script = "uid://76olk5l6av78"
+
+[sub_resource type="Resource" id="Resource_mljrw"]
+script = ExtResource("3_a6sa6")
+town = 4
+merchadise = 2
+amount = 150.0
+metadata/_custom_type_script = "uid://76olk5l6av78"
+
+[sub_resource type="Resource" id="Resource_ttk7w"]
+script = ExtResource("3_a6sa6")
+town = 5
+merchadise = 3
+amount = 110.0
+metadata/_custom_type_script = "uid://76olk5l6av78"
+
+[sub_resource type="Resource" id="Resource_tq3jb"]
+script = ExtResource("3_a6sa6")
+town = 11
+is_buying = true
+merchadise = 2
+amount = 250.0
+metadata/_custom_type_script = "uid://76olk5l6av78"
+
+[sub_resource type="Resource" id="Resource_8ubr5"]
+script = ExtResource("2_j3jgy")
+offers = Array[ExtResource("3_a6sa6")]([SubResource("Resource_2h34a"), SubResource("Resource_mljrw"), SubResource("Resource_ttk7w"), SubResource("Resource_tq3jb")])
+metadata/_custom_type_script = "uid://0lvj1rsiyhjb"
+
+[sub_resource type="Resource" id="Resource_2qo2t"]
+script = ExtResource("3_a6sa6")
+town = 2
+is_buying = true
+merchadise = 1
+amount = 100.0
+metadata/_custom_type_script = "uid://76olk5l6av78"
+
+[sub_resource type="Resource" id="Resource_qb0af"]
+script = ExtResource("3_a6sa6")
+town = 5
+is_buying = true
+merchadise = 2
+amount = 120.0
+metadata/_custom_type_script = "uid://76olk5l6av78"
+
+[sub_resource type="Resource" id="Resource_oa84l"]
+script = ExtResource("3_a6sa6")
+town = 3
+is_buying = true
+merchadise = 3
+amount = 125.0
+metadata/_custom_type_script = "uid://76olk5l6av78"
+
+[sub_resource type="Resource" id="Resource_8bn1p"]
+script = ExtResource("3_a6sa6")
+town = 1
+is_buying = true
+merchadise = 6
+amount = 15.0
+metadata/_custom_type_script = "uid://76olk5l6av78"
+
+[sub_resource type="Resource" id="Resource_ovuem"]
+script = ExtResource("3_a6sa6")
+town = 12
+merchadise = 5
+amount = 30.0
+metadata/_custom_type_script = "uid://76olk5l6av78"
+
+[sub_resource type="Resource" id="Resource_8k68r"]
+script = ExtResource("2_j3jgy")
+offers = Array[ExtResource("3_a6sa6")]([SubResource("Resource_2qo2t"), SubResource("Resource_qb0af"), SubResource("Resource_oa84l"), SubResource("Resource_8bn1p"), SubResource("Resource_ovuem")])
+metadata/_custom_type_script = "uid://0lvj1rsiyhjb"
+
+[sub_resource type="Resource" id="Resource_wqr3e"]
+script = ExtResource("3_a6sa6")
+town = 6
+is_buying = true
+merchadise = 4
+threat_level = 25
+amount = 75.0
+metadata/_custom_type_script = "uid://76olk5l6av78"
+
+[sub_resource type="Resource" id="Resource_2bmv3"]
+script = ExtResource("3_a6sa6")
+town = 5
+merchadise = 3
+threat_level = 10
+amount = 200.0
+metadata/_custom_type_script = "uid://76olk5l6av78"
+
+[sub_resource type="Resource" id="Resource_rcsfy"]
+script = ExtResource("3_a6sa6")
+town = 11
+is_buying = true
+merchadise = 2
+threat_level = 25
+amount = 90.0
+metadata/_custom_type_script = "uid://76olk5l6av78"
+
+[sub_resource type="Resource" id="Resource_fjrh1"]
+script = ExtResource("2_j3jgy")
+offers = Array[ExtResource("3_a6sa6")]([SubResource("Resource_wqr3e"), SubResource("Resource_2bmv3"), SubResource("Resource_rcsfy")])
+metadata/_custom_type_script = "uid://0lvj1rsiyhjb"
+
+[sub_resource type="Resource" id="Resource_2b4yh"]
+script = ExtResource("3_a6sa6")
+town = 2
+is_buying = true
+merchadise = 4
+threat_level = 5
+amount = 130.0
+metadata/_custom_type_script = "uid://76olk5l6av78"
+
+[sub_resource type="Resource" id="Resource_gs478"]
+script = ExtResource("3_a6sa6")
+town = 7
+merchadise = 1
+threat_level = 50
+amount = 20.0
+metadata/_custom_type_script = "uid://76olk5l6av78"
+
+[sub_resource type="Resource" id="Resource_3rva3"]
+script = ExtResource("3_a6sa6")
+town = 12
+merchadise = 4
+threat_level = 25
+amount = 95.0
+metadata/_custom_type_script = "uid://76olk5l6av78"
+
+[sub_resource type="Resource" id="Resource_t3i4a"]
+script = ExtResource("3_a6sa6")
+town = 1
+is_buying = true
+merchadise = 5
+amount = 30.0
+metadata/_custom_type_script = "uid://76olk5l6av78"
+
+[sub_resource type="Resource" id="Resource_b2b22"]
+script = ExtResource("3_a6sa6")
+town = 9
+is_buying = true
+merchadise = 5
+threat_level = 35
+amount = 25.0
+metadata/_custom_type_script = "uid://76olk5l6av78"
+
+[sub_resource type="Resource" id="Resource_ow1cg"]
+script = ExtResource("2_j3jgy")
+offers = Array[ExtResource("3_a6sa6")]([SubResource("Resource_2b4yh"), SubResource("Resource_gs478"), SubResource("Resource_3rva3"), SubResource("Resource_t3i4a"), SubResource("Resource_b2b22")])
+metadata/_custom_type_script = "uid://0lvj1rsiyhjb"
+
+[sub_resource type="Resource" id="Resource_wf4qf"]
+script = ExtResource("3_a6sa6")
+town = 2
+is_buying = true
+merchadise = 7
+threat_level = 15
+amount = 115.0
+metadata/_custom_type_script = "uid://76olk5l6av78"
+
+[sub_resource type="Resource" id="Resource_fvk7b"]
+script = ExtResource("3_a6sa6")
+town = 4
+is_buying = true
+merchadise = 3
+threat_level = 30
+amount = 150.0
+metadata/_custom_type_script = "uid://76olk5l6av78"
+
+[sub_resource type="Resource" id="Resource_rdp0r"]
+script = ExtResource("3_a6sa6")
+town = 5
+is_buying = true
+merchadise = 4
+threat_level = 40
+amount = 75.0
+metadata/_custom_type_script = "uid://76olk5l6av78"
+
+[sub_resource type="Resource" id="Resource_1bhnu"]
+script = ExtResource("3_a6sa6")
+town = 14
+is_buying = true
+merchadise = 6
+threat_level = 25
+amount = 25.0
+metadata/_custom_type_script = "uid://76olk5l6av78"
+
+[sub_resource type="Resource" id="Resource_yin31"]
+script = ExtResource("2_j3jgy")
+offers = Array[ExtResource("3_a6sa6")]([SubResource("Resource_wf4qf"), SubResource("Resource_fvk7b"), SubResource("Resource_rdp0r"), SubResource("Resource_1bhnu")])
+metadata/_custom_type_script = "uid://0lvj1rsiyhjb"
+
+[sub_resource type="Resource" id="Resource_7wai4"]
+script = ExtResource("3_a6sa6")
+town = 2
+is_buying = true
+merchadise = 1
+threat_level = 30
+amount = 250.0
+metadata/_custom_type_script = "uid://76olk5l6av78"
+
+[sub_resource type="Resource" id="Resource_uy483"]
+script = ExtResource("3_a6sa6")
+town = 13
+is_buying = true
+merchadise = 3
+threat_level = 50
+amount = 180.0
+metadata/_custom_type_script = "uid://76olk5l6av78"
+
+[sub_resource type="Resource" id="Resource_84oc2"]
+script = ExtResource("3_a6sa6")
+town = 11
+merchadise = 4
+threat_level = 42
+amount = 80.0
+metadata/_custom_type_script = "uid://76olk5l6av78"
+
+[sub_resource type="Resource" id="Resource_6oc2i"]
+script = ExtResource("3_a6sa6")
+town = 1
+merchadise = 7
+amount = 50.0
+metadata/_custom_type_script = "uid://76olk5l6av78"
+
+[sub_resource type="Resource" id="Resource_200fb"]
+script = ExtResource("2_j3jgy")
+offers = Array[ExtResource("3_a6sa6")]([SubResource("Resource_7wai4"), SubResource("Resource_uy483"), SubResource("Resource_84oc2"), SubResource("Resource_6oc2i")])
+metadata/_custom_type_script = "uid://0lvj1rsiyhjb"
+
+[sub_resource type="Resource" id="Resource_1agqi"]
+script = ExtResource("3_a6sa6")
+town = 2
+is_buying = true
+merchadise = 7
+threat_level = 20
+amount = 320.0
+metadata/_custom_type_script = "uid://76olk5l6av78"
+
+[sub_resource type="Resource" id="Resource_jnm2b"]
+script = ExtResource("3_a6sa6")
+town = 12
+is_buying = true
+merchadise = 3
+threat_level = 55
+amount = 220.0
+metadata/_custom_type_script = "uid://76olk5l6av78"
+
+[sub_resource type="Resource" id="Resource_0lpg8"]
+script = ExtResource("3_a6sa6")
+town = 6
+is_buying = true
+merchadise = 2
+threat_level = 60
+amount = 95.0
+metadata/_custom_type_script = "uid://76olk5l6av78"
+
+[sub_resource type="Resource" id="Resource_7hod4"]
+script = ExtResource("2_j3jgy")
+offers = Array[ExtResource("3_a6sa6")]([SubResource("Resource_1agqi"), SubResource("Resource_jnm2b"), SubResource("Resource_0lpg8")])
+metadata/_custom_type_script = "uid://0lvj1rsiyhjb"
+
+[sub_resource type="Resource" id="Resource_50sfb"]
+script = ExtResource("3_a6sa6")
+town = 2
+is_buying = true
+merchadise = 2
+threat_level = 25
+amount = 225.0
+metadata/_custom_type_script = "uid://76olk5l6av78"
+
+[sub_resource type="Resource" id="Resource_xsfnj"]
+script = ExtResource("3_a6sa6")
+town = 14
+is_buying = true
+merchadise = 1
+amount = 110.0
+metadata/_custom_type_script = "uid://76olk5l6av78"
+
+[sub_resource type="Resource" id="Resource_gwonn"]
+script = ExtResource("2_j3jgy")
+offers = Array[ExtResource("3_a6sa6")]([SubResource("Resource_50sfb"), SubResource("Resource_xsfnj")])
+metadata/_custom_type_script = "uid://0lvj1rsiyhjb"
+
 [resource]
 script = ExtResource("1_f5qxn")
-town_offers = Array[ExtResource("2_j3jgy")]([SubResource("Resource_wbs85"), SubResource("Resource_x23lb"), SubResource("Resource_fbong"), SubResource("Resource_2b1kv"), SubResource("Resource_b75uj"), SubResource("Resource_rf2kd"), SubResource("Resource_cma0m"), SubResource("Resource_ckryg"), SubResource("Resource_0knmg"), SubResource("Resource_vok8r"), SubResource("Resource_ybhy0"), SubResource("Resource_4u64r"), SubResource("Resource_bh8kw"), SubResource("Resource_4m6vv"), SubResource("Resource_5h4mh"), SubResource("Resource_wnve1"), SubResource("Resource_qehkl"), SubResource("Resource_mgda8"), SubResource("Resource_0xapk"), SubResource("Resource_gwi6m"), SubResource("Resource_c28hi"), SubResource("Resource_mireh"), SubResource("Resource_5hsdq"), SubResource("Resource_7am5o"), SubResource("Resource_41wg8"), SubResource("Resource_try5c"), SubResource("Resource_6ejg3"), SubResource("Resource_1lmmr"), SubResource("Resource_mgos6"), SubResource("Resource_7slns"), SubResource("Resource_ucxw3"), SubResource("Resource_omh07")])
+town_offers = Array[ExtResource("2_j3jgy")]([SubResource("Resource_wbs85"), SubResource("Resource_x23lb"), SubResource("Resource_fbong"), SubResource("Resource_2b1kv"), SubResource("Resource_b75uj"), SubResource("Resource_rf2kd"), SubResource("Resource_cma0m"), SubResource("Resource_ckryg"), SubResource("Resource_0knmg"), SubResource("Resource_vok8r"), SubResource("Resource_ybhy0"), SubResource("Resource_4u64r"), SubResource("Resource_bh8kw"), SubResource("Resource_4m6vv"), SubResource("Resource_5h4mh"), SubResource("Resource_wnve1"), SubResource("Resource_qehkl"), SubResource("Resource_mgda8"), SubResource("Resource_0xapk"), SubResource("Resource_gwi6m"), SubResource("Resource_c28hi"), SubResource("Resource_mireh"), SubResource("Resource_5hsdq"), SubResource("Resource_7am5o"), SubResource("Resource_41wg8"), SubResource("Resource_try5c"), SubResource("Resource_6ejg3"), SubResource("Resource_1lmmr"), SubResource("Resource_mgos6"), SubResource("Resource_7slns"), SubResource("Resource_ucxw3"), SubResource("Resource_omh07"), SubResource("Resource_8ubr5"), SubResource("Resource_8k68r"), SubResource("Resource_fjrh1"), SubResource("Resource_ow1cg"), SubResource("Resource_yin31"), SubResource("Resource_200fb"), SubResource("Resource_7hod4"), SubResource("Resource_gwonn")])
 metadata/_custom_type_script = "uid://bu7cj6yg78hg2"
