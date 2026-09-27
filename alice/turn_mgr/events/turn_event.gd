@@ -7,3 +7,6 @@ enum Type {NONE,TEMPEST,FOE}
 
 @export var target_town : int = -1
 @export var type : Type = Type.NONE
+@export_multiline() var text : String = ""
+@export var increase_min_guards : int = 0
+@export var threat_increase : int = 0

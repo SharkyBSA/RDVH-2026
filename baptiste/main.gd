@@ -10,38 +10,16 @@ extends Node
 @onready var ath: Ath = %Ath
 @onready var trade_window: TradeWindow = %TradeWindow
 
+
 func _ready() -> void:
 	player.inventory_modified.connect(ath.set_ressource_amount)
 	turn_manager.next_turned.connect(ath.set_turn)
 	ath.next_turn.connect(go_to_next_turn)
 	trade_window.launch_expedition.connect(_on_launch_expedition)
+	prepare_turn()
 
 func _on_player_updated(inv):
 	%Ath.update_all(inv)
-
-	##Temporaire pour le test
-	#var expedition1:=Expedition.new()
-	#var expedition2:=Expedition.new()
-	#
-	#expedition1.success_duration=4
-	#expedition2.success_duration=6
-	#expedition1.start_turn=0
-	#expedition2.start_turn=0
-	#expedition1.current_turn=0
-	#expedition2.current_turn=0
-	#expedition1.fail_risk=0
-	#expedition2.fail_risk=1
-	#expedition1.destination=1
-	#expedition2.destination=2
-	#expedition1.delta_res={0:5,2:3,1:1}
-	#expedition2.delta_res={1:9,3:2.3}
-	#
-	#expedition1.draw_fail()
-	#expedition2.draw_fail()
-	#expedition_manager.add_expedition(expedition2)
-	#expedition_manager.add_expedition(expedition1)
-	##Fin temporaire
-	prepare_turn()
 
 func go_to_next_turn()->void:
 	turn_manager.next_turn()
@@ -50,11 +28,12 @@ func go_to_next_turn()->void:
 func prepare_turn()->void:
 	turn_manager = %TurnManager
 	expedition_manager = %ExpeditionMgr
-	#Get thes events affecting this turn and then apply them (TODO) 
+	#Get the events affecting this turn and then apply them (TODO) 
 	var town_offers : Array[TownOffer] = turn_manager.get_turn_town_offers()
-	var _event : Event = turn_manager.get_turn_event()
+	var event : Event = turn_manager.get_turn_event()
 	var current_turn := turn_manager.current_turn
 	
+	apply_event(event)
 	#Get the results of the expeditions and 
 	var expeditions_results : Dictionary[Merchandise.Type,float] = expedition_manager.update_expeditions(current_turn)
 	
@@ -63,15 +42,27 @@ func prepare_turn()->void:
 	pop_offer_bubbles(town_offers)
 	process_expeditions_results(expeditions_results)
 
+func apply_event(event : Event) ->void:
+	if not event.text.is_empty():
+		pop_event_win(event.text)
+	var town : Town = town_manager.get_child(event.target_town)
+	if town == null:
+		return
+	town.min_guards+= event.increase_min_guards
+	town.threat_level += event.threat_increase
+
+func pop_event_win(text: String)->void:
+	pass
+
 func pop_offer_bubbles(town_offers: Array[TownOffer])->void:
 	for trade : TownOffer in town_offers:
 		var town : Town = town_manager.get_child(trade.town)
 		trade.threat_level =trade.threat_level + town.threat_level
+		trade.min_gards = town.min_guards
 		town.current_offer=trade
 		town.popup(trade.is_buying, trade.merchadise)
 
 func hide_old_bubbles()->void:
-	town_manager = %TownManager
 	for town in town_manager.get_children():
 		await town.hide_popup()
 

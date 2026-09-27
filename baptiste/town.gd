@@ -12,10 +12,7 @@ class_name Town
 @export var color : Color = Color(0.7, 0, 0)
 @export var reverse_popup := false
 var current_offer : TownOffer
-var res_type := 0
-var res_amount := 0
-var added_threat := 0
-
+var min_guards : int = 0
 var _bubble_displayed:= false
 
 signal clicked(display_name, town_offer, transport_turn)
@@ -57,6 +54,6 @@ func hide_popup():
 	if not _bubble_displayed:
 		return
 	var tween = create_tween()
-	tween.tween_property($TradeHBox, "modulate:a", 0, 0.5)
+	tween.tween_property($TradeHBox, "modulate:a", 0, 0.1)
 	_bubble_displayed=false
 	await tween.finished
