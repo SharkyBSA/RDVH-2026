@@ -45,7 +45,7 @@ point_count = 3
 
 [sub_resource type="Curve2D" id="Curve2D_brh71"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 977, 485, 17.843323, 16.5688, -17.843323, -16.5688, 878, 467, -10.514815, 22.622784, 10.514815, -22.622784, 847, 391, 0, 0, 0, 0, 910, 346)
+"points": PackedVector2Array(0, 0, 0, 0, 974.565, 485, -1.4052353, 27.124462, 1.4052353, -27.124462, 992, 440, 19.910328, 15.171728, -19.910328, -15.171728, 963, 371, 0, 0, 0, 0, 910, 346)
 }
 point_count = 4
 
@@ -154,7 +154,6 @@ color = Color(0.7, 0, 0, 1)
 metadata/_custom_type_script = "uid://dpup24da6v5sc"
 
 [node name="Chaul3" type="Path2D" parent="UI/Paths" unique_id=321107174]
-visible = false
 curve = SubResource("Curve2D_brh71")
 script = ExtResource("25_0lpg8")
 color = Color(0.7, 0, 0, 1)
