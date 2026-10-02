@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://bnu1q44kxpr2f"]
+[gd_scene format=3 uid="uid://butqtwn5ae3u3"]
 
 [ext_resource type="Script" uid="uid://c55ypskftqjaf" path="res://baptiste/menu.gd" id="1_ry2f6"]
 [ext_resource type="AudioStream" uid="uid://biev2ff5uyoav" path="res://assets/audio/Musique/Musique_Menu.mp3" id="2_hd5j0"]
@@ -20,9 +20,12 @@ script = ExtResource("1_ry2f6")
 
 [node name="TextureRect2" type="TextureRect" parent="." unique_id=1480024980]
 z_index = -1
-layout_mode = 0
-offset_right = 1920.0
-offset_bottom = 1080.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("2_osric")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=598767064]
@@ -48,9 +51,6 @@ anchor_left = 0.5
 anchor_top = 0.778
 anchor_right = 0.5
 anchor_bottom = 0.778
-offset_left = -50.5
-offset_top = -316.0
-offset_right = 50.5
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_constants/separation = 98
