@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://diq8sdq1y3pbn"]
 
 [ext_resource type="Script" uid="uid://bg3jo52m7mdnw" path="res://alice/hud/ath.gd" id="1_0hjve"]
-[ext_resource type="FontFile" uid="uid://vaw6peo6gunr" path="res://assets/CharpentierRenRed-Demi.ttf" id="1_g56sb"]
 [ext_resource type="Texture2D" uid="uid://d14cdrck17eci" path="res://assets/Trading_interface/Materials_interfaceV1.png" id="2_k5d8j"]
 [ext_resource type="Texture2D" uid="uid://c3ds0yfqaqo" path="res://assets/icons/or.png" id="3_k5d8j"]
 [ext_resource type="FontFile" uid="uid://c3v83r2x1hqbg" path="res://assets/Indira_K.ttf" id="4_g56sb"]
@@ -16,8 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://cgcgodju812pw" path="res://assets/Trading_interface/OptionV1.png" id="13_7kn40"]
 
 [sub_resource type="Theme" id="Theme_pmwtw"]
-Label/font_sizes/font_size = 22
-Label/fonts/font = ExtResource("1_g56sb")
+Label/font_sizes/font_size = 26
 
 [node name="Ath" type="Control" unique_id=2026785200]
 layout_mode = 3
