@@ -15,6 +15,7 @@ func add_expedition(new_expedition: Expedition)->void:
 		return 
 		
 	var path : ExpeditionPath = destination_paths[new_expedition.destination]
+	path.show()
 	var path_follow := ExpeditionPathFollow2D.new()
 	var expedition_token : Node2D
 	if path.maritime_path:
@@ -31,7 +32,7 @@ func update_expeditions(turn : int)->Dictionary[Merchandise.Type,float]:
 	var results:Dictionary[Merchandise.Type,float]= {}
 	
 	for expedition in _ongoing_expeditions:
-		expedition.current_turn= turn
+		expedition.current_turn = turn
 		if not expedition.is_over():
 			continue
 			
@@ -40,8 +41,8 @@ func update_expeditions(turn : int)->Dictionary[Merchandise.Type,float]:
 		
 		for merchandise in expedition.delta_res:
 			if not results.has(merchandise):
-				results[merchandise]=0
-			results[merchandise]+=expedition.delta_res[merchandise]
+				results[merchandise] = 0
+			results[merchandise] += expedition.delta_res[merchandise]
 		
 	progess_expeditions_tokens()
 	return results

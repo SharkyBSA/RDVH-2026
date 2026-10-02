@@ -141,74 +141,101 @@ metadata/_edit_lock_ = true
 anchors_preset = 0
 
 [node name="ExpeditionPath" type="Path2D" parent="UI/Paths" unique_id=1075346388]
+visible = false
 curve = SubResource("Curve2D_sp1y7")
 script = ExtResource("25_0lpg8")
 metadata/_custom_type_script = "uid://dpup24da6v5sc"
 
 [node name="Goa2" type="Path2D" parent="UI/Paths" unique_id=898544559]
+visible = false
 curve = SubResource("Curve2D_igymv")
 script = ExtResource("25_0lpg8")
+color = Color(0.7, 0, 0, 1)
 metadata/_custom_type_script = "uid://dpup24da6v5sc"
 
 [node name="Chaul3" type="Path2D" parent="UI/Paths" unique_id=321107174]
+visible = false
 curve = SubResource("Curve2D_brh71")
 script = ExtResource("25_0lpg8")
+color = Color(0.7, 0, 0, 1)
 metadata/_custom_type_script = "uid://dpup24da6v5sc"
 
 [node name="Colombo4" type="Path2D" parent="UI/Paths" unique_id=1506187603]
+visible = false
 curve = SubResource("Curve2D_x23lb")
 script = ExtResource("25_0lpg8")
+color = Color(0.7, 0, 0, 1)
 metadata/_custom_type_script = "uid://dpup24da6v5sc"
 
 [node name="Patna5" type="Path2D" parent="UI/Paths" unique_id=2123908017]
+visible = false
 curve = SubResource("Curve2D_jhded")
 script = ExtResource("25_0lpg8")
 maritime_path = false
+color = Color(0.7, 0, 0, 1)
 metadata/_custom_type_script = "uid://dpup24da6v5sc"
 
 [node name="Aden6" type="Path2D" parent="UI/Paths" unique_id=1263215928]
+visible = false
 curve = SubResource("Curve2D_fp81k")
 script = ExtResource("25_0lpg8")
+color = Color(0.34509805, 0.3254902, 0, 1)
 metadata/_custom_type_script = "uid://dpup24da6v5sc"
 
 [node name="Ormuz7" type="Path2D" parent="UI/Paths" unique_id=1571871185]
+visible = false
 curve = SubResource("Curve2D_0lpg8")
 script = ExtResource("25_0lpg8")
+color = Color(0.34509805, 0.3254902, 0, 1)
 metadata/_custom_type_script = "uid://dpup24da6v5sc"
 
 [node name="Debal8" type="Path2D" parent="UI/Paths" unique_id=1490935104]
+visible = false
 curve = SubResource("Curve2D_3xgaf")
 script = ExtResource("25_0lpg8")
+color = Color(0.34509805, 0.3254902, 0, 1)
 metadata/_custom_type_script = "uid://dpup24da6v5sc"
 
 [node name="Soffala9" type="Path2D" parent="UI/Paths" unique_id=612647956]
+visible = false
 curve = SubResource("Curve2D_upuqf")
 script = ExtResource("25_0lpg8")
+color = Color(0.34509805, 0.3254902, 0, 1)
 metadata/_custom_type_script = "uid://dpup24da6v5sc"
 
 [node name="Zanzibar10" type="Path2D" parent="UI/Paths" unique_id=277415020]
+visible = false
 curve = SubResource("Curve2D_fbong")
 script = ExtResource("25_0lpg8")
+color = Color(0.34509805, 0.3254902, 0, 1)
 metadata/_custom_type_script = "uid://dpup24da6v5sc"
 
 [node name="Malacca11" type="Path2D" parent="UI/Paths" unique_id=283714538]
+visible = false
 curve = SubResource("Curve2D_2b1kv")
 script = ExtResource("25_0lpg8")
+color = Color(0, 0.39607844, 0, 1)
 metadata/_custom_type_script = "uid://dpup24da6v5sc"
 
 [node name="Timor12" type="Path2D" parent="UI/Paths" unique_id=1293742541]
+visible = false
 curve = SubResource("Curve2D_b75uj")
 script = ExtResource("25_0lpg8")
+color = Color(0, 0.39607844, 0, 1)
 metadata/_custom_type_script = "uid://dpup24da6v5sc"
 
 [node name="Chatigaon13" type="Path2D" parent="UI/Paths" unique_id=1968060032]
+visible = false
 curve = SubResource("Curve2D_rf2kd")
 script = ExtResource("25_0lpg8")
+color = Color(0, 0.39607844, 0, 1)
 metadata/_custom_type_script = "uid://dpup24da6v5sc"
 
 [node name="Syriam14" type="Path2D" parent="UI/Paths" unique_id=84582373]
+visible = false
 curve = SubResource("Curve2D_cma0m")
 script = ExtResource("25_0lpg8")
+color = Color(0, 0.39607844, 0, 1)
 metadata/_custom_type_script = "uid://dpup24da6v5sc"
 
 [node name="Ath" parent="UI" unique_id=2026785200 instance=ExtResource("11_ekwjs")]
