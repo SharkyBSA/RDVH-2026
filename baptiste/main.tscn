@@ -141,6 +141,7 @@ metadata/_edit_lock_ = true
 anchors_preset = 0
 
 [node name="ExpeditionPath" type="Path2D" parent="UI/Paths" unique_id=1075346388]
+position = Vector2(-100, -100)
 curve = SubResource("Curve2D_sp1y7")
 script = ExtResource("25_0lpg8")
 metadata/_custom_type_script = "uid://dpup24da6v5sc"

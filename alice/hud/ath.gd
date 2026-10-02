@@ -27,6 +27,7 @@ class_name Ath
 	Merchandise.Type.ANIMALS:animals,
 	Merchandise.Type.SLAVES:slaves}
 
+var once = true
 
 signal next_turn
 signal pause_btn_pressed
@@ -41,7 +42,11 @@ func update_all(inventory : Dictionary):
 func set_ressource_amount(res_key :Merchandise.Type, amount: float)->void:
 	if not resource_labels.has(res_key):
 		return
+	var old_val:int= str_to_var(resource_labels[res_key].text)
+	var delta : int = amount-old_val
 	resource_labels[res_key].text=str(floori(amount))
+	_pop_notif_text(delta,resource_labels[res_key])
+	
 
 func set_turn(turn : int)->void:
 	turn_lbl.text = "Tour : "+str(turn)
@@ -62,3 +67,29 @@ func pass_button_animation():
 	tween2.tween_property(%NextTurnBtn, "modulate", Color(1, 1, 1), 1)
 	await tween2.finished
 	pass_button_animation()
+
+func _pop_notif_text(delta_value : int, target_node : Label)->void:
+	for child in target_node.get_children():
+		target_node.remove_child(child)
+		
+	var notif_lbl:= target_node.duplicate()
+	
+	if delta_value>0:
+		notif_lbl.text="+ "+str(delta_value)
+		notif_lbl.add_theme_color_override("font_color",Color.DARK_GREEN)
+	elif delta_value<0:
+		notif_lbl.text="- "+str(abs(delta_value))
+		notif_lbl.add_theme_color_override("font_color",Color.RED)
+	else:
+		return
+		
+	target_node.add_child(notif_lbl)
+	notif_lbl.global_position=target_node.global_position
+	var offset_lbl:float=target_node.size.y*(-sign(delta_value))
+	
+	var tween :=create_tween()
+	tween.set_parallel()
+	tween.tween_property(notif_lbl,"position:y",offset_lbl,2).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_EXPO)
+	tween.tween_property(notif_lbl,"modulate:a",0,1.5)
+	tween.finished.connect(notif_lbl.queue_free)
+	

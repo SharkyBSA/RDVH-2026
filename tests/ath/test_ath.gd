@@ -16,7 +16,7 @@ extends Control
 
 var next_turn_counter : int =0
 var paused : bool = false
-var inventory : Array[int] = [0,0,0,0,0,0,0,0,0,0]
+var inventory : Array[int] = [20,20,20,20,20,20,20,20,20,20]
 
 func _ready() -> void:
 	ath.next_turn.connect(func()->void:
