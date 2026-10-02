@@ -89,7 +89,7 @@ func _pop_notif_text(delta_value : int, target_node : Label)->void:
 	
 	var tween :=create_tween()
 	tween.set_parallel()
-	tween.tween_property(notif_lbl,"position:y",offset_lbl,2).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_EXPO)
-	tween.tween_property(notif_lbl,"modulate:a",0,1.5)
+	tween.tween_property(notif_lbl,"position:y",offset_lbl,2.5).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_EXPO)
+	tween.tween_property(notif_lbl,"modulate:a",0,2)
 	tween.finished.connect(notif_lbl.queue_free)
 	
