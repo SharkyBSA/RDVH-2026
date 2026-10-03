@@ -3,9 +3,9 @@ extends Resource
 ##TownOffer.new() cree une offre vide
 class_name TownOffer
 
-@export var town : int = -1
+@export var town : Town.ID = Town.ID.GOA
 @export var is_buying : bool = false
-@export var merchadise := -1
+@export var merchadise : int = Merchandise.Type.SPICE
 @export var threat_level := 0
 @export var amount : float = 0
 var min_gards: int =0

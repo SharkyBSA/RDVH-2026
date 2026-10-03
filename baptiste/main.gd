@@ -6,7 +6,7 @@ extends Node
 @onready var turn_manager: TurnManager = %TurnManager
 @onready var expedition_manager: ExpeditionManager = %ExpeditionMgr
 @onready var player: Player = %Player
-@onready var town_manager: Node = %TownManager
+@onready var town_manager: TownManager = %TownManager
 @onready var ath: Ath = %Ath
 @onready var trade_window: TradeWindow = %TradeWindow
 @onready var event_win: EventWindow = %EventWindow
@@ -49,16 +49,16 @@ func apply_event(event : Event) ->void:
 	if not event.text.is_empty():
 		event_win.set_type(event.type)
 		pop_event_win(event.text)
-	var town : Town = town_manager.get_child(event.target_town)
+	var town : Town = town_manager.get_town(event.target_town)
 	if town == null:
 		return
 	
 	if event.type == Event.Type.CHANTAGE:
-		for town_a in town_manager.get_children():
+		for town_a in town_manager.get_towns():
 			town_a.min_guards+= event.increase_min_guards
 			
 	#elif event.type == Event.Type.ATTACK && event.target_town == 0:
-		#for town_a in town_manager.get_children():
+		#for town_a in town_manager.get_towns():
 			#town_a.threat_level+= event.threat_increase
 
 func pop_event_win(text: String)->void:
@@ -67,14 +67,14 @@ func pop_event_win(text: String)->void:
 
 func pop_offer_bubbles(town_offers: Array[TownOffer])->void:
 	for trade : TownOffer in town_offers:
-		var town : Town = town_manager.get_child(trade.town)
+		var town : Town = town_manager.get_town(trade.town)
 		trade.threat_level =trade.threat_level + town.threat_level
 		trade.min_gards = town.min_guards
 		town.current_offer=trade
 		town.popup(trade.is_buying, trade.merchadise)
 
 func hide_old_bubbles()->void:
-	for town in town_manager.get_children():
+	for town in town_manager.get_towns():
 		await town.hide_popup()
 
 func process_expeditions_results(expeditions_results : Dictionary[Merchandise.Type,float])->void:
@@ -84,7 +84,7 @@ func process_expeditions_results(expeditions_results : Dictionary[Merchandise.Ty
 func _on_launch_expedition(expedition : Expedition)->void:
 	expedition.start_turn=turn_manager.current_turn
 	expedition.current_turn=turn_manager.current_turn
-	var town : Town = town_manager.get_child(expedition.destination)
+	var town : Town = town_manager.get_town(expedition.destination)
 	if town != null:
 		town.hide_popup()
 	if expedition.success_duration==0:
