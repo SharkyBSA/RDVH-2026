@@ -5,7 +5,7 @@ class_name Event
 
 enum Type {NONE,ATTACK,CHANTAGE,GAME_OVER}
 
-@export var target_town : int = -1
+@export var target_town : Town.ID = Town.ID.GOA
 @export var type : Type = Type.NONE
 @export_multiline() var text : String = ""
 @export var increase_min_guards : int = 0

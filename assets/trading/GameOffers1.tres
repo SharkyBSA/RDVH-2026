@@ -35,7 +35,6 @@ metadata/_custom_type_script = "uid://76olk5l6av78"
 [sub_resource type="Resource" id="Resource_brh71"]
 script = ExtResource("3_a6sa6")
 town = 3
-merchadise = 4
 amount = 50.0
 metadata/_custom_type_script = "uid://76olk5l6av78"
 
@@ -60,9 +59,7 @@ metadata/_custom_type_script = "uid://76olk5l6av78"
 
 [sub_resource type="Resource" id="Resource_3xgaf"]
 script = ExtResource("3_a6sa6")
-town = 2
 is_buying = true
-merchadise = 4
 amount = 10.0
 metadata/_custom_type_script = "uid://76olk5l6av78"
 
@@ -97,7 +94,6 @@ metadata/_custom_type_script = "uid://76olk5l6av78"
 [sub_resource type="Resource" id="Resource_bhd6o"]
 script = ExtResource("3_a6sa6")
 town = 4
-merchadise = 4
 amount = 75.0
 metadata/_custom_type_script = "uid://76olk5l6av78"
 
@@ -158,7 +154,6 @@ metadata/_custom_type_script = "uid://76olk5l6av78"
 
 [sub_resource type="Resource" id="Resource_us77d"]
 script = ExtResource("3_a6sa6")
-town = 2
 is_buying = true
 merchadise = 2
 amount = 120.0
@@ -243,7 +238,6 @@ metadata/_custom_type_script = "uid://0lvj1rsiyhjb"
 [sub_resource type="Resource" id="Resource_0i4ec"]
 script = ExtResource("3_a6sa6")
 town = 11
-merchadise = 4
 amount = 50.0
 metadata/_custom_type_script = "uid://76olk5l6av78"
 
@@ -361,7 +355,6 @@ metadata/_custom_type_script = "uid://76olk5l6av78"
 script = ExtResource("3_a6sa6")
 town = 1
 is_buying = true
-merchadise = 4
 amount = 75.0
 metadata/_custom_type_script = "uid://76olk5l6av78"
 
@@ -374,7 +367,6 @@ metadata/_custom_type_script = "uid://0lvj1rsiyhjb"
 script = ExtResource("3_a6sa6")
 town = 9
 is_buying = true
-merchadise = 4
 amount = 100.0
 metadata/_custom_type_script = "uid://76olk5l6av78"
 
@@ -396,7 +388,6 @@ metadata/_custom_type_script = "uid://76olk5l6av78"
 [sub_resource type="Resource" id="Resource_cp6g2"]
 script = ExtResource("3_a6sa6")
 town = 8
-merchadise = 4
 amount = 200.0
 metadata/_custom_type_script = "uid://76olk5l6av78"
 
@@ -417,6 +408,7 @@ metadata/_custom_type_script = "uid://0lvj1rsiyhjb"
 script = ExtResource("3_a6sa6")
 town = 5
 is_buying = true
+merchadise = 6
 threat_level = 6
 amount = 10.0
 metadata/_custom_type_script = "uid://76olk5l6av78"
@@ -480,7 +472,6 @@ metadata/_custom_type_script = "uid://76olk5l6av78"
 
 [sub_resource type="Resource" id="Resource_iqsrn"]
 script = ExtResource("3_a6sa6")
-town = 2
 is_buying = true
 merchadise = 3
 amount = 100.0
@@ -526,7 +517,6 @@ metadata/_custom_type_script = "uid://76olk5l6av78"
 script = ExtResource("3_a6sa6")
 town = 7
 is_buying = true
-merchadise = 4
 amount = 110.0
 metadata/_custom_type_script = "uid://76olk5l6av78"
 
@@ -545,7 +535,6 @@ metadata/_custom_type_script = "uid://76olk5l6av78"
 [sub_resource type="Resource" id="Resource_q7lrr"]
 script = ExtResource("3_a6sa6")
 town = 8
-merchadise = 4
 amount = 130.0
 metadata/_custom_type_script = "uid://76olk5l6av78"
 
@@ -597,7 +586,6 @@ metadata/_custom_type_script = "uid://76olk5l6av78"
 script = ExtResource("3_a6sa6")
 town = 9
 is_buying = true
-merchadise = 4
 amount = 120.0
 metadata/_custom_type_script = "uid://76olk5l6av78"
 
@@ -632,7 +620,6 @@ metadata/_custom_type_script = "uid://76olk5l6av78"
 script = ExtResource("3_a6sa6")
 town = 9
 is_buying = true
-merchadise = 4
 threat_level = 30
 amount = 150.0
 metadata/_custom_type_script = "uid://76olk5l6av78"
@@ -641,7 +628,6 @@ metadata/_custom_type_script = "uid://76olk5l6av78"
 script = ExtResource("3_a6sa6")
 town = 1
 is_buying = true
-merchadise = 4
 amount = 75.0
 metadata/_custom_type_script = "uid://76olk5l6av78"
 
@@ -669,7 +655,6 @@ metadata/_custom_type_script = "uid://76olk5l6av78"
 [sub_resource type="Resource" id="Resource_t1yub"]
 script = ExtResource("3_a6sa6")
 town = 8
-merchadise = 4
 amount = 200.0
 metadata/_custom_type_script = "uid://76olk5l6av78"
 
@@ -767,7 +752,6 @@ metadata/_custom_type_script = "uid://76olk5l6av78"
 script = ExtResource("3_a6sa6")
 town = 10
 is_buying = true
-merchadise = 4
 threat_level = 20
 amount = 75.0
 metadata/_custom_type_script = "uid://76olk5l6av78"
@@ -780,7 +764,6 @@ metadata/_custom_type_script = "uid://0lvj1rsiyhjb"
 [sub_resource type="Resource" id="Resource_4lpt0"]
 script = ExtResource("3_a6sa6")
 town = 12
-merchadise = 4
 amount = 80.0
 metadata/_custom_type_script = "uid://76olk5l6av78"
 
@@ -795,7 +778,6 @@ metadata/_custom_type_script = "uid://76olk5l6av78"
 script = ExtResource("3_a6sa6")
 town = 6
 is_buying = true
-merchadise = 4
 threat_level = 10
 amount = 135.0
 metadata/_custom_type_script = "uid://76olk5l6av78"
@@ -823,7 +805,6 @@ metadata/_custom_type_script = "uid://76olk5l6av78"
 [sub_resource type="Resource" id="Resource_uc0gs"]
 script = ExtResource("3_a6sa6")
 town = 4
-merchadise = 4
 amount = 110.0
 metadata/_custom_type_script = "uid://76olk5l6av78"
 
@@ -838,7 +819,6 @@ metadata/_custom_type_script = "uid://76olk5l6av78"
 script = ExtResource("3_a6sa6")
 town = 7
 is_buying = true
-merchadise = 4
 amount = 95.0
 metadata/_custom_type_script = "uid://76olk5l6av78"
 
@@ -867,14 +847,12 @@ metadata/_custom_type_script = "uid://76olk5l6av78"
 script = ExtResource("3_a6sa6")
 town = 13
 is_buying = true
-merchadise = 4
 amount = 75.0
 metadata/_custom_type_script = "uid://76olk5l6av78"
 
 [sub_resource type="Resource" id="Resource_qglg0"]
 script = ExtResource("3_a6sa6")
 town = 8
-merchadise = 4
 threat_level = 5
 amount = 95.0
 metadata/_custom_type_script = "uid://76olk5l6av78"
@@ -919,7 +897,6 @@ metadata/_custom_type_script = "uid://76olk5l6av78"
 [sub_resource type="Resource" id="Resource_4mb6h"]
 script = ExtResource("3_a6sa6")
 town = 8
-merchadise = 4
 amount = 65.0
 metadata/_custom_type_script = "uid://76olk5l6av78"
 
@@ -991,14 +968,12 @@ metadata/_custom_type_script = "uid://76olk5l6av78"
 script = ExtResource("3_a6sa6")
 town = 5
 is_buying = true
-merchadise = 4
 amount = 45.0
 metadata/_custom_type_script = "uid://76olk5l6av78"
 
 [sub_resource type="Resource" id="Resource_8vdj4"]
 script = ExtResource("3_a6sa6")
 town = 8
-merchadise = 4
 amount = 20.0
 metadata/_custom_type_script = "uid://76olk5l6av78"
 
@@ -1080,7 +1055,6 @@ metadata/_custom_type_script = "uid://76olk5l6av78"
 [sub_resource type="Resource" id="Resource_s5fx4"]
 script = ExtResource("3_a6sa6")
 town = 11
-merchadise = 4
 amount = 120.0
 metadata/_custom_type_script = "uid://76olk5l6av78"
 
@@ -1240,7 +1214,6 @@ metadata/_custom_type_script = "uid://0lvj1rsiyhjb"
 
 [sub_resource type="Resource" id="Resource_2qo2t"]
 script = ExtResource("3_a6sa6")
-town = 2
 is_buying = true
 merchadise = 1
 amount = 100.0
@@ -1318,7 +1291,6 @@ metadata/_custom_type_script = "uid://0lvj1rsiyhjb"
 
 [sub_resource type="Resource" id="Resource_2b4yh"]
 script = ExtResource("3_a6sa6")
-town = 2
 is_buying = true
 merchadise = 4
 threat_level = 20
@@ -1365,7 +1337,6 @@ metadata/_custom_type_script = "uid://0lvj1rsiyhjb"
 
 [sub_resource type="Resource" id="Resource_wf4qf"]
 script = ExtResource("3_a6sa6")
-town = 2
 is_buying = true
 merchadise = 7
 threat_level = 35
@@ -1406,7 +1377,6 @@ metadata/_custom_type_script = "uid://0lvj1rsiyhjb"
 
 [sub_resource type="Resource" id="Resource_7wai4"]
 script = ExtResource("3_a6sa6")
-town = 2
 is_buying = true
 merchadise = 1
 threat_level = 88
@@ -1444,7 +1414,6 @@ metadata/_custom_type_script = "uid://0lvj1rsiyhjb"
 
 [sub_resource type="Resource" id="Resource_1agqi"]
 script = ExtResource("3_a6sa6")
-town = 2
 is_buying = true
 merchadise = 7
 threat_level = 42
@@ -1476,7 +1445,6 @@ metadata/_custom_type_script = "uid://0lvj1rsiyhjb"
 
 [sub_resource type="Resource" id="Resource_50sfb"]
 script = ExtResource("3_a6sa6")
-town = 2
 is_buying = true
 merchadise = 4
 threat_level = 40
