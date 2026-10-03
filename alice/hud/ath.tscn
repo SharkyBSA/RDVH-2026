@@ -349,15 +349,5 @@ texture_pressed = ExtResource("13_7kn40")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="Label" type="Label" parent="." unique_id=1416078837]
-layout_mode = 0
-offset_left = 137.6
-offset_top = 65.4
-offset_right = 177.6
-offset_bottom = 88.4
-theme_override_colors/font_color = Color(0, 0.6745098, 0, 1)
-theme_override_fonts/font = ExtResource("4_g56sb")
-text = "+20"
-
 [connection signal="pressed" from="HBoxContainer/NextTurnBtn" to="." method="_on_next_turn_btn_pressed"]
 [connection signal="pressed" from="HBoxContainer/Pausebtn" to="." method="_on_pausebtn_pressed"]
