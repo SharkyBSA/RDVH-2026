@@ -9,3 +9,4 @@ class_name TownOffer
 @export var threat_level := 0
 @export var amount : float = 0
 var min_gards: int =0
+var price_modifier : float = 1.0

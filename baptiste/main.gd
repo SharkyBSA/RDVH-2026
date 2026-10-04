@@ -70,6 +70,11 @@ func pop_offer_bubbles(town_offers: Array[TownOffer])->void:
 		var town : Town = town_manager.get_town(trade.town)
 		trade.threat_level =trade.threat_level + town.threat_level
 		trade.min_gards = town.min_guards
+		if trade.is_buying:
+			trade.price_modifier = town.buy_factor[trade.merchadise] if town.buy_factor.has(trade.merchadise) else 1.0
+		else:
+			trade.price_modifier = town.sell_factor[trade.merchadise] if town.buy_factor.has(trade.merchadise) else 1.0
+		
 		town.current_offer=trade
 		town.popup(trade.is_buying, trade.merchadise)
 
