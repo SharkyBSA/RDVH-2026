@@ -11,7 +11,7 @@ enum ID {
 	ADEN=6,
 	ORMUZ=7,
 	DEBAL=8,
-	SOFFALA=9,
+	SOFALA=9,
 	ZANZIBAR=10,
 	MALACCA=11,
 	TIMOR=12,
@@ -20,11 +20,11 @@ enum ID {
 }
 
 @export var town_name := ""
+@export var index :ID= 0
 @export var transport_mode := 0
 @export var transport_turn := 1
 @export var transport_threat := 0
 @export var threat_level := 0
-@export var index :ID= 0
 @export var sfx : Array[AudioStreamMP3] = []
 @export var start_town := false
 @export var color : Color = Color(0.7, 0, 0)

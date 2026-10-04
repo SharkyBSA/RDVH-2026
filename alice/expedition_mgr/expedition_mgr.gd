@@ -4,7 +4,7 @@ class_name ExpeditionManager
 const MARITIME_TOKEN = preload("uid://bb7cgqp22fgvx")
 const TERRESTRIAL_TOKEN = preload("uid://c45ii7ibuubkg")
 
-@export var destination_paths : Dictionary[int,ExpeditionPath]={}
+@export var destination_paths : Dictionary[Town.ID,ExpeditionPath]={}
 
 ##Dictionnary storing an Expedition and its corresponding PathFollow (its visual represenation)
 var _ongoing_expeditions : Dictionary[Expedition,ExpeditionPathFollow2D] = {}
