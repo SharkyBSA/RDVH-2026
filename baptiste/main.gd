@@ -49,18 +49,24 @@ func apply_event(event : Event) ->void:
 	if not event.text.is_empty():
 		event_win.set_type(event.type)
 		pop_event_win(event.text)
-	var town : Town = town_manager.get_town(event.target_town)
-	if town == null:
-		return
-	
-	if event.type == Event.Type.CHANTAGE:
-		for town_a in town_manager.get_towns():
-			town_a.min_guards+= event.increase_min_guards
-			
-	#elif event.type == Event.Type.ATTACK && event.target_town == 0:
-		#for town_a in town_manager.get_towns():
-			#town_a.threat_level+= event.threat_increase
+	var target_towns : Array[Town] = [] 
+	if event.target_all_town:
+		target_towns=town_manager.get_towns()
+	else:
+		for town_id in event.target_town:
+			if not town_manager.town_exist(town_id):
+				continue
+			target_towns.append(town_manager.get_town(town_id))
 
+	for town in target_towns:
+		town.min_guards+=event.increase_min_guards
+		town.threat_level+=event.threat_increase
+		for merchandise_type in event.sell_price_modifier_increase.keys():
+			if not town.sell_factor.has(merchandise_type):
+				town.sell_factor[merchandise_type]=0.5
+			town.sell_factor[merchandise_type]+=event.sell_price_modifier_increase[merchandise_type]
+		
+		
 func pop_event_win(text: String)->void:
 	event_win.set_text(text)
 	event_win.appear()
