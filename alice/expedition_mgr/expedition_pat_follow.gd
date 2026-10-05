@@ -3,16 +3,25 @@ class_name ExpeditionToken
 
 enum State {ALIVE,SINKING}
 
-const SPEED : float = 0.35
-var move_tween : Tween
-var expedition_progress : float = 0.0
-var state : State = State.ALIVE
-	
+@export_category("Parametres, tu peux toucher")
 @export var sprite_alive : Texture2D
 @export var sprite_sink : Texture2D
 @export var fail_text : String = "Expedition perdue !"
 @export var fail_theme : Theme = Theme.new()
+@export_category("Nodes, pas toucher")
 @export var sprite : Sprite2D
+@export var tooltip_detection_area : Area2D
+
+const SPEED : float = 0.35
+
+var move_tween : Tween
+var expedition_progress : float = 0.0
+var state : State = State.ALIVE
+
+const TOOLTIP_CHECK_PERIOD : float = 0.2
+var hovered_by_mouse := false 
+
+signal requet_tooltip(me : ExpeditionToken)
 
 func _init() -> void:
 	rotates=false
@@ -20,6 +29,25 @@ func _init() -> void:
 func _ready() -> void:
 	if sprite == null:
 		sprite = get_child(0)
+	
+	_check_has_hovered_state_changed()
+
+#Verifie la position de la souris pour savoir si elle est dans ou hors du cadre
+#Marche mieux que d'utiliser les signaux mouse_entered et mouse_exited
+func _check_has_hovered_state_changed()-> void:
+	var shape_rect : RectangleShape2D = tooltip_detection_area.get_child(0).shape
+	if not hovered_by_mouse:
+		hovered_by_mouse = shape_rect.get_rect().has_point(get_local_mouse_position())
+		if hovered_by_mouse:
+			requet_tooltip.emit(self)
+	else:
+		hovered_by_mouse = shape_rect.get_rect().has_point(get_local_mouse_position())
+		if not hovered_by_mouse:
+			for child in get_children():
+				if child is ExpeditionTooltip:
+					remove_child(child)
+
+	get_tree().create_timer(TOOLTIP_CHECK_PERIOD).timeout.connect(_check_has_hovered_state_changed)
 
 func set_progess(prog_val: float):
 	if state==State.SINKING:

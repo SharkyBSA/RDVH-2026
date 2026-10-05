@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://ca67r48c812aj"]
+
+[ext_resource type="Script" uid="uid://c0552tfhuscao" path="res://alice/expedition_mgr/expedition_tooltip.gd" id="1_6c87k"]
+
+[node name="ExpeditionTooltip" type="PanelContainer" unique_id=880980047]
+anchors_preset = -1
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_6c87k")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=573788009]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 10
+
+[node name="HBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1514232313]
+layout_mode = 2
+
+[node name="TurnCounter" type="Label" parent="MarginContainer/HBoxContainer" unique_id=1234155176]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Contenant"
+
+[node name="Cargaison" type="Label" parent="MarginContainer/HBoxContainer" unique_id=1278034787]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Ramene"

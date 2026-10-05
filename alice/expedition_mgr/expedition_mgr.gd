@@ -3,6 +3,7 @@ class_name ExpeditionManager
 
 const MARITIME_TOKEN = preload("uid://bb7cgqp22fgvx")
 const TERRESTRIAL_TOKEN = preload("uid://c45ii7ibuubkg")
+const EXPEDITION_TOOLTIP = preload("uid://ca67r48c812aj")
 
 @export var destination_paths : Dictionary[Town.ID,ExpeditionPath]={}
 
@@ -25,6 +26,7 @@ func add_expedition(new_expedition: Expedition)->void:
 	
 	path.add_child(expedition_token)
 	_ongoing_expeditions[new_expedition]= expedition_token
+	expedition_token.requet_tooltip.connect(attach_expedition_tooltip)
 
 func update_expeditions(turn : int)->Dictionary[Merchandise.Type,float]:
 	var results:Dictionary[Merchandise.Type,float]= {}
@@ -70,3 +72,28 @@ func progess_expeditions_tokens():
 		else:
 			remaining_expeditions[expedition]=expedition_token
 	_ongoing_expeditions=remaining_expeditions
+
+func attach_expedition_tooltip(expedition_token : ExpeditionToken)->void:
+	var corresponding_expedition := find_expedition(expedition_token)
+	if corresponding_expedition == null:
+		print("WARNING: Failed to find corresponding expedition while creating tooltip")
+		return
+	
+	var tooltip : ExpeditionTooltip = EXPEDITION_TOOLTIP.instantiate()
+	expedition_token.add_child(tooltip)
+	tooltip.position= Vector2(50,20)
+	tooltip.turn_counter.text="Tours restants: "+str(max(0,corresponding_expedition.get_remaining_turns()))
+	
+	tooltip.cargaison.text="Gains au retour:"
+	for merchandise_id in corresponding_expedition.delta_res:
+		tooltip.cargaison.text+="\n - "+Merchandise.display_names[merchandise_id]+": "+str(corresponding_expedition.delta_res[merchandise_id] as int)
+	
+func find_expedition(expedition_token : ExpeditionToken)->Expedition:
+	for expedition in _ongoing_expeditions:
+		if _ongoing_expeditions[expedition] == expedition_token:
+			return expedition
+	for expedition in _sinking_expeditions:
+		if _sinking_expeditions[expedition] == expedition_token:
+			return expedition
+	return null
+	
