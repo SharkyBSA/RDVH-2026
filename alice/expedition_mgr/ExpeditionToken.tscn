@@ -12,6 +12,7 @@ size = Vector2(122, 68)
 script = ExtResource("1_p2bje")
 sprite_alive = ExtResource("1_26ak7")
 sprite_sink = ExtResource("3_q1nic")
+fail_text = null
 fail_theme = ExtResource("4_y0b80")
 sprite = NodePath("Sprite2D")
 tooltip_detection_area = NodePath("Area2D")

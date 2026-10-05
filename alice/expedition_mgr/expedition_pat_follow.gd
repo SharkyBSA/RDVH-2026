@@ -21,7 +21,8 @@ var state : State = State.ALIVE
 const TOOLTIP_CHECK_PERIOD : float = 0.2
 var hovered_by_mouse := false 
 
-signal requet_tooltip(me : ExpeditionToken)
+signal is_hovered(me : ExpeditionToken)
+signal is_not_hovered
 
 func _init() -> void:
 	rotates=false
@@ -39,10 +40,11 @@ func _check_has_hovered_state_changed()-> void:
 	if not hovered_by_mouse:
 		hovered_by_mouse = shape_rect.get_rect().has_point(get_local_mouse_position())
 		if hovered_by_mouse:
-			requet_tooltip.emit(self)
+			is_hovered.emit(self)
 	else:
 		hovered_by_mouse = shape_rect.get_rect().has_point(get_local_mouse_position())
 		if not hovered_by_mouse:
+			is_not_hovered.emit()
 			for child in get_children():
 				if child is ExpeditionTooltip:
 					remove_child(child)

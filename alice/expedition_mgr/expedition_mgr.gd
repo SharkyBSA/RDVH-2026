@@ -17,7 +17,6 @@ func add_expedition(new_expedition: Expedition)->void:
 		return 
 		
 	var path : ExpeditionPath = destination_paths[new_expedition.destination]
-	path.show()
 	var expedition_token : ExpeditionToken
 	if path.maritime_path:
 		expedition_token = MARITIME_TOKEN.instantiate()
@@ -26,7 +25,11 @@ func add_expedition(new_expedition: Expedition)->void:
 	
 	path.add_child(expedition_token)
 	_ongoing_expeditions[new_expedition]= expedition_token
-	expedition_token.requet_tooltip.connect(attach_expedition_tooltip)
+	expedition_token.is_hovered.connect(attach_expedition_tooltip)
+	expedition_token.is_hovered.connect(func(_ignored)->void:
+		path.appear()
+		)
+	expedition_token.is_not_hovered.connect(path.disappear)
 
 func update_expeditions(turn : int)->Dictionary[Merchandise.Type,float]:
 	var results:Dictionary[Merchandise.Type,float]= {}
@@ -76,7 +79,6 @@ func progess_expeditions_tokens():
 func attach_expedition_tooltip(expedition_token : ExpeditionToken)->void:
 	var corresponding_expedition := find_expedition(expedition_token)
 	if corresponding_expedition == null:
-		print("WARNING: Failed to find corresponding expedition while creating tooltip")
 		return
 	
 	var tooltip : ExpeditionTooltip = EXPEDITION_TOOLTIP.instantiate()
