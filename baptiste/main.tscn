@@ -251,7 +251,6 @@ anchor_right = 0.515
 anchor_bottom = 0.15
 town_name = "Dehli"
 transport_turn = 3
-threat_level = 5
 sfx = Array[AudioStreamMP3]([ExtResource("4_4hl6o"), ExtResource("5_2vfub"), ExtResource("6_ui1tf"), ExtResource("7_m42f4")])
 
 [node name="StartingTown" parent="UI/TownManager" unique_id=2064836468 instance=ExtResource("2_eos35")]
@@ -264,6 +263,24 @@ anchor_bottom = 0.427
 town_name = "Calicut"
 index = 1
 transport_turn = 0
+buy_factor = Dictionary[int, float]({
+1: 1.5,
+2: 1.5,
+3: 1.5,
+4: 1.5,
+5: 1.5,
+6: 1.6,
+7: 0.8
+})
+sell_factor = Dictionary[int, float]({
+1: 0.5,
+2: 0.5,
+3: 0.5,
+4: 0.5,
+5: 0.5,
+6: 0.5,
+7: 0.4
+})
 sfx = Array[AudioStreamMP3]([ExtResource("4_4hl6o"), ExtResource("5_2vfub"), ExtResource("6_ui1tf"), ExtResource("7_m42f4")])
 start_town = true
 color = Color(0, 0, 0.7, 1)
@@ -281,7 +298,24 @@ grow_horizontal = 2
 grow_vertical = 2
 town_name = "Goa"
 index = 2
-threat_level = 5
+buy_factor = Dictionary[int, float]({
+1: 1.3,
+2: 1.3,
+3: 1.3,
+4: 1.3,
+5: 1.3,
+6: 1.3,
+7: 1.1
+})
+sell_factor = Dictionary[int, float]({
+1: 0.5,
+2: 0.5,
+3: 0.5,
+4: 0.5,
+5: 0.5,
+6: 0.5,
+7: 0.7
+})
 sfx = Array[AudioStreamMP3]([ExtResource("4_4hl6o"), ExtResource("5_2vfub"), ExtResource("6_ui1tf"), ExtResource("7_m42f4")])
 
 [node name="Chaul" parent="UI/TownManager" unique_id=1721095960 instance=ExtResource("2_eos35")]
@@ -295,7 +329,15 @@ grow_horizontal = 2
 grow_vertical = 2
 town_name = "Chaul"
 index = 3
-threat_level = 5
+buy_factor = Dictionary[int, float]({
+1: 1.5,
+2: 1.5,
+3: 1.5,
+4: 1.1,
+5: 1.5,
+6: 1.5,
+7: 1.3
+})
 sfx = Array[AudioStreamMP3]([ExtResource("4_4hl6o"), ExtResource("5_2vfub"), ExtResource("6_ui1tf"), ExtResource("7_m42f4")])
 
 [node name="Colombo" parent="UI/TownManager" unique_id=6411554 instance=ExtResource("2_eos35")]
@@ -308,7 +350,24 @@ anchor_bottom = 0.48
 town_name = "Colomba"
 index = 4
 transport_mode = 1
-threat_level = 5
+buy_factor = Dictionary[int, float]({
+1: 1.5,
+2: 1.1,
+3: 1.5,
+4: 1.1,
+5: 1.5,
+6: 1.5,
+7: 1.5
+})
+sell_factor = Dictionary[int, float]({
+1: 0.5,
+2: 0.6,
+3: 0.5,
+4: 0.5,
+5: 0.5,
+6: 0.5,
+7: 0.5
+})
 sfx = Array[AudioStreamMP3]([ExtResource("8_51cql")])
 
 [node name="Patna" parent="UI/TownManager" unique_id=85137416 instance=ExtResource("2_eos35")]
@@ -321,7 +380,24 @@ anchor_bottom = 0.173
 town_name = "Patna"
 index = 5
 transport_turn = 2
-threat_level = 5
+buy_factor = Dictionary[int, float]({
+1: 1.6,
+2: 1.5,
+3: 1.1,
+4: 1.6,
+5: 1.7,
+6: 1.8,
+7: 1.7
+})
+sell_factor = Dictionary[int, float]({
+1: 0.5,
+2: 0.5,
+3: 0.3,
+4: 0.5,
+5: 0.5,
+6: 0.5,
+7: 0.5
+})
 sfx = Array[AudioStreamMP3]([ExtResource("4_4hl6o"), ExtResource("5_2vfub"), ExtResource("6_ui1tf"), ExtResource("7_m42f4")])
 
 [node name="Aden" parent="UI/TownManager" unique_id=376978946 instance=ExtResource("2_eos35")]
@@ -335,7 +411,24 @@ town_name = "Aden"
 index = 6
 transport_mode = 2
 transport_turn = 3
-threat_level = 15
+buy_factor = Dictionary[int, float]({
+1: 1.5,
+2: 1.5,
+3: 1.5,
+4: 1.5,
+5: 1.1,
+6: 1.3,
+7: 1.5
+})
+sell_factor = Dictionary[int, float]({
+1: 0.5,
+2: 0.5,
+3: 0.5,
+4: 0.6,
+5: 0.4,
+6: 0.5,
+7: 0.6
+})
 sfx = Array[AudioStreamMP3]([ExtResource("21_jhded"), ExtResource("22_fp81k"), ExtResource("23_3xgaf"), ExtResource("24_upuqf")])
 color = Color(0.34509805, 0.3254902, 0, 1)
 
@@ -350,7 +443,24 @@ town_name = "Ormuz"
 index = 7
 transport_mode = 1
 transport_turn = 3
-threat_level = 15
+buy_factor = Dictionary[int, float]({
+1: 1.1,
+2: 1.5,
+3: 1.5,
+4: 1.6,
+5: 1.4,
+6: 1.4,
+7: 1.6
+})
+sell_factor = Dictionary[int, float]({
+1: 0.4,
+2: 0.5,
+3: 0.5,
+4: 0.5,
+5: 0.5,
+6: 0.5,
+7: 0.5
+})
 sfx = Array[AudioStreamMP3]([ExtResource("21_jhded"), ExtResource("22_fp81k"), ExtResource("23_3xgaf"), ExtResource("24_upuqf")])
 color = Color(0.34509805, 0.3254902, 0, 1)
 reverse_popup = true
@@ -366,7 +476,24 @@ town_name = "Debal"
 index = 8
 transport_mode = 1
 transport_turn = 2
-threat_level = 15
+buy_factor = Dictionary[int, float]({
+1: 1.3,
+2: 1.5,
+3: 1.1,
+4: 1.1,
+5: 1.5,
+6: 1.6,
+7: 1.4
+})
+sell_factor = Dictionary[int, float]({
+1: 0.5,
+2: 0.5,
+3: 0.4,
+4: 0.5,
+5: 0.5,
+6: 0.5,
+7: 0.5
+})
 sfx = Array[AudioStreamMP3]([ExtResource("21_jhded"), ExtResource("22_fp81k"), ExtResource("23_3xgaf"), ExtResource("24_upuqf")])
 color = Color(0.34509805, 0.3254902, 0, 1)
 
@@ -381,7 +508,15 @@ town_name = "Sofala"
 index = 9
 transport_mode = 2
 transport_turn = 5
-threat_level = 25
+sell_factor = Dictionary[int, float]({
+1: 0.5,
+2: 0.25,
+3: 0.5,
+4: 0.5,
+5: 0.5,
+6: 0.5,
+7: 0.5
+})
 sfx = Array[AudioStreamMP3]([ExtResource("17_igymv"), ExtResource("18_sp1y7"), ExtResource("19_brh71"), ExtResource("20_x23lb")])
 color = Color(0.34509805, 0.3254902, 0, 1)
 
@@ -396,7 +531,15 @@ town_name = "Zanzibar"
 index = 10
 transport_mode = 2
 transport_turn = 4
-threat_level = 25
+sell_factor = Dictionary[int, float]({
+1: 0.5,
+2: 0.4,
+3: 0.5,
+4: 0.5,
+5: 0.5,
+6: 0.4,
+7: 0.5
+})
 sfx = Array[AudioStreamMP3]([ExtResource("17_igymv"), ExtResource("18_sp1y7"), ExtResource("19_brh71"), ExtResource("20_x23lb")])
 color = Color(0.34509805, 0.3254902, 0, 1)
 
@@ -411,7 +554,24 @@ town_name = "Malacca"
 index = 11
 transport_mode = 2
 transport_turn = 4
-threat_level = 25
+buy_factor = Dictionary[int, float]({
+1: 1.9,
+2: 1.5,
+3: 1.7,
+4: 1.1,
+5: 1.4,
+6: 1.8,
+7: 1.6
+})
+sell_factor = Dictionary[int, float]({
+1: 0.5,
+2: 0.5,
+3: 0.5,
+4: 0.4,
+5: 0.5,
+6: 0.5,
+7: 0.5
+})
 sfx = Array[AudioStreamMP3]([ExtResource("8_o3h7a"), ExtResource("9_eubu7"), ExtResource("10_hm3xc"), ExtResource("11_vvw5h")])
 color = Color(0, 0.39607844, 0, 1)
 
@@ -426,7 +586,24 @@ town_name = "Timor"
 index = 12
 transport_mode = 2
 transport_turn = 5
-threat_level = 25
+buy_factor = Dictionary[int, float]({
+1: 2.0,
+2: 1.6,
+3: 1.7,
+4: 1.1,
+5: 1.5,
+6: 2.1,
+7: 1.6
+})
+sell_factor = Dictionary[int, float]({
+1: 0.5,
+2: 0.5,
+3: 0.5,
+4: 0.4,
+5: 0.4,
+6: 0.5,
+7: 0.5
+})
 sfx = Array[AudioStreamMP3]([ExtResource("8_o3h7a"), ExtResource("9_eubu7"), ExtResource("10_hm3xc"), ExtResource("11_vvw5h")])
 color = Color(0, 0.39607844, 0, 1)
 
@@ -442,7 +619,24 @@ town_name = "Chatigaon"
 index = 13
 transport_mode = 1
 transport_turn = 3
-threat_level = 20
+buy_factor = Dictionary[int, float]({
+1: 1.6,
+2: 1.5,
+3: 1.3,
+4: 1.4,
+5: 1.1,
+6: 1.75,
+7: 1.4
+})
+sell_factor = Dictionary[int, float]({
+1: 0.5,
+2: 0.5,
+3: 0.5,
+4: 0.5,
+5: 0.4,
+6: 0.5,
+7: 0.5
+})
 sfx = Array[AudioStreamMP3]([ExtResource("13_5bulh"), ExtResource("14_i3sme"), ExtResource("15_5bbsv"), ExtResource("16_7s21p")])
 color = Color(0, 0.39607844, 0, 1)
 
@@ -457,7 +651,24 @@ town_name = "Syriam"
 index = 14
 transport_mode = 2
 transport_turn = 3
-threat_level = 20
+buy_factor = Dictionary[int, float]({
+1: 1.8,
+2: 1.5,
+3: 1.1,
+4: 1.4,
+5: 1.3,
+6: 1.5,
+7: 1.4
+})
+sell_factor = Dictionary[int, float]({
+1: 0.5,
+2: 0.5,
+3: 0.45,
+4: 0.5,
+5: 0.5,
+6: 0.5,
+7: 0.5
+})
 sfx = Array[AudioStreamMP3]([ExtResource("13_5bulh"), ExtResource("14_i3sme"), ExtResource("15_5bbsv"), ExtResource("16_7s21p")])
 color = Color(0, 0.39607844, 0, 1)
 
