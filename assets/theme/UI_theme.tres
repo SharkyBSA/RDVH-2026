@@ -1,4 +1,15 @@
 [gd_resource type="Theme" format=3 uid="uid://cy8ofoih0aoe2"]
 
+[ext_resource type="FontFile" uid="uid://c3v83r2x1hqbg" path="res://assets/Indira_K.ttf" id="1_2sda5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_143wg"]
+bg_color = Color(0.8901961, 0.7764706, 0.52156866, 1)
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
 [resource]
+Label/colors/font_color = Color(0, 0, 0, 1)
 Label/font_sizes/font_size = 26
+Label/fonts/font = ExtResource("1_2sda5")
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_143wg")
