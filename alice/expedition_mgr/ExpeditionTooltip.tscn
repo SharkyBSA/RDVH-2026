@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ca67r48c812aj"]
 
 [ext_resource type="Script" uid="uid://c0552tfhuscao" path="res://alice/expedition_mgr/expedition_tooltip.gd" id="1_6c87k"]
-[ext_resource type="Theme" uid="uid://cy8ofoih0aoe2" path="res://assets/theme/UI_theme.tres" id="1_icqgp"]
+[ext_resource type="Theme" uid="uid://dqq1d464cnjpu" path="res://assets/theme/Expedition_tooltip_theme.tres" id="1_icqgp"]
 
 [node name="ExpeditionTooltip" type="PanelContainer" unique_id=880980047]
 anchors_preset = -1

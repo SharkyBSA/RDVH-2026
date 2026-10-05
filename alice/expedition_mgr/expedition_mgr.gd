@@ -85,7 +85,7 @@ func attach_expedition_tooltip(expedition_token : ExpeditionToken)->void:
 	expedition_token.add_child(tooltip)
 	tooltip.position= Vector2(50,20)
 	tooltip.turn_counter.text="Tours restants: "+str(max(0,corresponding_expedition.get_remaining_turns()))
-	tooltip.threat.text="Risque d'echec: "+str(corresponding_expedition.fail_risk*100 as int)+"%"
+	tooltip.threat.text="Risque d'échec: "+str(corresponding_expedition.fail_risk*100 as int)+"%"
 	tooltip.cargaison.text="Gains au retour:"
 	for merchandise_id in corresponding_expedition.delta_res:
 		tooltip.cargaison.text+="\n - "+Merchandise.display_names[merchandise_id]+": "+str(corresponding_expedition.delta_res[merchandise_id] as int)
