@@ -4,17 +4,17 @@
 [ext_resource type="PackedScene" uid="uid://m0dstgxyqa1g" path="res://alice/expedition_mgr/expedition_mgr.tscn" id="2_u6rvu"]
 [ext_resource type="Script" uid="uid://dpup24da6v5sc" path="res://alice/expedition_mgr/expedition_path.gd" id="3_slsq3"]
 
-[sub_resource type="Curve2D" id="Curve2D_u6rvu"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, 198, 140, -85.743576, -15.589741, 85.743576, 15.589741, 405, 23, 0, 0, 0, 0, 492, 251)
-}
-point_count = 3
-
 [sub_resource type="Curve2D" id="Curve2D_slsq3"]
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 1030, 178, -35.076916, -62.358963, 35.076916, 62.358963, 1287, 248, 83.79485, -48.71794, -83.79485, 48.71794, 1240, 453, 0, 0, 0, 0, 956, 441)
 }
 point_count = 4
+
+[sub_resource type="Curve2D" id="Curve2D_mflow"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 341, 413, -68.59486, -102.89229, 68.59486, 102.89229, 621, 316, 21.435894, -154.33842, -21.435894, 154.33842, 514, 548, 109.32305, -98.6051, -109.32305, 98.6051, 293, 678, 0, 0, 0, 0, 330, 818)
+}
+point_count = 5
 
 [node name="TestExpeditionMgr" type="Control" unique_id=1364237832]
 layout_mode = 3
@@ -29,7 +29,7 @@ metadata/_edit_lock_ = true
 [node name="ExpeditionMgr" parent="." unique_id=1818811447 node_paths=PackedStringArray("destination_paths") instance=ExtResource("2_u6rvu")]
 unique_name_in_owner = true
 destination_paths = {
-0: NodePath("../Path2D"),
+0: NodePath("../ExpeditionPath"),
 1: NodePath("../Path2D2")
 }
 
@@ -39,15 +39,14 @@ offset_left = 345.0
 offset_top = 187.0
 offset_right = 436.0
 offset_bottom = 218.0
-text = "Next turnz"
-
-[node name="Path2D" type="Path2D" parent="." unique_id=1614462211]
-position = Vector2(251, 270)
-curve = SubResource("Curve2D_u6rvu")
-script = ExtResource("3_slsq3")
-metadata/_custom_type_script = "uid://dpup24da6v5sc"
+text = "Next turn"
 
 [node name="Path2D2" type="Path2D" parent="." unique_id=401322981]
 curve = SubResource("Curve2D_slsq3")
+script = ExtResource("3_slsq3")
+metadata/_custom_type_script = "uid://dpup24da6v5sc"
+
+[node name="ExpeditionPath" type="Path2D" parent="." unique_id=914686348]
+curve = SubResource("Curve2D_mflow")
 script = ExtResource("3_slsq3")
 metadata/_custom_type_script = "uid://dpup24da6v5sc"

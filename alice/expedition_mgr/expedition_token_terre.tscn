@@ -1,8 +1,11 @@
 [gd_scene format=3 uid="uid://c45ii7ibuubkg"]
 
 [ext_resource type="Texture2D" uid="uid://c3hyxqkwh6cjt" path="res://assets/Trading_interface/Chariot_V1.png" id="1_ombp3"]
+[ext_resource type="Script" uid="uid://dotqdftteqsie" path="res://alice/expedition_mgr/expedition_pat_follow.gd" id="1_w7udv"]
 
-[node name="ExpeditionTokenTerre" type="Node2D" unique_id=1704623945]
+[node name="ExpeditionTokenTerre" type="PathFollow2D" unique_id=423781584]
+script = ExtResource("1_w7udv")
+metadata/_custom_type_script = "uid://dotqdftteqsie"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=405551207]
 scale = Vector2(0.15, 0.15)

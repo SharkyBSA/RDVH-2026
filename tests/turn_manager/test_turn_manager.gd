@@ -21,10 +21,10 @@ func update_ui():
 	var town_offer_string : String = ""
 	
 	match event.type:
-		Event.Type.TEMPEST:
-			event_string = "Tempete !"
-		Event.Type.FOE:
-			event_string = "Invasion"
+		Event.Type.ATTACK:
+			event_string = "Attack !"
+		Event.Type.GAME_OVER:
+			event_string = "Game over"
 			
 	
 	if town_offer_array.is_empty():

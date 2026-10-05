@@ -1,8 +1,11 @@
 [gd_scene format=3 uid="uid://bb7cgqp22fgvx"]
 
 [ext_resource type="Texture2D" uid="uid://cnvf8yuxfkx0o" path="res://assets/transport/boat.png" id="1_26ak7"]
+[ext_resource type="Script" uid="uid://dotqdftteqsie" path="res://alice/expedition_mgr/expedition_pat_follow.gd" id="1_p2bje"]
 
-[node name="ExpeditionToken" type="Node2D" unique_id=1374973321]
+[node name="ExpeditionToken" type="PathFollow2D" unique_id=1765521543]
+script = ExtResource("1_p2bje")
+metadata/_custom_type_script = "uid://dotqdftteqsie"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1261984420]
 scale = Vector2(0.07, 0.07)

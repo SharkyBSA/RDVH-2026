@@ -7,7 +7,7 @@ const TERRESTRIAL_TOKEN = preload("uid://c45ii7ibuubkg")
 @export var destination_paths : Dictionary[Town.ID,ExpeditionPath]={}
 
 ##Dictionnary storing an Expedition and its corresponding PathFollow (its visual represenation)
-var _ongoing_expeditions : Dictionary[Expedition,ExpeditionPathFollow2D] = {}
+var _ongoing_expeditions : Dictionary[Expedition,ExpeditionToken] = {}
 
 func add_expedition(new_expedition: Expedition)->void:
 	if not destination_paths.has(new_expedition.destination):
@@ -16,17 +16,14 @@ func add_expedition(new_expedition: Expedition)->void:
 		
 	var path : ExpeditionPath = destination_paths[new_expedition.destination]
 	path.show()
-	var path_follow := ExpeditionPathFollow2D.new()
-	var expedition_token : Node2D
+	var expedition_token : ExpeditionToken
 	if path.maritime_path:
 		expedition_token = MARITIME_TOKEN.instantiate()
 	else:
 		expedition_token = TERRESTRIAL_TOKEN.instantiate()
 	
-	path_follow.add_child(expedition_token)
-	path.add_child(path_follow)
-	_ongoing_expeditions[new_expedition]= path_follow
-
+	path.add_child(expedition_token)
+	_ongoing_expeditions[new_expedition]= expedition_token
 
 func update_expeditions(turn : int)->Dictionary[Merchandise.Type,float]:
 	var results:Dictionary[Merchandise.Type,float]= {}
@@ -48,14 +45,17 @@ func update_expeditions(turn : int)->Dictionary[Merchandise.Type,float]:
 	return results
 
 func progess_expeditions_tokens():
-	var remaining_expeditions:  Dictionary[Expedition,ExpeditionPathFollow2D] ={}
+	var remaining_expeditions:  Dictionary[Expedition,ExpeditionToken] ={}
 
 	for expedition in _ongoing_expeditions:
-		var path_follow : ExpeditionPathFollow2D = _ongoing_expeditions[expedition]
+		var expedition_token : ExpeditionToken = _ongoing_expeditions[expedition]
 		var progress : float = expedition.get_advancement_ratio()
-		path_follow.set_progess(progress)
+		if expedition.will_succeed == false :
+			progress = min(0.9,progress)
+		expedition_token.set_progess(progress)
+		
 		if expedition.is_over():
-			path_follow.kill()
+			expedition_token.kill()
 		else:
 			remaining_expeditions[expedition]=_ongoing_expeditions[expedition]
 	_ongoing_expeditions=remaining_expeditions
