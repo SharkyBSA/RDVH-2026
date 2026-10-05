@@ -2,9 +2,15 @@
 
 [ext_resource type="Texture2D" uid="uid://cnvf8yuxfkx0o" path="res://assets/transport/boat.png" id="1_26ak7"]
 [ext_resource type="Script" uid="uid://dotqdftteqsie" path="res://alice/expedition_mgr/expedition_pat_follow.gd" id="1_p2bje"]
+[ext_resource type="Texture2D" uid="uid://bve4oo35a58cs" path="res://assets/transport/boat_inverse.png" id="3_q1nic"]
+[ext_resource type="Theme" uid="uid://buidhwy7qaw2v" path="res://assets/theme/Notif_theme.tres" id="4_y0b80"]
 
-[node name="ExpeditionToken" type="PathFollow2D" unique_id=1765521543]
+[node name="ExpeditionToken" type="PathFollow2D" unique_id=1765521543 node_paths=PackedStringArray("sprite")]
 script = ExtResource("1_p2bje")
+sprite_alive = ExtResource("1_26ak7")
+sprite_sink = ExtResource("3_q1nic")
+fail_theme = ExtResource("4_y0b80")
+sprite = NodePath("Sprite2D")
 metadata/_custom_type_script = "uid://dotqdftteqsie"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1261984420]

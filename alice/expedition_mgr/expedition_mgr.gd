@@ -8,6 +8,7 @@ const TERRESTRIAL_TOKEN = preload("uid://c45ii7ibuubkg")
 
 ##Dictionnary storing an Expedition and its corresponding PathFollow (its visual represenation)
 var _ongoing_expeditions : Dictionary[Expedition,ExpeditionToken] = {}
+var _sinking_expeditions : Dictionary[Expedition,ExpeditionToken]= {}
 
 func add_expedition(new_expedition: Expedition)->void:
 	if not destination_paths.has(new_expedition.destination):
@@ -47,16 +48,25 @@ func update_expeditions(turn : int)->Dictionary[Merchandise.Type,float]:
 func progess_expeditions_tokens():
 	var remaining_expeditions:  Dictionary[Expedition,ExpeditionToken] ={}
 
+	#On fais disparaitre les token qui ont commenc  couler au tour precedent
+	for expedition in _sinking_expeditions:
+		_sinking_expeditions[expedition].kill()
+		
+	_sinking_expeditions = {}
+
 	for expedition in _ongoing_expeditions:
 		var expedition_token : ExpeditionToken = _ongoing_expeditions[expedition]
 		var progress : float = expedition.get_advancement_ratio()
 		if expedition.will_succeed == false :
 			progress = min(0.9,progress)
 		expedition_token.set_progess(progress)
-		
+					
 		if expedition.is_over():
-			expedition_token.kill()
+			if expedition.will_succeed:
+				expedition_token.kill()
+			else:
+				expedition_token.start_sink()
+				_sinking_expeditions[expedition]=expedition_token
 		else:
-			remaining_expeditions[expedition]=_ongoing_expeditions[expedition]
+			remaining_expeditions[expedition]=expedition_token
 	_ongoing_expeditions=remaining_expeditions
-	

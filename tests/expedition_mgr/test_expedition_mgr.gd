@@ -10,8 +10,8 @@ func _ready() -> void:
 	var expedition1:=Expedition.new()
 	var expedition2:=Expedition.new()
 	
-	expedition1.success_duration=3
-	expedition2.success_duration=4
+	expedition1.success_duration=30
+	expedition2.success_duration=3
 	expedition1.start_turn=0
 	expedition2.start_turn=0
 	expedition1.current_turn=0
