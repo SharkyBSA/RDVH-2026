@@ -156,6 +156,7 @@ metadata/_custom_type_script = "uid://dpup24da6v5sc"
 [node name="Chaul3" type="Path2D" parent="UI/Paths" unique_id=321107174]
 curve = SubResource("Curve2D_brh71")
 script = ExtResource("25_0lpg8")
+maritime_path = false
 color = Color(0.7, 0, 0, 1)
 metadata/_custom_type_script = "uid://dpup24da6v5sc"
 

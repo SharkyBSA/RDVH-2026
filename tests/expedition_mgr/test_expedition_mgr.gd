@@ -10,7 +10,7 @@ func _ready() -> void:
 	var expedition1:=Expedition.new()
 	var expedition2:=Expedition.new()
 	
-	expedition1.success_duration=2
+	expedition1.success_duration=30
 	expedition2.success_duration=3
 	expedition1.start_turn=0
 	expedition2.start_turn=0
@@ -18,10 +18,15 @@ func _ready() -> void:
 	expedition2.current_turn=0
 	expedition1.fail_risk=0
 	expedition2.fail_risk=1
-	expedition1.destination=0
-	expedition2.destination=1
-	expedition1.delta_res={0:5,2:3,1:1}
-	expedition2.delta_res={1:9,3:2.3}
+	expedition1.destination=Town.ID.DELHI
+	expedition2.destination=Town.ID.CALICUT
+	expedition1.delta_res={
+		Merchandise.Type.GOLD:5,
+		Merchandise.Type.PEPPER:3,
+		Merchandise.Type.SPICE:1}
+	expedition2.delta_res={
+		Merchandise.Type.GOLD:9,
+		Merchandise.Type.SPICE:2.3}
 	
 	expedition1.draw_fail()
 	expedition2.draw_fail()
@@ -34,5 +39,4 @@ func _ready() -> void:
 
 func next_turn()->void:
 	current_turn+=1
-	print(expedition_mgr.update_expeditions(current_turn))
-	print(expedition_mgr._ongoing_expeditions.size())
+	expedition_mgr.update_expeditions(current_turn)
