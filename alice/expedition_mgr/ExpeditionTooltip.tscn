@@ -26,6 +26,11 @@ unique_name_in_owner = true
 layout_mode = 2
 text = "Contenant"
 
+[node name="Threat" type="Label" parent="MarginContainer/HBoxContainer" unique_id=1372091388]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Chance echec"
+
 [node name="Cargaison" type="Label" parent="MarginContainer/HBoxContainer" unique_id=1278034787]
 unique_name_in_owner = true
 layout_mode = 2
