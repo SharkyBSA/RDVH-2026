@@ -68,7 +68,8 @@ func apply_event(event : Event) ->void:
 			if not town.sell_factor.has(merchandise_type):
 				town.sell_factor[merchandise_type]=0.5
 			town.sell_factor[merchandise_type]+=event.sell_price_modifier_increase[merchandise_type]
-		
+		if event.type == Event.Type.CONQUETE:
+			town.icon_texture = town.FORTERESS_TEXTURE
 		
 func pop_event_win(text: String)->void:
 	event_win.set_text(text)
