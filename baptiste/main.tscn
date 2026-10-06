@@ -35,12 +35,13 @@
 [ext_resource type="PackedScene" uid="uid://c4x4okwk05cym" path="res://alice/turn_mgr/events/event_window.tscn" id="28_0lpg8"]
 [ext_resource type="Resource" uid="uid://blb71cw7hx5ap" path="res://GameEvents.tres" id="29_m20qg"]
 [ext_resource type="Resource" uid="uid://dx8aug05s0qor" path="res://assets/trading/GameOffers1.tres" id="30_m20qg"]
+[ext_resource type="PackedScene" uid="uid://uldpwpykx6a4" path="res://baptiste/option.tscn" id="35_igymv"]
 
 [sub_resource type="Curve2D" id="Curve2D_sp1y7"]
 
 [sub_resource type="Curve2D" id="Curve2D_igymv"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 974, 493, 4.4766307, 29.493095, -4.4766307, -29.493095, 878, 468, 0, 0, 0, 0, 942, 411)
+"points": PackedVector2Array(0, 0, 0, 0, 974, 493, 4.4766307, 29.493095, -4.4766307, -29.493095, 971, 451, 0, 0, 0, 0, 942, 411)
 }
 point_count = 3
 
@@ -52,7 +53,7 @@ point_count = 4
 
 [sub_resource type="Curve2D" id="Curve2D_x23lb"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 974, 490, -28.966433, -32.9164, 28.966433, 32.9164, 957, 574, 0, 0, 0, 0, 1043, 549)
+"points": PackedVector2Array(0, 0, 0, 0, 974, 490, -29.66742, -28.710476, 29.66742, 28.710476, 967, 560, 0, 0, 0, 0, 1043, 549)
 }
 point_count = 3
 
@@ -64,7 +65,7 @@ point_count = 5
 
 [sub_resource type="Curve2D" id="Curve2D_fp81k"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 975, 494, 28.43977, 9.743255, -28.43977, -9.743255, 730, 514, 23.699808, 10.269917, -23.699808, -10.269917, 647, 445, 28.966433, -1.8433185, -28.966433, 1.8433185, 515, 417, 26.06979, 13.16656, -26.06979, -13.16656, 437, 440, 0, 0, 0, 0, 401, 406)
+"points": PackedVector2Array(0, 0, 0, 0, 975, 494, 28.43977, 9.743255, -28.43977, -9.743255, 750, 468, 23.699808, 10.269917, -23.699808, -10.269917, 647, 445, 51.693703, 2.702136, -51.693703, -2.702136, 537, 414, 29.706154, 13.16656, -29.706154, -13.16656, 427, 436, 0, 0, 0, 0, 401, 406)
 }
 point_count = 6
 
@@ -76,7 +77,7 @@ point_count = 7
 
 [sub_resource type="Curve2D" id="Curve2D_3xgaf"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 978, 492, 6.319949, 40.553005, -6.319949, -40.553005, 797, 401, -2.3699808, 30.019758, 2.3699808, -30.019758, 834, 326, -0.78999364, 24.753134, 0.78999364, -24.753134, 790, 246, 0, 0, 0, 0, 813, 209)
+"points": PackedVector2Array(0, 0, 0, 0, 978, 492, 15.410858, 56.91664, -15.410858, -56.91664, 931, 436, 11.266383, 23.656122, -11.266383, -23.656122, 889, 316, 8.300915, 26.571314, -8.300915, -26.571314, 818, 244, 0, 0, 0, 0, 813, 209)
 }
 point_count = 5
 
@@ -94,13 +95,13 @@ point_count = 5
 
 [sub_resource type="Curve2D" id="Curve2D_2b1kv"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 972, 495, -13.693223, -11.849904, 13.693223, 11.849904, 1007, 602, -27.913107, 16.063204, 27.913107, -16.063204, 1101, 607, -37.502842, -8.411852, 37.502842, 8.411852, 1298, 506, -2.8966432, -32.38974, 2.8966432, 32.38974, 1396, 571, 0, 0, 0, 0, 1473, 633)
+"points": PackedVector2Array(0, 0, 0, 0, 972, 495, -17.449797, -17.109108, 17.449797, 17.109108, 1019, 586, -39.934143, 4.793483, 39.934143, -4.793483, 1183, 599, -21.725233, 17.13285, 21.725233, -17.13285, 1322, 576, -36.70581, -60.9397, 36.70581, 60.9397, 1409, 585, 0, 0, 0, 0, 1473, 633)
 }
 point_count = 6
 
 [sub_resource type="Curve2D" id="Curve2D_b75uj"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 974, 491, -18.280842, -20.89239, 18.280842, 20.89239, 1009, 596, -13.693223, 16.326534, 13.693223, -16.326534, 1104, 614, -38.183025, 3.4233057, 38.183025, -3.4233057, 1304, 509, -5.5396485, -24.137041, 5.5396485, 24.137041, 1417, 602, -6.08295, -15.062544, 6.08295, 15.062544, 1507, 669, -15.641872, -13.324557, 15.641872, 13.324557, 1580, 704, -25.37555, -10.533247, 25.37555, 10.533247, 1615, 799, 0, 0, 0, 0, 1710, 819, -25.831394, -12.337382, 25.831394, 12.337382, 1857, 831, 0, 0, 0, 0, 1866, 873)
+"points": PackedVector2Array(0, 0, 0, 0, 974, 491, -18.280842, -20.89239, 18.280842, 20.89239, 1003, 592, -33.52793, -1.8552837, 33.52793, 1.8552837, 1104, 614, -37.35658, -14.7585125, 37.35658, 14.7585125, 1304, 609, -12.977665, -18.351917, 12.977665, 18.351917, 1383, 707, -17.653198, -11.756759, 17.653198, 11.756759, 1447, 750, -15.641872, -13.324557, 15.641872, 13.324557, 1512, 814, -25.37555, -10.533247, 25.37555, 10.533247, 1574, 793, 0, 0, 0, 0, 1710, 819, -25.831394, -12.337382, 25.831394, 12.337382, 1857, 831, 0, 0, 0, 0, 1866, 873)
 }
 point_count = 11
 
@@ -631,6 +632,7 @@ color = Color(0.7, 0, 0, 1)
 metadata/_custom_type_script = "uid://dpup24da6v5sc"
 
 [node name="Chaul3" type="Path2D" parent="UI/Paths" unique_id=321107174]
+visible = false
 curve = SubResource("Curve2D_brh71")
 script = ExtResource("25_0lpg8")
 maritime_path = false
@@ -721,6 +723,11 @@ z_index = 30
 layout_mode = 1
 mouse_filter = 2
 
+[node name="Option" parent="UI" unique_id=816212415 instance=ExtResource("35_igymv")]
+visible = false
+z_index = 3
+layout_mode = 1
+
 [node name="TurnManager" parent="." unique_id=610062439 instance=ExtResource("1_olmnm")]
 unique_name_in_owner = true
 events = ExtResource("29_m20qg")
@@ -761,7 +768,8 @@ destination_paths = {
 [node name="Music" type="AudioStreamPlayer" parent="." unique_id=401592327]
 unique_name_in_owner = true
 stream = ExtResource("18_2vfub")
-volume_db = -5.0
+volume_db = -10.0
 autoplay = true
 
+[connection signal="pause_btn_pressed" from="UI/Ath" to="UI/Option" method="show_window"]
 [connection signal="updated" from="Player" to="." method="_on_player_updated"]

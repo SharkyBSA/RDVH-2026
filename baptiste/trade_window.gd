@@ -26,8 +26,7 @@ var price_modifier : float
 signal launch_expedition(expedition: Expedition)
 
 func _ready():
-	for town : Town in %TownManager.get_children():
-		town.clicked.connect(popup)
+	for town : Town in %TownManager.get_children(): town.clicked.connect(popup)
 
 func update_cost()->void:
 	var turn_cost := 0
@@ -76,6 +75,7 @@ func popup(trade_town : Town, town_offer : TownOffer, transport_turn := 1):
 	%GuardProgressBar.value = town_offer.threat_level
 	threat = town_offer.threat_level
 	turn = transport_turn
+
 	destination=town_offer.town
 	price_modifier=town_offer.price_modifier
 	%PercentLabel.text = "\n%d%%" % [($%GuardProgressBar.value / 100) * 100]
@@ -155,3 +155,5 @@ func _on_launch_expedition_pressed() -> void:
 	expedition.draw_fail()
 	launch_expedition.emit(expedition)
 	disapear()
+
+func sfx_volume(value  := 10.): pass

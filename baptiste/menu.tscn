@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://dp2pg4k3oecxl" path="res://assets/Trading_interface/button_menu.png" id="4_osric"]
 
 [node name="Menu" type="Control" unique_id=861258635]
+z_index = 20
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
