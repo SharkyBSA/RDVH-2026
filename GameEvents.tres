@@ -56,5 +56,5 @@ metadata/_custom_type_script = "uid://dji1gvea14ls8"
 
 [resource]
 script = ExtResource("2_j6330")
-events = Array[ExtResource("1_pmwtw")]([null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, SubResource("Resource_0lpg8"), null, null, null, SubResource("Resource_f100b"), SubResource("Resource_ephac"), null, null, SubResource("Resource_byyj6"), null, null, null, null, SubResource("Resource_pmwtw"), null, null, null, null, SubResource("Resource_p65io"), null, null, null, null, null, SubResource("Resource_j6330")])
+events = Array[ExtResource("1_pmwtw")]([null, null, null, null, null, null, null, null, null, null, null, null, null, null, SubResource("Resource_0lpg8"), null, null, null, SubResource("Resource_f100b"), SubResource("Resource_ephac"), null, null, SubResource("Resource_byyj6"), null, null, null, null, SubResource("Resource_pmwtw"), null, null, null, null, SubResource("Resource_p65io"), null, null, null, null, null, SubResource("Resource_j6330")])
 metadata/_custom_type_script = "uid://drfbg3jb0nf5x"

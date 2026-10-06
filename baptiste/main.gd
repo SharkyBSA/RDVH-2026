@@ -50,6 +50,8 @@ func apply_event(event : Event) ->void:
 	if not event.text.is_empty():
 		event_win.set_type(event.type)
 		pop_event_win(event.text)
+	
+	trade_window.guard_cost+=event.guard_cost_increase
 	var target_towns : Array[Town] = [] 
 	if event.target_all_town:
 		target_towns=town_manager.get_towns()

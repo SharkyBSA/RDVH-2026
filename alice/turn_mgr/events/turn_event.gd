@@ -14,3 +14,4 @@ enum Type {NONE,ATTACK,CHANTAGE,GAME_OVER}
 @export var increase_min_guards : int = 0
 @export var threat_increase : int = 0
 @export var sell_price_modifier_increase : Dictionary[Merchandise.Type,float] = {}
+@export var guard_cost_increase : float = 0.0

@@ -1,6 +1,7 @@
 extends Control
 class_name TradeWindow
 
+@export var guard_cost := 10.0
 var merch_type : Merchandise.Type
 var trade_amount := 0:
 	set(value):
@@ -23,6 +24,7 @@ var buy := false
 var merc := 0
 var town : Town
 var price_modifier : float
+
 signal launch_expedition(expedition: Expedition)
 
 func _ready():
@@ -42,8 +44,8 @@ func update_cost()->void:
 			turn_cost = 30
 			unit_size = 100
 	cost = trade_amount * Merchandise.prices.get(merc) * price_modifier + \
-		ceil(float(trade_amount) / unit_size) * turn_cost * turn + guard_amount * (turn+1) if buy else\
-		ceil(float(trade_amount) / unit_size) * turn_cost * turn + guard_amount * (turn+1)
+		ceil(float(trade_amount) / unit_size) * turn_cost * (turn+1) + guard_cost * guard_amount * (turn+1) if buy else\
+		ceil(float(trade_amount) / unit_size) * turn_cost * (turn+1) + guard_cost * guard_amount * (turn+1)
 	
 	%CostLabel.text = "Coût de l'expédition : "+str(cost)
 	%GainLabel.text = "Argent remporté : " + str(int(trade_amount * Merchandise.prices[merc] * price_modifier))
