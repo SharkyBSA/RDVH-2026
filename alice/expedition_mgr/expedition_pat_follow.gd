@@ -12,11 +12,12 @@ enum State {ALIVE,SINKING}
 @export var sprite : Sprite2D
 @export var tooltip_detection_area : Area2D
 
-const SPEED : float = 0.35
+const SPEED : float = 100
 
 var move_tween : Tween
 var expedition_progress : float = 0.0
 var state : State = State.ALIVE
+var path_length : float = 0.0
 
 const TOOLTIP_CHECK_PERIOD : float = 0.2
 var hovered_by_mouse := false 
@@ -31,6 +32,9 @@ func _ready() -> void:
 	if sprite == null:
 		sprite = get_child(0)
 	
+	var path : Path2D = get_parent()
+	if path != null:
+		path_length=path.curve.get_baked_length()
 	_check_has_hovered_state_changed()
 
 #Verifie la position de la souris pour savoir si elle est dans ou hors du cadre
@@ -59,7 +63,7 @@ func set_progess(prog_val: float):
 		move_tween.kill()
 	
 	move_tween = create_tween()
-	var duration = abs(expedition_progress-prog_val)/SPEED
+	var duration = abs(expedition_progress-prog_val)*path_length/SPEED
 	move_tween.tween_method(_compute_progress,expedition_progress,prog_val,duration)
 
 func _compute_progress(prog_val: float)->void:
