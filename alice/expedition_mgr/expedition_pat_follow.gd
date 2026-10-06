@@ -95,5 +95,4 @@ func kill()->void:
 	var tween:= create_tween()
 	tween.tween_property(self,"modulate:a",0.0,0.5)
 	await tween.finished
-	get_parent().hide()
 	queue_free()
