@@ -18,7 +18,6 @@ config/icon="uid://qc77twd3ni3b"
 
 [autoload]
 
-EventsDb="*uid://dp3hwwwgi8nk8"
 Volumes="*uid://bucghhmvskkyw"
 
 [display]

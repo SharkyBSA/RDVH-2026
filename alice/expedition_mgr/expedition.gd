@@ -16,6 +16,9 @@ var _real_duration : int
 func get_advancement_ratio()->float:
 	return (1.0*current_turn-start_turn)/(1.0*success_duration)
 
+func get_remaining_turns()->int:
+	return start_turn+_real_duration-current_turn
+
 ##return true if the expedition is over and must be resolved
 func is_over()->bool:
 	return (start_turn+_real_duration)<=current_turn

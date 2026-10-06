@@ -11,9 +11,18 @@ func _ready():
 	for point in curve.get_baked_points():
 		line.add_point(point + position)
 	add_child(line)
+	disappear()
+
+func appear()->void:
+	line.show()
 	anim_line()
 
+func disappear()->void:
+	line.hide()
+
 func anim_line():
+	if not line.visible:
+		return
 	var tween = create_tween()
 	tween.tween_property(line, "default_color:a", 0.15, 1)
 	await tween.finished
