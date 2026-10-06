@@ -23,6 +23,18 @@ const names : Dictionary[Type,String] = {
 	Type.PORCELAIN:"porcelaine",
 	Type.SLAVES:"esclaves"}
 
+const display_names : Dictionary[Type,String] = {
+	Type.GOLD:"Or",
+	Type.PEPPER:"Poivre",
+	Type.SILK:"Soie",
+	Type.IVORY:"Ivoire",
+	Type.COTON:"Coton",
+	Type.GEMS:"Gemmes",
+	Type.SPICE:"Epices",
+	Type.ANIMALS:"Chevaux",
+	Type.PORCELAIN:"Porcelaine",
+	Type.SLAVES:"Esclaves"}
+
 const prices : Dictionary[Type,float] = {
 	Type.GOLD:1,
 	Type.SILK:4,

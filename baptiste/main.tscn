@@ -59,9 +59,9 @@ point_count = 3
 
 [sub_resource type="Curve2D" id="Curve2D_jhded"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 974, 489, -6.0566177, 17.64319, 6.0566177, -17.64319, 1023, 436, -16.839687, 24.096289, 16.839687, -24.096289, 1048, 379, -10.533248, 7.1099424, 10.533248, -7.1099424, 1080, 334, -5.2636557, 15.763949, 5.2636557, -15.763949, 1108, 282, 0, 0, 0, 0, 1136, 225)
+"points": PackedVector2Array(0, 0, 0, 0, 974, 489, -6.0566177, 17.64319, 6.0566177, -17.64319, 1023, 436, -14.639565, 25.822874, 14.639565, -25.822874, 1039, 323, -24.588482, 20.490402, 24.588482, -20.490402, 1111, 279, 0, 0, 0, 0, 1139, 217)
 }
-point_count = 6
+point_count = 5
 
 [sub_resource type="Curve2D" id="Curve2D_fp81k"]
 _data = {
@@ -71,7 +71,7 @@ point_count = 6
 
 [sub_resource type="Curve2D" id="Curve2D_0lpg8"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 977, 489, 17.2859, 83.27907, -17.2859, -83.27907, 911, 434, 13.931417, 14.320432, -13.931417, -14.320432, 870, 326, 18.024414, 26.665277, -18.024414, -26.665277, 816, 263, 26.771202, -1.0084295, -26.771202, 1.0084295, 755, 212, 22.696756, 1.5045769, -22.696756, -1.5045769, 655, 200, 0, 0, 0, 0, 628, 153)
+"points": PackedVector2Array(0, 0, 0, 0, 977, 489, 20.013172, 2.3699808, -20.013172, -2.3699808, 883, 486, 12.113235, 21.593159, -12.113235, -21.593159, 751, 428, -11.752677, 25.845348, 11.752677, -25.845348, 744, 352, 22.766663, 22.342644, -22.766663, -22.342644, 712, 245, 26.33312, 7.903983, -26.33312, -7.903983, 655, 200, 0, 0, 0, 0, 628, 153)
 }
 point_count = 7
 
@@ -83,15 +83,15 @@ point_count = 5
 
 [sub_resource type="Curve2D" id="Curve2D_upuqf"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 974, 489, 44.472637, 8.595253, -44.472637, -8.595253, 541, 558, 35.699482, -25.37789, -35.699482, 25.37789, 402, 679, -11.295262, -35.07843, 11.295262, 35.07843, 282, 831, -10.965789, -30.903164, 10.965789, 30.903164, 312, 949, 25.112637, -21.476852, -25.112637, 21.476852, 292, 1034, 0, 0, 0, 0, 228, 1064)
+"points": PackedVector2Array(0, 0, 0, 0, 974, 489, 35.02509, -26.203388, -35.02509, 26.203388, 857, 608, 38.49044, -15.344453, -38.49044, 15.344453, 649, 677, 27.501165, -31.819393, -27.501165, 31.819393, 532, 798, 0.8061218, -45.402378, -0.8061218, 45.402378, 368, 950, 0, 0, 0, 0, 228, 1064)
 }
-point_count = 7
+point_count = 6
 
 [sub_resource type="Curve2D" id="Curve2D_fbong"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 971, 488, 38.958813, -4.5852613, -38.958813, 4.5852613, 764, 510, 0, 0, 0, 0, 598, 516, 28.562378, -28.562378, -28.562378, 28.562378, 487, 516, 6.2092123, -27.320536, -6.2092123, 27.320536, 464, 564, 0, 0, 0, 0, 425, 613, 0, 0, 0, 0, 357, 675, 0, 0, 0, 0, 303, 733, 0, 0, 0, 0, 266, 790)
+"points": PackedVector2Array(0, 0, 0, 0, 971, 488, 29.752064, 20.661156, -29.752064, -20.661156, 724, 511, 21.487602, -56.198345, -21.487602, 56.198345, 555, 594, 64.46281, -31.404957, -64.46281, 31.404957, 475, 724, 0, 0, 0, 0, 260, 785)
 }
-point_count = 9
+point_count = 5
 
 [sub_resource type="Curve2D" id="Curve2D_2b1kv"]
 _data = {
@@ -107,15 +107,15 @@ point_count = 11
 
 [sub_resource type="Curve2D" id="Curve2D_rf2kd"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 973, 489, -7.820936, -13.034893, 7.820936, 13.034893, 968, 542, -12.745229, 15.352208, 12.745229, -15.352208, 1016, 549, -19.986837, 9.269258, 19.986837, -9.269258, 1052, 488, -10.016027, 36.912277, 10.016027, -36.912277, 1065, 411, -17.379858, 10.427915, 17.379858, -10.427915, 1124, 350, -22.304152, -0.86899185, 22.304152, 0.86899185, 1210, 289, 0, 0, 0, 0, 1262, 253)
+"points": PackedVector2Array(0, 0, 0, 0, 973, 489, -7.820936, -13.034893, 7.820936, 13.034893, 968, 542, -12.745229, 15.352208, 12.745229, -15.352208, 1016, 549, -19.986837, 9.269258, 19.986837, -9.269258, 1052, 488, 15.641872, 26.649115, -15.641872, -26.649115, 1073, 437, -33.495567, -4.4155006, 33.495567, 4.4155006, 1131, 364, -31.210201, -5.1099677, 31.210201, 5.1099677, 1195, 298, 0, 0, 0, 0, 1262, 253)
 }
 point_count = 8
 
 [sub_resource type="Curve2D" id="Curve2D_cma0m"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 973, 491, -3.265551, -20.526321, 3.265551, 20.526321, 970, 539, -17.260769, 14.461726, 17.260769, -14.461726, 1015, 547, -28.456944, 28.923452, 28.456944, -28.923452, 1062, 473, -29.856466, 17.260769, 29.856466, -17.260769, 1102, 392, -36.38757, 3.7320583, 36.38757, -3.7320583, 1234, 292, -20.059813, -12.1291895, 20.059813, 12.1291895, 1287, 311, 0, 0, 0, 0, 1312, 357)
+"points": PackedVector2Array(0, 0, 0, 0, 973, 491, 0, 0, 0, 0, 970, 539, 0, 0, 0, 0, 1015, 547, -27.094746, 9.031582, 27.094746, -9.031582, 1076, 469, -25.954506, 10.2452, 25.954506, -10.2452, 1137, 411, -32.78464, 2.7320535, 32.78464, -2.7320535, 1227, 417, 0, 0, 0, 0, 1312, 359)
 }
-point_count = 8
+point_count = 7
 
 [node name="Main" type="Node" unique_id=2072706222]
 script = ExtResource("1_5iygx")
@@ -127,6 +127,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
 [node name="WorldMap" type="TextureRect" parent="UI" unique_id=729713391]
 layout_mode = 1
@@ -135,14 +136,490 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 texture = ExtResource("1_08s08")
 expand_mode = 1
 metadata/_edit_lock_ = true
 
-[node name="Paths" type="Control" parent="UI" unique_id=2111951668]
-anchors_preset = 0
+[node name="Ath" parent="UI" unique_id=2026785200 instance=ExtResource("11_ekwjs")]
+unique_name_in_owner = true
+layout_mode = 1
+mouse_filter = 2
 
-[node name="ExpeditionPath" type="Path2D" parent="UI/Paths" unique_id=1075346388]
+[node name="TownManager" type="Control" parent="UI" unique_id=1072792510]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("5_igymv")
+metadata/_custom_type_script = "uid://4egkior740x6"
+
+[node name="Dehli" parent="UI/TownManager" unique_id=2084830226 instance=ExtResource("2_eos35")]
+z_index = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.488
+anchor_top = 0.15
+anchor_right = 0.515
+anchor_bottom = 0.15
+town_name = "Dehli"
+transport_turn = 3
+sfx = Array[AudioStreamMP3]([ExtResource("4_4hl6o"), ExtResource("5_2vfub"), ExtResource("6_ui1tf"), ExtResource("7_m42f4")])
+
+[node name="StartingTown" parent="UI/TownManager" unique_id=2064836468 instance=ExtResource("2_eos35")]
+z_index = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.48
+anchor_top = 0.427
+anchor_right = 0.48
+anchor_bottom = 0.427
+town_name = "Calicut"
+index = 1
+transport_turn = 0
+buy_factor = Dictionary[int, float]({
+1: 1.5,
+2: 1.5,
+3: 1.5,
+4: 1.5,
+5: 1.5,
+6: 1.6,
+7: 0.8
+})
+sell_factor = Dictionary[int, float]({
+1: 0.5,
+2: 0.5,
+3: 0.5,
+4: 0.5,
+5: 0.5,
+6: 0.5,
+7: 0.4
+})
+sfx = Array[AudioStreamMP3]([ExtResource("4_4hl6o"), ExtResource("5_2vfub"), ExtResource("6_ui1tf"), ExtResource("7_m42f4")])
+start_town = true
+color = Color(0, 0, 0.7, 1)
+
+[node name="Goa" parent="UI/TownManager" unique_id=811356729 instance=ExtResource("2_eos35")]
+z_index = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.467
+anchor_top = 0.356
+anchor_right = 0.467
+anchor_bottom = 0.356
+offset_top = -3.0
+offset_bottom = 48.0
+grow_horizontal = 2
+grow_vertical = 2
+town_name = "Goa"
+index = 2
+buy_factor = Dictionary[int, float]({
+1: 1.3,
+2: 1.3,
+3: 1.3,
+4: 1.3,
+5: 1.3,
+6: 1.3,
+7: 1.1
+})
+sell_factor = Dictionary[int, float]({
+1: 0.5,
+2: 0.5,
+3: 0.5,
+4: 0.5,
+5: 0.5,
+6: 0.5,
+7: 0.7
+})
+sfx = Array[AudioStreamMP3]([ExtResource("4_4hl6o"), ExtResource("5_2vfub"), ExtResource("6_ui1tf"), ExtResource("7_m42f4")])
+
+[node name="Chaul" parent="UI/TownManager" unique_id=1721095960 instance=ExtResource("2_eos35")]
+z_index = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.45
+anchor_top = 0.29
+anchor_right = 0.45
+anchor_bottom = 0.29
+grow_horizontal = 2
+grow_vertical = 2
+town_name = "Chaul"
+index = 3
+buy_factor = Dictionary[int, float]({
+1: 1.5,
+2: 1.5,
+3: 1.5,
+4: 1.1,
+5: 1.5,
+6: 1.5,
+7: 1.3
+})
+sfx = Array[AudioStreamMP3]([ExtResource("4_4hl6o"), ExtResource("5_2vfub"), ExtResource("6_ui1tf"), ExtResource("7_m42f4")])
+
+[node name="Colombo" parent="UI/TownManager" unique_id=6411554 instance=ExtResource("2_eos35")]
+z_index = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.515
+anchor_top = 0.48
+anchor_right = 0.515
+anchor_bottom = 0.48
+town_name = "Colomba"
+index = 4
+transport_mode = 1
+buy_factor = Dictionary[int, float]({
+1: 1.5,
+2: 1.1,
+3: 1.5,
+4: 1.1,
+5: 1.5,
+6: 1.5,
+7: 1.5
+})
+sell_factor = Dictionary[int, float]({
+1: 0.5,
+2: 0.6,
+3: 0.5,
+4: 0.5,
+5: 0.5,
+6: 0.5,
+7: 0.5
+})
+sfx = Array[AudioStreamMP3]([ExtResource("8_51cql")])
+
+[node name="Patna" parent="UI/TownManager" unique_id=85137416 instance=ExtResource("2_eos35")]
+z_index = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.567
+anchor_top = 0.173
+anchor_right = 0.567
+anchor_bottom = 0.173
+town_name = "Patna"
+index = 5
+transport_turn = 2
+buy_factor = Dictionary[int, float]({
+1: 1.6,
+2: 1.5,
+3: 1.1,
+4: 1.6,
+5: 1.7,
+6: 1.8,
+7: 1.7
+})
+sell_factor = Dictionary[int, float]({
+1: 0.5,
+2: 0.5,
+3: 0.3,
+4: 0.5,
+5: 0.5,
+6: 0.5,
+7: 0.5
+})
+sfx = Array[AudioStreamMP3]([ExtResource("4_4hl6o"), ExtResource("5_2vfub"), ExtResource("6_ui1tf"), ExtResource("7_m42f4")])
+
+[node name="Aden" parent="UI/TownManager" unique_id=376978946 instance=ExtResource("2_eos35")]
+z_index = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.183
+anchor_top = 0.344
+anchor_right = 0.183
+anchor_bottom = 0.344
+town_name = "Aden"
+index = 6
+transport_mode = 2
+transport_turn = 3
+buy_factor = Dictionary[int, float]({
+1: 1.5,
+2: 1.5,
+3: 1.5,
+4: 1.5,
+5: 1.1,
+6: 1.3,
+7: 1.5
+})
+sell_factor = Dictionary[int, float]({
+1: 0.5,
+2: 0.5,
+3: 0.5,
+4: 0.6,
+5: 0.4,
+6: 0.5,
+7: 0.6
+})
+sfx = Array[AudioStreamMP3]([ExtResource("21_jhded"), ExtResource("22_fp81k"), ExtResource("23_3xgaf"), ExtResource("24_upuqf")])
+color = Color(0.34509805, 0.3254902, 0, 1)
+
+[node name="Ormuz" parent="UI/TownManager" unique_id=725774517 instance=ExtResource("2_eos35")]
+z_index = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.3
+anchor_top = 0.11
+anchor_right = 0.3
+anchor_bottom = 0.11
+town_name = "Ormuz"
+index = 7
+transport_mode = 1
+transport_turn = 3
+buy_factor = Dictionary[int, float]({
+1: 1.1,
+2: 1.5,
+3: 1.5,
+4: 1.6,
+5: 1.4,
+6: 1.4,
+7: 1.6
+})
+sell_factor = Dictionary[int, float]({
+1: 0.4,
+2: 0.5,
+3: 0.5,
+4: 0.5,
+5: 0.5,
+6: 0.5,
+7: 0.5
+})
+sfx = Array[AudioStreamMP3]([ExtResource("21_jhded"), ExtResource("22_fp81k"), ExtResource("23_3xgaf"), ExtResource("24_upuqf")])
+color = Color(0.34509805, 0.3254902, 0, 1)
+reverse_popup = true
+
+[node name="Debal" parent="UI/TownManager" unique_id=1930254467 instance=ExtResource("2_eos35")]
+z_index = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.4
+anchor_top = 0.165
+anchor_right = 0.4
+anchor_bottom = 0.165
+town_name = "Debal"
+index = 8
+transport_mode = 1
+transport_turn = 2
+buy_factor = Dictionary[int, float]({
+1: 1.3,
+2: 1.5,
+3: 1.1,
+4: 1.1,
+5: 1.5,
+6: 1.6,
+7: 1.4
+})
+sell_factor = Dictionary[int, float]({
+1: 0.5,
+2: 0.5,
+3: 0.4,
+4: 0.5,
+5: 0.5,
+6: 0.5,
+7: 0.5
+})
+sfx = Array[AudioStreamMP3]([ExtResource("21_jhded"), ExtResource("22_fp81k"), ExtResource("23_3xgaf"), ExtResource("24_upuqf")])
+color = Color(0.34509805, 0.3254902, 0, 1)
+
+[node name="Sofala" parent="UI/TownManager" unique_id=1945968804 instance=ExtResource("2_eos35")]
+z_index = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.09
+anchor_top = 0.955
+anchor_right = 0.09
+anchor_bottom = 0.955
+town_name = "Sofala"
+index = 9
+transport_mode = 2
+transport_turn = 5
+sell_factor = Dictionary[int, float]({
+1: 0.5,
+2: 0.25,
+3: 0.5,
+4: 0.5,
+5: 0.5,
+6: 0.5,
+7: 0.5
+})
+sfx = Array[AudioStreamMP3]([ExtResource("17_igymv"), ExtResource("18_sp1y7"), ExtResource("19_brh71"), ExtResource("20_x23lb")])
+color = Color(0.34509805, 0.3254902, 0, 1)
+
+[node name="Zanzibar" parent="UI/TownManager" unique_id=1036590766 instance=ExtResource("2_eos35")]
+z_index = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.111
+anchor_top = 0.7
+anchor_right = 0.111
+anchor_bottom = 0.7
+town_name = "Zanzibar"
+index = 10
+transport_mode = 2
+transport_turn = 4
+buy_factor = Dictionary[int, float]({
+1: 1.6,
+2: 1.1,
+3: 1.7,
+4: 1.6,
+5: 1.5,
+6: 1.1,
+7: 1.6
+})
+sell_factor = Dictionary[int, float]({
+1: 0.5,
+2: 0.4,
+3: 0.5,
+4: 0.5,
+5: 0.5,
+6: 0.4,
+7: 0.5
+})
+sfx = Array[AudioStreamMP3]([ExtResource("17_igymv"), ExtResource("18_sp1y7"), ExtResource("19_brh71"), ExtResource("20_x23lb")])
+color = Color(0.34509805, 0.3254902, 0, 1)
+
+[node name="Malacca" parent="UI/TownManager" unique_id=135587927 instance=ExtResource("2_eos35")]
+z_index = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.74
+anchor_top = 0.555
+anchor_right = 0.744
+anchor_bottom = 0.555
+town_name = "Malacca"
+index = 11
+transport_mode = 2
+transport_turn = 4
+buy_factor = Dictionary[int, float]({
+1: 1.9,
+2: 1.5,
+3: 1.7,
+4: 1.1,
+5: 1.4,
+6: 1.8,
+7: 1.6
+})
+sell_factor = Dictionary[int, float]({
+1: 0.5,
+2: 0.5,
+3: 0.5,
+4: 0.4,
+5: 0.5,
+6: 0.5,
+7: 0.5
+})
+sfx = Array[AudioStreamMP3]([ExtResource("8_o3h7a"), ExtResource("9_eubu7"), ExtResource("10_hm3xc"), ExtResource("11_vvw5h")])
+color = Color(0, 0.39607844, 0, 1)
+
+[node name="Timor" parent="UI/TownManager" unique_id=520961299 instance=ExtResource("2_eos35")]
+z_index = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.944
+anchor_top = 0.789
+anchor_right = 0.944
+anchor_bottom = 0.789
+town_name = "Timor"
+index = 12
+transport_mode = 2
+transport_turn = 5
+buy_factor = Dictionary[int, float]({
+1: 2.0,
+2: 1.6,
+3: 1.7,
+4: 1.1,
+5: 1.5,
+6: 2.1,
+7: 1.6
+})
+sell_factor = Dictionary[int, float]({
+1: 0.5,
+2: 0.5,
+3: 0.5,
+4: 0.4,
+5: 0.4,
+6: 0.5,
+7: 0.5
+})
+sfx = Array[AudioStreamMP3]([ExtResource("8_o3h7a"), ExtResource("9_eubu7"), ExtResource("10_hm3xc"), ExtResource("11_vvw5h")])
+color = Color(0, 0.39607844, 0, 1)
+
+[node name="Chatigaon" parent="UI/TownManager" unique_id=1687683668 instance=ExtResource("2_eos35")]
+z_index = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.63
+anchor_top = 0.211
+anchor_right = 0.63000005
+anchor_bottom = 0.211
+offset_right = 108.3999
+town_name = "Chatigaon"
+index = 13
+transport_mode = 1
+transport_turn = 3
+buy_factor = Dictionary[int, float]({
+1: 1.6,
+2: 1.5,
+3: 1.3,
+4: 1.4,
+5: 1.1,
+6: 1.75,
+7: 1.4
+})
+sell_factor = Dictionary[int, float]({
+1: 0.5,
+2: 0.5,
+3: 0.5,
+4: 0.5,
+5: 0.4,
+6: 0.5,
+7: 0.5
+})
+sfx = Array[AudioStreamMP3]([ExtResource("13_5bulh"), ExtResource("14_i3sme"), ExtResource("15_5bbsv"), ExtResource("16_7s21p")])
+color = Color(0, 0.39607844, 0, 1)
+
+[node name="Syriam2" parent="UI/TownManager" unique_id=1318445323 instance=ExtResource("2_eos35")]
+z_index = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.656
+anchor_top = 0.305
+anchor_right = 0.656
+anchor_bottom = 0.305
+town_name = "Syriam"
+index = 14
+transport_mode = 2
+transport_turn = 3
+buy_factor = Dictionary[int, float]({
+1: 1.8,
+2: 1.5,
+3: 1.1,
+4: 1.4,
+5: 1.3,
+6: 1.5,
+7: 1.4
+})
+sell_factor = Dictionary[int, float]({
+1: 0.5,
+2: 0.5,
+3: 0.45,
+4: 0.5,
+5: 0.5,
+6: 0.5,
+7: 0.5
+})
+sfx = Array[AudioStreamMP3]([ExtResource("13_5bulh"), ExtResource("14_i3sme"), ExtResource("15_5bbsv"), ExtResource("16_7s21p")])
+color = Color(0, 0.39607844, 0, 1)
+
+[node name="Paths" type="Control" parent="UI" unique_id=2111951668]
+z_index = 10
+anchors_preset = 0
+offset_top = 1.0
+offset_bottom = 1.0
+mouse_filter = 2
+
+[node name="Calicut1" type="Path2D" parent="UI/Paths" unique_id=1075346388]
 position = Vector2(-100, -100)
 curve = SubResource("Curve2D_sp1y7")
 script = ExtResource("25_0lpg8")
@@ -155,7 +632,6 @@ color = Color(0.7, 0, 0, 1)
 metadata/_custom_type_script = "uid://dpup24da6v5sc"
 
 [node name="Chaul3" type="Path2D" parent="UI/Paths" unique_id=321107174]
-visible = false
 curve = SubResource("Curve2D_brh71")
 script = ExtResource("25_0lpg8")
 maritime_path = false
@@ -229,475 +705,22 @@ script = ExtResource("25_0lpg8")
 color = Color(0, 0.39607844, 0, 1)
 metadata/_custom_type_script = "uid://dpup24da6v5sc"
 
-[node name="Ath" parent="UI" unique_id=2026785200 instance=ExtResource("11_ekwjs")]
-unique_name_in_owner = true
-layout_mode = 1
-
-[node name="TownManager" type="Control" parent="UI" unique_id=1072792510]
-unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-script = ExtResource("5_igymv")
-metadata/_custom_type_script = "uid://4egkior740x6"
-
-[node name="Dehli" parent="UI/TownManager" unique_id=2084830226 instance=ExtResource("2_eos35")]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.488
-anchor_top = 0.15
-anchor_right = 0.515
-anchor_bottom = 0.15
-town_name = "Dehli"
-transport_turn = 3
-sfx = Array[AudioStreamMP3]([ExtResource("4_4hl6o"), ExtResource("5_2vfub"), ExtResource("6_ui1tf"), ExtResource("7_m42f4")])
-
-[node name="StartingTown" parent="UI/TownManager" unique_id=2064836468 instance=ExtResource("2_eos35")]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.48
-anchor_top = 0.427
-anchor_right = 0.48
-anchor_bottom = 0.427
-town_name = "Calicut"
-index = 1
-transport_turn = 0
-buy_factor = Dictionary[int, float]({
-1: 1.5,
-2: 1.5,
-3: 1.5,
-4: 1.5,
-5: 1.5,
-6: 1.6,
-7: 0.8
-})
-sell_factor = Dictionary[int, float]({
-1: 0.5,
-2: 0.5,
-3: 0.5,
-4: 0.5,
-5: 0.5,
-6: 0.5,
-7: 0.4
-})
-sfx = Array[AudioStreamMP3]([ExtResource("4_4hl6o"), ExtResource("5_2vfub"), ExtResource("6_ui1tf"), ExtResource("7_m42f4")])
-start_town = true
-color = Color(0, 0, 0.7, 1)
-
-[node name="Goa" parent="UI/TownManager" unique_id=811356729 instance=ExtResource("2_eos35")]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.467
-anchor_top = 0.356
-anchor_right = 0.467
-anchor_bottom = 0.356
-offset_top = -3.0
-offset_bottom = 48.0
-grow_horizontal = 2
-grow_vertical = 2
-town_name = "Goa"
-index = 2
-buy_factor = Dictionary[int, float]({
-1: 1.3,
-2: 1.3,
-3: 1.3,
-4: 1.3,
-5: 1.3,
-6: 1.3,
-7: 1.1
-})
-sell_factor = Dictionary[int, float]({
-1: 0.5,
-2: 0.5,
-3: 0.5,
-4: 0.5,
-5: 0.5,
-6: 0.5,
-7: 0.7
-})
-sfx = Array[AudioStreamMP3]([ExtResource("4_4hl6o"), ExtResource("5_2vfub"), ExtResource("6_ui1tf"), ExtResource("7_m42f4")])
-
-[node name="Chaul" parent="UI/TownManager" unique_id=1721095960 instance=ExtResource("2_eos35")]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.45
-anchor_top = 0.29
-anchor_right = 0.45
-anchor_bottom = 0.29
-grow_horizontal = 2
-grow_vertical = 2
-town_name = "Chaul"
-index = 3
-buy_factor = Dictionary[int, float]({
-1: 1.5,
-2: 1.5,
-3: 1.5,
-4: 1.1,
-5: 1.5,
-6: 1.5,
-7: 1.3
-})
-sfx = Array[AudioStreamMP3]([ExtResource("4_4hl6o"), ExtResource("5_2vfub"), ExtResource("6_ui1tf"), ExtResource("7_m42f4")])
-
-[node name="Colombo" parent="UI/TownManager" unique_id=6411554 instance=ExtResource("2_eos35")]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.515
-anchor_top = 0.48
-anchor_right = 0.515
-anchor_bottom = 0.48
-town_name = "Colomba"
-index = 4
-transport_mode = 1
-buy_factor = Dictionary[int, float]({
-1: 1.5,
-2: 1.1,
-3: 1.5,
-4: 1.1,
-5: 1.5,
-6: 1.5,
-7: 1.5
-})
-sell_factor = Dictionary[int, float]({
-1: 0.5,
-2: 0.6,
-3: 0.5,
-4: 0.5,
-5: 0.5,
-6: 0.5,
-7: 0.5
-})
-sfx = Array[AudioStreamMP3]([ExtResource("8_51cql")])
-
-[node name="Patna" parent="UI/TownManager" unique_id=85137416 instance=ExtResource("2_eos35")]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.567
-anchor_top = 0.173
-anchor_right = 0.567
-anchor_bottom = 0.173
-town_name = "Patna"
-index = 5
-transport_turn = 2
-buy_factor = Dictionary[int, float]({
-1: 1.6,
-2: 1.5,
-3: 1.1,
-4: 1.6,
-5: 1.7,
-6: 1.8,
-7: 1.7
-})
-sell_factor = Dictionary[int, float]({
-1: 0.5,
-2: 0.5,
-3: 0.3,
-4: 0.5,
-5: 0.5,
-6: 0.5,
-7: 0.5
-})
-sfx = Array[AudioStreamMP3]([ExtResource("4_4hl6o"), ExtResource("5_2vfub"), ExtResource("6_ui1tf"), ExtResource("7_m42f4")])
-
-[node name="Aden" parent="UI/TownManager" unique_id=376978946 instance=ExtResource("2_eos35")]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.183
-anchor_top = 0.344
-anchor_right = 0.183
-anchor_bottom = 0.344
-town_name = "Aden"
-index = 6
-transport_mode = 2
-transport_turn = 3
-buy_factor = Dictionary[int, float]({
-1: 1.5,
-2: 1.5,
-3: 1.5,
-4: 1.5,
-5: 1.1,
-6: 1.3,
-7: 1.5
-})
-sell_factor = Dictionary[int, float]({
-1: 0.5,
-2: 0.5,
-3: 0.5,
-4: 0.6,
-5: 0.4,
-6: 0.5,
-7: 0.6
-})
-sfx = Array[AudioStreamMP3]([ExtResource("21_jhded"), ExtResource("22_fp81k"), ExtResource("23_3xgaf"), ExtResource("24_upuqf")])
-color = Color(0.34509805, 0.3254902, 0, 1)
-
-[node name="Ormuz" parent="UI/TownManager" unique_id=725774517 instance=ExtResource("2_eos35")]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.3
-anchor_top = 0.11
-anchor_right = 0.3
-anchor_bottom = 0.11
-town_name = "Ormuz"
-index = 7
-transport_mode = 1
-transport_turn = 3
-buy_factor = Dictionary[int, float]({
-1: 1.1,
-2: 1.5,
-3: 1.5,
-4: 1.6,
-5: 1.4,
-6: 1.4,
-7: 1.6
-})
-sell_factor = Dictionary[int, float]({
-1: 0.4,
-2: 0.5,
-3: 0.5,
-4: 0.5,
-5: 0.5,
-6: 0.5,
-7: 0.5
-})
-sfx = Array[AudioStreamMP3]([ExtResource("21_jhded"), ExtResource("22_fp81k"), ExtResource("23_3xgaf"), ExtResource("24_upuqf")])
-color = Color(0.34509805, 0.3254902, 0, 1)
-reverse_popup = true
-
-[node name="Debal" parent="UI/TownManager" unique_id=1930254467 instance=ExtResource("2_eos35")]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.4
-anchor_top = 0.165
-anchor_right = 0.4
-anchor_bottom = 0.165
-town_name = "Debal"
-index = 8
-transport_mode = 1
-transport_turn = 2
-buy_factor = Dictionary[int, float]({
-1: 1.3,
-2: 1.5,
-3: 1.1,
-4: 1.1,
-5: 1.5,
-6: 1.6,
-7: 1.4
-})
-sell_factor = Dictionary[int, float]({
-1: 0.5,
-2: 0.5,
-3: 0.4,
-4: 0.5,
-5: 0.5,
-6: 0.5,
-7: 0.5
-})
-sfx = Array[AudioStreamMP3]([ExtResource("21_jhded"), ExtResource("22_fp81k"), ExtResource("23_3xgaf"), ExtResource("24_upuqf")])
-color = Color(0.34509805, 0.3254902, 0, 1)
-
-[node name="Sofala" parent="UI/TownManager" unique_id=1945968804 instance=ExtResource("2_eos35")]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.09
-anchor_top = 0.955
-anchor_right = 0.09
-anchor_bottom = 0.955
-town_name = "Sofala"
-index = 9
-transport_mode = 2
-transport_turn = 5
-sell_factor = Dictionary[int, float]({
-1: 0.5,
-2: 0.25,
-3: 0.5,
-4: 0.5,
-5: 0.5,
-6: 0.5,
-7: 0.5
-})
-sfx = Array[AudioStreamMP3]([ExtResource("17_igymv"), ExtResource("18_sp1y7"), ExtResource("19_brh71"), ExtResource("20_x23lb")])
-color = Color(0.34509805, 0.3254902, 0, 1)
-
-[node name="Zanzibar" parent="UI/TownManager" unique_id=1036590766 instance=ExtResource("2_eos35")]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.111
-anchor_top = 0.7
-anchor_right = 0.111
-anchor_bottom = 0.7
-town_name = "Zanzibar"
-index = 10
-transport_mode = 2
-transport_turn = 4
-buy_factor = Dictionary[int, float]({
-1: 1.6,
-2: 1.1,
-3: 1.7,
-4: 1.6,
-5: 1.5,
-6: 1.1,
-7: 1.6
-})
-sell_factor = Dictionary[int, float]({
-1: 0.5,
-2: 0.4,
-3: 0.5,
-4: 0.5,
-5: 0.5,
-6: 0.4,
-7: 0.5
-})
-sfx = Array[AudioStreamMP3]([ExtResource("17_igymv"), ExtResource("18_sp1y7"), ExtResource("19_brh71"), ExtResource("20_x23lb")])
-color = Color(0.34509805, 0.3254902, 0, 1)
-
-[node name="Malacca" parent="UI/TownManager" unique_id=135587927 instance=ExtResource("2_eos35")]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.74
-anchor_top = 0.555
-anchor_right = 0.744
-anchor_bottom = 0.555
-town_name = "Malacca"
-index = 11
-transport_mode = 2
-transport_turn = 4
-buy_factor = Dictionary[int, float]({
-1: 1.9,
-2: 1.5,
-3: 1.7,
-4: 1.1,
-5: 1.4,
-6: 1.8,
-7: 1.6
-})
-sell_factor = Dictionary[int, float]({
-1: 0.5,
-2: 0.5,
-3: 0.5,
-4: 0.4,
-5: 0.5,
-6: 0.5,
-7: 0.5
-})
-sfx = Array[AudioStreamMP3]([ExtResource("8_o3h7a"), ExtResource("9_eubu7"), ExtResource("10_hm3xc"), ExtResource("11_vvw5h")])
-color = Color(0, 0.39607844, 0, 1)
-
-[node name="Timor" parent="UI/TownManager" unique_id=520961299 instance=ExtResource("2_eos35")]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.944
-anchor_top = 0.789
-anchor_right = 0.944
-anchor_bottom = 0.789
-town_name = "Timor"
-index = 12
-transport_mode = 2
-transport_turn = 5
-buy_factor = Dictionary[int, float]({
-1: 2.0,
-2: 1.6,
-3: 1.7,
-4: 1.1,
-5: 1.5,
-6: 2.1,
-7: 1.6
-})
-sell_factor = Dictionary[int, float]({
-1: 0.5,
-2: 0.5,
-3: 0.5,
-4: 0.4,
-5: 0.4,
-6: 0.5,
-7: 0.5
-})
-sfx = Array[AudioStreamMP3]([ExtResource("8_o3h7a"), ExtResource("9_eubu7"), ExtResource("10_hm3xc"), ExtResource("11_vvw5h")])
-color = Color(0, 0.39607844, 0, 1)
-
-[node name="Chatigaon" parent="UI/TownManager" unique_id=1687683668 instance=ExtResource("2_eos35")]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.63
-anchor_top = 0.211
-anchor_right = 0.63000005
-anchor_bottom = 0.211
-offset_right = 108.3999
-town_name = "Chatigaon"
-index = 13
-transport_mode = 1
-transport_turn = 3
-buy_factor = Dictionary[int, float]({
-1: 1.6,
-2: 1.5,
-3: 1.3,
-4: 1.4,
-5: 1.1,
-6: 1.75,
-7: 1.4
-})
-sell_factor = Dictionary[int, float]({
-1: 0.5,
-2: 0.5,
-3: 0.5,
-4: 0.5,
-5: 0.4,
-6: 0.5,
-7: 0.5
-})
-sfx = Array[AudioStreamMP3]([ExtResource("13_5bulh"), ExtResource("14_i3sme"), ExtResource("15_5bbsv"), ExtResource("16_7s21p")])
-color = Color(0, 0.39607844, 0, 1)
-
-[node name="Syriam2" parent="UI/TownManager" unique_id=1318445323 instance=ExtResource("2_eos35")]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.656
-anchor_top = 0.305
-anchor_right = 0.656
-anchor_bottom = 0.305
-town_name = "Syriam"
-index = 14
-transport_mode = 2
-transport_turn = 3
-buy_factor = Dictionary[int, float]({
-1: 1.8,
-2: 1.5,
-3: 1.1,
-4: 1.4,
-5: 1.3,
-6: 1.5,
-7: 1.4
-})
-sell_factor = Dictionary[int, float]({
-1: 0.5,
-2: 0.5,
-3: 0.45,
-4: 0.5,
-5: 0.5,
-6: 0.5,
-7: 0.5
-})
-sfx = Array[AudioStreamMP3]([ExtResource("13_5bulh"), ExtResource("14_i3sme"), ExtResource("15_5bbsv"), ExtResource("16_7s21p")])
-color = Color(0, 0.39607844, 0, 1)
-
 [node name="EventWindow" parent="UI" unique_id=678875500 instance=ExtResource("28_0lpg8")]
 unique_name_in_owner = true
 visible = false
-z_index = 3
+z_index = 20
 layout_mode = 1
 offset_left = -8.0
 offset_right = -8.0
 grow_horizontal = 2
 grow_vertical = 2
-mouse_filter = 1
+mouse_filter = 2
 
 [node name="TradeWindow" parent="UI" unique_id=304652504 instance=ExtResource("9_wbs85")]
 unique_name_in_owner = true
+z_index = 30
 layout_mode = 1
+mouse_filter = 2
 
 [node name="Option" parent="UI" unique_id=816212415 instance=ExtResource("35_igymv")]
 visible = false
@@ -725,7 +748,7 @@ inventory = Dictionary[int, float]({
 [node name="ExpeditionMgr" parent="." unique_id=1818811447 node_paths=PackedStringArray("destination_paths") instance=ExtResource("12_n0y6q")]
 unique_name_in_owner = true
 destination_paths = {
-1: NodePath("../UI/Paths/ExpeditionPath"),
+1: NodePath("../UI/Paths/Calicut1"),
 2: NodePath("../UI/Paths/Goa2"),
 3: NodePath("../UI/Paths/Chaul3"),
 4: NodePath("../UI/Paths/Colombo4"),

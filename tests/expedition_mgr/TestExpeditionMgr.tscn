@@ -23,14 +23,15 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 script = ExtResource("1_o3t3a")
 metadata/_edit_lock_ = true
 
 [node name="ExpeditionMgr" parent="." unique_id=1818811447 node_paths=PackedStringArray("destination_paths") instance=ExtResource("2_u6rvu")]
 unique_name_in_owner = true
 destination_paths = {
-0: NodePath("../ExpeditionPath"),
-1: NodePath("../Path2D2")
+0: NodePath("../Path2D2"),
+1: NodePath("../ExpeditionPath")
 }
 
 [node name="next_turn" type="Button" parent="ExpeditionMgr" unique_id=1841535515]
