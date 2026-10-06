@@ -5,19 +5,19 @@
 
 [sub_resource type="Resource" id="Resource_f5qxn"]
 script = ExtResource("1_pmwtw")
-text = "Il y a quelques années, un navire est arrivé au port de Calicut. Son navigateur, Vasco de Gama, prétendait arriver du royaume du Portugal part la mer. Nous l'avions alors chassé de nos mers. Aujourd'hui, il est de retour avec des cadeaux, et notre souverain, le râja lui a accordé le droit de faire du commerce ici"
+text = "Il y a quelques années, un navire est arrivé au port de Calicut. Son navigateur, Vasco de Gama, prétendait arriver du royaume du Portugal part la mer. Nous l'avions alors chassé. Aujourd'hui, il est de retour avec des cadeaux, et notre souverain, le râja, lui a accordé le droit de faire du commerce ici"
 metadata/_custom_type_script = "uid://dji1gvea14ls8"
 
 [sub_resource type="Resource" id="Resource_j6330"]
 script = ExtResource("1_pmwtw")
-text = "Pour permettre ses nouvelles conquêtes, le râja a décidé d'augmenter les taxes sur le commerce d'épices et de poivre. En acheter couterat plus cher à présent"
+text = "Pour permettre ses nouvelles conquêtes, le râja a décidé d'augmenter les taxes sur le commerce d'épices et de poivre. En acheter coûtera plus cher à présent"
 metadata/_custom_type_script = "uid://dji1gvea14ls8"
 
 [sub_resource type="Resource" id="Resource_0lpg8"]
 script = ExtResource("1_pmwtw")
 target_town = Array[int]([9])
 type = 3
-text = "Un message de l'ouest. Des hommes en armes sont venus depuis le royaume du Portugal, et on pris la ville de Solafa. Ils en ont fais une forteresse, et interdit a tout navire d'y entrer. Il sera beaucoup plus risqué de faire du commerce là-bas.."
+text = "Un message de l'ouest. Des hommes en armes sont venus depuis le royaume du Portugal, et ont pris la ville de Solafa. Ils en ont fais une forteresse, et interdit à tout navire d'y entrer. Il sera beaucoup plus risqué de faire du commerce là-bas.."
 threat_increase = 25
 metadata/_custom_type_script = "uid://dji1gvea14ls8"
 
@@ -47,7 +47,7 @@ metadata/_custom_type_script = "uid://dji1gvea14ls8"
 script = ExtResource("1_pmwtw")
 target_town = Array[int]([7])
 type = 3
-text = "Un message de l'ouest. Après une longue bataille, le port d'Ormuz a été capturé par les Portugais, qui ont imposé leur ordre . On dis que nul ne peut plus approcher du passage d'Ormuz a présent.."
+text = "Un message de l'ouest. Après une longue bataille, le port d'Ormuz a été capturé par les Portugais, qui ont imposé leur ordre. On dis que nul ne peut plus approcher du passage d'Ormuz a présent.."
 threat_increase = 30
 guard_cost_increase = 5.0
 metadata/_custom_type_script = "uid://dji1gvea14ls8"
