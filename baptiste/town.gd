@@ -19,6 +19,14 @@ enum ID {
 	SYRIAM=14
 }
 
+@onready var icon: TextureRect = %Icon
+
+@export var icon_texture : Texture2D : 
+	set(new_icon):
+		icon_texture=new_icon
+		if is_node_ready():
+			icon.texture=icon_texture
+		
 @export var town_name := ""
 @export var index :ID= 0
 @export var transport_mode := 0
@@ -59,7 +67,7 @@ func _ready():
 	$VBoxContainer/TownName.text = town_name
 	$VBoxContainer/TownName.modulate = color
 	$VBoxContainer/Icon.modulate = color
-	
+	%Icon.texture = icon_texture
 
 func _on_texture_button_pressed():
 	if $TradeHBox.modulate.a == 1:

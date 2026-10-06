@@ -29,6 +29,7 @@ theme_override_fonts/font = ExtResource("2_aq5wb")
 text = "Lorem ipsum"
 
 [node name="Icon" type="TextureRect" parent="VBoxContainer" unique_id=526331112]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(20, 20)
 custom_maximum_size = Vector2(20, 20)
 layout_mode = 2
