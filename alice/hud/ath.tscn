@@ -74,6 +74,7 @@ mouse_force_pass_scroll_events = false
 [node name="TextureRect" type="TextureRect" parent="HBoxContainer/HBoxContainer10/HBoxContainer" unique_id=224629672]
 layout_mode = 2
 size_flags_horizontal = 3
+tooltip_text = "Or"
 mouse_filter = 0
 mouse_force_pass_scroll_events = false
 texture = ExtResource("3_k5d8j")
@@ -100,6 +101,7 @@ mouse_force_pass_scroll_events = false
 [node name="TextureRect" type="TextureRect" parent="HBoxContainer/HBoxContainer10/HBoxContainer7" unique_id=1146644205]
 layout_mode = 2
 size_flags_horizontal = 3
+tooltip_text = "Epices"
 mouse_filter = 0
 mouse_force_pass_scroll_events = false
 texture = ExtResource("9_dd0do")
@@ -126,6 +128,7 @@ mouse_force_pass_scroll_events = false
 [node name="TextureRect" type="TextureRect" parent="HBoxContainer/HBoxContainer10/HBoxContainer2" unique_id=269240108]
 layout_mode = 2
 size_flags_horizontal = 3
+tooltip_text = "Poivre"
 mouse_filter = 0
 mouse_force_pass_scroll_events = false
 texture = ExtResource("10_uchpa")
@@ -152,6 +155,7 @@ mouse_force_pass_scroll_events = false
 [node name="TextureRect" type="TextureRect" parent="HBoxContainer/HBoxContainer10/HBoxContainer3" unique_id=1401905078]
 layout_mode = 2
 size_flags_horizontal = 3
+tooltip_text = "Soie"
 mouse_filter = 0
 mouse_force_pass_scroll_events = false
 texture = ExtResource("5_g56sb")
@@ -178,6 +182,7 @@ mouse_force_pass_scroll_events = false
 [node name="TextureRect" type="TextureRect" parent="HBoxContainer/HBoxContainer10/HBoxContainer4" unique_id=526324126]
 layout_mode = 2
 size_flags_horizontal = 3
+tooltip_text = "Ivoire"
 mouse_filter = 0
 mouse_force_pass_scroll_events = false
 texture = ExtResource("8_0app3")
@@ -204,6 +209,7 @@ mouse_force_pass_scroll_events = false
 [node name="TextureRect" type="TextureRect" parent="HBoxContainer/HBoxContainer10/HBoxContainer5" unique_id=2076701254]
 layout_mode = 2
 size_flags_horizontal = 3
+tooltip_text = "Coton"
 mouse_filter = 0
 mouse_force_pass_scroll_events = false
 texture = ExtResource("7_ewyhu")
@@ -230,6 +236,7 @@ mouse_force_pass_scroll_events = false
 [node name="TextureRect" type="TextureRect" parent="HBoxContainer/HBoxContainer10/HBoxContainer8" unique_id=13382411]
 layout_mode = 2
 size_flags_horizontal = 3
+tooltip_text = "Chevaux"
 mouse_filter = 0
 mouse_force_pass_scroll_events = false
 texture = ExtResource("10_c2fmi")
@@ -273,6 +280,7 @@ text = "20"
 [node name="HBoxContainer9" type="HBoxContainer" parent="HBoxContainer/HBoxContainer10" unique_id=537425302]
 layout_mode = 2
 size_flags_horizontal = 3
+tooltip_text = "Esclaves"
 mouse_filter = 0
 mouse_force_pass_scroll_events = false
 
@@ -281,6 +289,7 @@ custom_minimum_size = Vector2(0, 64.77)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
+tooltip_text = "Esclaves"
 mouse_filter = 0
 mouse_force_pass_scroll_events = false
 texture = ExtResource("12_ewyhu")
