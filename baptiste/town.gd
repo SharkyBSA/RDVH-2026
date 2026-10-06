@@ -21,6 +21,7 @@ func _ready():
 	$VBoxContainer/TownName.text = town_name
 	$VBoxContainer/TownName.modulate = color
 	$VBoxContainer/Icon.modulate = color
+	
 
 func _on_texture_button_pressed():
 	if $TradeHBox.modulate.a == 1:

@@ -360,4 +360,3 @@ theme_override_fonts/font = ExtResource("4_g56sb")
 text = "+20"
 
 [connection signal="pressed" from="HBoxContainer/NextTurnBtn" to="." method="_on_next_turn_btn_pressed"]
-[connection signal="pressed" from="HBoxContainer/Pausebtn" to="." method="_on_pausebtn_pressed"]

@@ -20,6 +20,7 @@ func _ready() -> void:
 		get_tree().change_scene_to_file("res://baptiste/menu.tscn")
 		)
 	prepare_turn()
+	Volumes.music_changed.connect(music_volume)
 
 func _on_player_updated(inv):
 	%Ath.update_all(inv)
@@ -91,3 +92,5 @@ func _on_launch_expedition(expedition : Expedition)->void:
 		process_expeditions_results(expedition.delta_res)
 		return
 	expedition_manager.add_expedition(expedition)
+
+func music_volume(value := -10.): $Music.volume_db = value

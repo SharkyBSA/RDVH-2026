@@ -55,10 +55,6 @@ func set_turn(turn : int)->void:
 func _on_next_turn_btn_pressed():
 	emit_signal("next_turn")
 
-
-func _on_pausebtn_pressed():
-	get_tree().change_scene_to_file("res://baptiste/menu.tscn")
-
 func pass_button_animation():
 	var tween = create_tween()
 	tween.tween_property(%NextTurnBtn, "modulate", Color(1, 1, 0.8), 1)
