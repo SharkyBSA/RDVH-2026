@@ -3,19 +3,28 @@
 [ext_resource type="Script" uid="uid://dji1gvea14ls8" path="res://alice/turn_mgr/events/turn_event.gd" id="1_pmwtw"]
 [ext_resource type="Script" uid="uid://drfbg3jb0nf5x" path="res://alice/turn_mgr/events/game_events.gd" id="2_j6330"]
 
+[sub_resource type="Resource" id="Resource_f5qxn"]
+script = ExtResource("1_pmwtw")
+text = "Il y a quelques années, un navire est arrivé au port de Calicut. Son navigateur, Vasco de Gama, prétendait arriver du royaume du Portugal part la mer. Nous l'avions alors chassé de nos mers. Aujourd'hui, il est de retour avec des cadeaux, et notre souverain, le râja lui a accordé le droit de faire du commerce ici"
+metadata/_custom_type_script = "uid://dji1gvea14ls8"
+
+[sub_resource type="Resource" id="Resource_j6330"]
+script = ExtResource("1_pmwtw")
+text = "Pour permettre ses nouvelles conquêtes, le râja a décidé d'augmenter les taxes sur le commerce d'épices et de poivre. En acheter couterat plus cher à présent"
+metadata/_custom_type_script = "uid://dji1gvea14ls8"
+
 [sub_resource type="Resource" id="Resource_0lpg8"]
 script = ExtResource("1_pmwtw")
 target_town = Array[int]([9])
-target_all_town = false
-type = 1
-text = "Un message de l'ouest. Des hommes en armes sont venus, et on pris la ville de Solafa. Ils en ont fais une forteresse, et interdit a tout navire d'y entrer. Il sera beaucoup plus risqué de faire du commerce là-bas.."
+type = 3
+text = "Un message de l'ouest. Des hommes en armes sont venus depuis le royaume du Portugal, et on pris la ville de Solafa. Ils en ont fais une forteresse, et interdit a tout navire d'y entrer. Il sera beaucoup plus risqué de faire du commerce là-bas.."
 threat_increase = 25
 metadata/_custom_type_script = "uid://dji1gvea14ls8"
 
 [sub_resource type="Resource" id="Resource_f100b"]
 script = ExtResource("1_pmwtw")
 type = 2
-text = "La flotte portugaise est à nos portes ! Après une terrible bataille, notre ville est prise, et des lois sont instaurées, imposant que chaque bateau soit escorté. Et leurs gardes ne sont pas gratuits !"
+text = "La flotte portugaise est à nos portes ! Après une terrible bataille, notre ville est prise, et des lois sont instaurées, imposant que chaque bateau soit escorté. Et leurs gardes ne sont pas gratuits.. "
 increase_min_guards = 4
 guard_cost_increase = 10.0
 metadata/_custom_type_script = "uid://dji1gvea14ls8"
@@ -37,9 +46,8 @@ metadata/_custom_type_script = "uid://dji1gvea14ls8"
 [sub_resource type="Resource" id="Resource_pmwtw"]
 script = ExtResource("1_pmwtw")
 target_town = Array[int]([7])
-target_all_town = false
-type = 1
-text = "Un message de l'ouest. Les hommes qui ont pris Sofala il y a quelques années disent venir du royaume du Portugal. Ils comptent s'installer dans tous les ports environnants, et faire leurs forteresses.. Le dernier port attaqué est celui d'Ormuz. On dis que nul ne peut plus approcher du passage d'Ormuz.."
+type = 3
+text = "Un message de l'ouest. Après une longue bataille, le port d'Ormuz a été capturé par les Portugais, qui ont imposé leur ordre . On dis que nul ne peut plus approcher du passage d'Ormuz a présent.."
 threat_increase = 30
 guard_cost_increase = 5.0
 metadata/_custom_type_script = "uid://dji1gvea14ls8"
@@ -47,19 +55,19 @@ metadata/_custom_type_script = "uid://dji1gvea14ls8"
 [sub_resource type="Resource" id="Resource_p65io"]
 script = ExtResource("1_pmwtw")
 type = 1
-text = "Les années se font longues depuis que les portugais bloquent le commerce. D'autres ports tombent sous leur joug, et ils interdisent le commerce de nombreux biens. Nous devons être prudents."
+text = "Les années se font longues depuis que les Portugais bloquent le commerce. D'autres ports tombent sous leur joug, et ils interdisent le commerce de nombreux biens. Nous devons être prudents."
 threat_increase = 25
 guard_cost_increase = 5.0
 metadata/_custom_type_script = "uid://dji1gvea14ls8"
 
-[sub_resource type="Resource" id="Resource_j6330"]
+[sub_resource type="Resource" id="Resource_v8v2l"]
 script = ExtResource("1_pmwtw")
-type = 3
-text = "En quelques années, ces hommes venus de loin se sont empars de tout le commerce de cet ocean. Il n'est pratiquement plus possible que de commercer avec eux. Aujourd'hui, c'est au tour de nos voisins de Goa de tomber sous leur joug.. Nous sommes seuls."
+type = 4
+text = "En quelques années, ces hommes venus de loin se sont emparés de tout le commerce de cet océan. Il n'est pratiquement plus possible que de commercer avec eux. Aujourd'hui, c'est au tour de nos voisins de Goa de tomber sous leur joug.. Nous sommes seuls."
 guard_cost_increase = 5.0
 metadata/_custom_type_script = "uid://dji1gvea14ls8"
 
 [resource]
 script = ExtResource("2_j6330")
-events = Array[ExtResource("1_pmwtw")]([null, null, null, null, null, null, null, null, null, null, null, null, null, null, SubResource("Resource_0lpg8"), null, null, null, SubResource("Resource_f100b"), SubResource("Resource_ephac"), null, null, SubResource("Resource_byyj6"), null, null, null, null, SubResource("Resource_pmwtw"), null, null, null, null, SubResource("Resource_p65io"), null, null, null, null, null, SubResource("Resource_j6330")])
+events = Array[ExtResource("1_pmwtw")]([null, null, null, null, SubResource("Resource_f5qxn"), null, null, null, null, SubResource("Resource_j6330"), null, null, null, null, null, null, SubResource("Resource_0lpg8"), null, null, null, SubResource("Resource_f100b"), SubResource("Resource_ephac"), null, null, SubResource("Resource_byyj6"), null, null, null, SubResource("Resource_pmwtw"), null, null, null, null, SubResource("Resource_p65io"), null, null, null, null, null, SubResource("Resource_v8v2l")])
 metadata/_custom_type_script = "uid://drfbg3jb0nf5x"

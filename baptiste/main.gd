@@ -32,7 +32,7 @@ func go_to_next_turn()->void:
 func prepare_turn()->void:
 	turn_manager = %TurnManager
 	expedition_manager = %ExpeditionMgr
-	#Get the events affecting this turn and then apply them (TODO) 
+	#Get the events affecting this turn and then apply them 
 	var town_offers : Array[TownOffer] = turn_manager.get_turn_town_offers()
 	var event : Event = turn_manager.get_turn_event()
 	var current_turn := turn_manager.current_turn
