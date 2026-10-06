@@ -1,7 +1,7 @@
 extends RefCounted
 class_name Expedition
 
-var destination : int = -1
+var destination : Town.ID = Town.ID.CALICUT
 var delta_res : Dictionary[Merchandise.Type, float]
 var fail_risk : float
 

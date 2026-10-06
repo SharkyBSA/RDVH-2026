@@ -6,7 +6,7 @@ extends Node
 @onready var turn_manager: TurnManager = %TurnManager
 @onready var expedition_manager: ExpeditionManager = %ExpeditionMgr
 @onready var player: Player = %Player
-@onready var town_manager: Node = %TownManager
+@onready var town_manager: TownManager = %TownManager
 @onready var ath: Ath = %Ath
 @onready var trade_window: TradeWindow = %TradeWindow
 @onready var event_win: EventWindow = %EventWindow
@@ -50,32 +50,43 @@ func apply_event(event : Event) ->void:
 	if not event.text.is_empty():
 		event_win.set_type(event.type)
 		pop_event_win(event.text)
-	var town : Town = town_manager.get_child(event.target_town)
-	if town == null:
-		return
-	
-	if event.type == Event.Type.CHANTAGE:
-		for town_a in town_manager.get_children():
-			town_a.min_guards+= event.increase_min_guards
-			
-	#elif event.type == Event.Type.ATTACK && event.target_town == 0:
-		#for town_a in town_manager.get_children():
-			#town_a.threat_level+= event.threat_increase
+	var target_towns : Array[Town] = [] 
+	if event.target_all_town:
+		target_towns=town_manager.get_towns()
+	else:
+		for town_id in event.target_town:
+			if not town_manager.town_exist(town_id):
+				continue
+			target_towns.append(town_manager.get_town(town_id))
 
+	for town in target_towns:
+		town.min_guards+=event.increase_min_guards
+		town.threat_level+=event.threat_increase
+		for merchandise_type in event.sell_price_modifier_increase.keys():
+			if not town.sell_factor.has(merchandise_type):
+				town.sell_factor[merchandise_type]=0.5
+			town.sell_factor[merchandise_type]+=event.sell_price_modifier_increase[merchandise_type]
+		
+		
 func pop_event_win(text: String)->void:
 	event_win.set_text(text)
 	event_win.appear()
 
 func pop_offer_bubbles(town_offers: Array[TownOffer])->void:
 	for trade : TownOffer in town_offers:
-		var town : Town = town_manager.get_child(trade.town)
+		var town : Town = town_manager.get_town(trade.town)
 		trade.threat_level =trade.threat_level + town.threat_level
 		trade.min_gards = town.min_guards
+		if trade.is_buying:
+			trade.price_modifier = town.buy_factor[trade.merchadise] if town.buy_factor.has(trade.merchadise) else 1.0
+		else:
+			trade.price_modifier = town.sell_factor[trade.merchadise] if town.buy_factor.has(trade.merchadise) else 1.0
+		
 		town.current_offer=trade
 		town.popup(trade.is_buying, trade.merchadise)
 
 func hide_old_bubbles()->void:
-	for town in town_manager.get_children():
+	for town in town_manager.get_towns():
 		await town.hide_popup()
 
 func process_expeditions_results(expeditions_results : Dictionary[Merchandise.Type,float])->void:
@@ -85,7 +96,7 @@ func process_expeditions_results(expeditions_results : Dictionary[Merchandise.Ty
 func _on_launch_expedition(expedition : Expedition)->void:
 	expedition.start_turn=turn_manager.current_turn
 	expedition.current_turn=turn_manager.current_turn
-	var town : Town = town_manager.get_child(expedition.destination)
+	var town : Town = town_manager.get_town(expedition.destination)
 	if town != null:
 		town.hide_popup()
 	if expedition.success_duration==0:

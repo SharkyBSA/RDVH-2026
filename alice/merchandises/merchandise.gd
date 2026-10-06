@@ -23,7 +23,6 @@ const names : Dictionary[Type,String] = {
 	Type.PORCELAIN:"porcelaine",
 	Type.SLAVES:"esclaves"}
 
-const prices_old : Array[float] = [1, 20, 4, 0.2, 0.5, 0, 20, 100]
 const prices : Dictionary[Type,float] = {
 	Type.GOLD:1,
 	Type.SILK:4,

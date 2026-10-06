@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://diq8sdq1y3pbn"]
 
 [ext_resource type="Script" uid="uid://bg3jo52m7mdnw" path="res://alice/hud/ath.gd" id="1_0hjve"]
+[ext_resource type="Theme" uid="uid://cy8ofoih0aoe2" path="res://assets/theme/UI_theme.tres" id="1_g56sb"]
 [ext_resource type="Texture2D" uid="uid://d14cdrck17eci" path="res://assets/Trading_interface/Materials_interfaceV1.png" id="2_k5d8j"]
 [ext_resource type="Texture2D" uid="uid://c3ds0yfqaqo" path="res://assets/icons/or.png" id="3_k5d8j"]
 [ext_resource type="FontFile" uid="uid://c3v83r2x1hqbg" path="res://assets/Indira_K.ttf" id="4_g56sb"]
@@ -14,9 +15,6 @@
 [ext_resource type="Texture2D" uid="uid://coklit0uuntf5" path="res://assets/icons/esclave.png" id="12_ewyhu"]
 [ext_resource type="Texture2D" uid="uid://cgcgodju812pw" path="res://assets/Trading_interface/OptionV1.png" id="13_7kn40"]
 
-[sub_resource type="Theme" id="Theme_pmwtw"]
-Label/font_sizes/font_size = 26
-
 [node name="Ath" type="Control" unique_id=2026785200]
 layout_mode = 3
 anchor_left = 0.02
@@ -24,7 +22,7 @@ anchor_top = 0.02
 anchor_right = 0.98
 anchor_bottom = 0.12
 mouse_force_pass_scroll_events = false
-theme = SubResource("Theme_pmwtw")
+theme = ExtResource("1_g56sb")
 script = ExtResource("1_0hjve")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1628380618]
@@ -76,6 +74,7 @@ mouse_force_pass_scroll_events = false
 [node name="TextureRect" type="TextureRect" parent="HBoxContainer/HBoxContainer10/HBoxContainer" unique_id=224629672]
 layout_mode = 2
 size_flags_horizontal = 3
+tooltip_text = "Or"
 mouse_filter = 0
 mouse_force_pass_scroll_events = false
 texture = ExtResource("3_k5d8j")
@@ -83,6 +82,60 @@ expand_mode = 1
 stretch_mode = 5
 
 [node name="Gold" type="Label" parent="HBoxContainer/HBoxContainer10/HBoxContainer" unique_id=851840837]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 0
+mouse_force_pass_scroll_events = false
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_g56sb")
+text = "20"
+horizontal_alignment = 1
+
+[node name="HBoxContainer7" type="HBoxContainer" parent="HBoxContainer/HBoxContainer10" unique_id=746204766]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 0
+mouse_force_pass_scroll_events = false
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/HBoxContainer10/HBoxContainer7" unique_id=1146644205]
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "Epices"
+mouse_filter = 0
+mouse_force_pass_scroll_events = false
+texture = ExtResource("9_dd0do")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Spice" type="Label" parent="HBoxContainer/HBoxContainer10/HBoxContainer7" unique_id=81912201]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 0
+mouse_force_pass_scroll_events = false
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_g56sb")
+text = "20"
+horizontal_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="HBoxContainer/HBoxContainer10" unique_id=249919889]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 0
+mouse_force_pass_scroll_events = false
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/HBoxContainer10/HBoxContainer2" unique_id=269240108]
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "Poivre"
+mouse_filter = 0
+mouse_force_pass_scroll_events = false
+texture = ExtResource("10_uchpa")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Pepper" type="Label" parent="HBoxContainer/HBoxContainer10/HBoxContainer2" unique_id=1887426698]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
@@ -102,6 +155,7 @@ mouse_force_pass_scroll_events = false
 [node name="TextureRect" type="TextureRect" parent="HBoxContainer/HBoxContainer10/HBoxContainer3" unique_id=1401905078]
 layout_mode = 2
 size_flags_horizontal = 3
+tooltip_text = "Soie"
 mouse_filter = 0
 mouse_force_pass_scroll_events = false
 texture = ExtResource("5_g56sb")
@@ -128,6 +182,7 @@ mouse_force_pass_scroll_events = false
 [node name="TextureRect" type="TextureRect" parent="HBoxContainer/HBoxContainer10/HBoxContainer4" unique_id=526324126]
 layout_mode = 2
 size_flags_horizontal = 3
+tooltip_text = "Ivoire"
 mouse_filter = 0
 mouse_force_pass_scroll_events = false
 texture = ExtResource("8_0app3")
@@ -154,6 +209,7 @@ mouse_force_pass_scroll_events = false
 [node name="TextureRect" type="TextureRect" parent="HBoxContainer/HBoxContainer10/HBoxContainer5" unique_id=2076701254]
 layout_mode = 2
 size_flags_horizontal = 3
+tooltip_text = "Coton"
 mouse_filter = 0
 mouse_force_pass_scroll_events = false
 texture = ExtResource("7_ewyhu")
@@ -161,32 +217,6 @@ expand_mode = 1
 stretch_mode = 5
 
 [node name="Coton" type="Label" parent="HBoxContainer/HBoxContainer10/HBoxContainer5" unique_id=554616454]
-unique_name_in_owner = true
-layout_mode = 2
-size_flags_horizontal = 3
-mouse_filter = 0
-mouse_force_pass_scroll_events = false
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("4_g56sb")
-text = "20"
-horizontal_alignment = 1
-
-[node name="HBoxContainer7" type="HBoxContainer" parent="HBoxContainer/HBoxContainer10" unique_id=746204766]
-layout_mode = 2
-size_flags_horizontal = 3
-mouse_filter = 0
-mouse_force_pass_scroll_events = false
-
-[node name="TextureRect" type="TextureRect" parent="HBoxContainer/HBoxContainer10/HBoxContainer7" unique_id=1146644205]
-layout_mode = 2
-size_flags_horizontal = 3
-mouse_filter = 0
-mouse_force_pass_scroll_events = false
-texture = ExtResource("9_dd0do")
-expand_mode = 1
-stretch_mode = 5
-
-[node name="Spice" type="Label" parent="HBoxContainer/HBoxContainer10/HBoxContainer7" unique_id=81912201]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
@@ -206,6 +236,7 @@ mouse_force_pass_scroll_events = false
 [node name="TextureRect" type="TextureRect" parent="HBoxContainer/HBoxContainer10/HBoxContainer8" unique_id=13382411]
 layout_mode = 2
 size_flags_horizontal = 3
+tooltip_text = "Chevaux"
 mouse_filter = 0
 mouse_force_pass_scroll_events = false
 texture = ExtResource("10_c2fmi")
@@ -213,32 +244,6 @@ expand_mode = 1
 stretch_mode = 5
 
 [node name="Animals" type="Label" parent="HBoxContainer/HBoxContainer10/HBoxContainer8" unique_id=1030398021]
-unique_name_in_owner = true
-layout_mode = 2
-size_flags_horizontal = 3
-mouse_filter = 0
-mouse_force_pass_scroll_events = false
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("4_g56sb")
-text = "20"
-horizontal_alignment = 1
-
-[node name="HBoxContainer2" type="HBoxContainer" parent="HBoxContainer/HBoxContainer10" unique_id=249919889]
-layout_mode = 2
-size_flags_horizontal = 3
-mouse_filter = 0
-mouse_force_pass_scroll_events = false
-
-[node name="TextureRect" type="TextureRect" parent="HBoxContainer/HBoxContainer10/HBoxContainer2" unique_id=269240108]
-layout_mode = 2
-size_flags_horizontal = 3
-mouse_filter = 0
-mouse_force_pass_scroll_events = false
-texture = ExtResource("10_uchpa")
-expand_mode = 1
-stretch_mode = 5
-
-[node name="Pepper" type="Label" parent="HBoxContainer/HBoxContainer10/HBoxContainer2" unique_id=1887426698]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
@@ -275,6 +280,7 @@ text = "20"
 [node name="HBoxContainer9" type="HBoxContainer" parent="HBoxContainer/HBoxContainer10" unique_id=537425302]
 layout_mode = 2
 size_flags_horizontal = 3
+tooltip_text = "Esclaves"
 mouse_filter = 0
 mouse_force_pass_scroll_events = false
 
@@ -283,6 +289,7 @@ custom_minimum_size = Vector2(0, 64.77)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
+tooltip_text = "Esclaves"
 mouse_filter = 0
 mouse_force_pass_scroll_events = false
 texture = ExtResource("12_ewyhu")
@@ -348,15 +355,5 @@ texture_normal = ExtResource("13_7kn40")
 texture_pressed = ExtResource("13_7kn40")
 ignore_texture_size = true
 stretch_mode = 5
-
-[node name="Label" type="Label" parent="." unique_id=1416078837]
-layout_mode = 0
-offset_left = 137.6
-offset_top = 65.4
-offset_right = 177.6
-offset_bottom = 88.4
-theme_override_colors/font_color = Color(0, 0.6745098, 0, 1)
-theme_override_fonts/font = ExtResource("4_g56sb")
-text = "+20"
 
 [connection signal="pressed" from="HBoxContainer/NextTurnBtn" to="." method="_on_next_turn_btn_pressed"]

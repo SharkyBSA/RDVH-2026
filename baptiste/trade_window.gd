@@ -22,6 +22,7 @@ var cost := 0
 var buy := false
 var merc := 0
 var town : Town
+var price_modifier : float
 signal launch_expedition(expedition: Expedition)
 
 func _ready():
@@ -40,12 +41,12 @@ func update_cost()->void:
 		2:
 			turn_cost = 30
 			unit_size = 100
-	#cost = turn * turn_cost + trade_amount * Merchandise.prices[merc] * int(buy) + guard_amount * 5
-	cost = trade_amount * Merchandise.prices.get(merc) * 0.5 + \
-		ceil(float(trade_amount) / unit_size) * turn_cost * turn + guard_amount * turn if buy else\
-		ceil(float(trade_amount) / unit_size) * turn_cost * turn + guard_amount * turn
+	cost = trade_amount * Merchandise.prices.get(merc) * price_modifier + \
+		ceil(float(trade_amount) / unit_size) * turn_cost * turn + guard_amount * (turn+1) if buy else\
+		ceil(float(trade_amount) / unit_size) * turn_cost * turn + guard_amount * (turn+1)
+	
 	%CostLabel.text = "Coût de l'expédition : "+str(cost)
-	%GainLabel.text = "Argent remporté : " + str(int(trade_amount * Merchandise.prices[merc] * 1.5))
+	%GainLabel.text = "Argent remporté : " + str(int(trade_amount * Merchandise.prices[merc] * price_modifier))
 	
 ## Shows the trade window
 func popup(trade_town : Town, town_offer : TownOffer, transport_turn := 1):
@@ -69,11 +70,14 @@ func popup(trade_town : Town, town_offer : TownOffer, transport_turn := 1):
 		"à vendre" if town_offer.is_buying else "à acheter"]
 	
 	guard_amount = town_offer.min_gards
+	min_guard = town_offer.min_gards
 	%GuardLabel.text = str(min_guard)
 	%GuardProgressBar.value = town_offer.threat_level
 	threat = town_offer.threat_level
 	turn = transport_turn
-	destination = town_offer.town
+
+	destination=town_offer.town
+	price_modifier=town_offer.price_modifier
 	%PercentLabel.text = "\n%d%%" % [($%GuardProgressBar.value / 100) * 100]
 	%GuardButtonAdd.disabled = true if %GuardProgressBar.value <= 0 else false
 	%GuardButtonAdd.modulate = Color(0.6, 0.6, 0.6) if %GuardButtonAdd.disabled else Color.WHITE
@@ -146,7 +150,7 @@ func _on_launch_expedition_pressed() -> void:
 	if buy:
 		expedition.delta_res[merc] = trade_amount
 	else:
-		expedition.delta_res[Merchandise.Type.GOLD]= int(trade_amount * Merchandise.prices[merc] * 1.5)
+		expedition.delta_res[Merchandise.Type.GOLD]= int(trade_amount * Merchandise.prices[merc] * price_modifier)
 	expedition.success_duration = turn
 	expedition.draw_fail()
 	launch_expedition.emit(expedition)

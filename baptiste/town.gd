@@ -1,16 +1,54 @@
 extends Control
 class_name Town
 
+enum ID {
+	DELHI=0,
+	CALICUT=1,
+	GOA=2,
+	CHAUL=3,
+	COLOMBO=4,
+	PATNA=5,
+	ADEN=6,
+	ORMUZ=7,
+	DEBAL=8,
+	SOFALA=9,
+	ZANZIBAR=10,
+	MALACCA=11,
+	TIMOR=12,
+	CHATIGAON=13,
+	SYRIAM=14
+}
+
 @export var town_name := ""
+@export var index :ID= 0
 @export var transport_mode := 0
 @export var transport_turn := 1
 @export var transport_threat := 0
 @export var threat_level := 0
-@export var index := 0
+#Facteur applique au prix 
+@export var buy_factor : Dictionary[Merchandise.Type,float]= {
+	Merchandise.Type.SILK:1.5,
+	Merchandise.Type.IVORY:1.5,
+	Merchandise.Type.COTON:1.5,
+	Merchandise.Type.SPICE:1.5,
+	Merchandise.Type.ANIMALS:1.5,
+	Merchandise.Type.SLAVES:1.5,
+	Merchandise.Type.PEPPER:1.5	
+}
+@export var sell_factor : Dictionary[Merchandise.Type,float]= {
+	Merchandise.Type.SILK:0.5,
+	Merchandise.Type.IVORY:0.5,
+	Merchandise.Type.COTON:0.5,
+	Merchandise.Type.SPICE:0.5,
+	Merchandise.Type.ANIMALS:0.5,
+	Merchandise.Type.SLAVES:0.5,
+	Merchandise.Type.PEPPER:0.5	
+}
 @export var sfx : Array[AudioStreamMP3] = []
 @export var start_town := false
 @export var color : Color = Color(0.7, 0, 0)
 @export var reverse_popup := false
+
 var current_offer : TownOffer
 var min_guards : int = 0
 var _bubble_displayed:= false
@@ -52,6 +90,7 @@ func popup(type := 0, res := 0):
 		Merchandise.Type.SPICE:	$TradeHBox/TextureButton/TextureRect.texture = load("res://assets/icons/epices.png")
 		Merchandise.Type.ANIMALS:	$TradeHBox/TextureButton/TextureRect.texture = load("res://assets/icons/chevaux.png")
 		Merchandise.Type.SLAVES:	$TradeHBox/TextureButton/TextureRect.texture = load("res://assets/icons/esclave.png")
+
 func hide_popup():
 	if not _bubble_displayed:
 		return
