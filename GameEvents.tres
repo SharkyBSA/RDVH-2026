@@ -15,8 +15,9 @@ metadata/_custom_type_script = "uid://dji1gvea14ls8"
 [sub_resource type="Resource" id="Resource_f100b"]
 script = ExtResource("1_pmwtw")
 type = 2
-text = "La flotte portugaise est à nos portes ! Après une terrible bataille, notre ville est prise, et des lois sont instaurées, imposant que chaque bateau soit "
+text = "La flotte portugaise est à nos portes ! Après une terrible bataille, notre ville est prise, et des lois sont instaurées, imposant que chaque bateau soit  escorte. Et leurs gardes ne sont pas gratuits!"
 increase_min_guards = 4
+guard_cost_increase = 10.0
 metadata/_custom_type_script = "uid://dji1gvea14ls8"
 
 [sub_resource type="Resource" id="Resource_ephac"]
@@ -28,8 +29,9 @@ metadata/_custom_type_script = "uid://dji1gvea14ls8"
 [sub_resource type="Resource" id="Resource_byyj6"]
 script = ExtResource("1_pmwtw")
 type = 1
-text = "Les forteresses portugaises se multiplient, de nombreux ports sont dorénavant difficiles d'accès sans protection, et beaucoup de navires ne reviennent jamais"
+text = "Les forteresses portugaises se multiplient, de nombreux ports sont dorénavant difficiles d'accès sans protection, et beaucoup de navires ne reviennent jamais."
 threat_increase = 15
+guard_cost_increase = 5.0
 metadata/_custom_type_script = "uid://dji1gvea14ls8"
 
 [sub_resource type="Resource" id="Resource_pmwtw"]
@@ -39,19 +41,22 @@ target_all_town = false
 type = 1
 text = "Un message de l'ouest. Les hommes qui ont pris Sofala il y a quelques années disent venir du royaume du Portugal. Ils comptent s'installer dans tous les ports environnants, et faire leurs forteresses.. Le dernier port attaqué est celui d'Ormuz. On dis que nul ne peut plus approcher du passage d'Ormuz.."
 threat_increase = 30
+guard_cost_increase = 5.0
 metadata/_custom_type_script = "uid://dji1gvea14ls8"
 
 [sub_resource type="Resource" id="Resource_p65io"]
 script = ExtResource("1_pmwtw")
 type = 1
-text = "Les années se font longues depuis que les portugais bloquent le commerce. D'autres ports tombent sous leur joug, et ils interdisent le commerce de nombreux biens. Nous devons être prudents"
+text = "Les années se font longues depuis que les portugais bloquent le commerce. D'autres ports tombent sous leur joug, et ils interdisent le commerce de nombreux biens. Nous devons être prudents."
 threat_increase = 25
+guard_cost_increase = 5.0
 metadata/_custom_type_script = "uid://dji1gvea14ls8"
 
 [sub_resource type="Resource" id="Resource_j6330"]
 script = ExtResource("1_pmwtw")
 type = 3
-text = "En quelques années, ces hommes venus de loin se sont empars de tout le commerce de cet ocean. Il n'est pratiquement plus possible que de commercer avec eux. Aujourd'hui, c'est au tour de nos voisins de Goa de tomber sous leur joug.. Nous sommes seuls"
+text = "En quelques années, ces hommes venus de loin se sont empars de tout le commerce de cet ocean. Il n'est pratiquement plus possible que de commercer avec eux. Aujourd'hui, c'est au tour de nos voisins de Goa de tomber sous leur joug.. Nous sommes seuls."
+guard_cost_increase = 5.0
 metadata/_custom_type_script = "uid://dji1gvea14ls8"
 
 [resource]
