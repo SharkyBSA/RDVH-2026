@@ -15,14 +15,14 @@ metadata/_custom_type_script = "uid://dji1gvea14ls8"
 [sub_resource type="Resource" id="Resource_f100b"]
 script = ExtResource("1_pmwtw")
 type = 2
-text = "La flotte portugaise est à nos portes ! Après une terrible bataille, notre ville est prise, et des lois sont instaurées, imposant que chaque bateau soit  escorte. Et leurs gardes ne sont pas gratuits!"
+text = "La flotte portugaise est à nos portes ! Après une terrible bataille, notre ville est prise, et des lois sont instaurées, imposant que chaque bateau soit escorté. Et leurs gardes ne sont pas gratuits !"
 increase_min_guards = 4
 guard_cost_increase = 10.0
 metadata/_custom_type_script = "uid://dji1gvea14ls8"
 
 [sub_resource type="Resource" id="Resource_ephac"]
 script = ExtResource("1_pmwtw")
-text = "Nos voisins de Goa sont encore libres, et nous aideront à commercer sur ces mer. Nous pouvons encore compter sur des amis !"
+text = "Nos voisins de Goa sont encore libres, et nous aideront à commercer sur ces mers. Nous pouvons encore compter sur des amis !"
 threat_increase = -5
 metadata/_custom_type_script = "uid://dji1gvea14ls8"
 
