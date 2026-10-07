@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://b2018yrpiqsbb" path="res://baptiste/town.gd" id="1_isdnv"]
 [ext_resource type="FontFile" uid="uid://c3v83r2x1hqbg" path="res://assets/Indira_K.ttf" id="2_aq5wb"]
-[ext_resource type="Texture2D" uid="uid://bqn70ylniojqd" path="res://assets/icons/town.png" id="2_ghyft"]
 [ext_resource type="Texture2D" uid="uid://btm2fjme7qloh" path="res://assets/icons/arrow.png" id="3_5wbrl"]
+[ext_resource type="Texture2D" uid="uid://cwbi6wxy02vip" path="res://assets/Trading_interface/Bulding_icone03.png" id="3_aq5wb"]
 [ext_resource type="Texture2D" uid="uid://dxvqldpv5c6pn" path="res://assets/icons/placeholder.png" id="4_ghyft"]
 [ext_resource type="Texture2D" uid="uid://d3sspuibdxsi8" path="res://assets/bulle.png" id="5_aq5wb"]
 
@@ -29,12 +29,13 @@ theme_override_fonts/font = ExtResource("2_aq5wb")
 text = "Lorem ipsum"
 
 [node name="Icon" type="TextureRect" parent="VBoxContainer" unique_id=526331112]
-custom_minimum_size = Vector2(20, 20)
-custom_maximum_size = Vector2(20, 20)
+unique_name_in_owner = true
+custom_minimum_size = Vector2(70, 70)
 layout_mode = 2
 size_flags_horizontal = 4
-texture = ExtResource("2_ghyft")
-expand_mode = 2
+texture = ExtResource("3_aq5wb")
+expand_mode = 1
+stretch_mode = 4
 
 [node name="TradeHBox" type="VBoxContainer" parent="." unique_id=1617168093]
 modulate = Color(1, 1, 1, 0)

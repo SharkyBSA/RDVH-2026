@@ -30,7 +30,6 @@ func calcul_score()->int:
 		score+=player.inventory[res]*Merchandise.prices[res]
 	return score
 
-
 func set_type(type : Event.Type)->void:
 	event_type = type
 	match type:
@@ -38,6 +37,8 @@ func set_type(type : Event.Type)->void:
 			illustration.texture = BAGARRE
 		Event.Type.CHANTAGE:
 			illustration.texture = PORTUGAIS
+		Event.Type.CONQUETE:
+			illustration.texture = BAGARRE			
 		Event.Type.GAME_OVER:
 			illustration.texture = GAME_OVER_SKULL
 

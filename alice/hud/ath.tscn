@@ -89,7 +89,7 @@ mouse_filter = 0
 mouse_force_pass_scroll_events = false
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_g56sb")
-text = "20"
+text = "2500"
 horizontal_alignment = 1
 
 [node name="HBoxContainer7" type="HBoxContainer" parent="HBoxContainer/HBoxContainer10" unique_id=746204766]
@@ -116,7 +116,7 @@ mouse_filter = 0
 mouse_force_pass_scroll_events = false
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_g56sb")
-text = "20"
+text = "0"
 horizontal_alignment = 1
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="HBoxContainer/HBoxContainer10" unique_id=249919889]
@@ -170,7 +170,7 @@ mouse_filter = 0
 mouse_force_pass_scroll_events = false
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_g56sb")
-text = "20"
+text = "0"
 horizontal_alignment = 1
 
 [node name="HBoxContainer4" type="HBoxContainer" parent="HBoxContainer/HBoxContainer10" unique_id=1372179886]
@@ -197,7 +197,7 @@ mouse_filter = 0
 mouse_force_pass_scroll_events = false
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_g56sb")
-text = "20"
+text = "0"
 horizontal_alignment = 1
 
 [node name="HBoxContainer5" type="HBoxContainer" parent="HBoxContainer/HBoxContainer10" unique_id=1667210344]
@@ -224,7 +224,7 @@ mouse_filter = 0
 mouse_force_pass_scroll_events = false
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_g56sb")
-text = "20"
+text = "0"
 horizontal_alignment = 1
 
 [node name="HBoxContainer8" type="HBoxContainer" parent="HBoxContainer/HBoxContainer10" unique_id=1383007523]
@@ -251,7 +251,7 @@ mouse_filter = 0
 mouse_force_pass_scroll_events = false
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_g56sb")
-text = "20"
+text = "0"
 horizontal_alignment = 1
 
 [node name="HBoxContainer6" type="HBoxContainer" parent="HBoxContainer/HBoxContainer10" unique_id=268560119]
@@ -275,7 +275,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 0
 mouse_force_pass_scroll_events = false
-text = "20"
+text = "0"
 
 [node name="HBoxContainer9" type="HBoxContainer" parent="HBoxContainer/HBoxContainer10" unique_id=537425302]
 layout_mode = 2
@@ -304,7 +304,7 @@ mouse_filter = 0
 mouse_force_pass_scroll_events = false
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_g56sb")
-text = "20"
+text = "0"
 horizontal_alignment = 1
 
 [node name="NextTurnBtn" type="TextureButton" parent="HBoxContainer" unique_id=1003132224]

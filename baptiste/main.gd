@@ -32,7 +32,7 @@ func go_to_next_turn()->void:
 func prepare_turn()->void:
 	turn_manager = %TurnManager
 	expedition_manager = %ExpeditionMgr
-	#Get the events affecting this turn and then apply them (TODO) 
+	#Get the events affecting this turn and then apply them 
 	var town_offers : Array[TownOffer] = turn_manager.get_turn_town_offers()
 	var event : Event = turn_manager.get_turn_event()
 	var current_turn := turn_manager.current_turn
@@ -68,7 +68,8 @@ func apply_event(event : Event) ->void:
 			if not town.sell_factor.has(merchandise_type):
 				town.sell_factor[merchandise_type]=0.5
 			town.sell_factor[merchandise_type]+=event.sell_price_modifier_increase[merchandise_type]
-		
+		if event.type == Event.Type.CONQUETE:
+			town.icon_texture = town.FORTERESS_TEXTURE
 		
 func pop_event_win(text: String)->void:
 	event_win.set_text(text)

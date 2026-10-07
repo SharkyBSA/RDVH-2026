@@ -19,6 +19,16 @@ enum ID {
 	SYRIAM=14
 }
 
+const FORTERESS_TEXTURE : Texture2D = preload("res://assets/Trading_interface/Bulding_icone03.png")
+
+@onready var _icon: TextureRect = %Icon
+
+@export var icon_texture : Texture2D : 
+	set(new_icon):
+		icon_texture=new_icon
+		if is_node_ready():
+			_icon.texture=icon_texture
+		
 @export var town_name := ""
 @export var index :ID= 0
 @export var transport_mode := 0
@@ -48,6 +58,7 @@ enum ID {
 @export var start_town := false
 @export var color : Color = Color(0.7, 0, 0)
 @export var reverse_popup := false
+@export var flip_icon_horizontal := false
 
 var current_offer : TownOffer
 var min_guards : int = 0
@@ -58,8 +69,8 @@ signal clicked(display_name, town_offer, transport_turn)
 func _ready():
 	$VBoxContainer/TownName.text = town_name
 	$VBoxContainer/TownName.modulate = color
-	$VBoxContainer/Icon.modulate = color
-	
+	%Icon.texture = icon_texture
+	%Icon.flip_h = flip_icon_horizontal
 
 func _on_texture_button_pressed():
 	if $TradeHBox.modulate.a == 1:
@@ -78,7 +89,7 @@ func popup(type := 0, res := 0):
 	$TradeHBox.position.y = 0
 	$TradeHBox.modulate.a = 1
 	var tween = create_tween()
-	var new_pos = -80 if !reverse_popup else 45
+	var new_pos = -80 if !reverse_popup else 60
 	tween.tween_property($TradeHBox, "position:y", new_pos, 0.5).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_SPRING)
 	_bubble_displayed=true
 	match res:
