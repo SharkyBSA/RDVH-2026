@@ -19,7 +19,7 @@ enum ID {
 	SYRIAM=14
 }
 
-const FORTERESS_TEXTURE : Texture2D = preload("res://assets/Trading_interface/Bulding_icone03.png")
+const FORTERESS_TEXTURE : Texture2D = preload("res://assets/Trading_interface/Fortugais_icone.png")
 
 @onready var _icon: TextureRect = %Icon
 
