@@ -1,4 +1,4 @@
-extends PanelContainer
+extends Control
 class_name ExpeditionTooltip
 
 @onready var turn_counter: Label = %TurnCounter

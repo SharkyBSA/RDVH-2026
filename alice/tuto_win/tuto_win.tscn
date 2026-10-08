@@ -1,0 +1,561 @@
+[gd_scene format=3 uid="uid://coco4af38uhjl"]
+
+[ext_resource type="Script" uid="uid://7qant7hkhwt8" path="res://alice/tuto_win/tuto_win.gd" id="1_dwx31"]
+[ext_resource type="Texture2D" uid="uid://43wgdjon4l4h" path="res://assets/Trading_interface/Window_tileV1.png" id="1_eib25"]
+[ext_resource type="Theme" uid="uid://cy8ofoih0aoe2" path="res://assets/theme/UI_theme.tres" id="1_td6sf"]
+[ext_resource type="Texture2D" uid="uid://b37ecpbmlvt6w" path="res://assets/pitite_fenetre.png" id="3_uufjo"]
+[ext_resource type="Texture2D" uid="uid://7ogy0fwqus6b" path="res://assets/tuto_win/tuto_ville_up.png" id="4_hnps2"]
+[ext_resource type="Texture2D" uid="uid://xwnd37nhsmnd" path="res://assets/tuto_win/tuto_ville_down.png" id="5_vgprg"]
+[ext_resource type="FontFile" uid="uid://c3v83r2x1hqbg" path="res://assets/Indira_K.ttf" id="6_31pau"]
+[ext_resource type="Texture2D" uid="uid://d4uovan7rcy5" path="res://assets/petitbateau.png" id="7_6t4qw"]
+[ext_resource type="Texture2D" uid="uid://cww7yegvebw" path="res://assets/Trading_interface/Red_alert_V1.png" id="7_q4yes"]
+[ext_resource type="Texture2D" uid="uid://df626egv7sblw" path="res://assets/Trading_interface/DownV1.png" id="8_6t4qw"]
+[ext_resource type="Texture2D" uid="uid://cdj0b3vya178i" path="res://assets/Trading_interface/UpV1.png" id="9_0kj7n"]
+[ext_resource type="Texture2D" uid="uid://dqvj3vw6gp1jc" path="res://assets/Trading_interface/Jauge_V1.png" id="10_ugmxk"]
+[ext_resource type="Texture2D" uid="uid://s6djx6w27yg5" path="res://assets/Trading_interface/Jauge_ressources_V1.png" id="11_2ohqj"]
+[ext_resource type="Texture2D" uid="uid://bed2n8wr3efyo" path="res://assets/Trading_interface/SoldierV1.png" id="12_0kj7n"]
+[ext_resource type="Texture2D" uid="uid://dqdsm0ndv6suh" path="res://assets/Trading_interface/Jauge_protections_V1.png" id="13_ugmxk"]
+[ext_resource type="PackedScene" uid="uid://gebyhljdrb4c" path="res://baptiste/town.tscn" id="14_2ohqj"]
+[ext_resource type="Texture2D" uid="uid://cwbi6wxy02vip" path="res://assets/Trading_interface/Bulding_icone03.png" id="15_2ohqj"]
+[ext_resource type="Theme" uid="uid://c8cltoc1bmqnh" path="res://assets/theme/town_theme.tres" id="15_37cl2"]
+[ext_resource type="Texture2D" uid="uid://dl6dhexml2opw" path="res://assets/Trading_interface/Bulding_icone01.png" id="16_37cl2"]
+[ext_resource type="Script" uid="uid://dpup24da6v5sc" path="res://alice/expedition_mgr/expedition_path.gd" id="18_absto"]
+[ext_resource type="PackedScene" uid="uid://bb7cgqp22fgvx" path="res://alice/expedition_mgr/ExpeditionToken.tscn" id="19_dwx31"]
+[ext_resource type="Texture2D" uid="uid://ufou6mh12ds3" path="res://assets/Trading_interface/CheckV1.png" id="21_m1knj"]
+[ext_resource type="PackedScene" uid="uid://c45ii7ibuubkg" path="res://alice/expedition_mgr/expedition_token_terre.tscn" id="21_vtgqc"]
+
+[sub_resource type="Curve2D" id="Curve2D_m1knj"]
+_data = {
+"points": PackedVector2Array(-164.19182, 55.449997, 164.19182, -55.449997, 918, 719, -72.985, 83.875, 72.985, -83.875, 895, 302, -34, -29, 34, 29, 1359, 276)
+}
+point_count = 3
+
+[sub_resource type="Curve2D" id="Curve2D_vtgqc"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 901, 719, 145.91649, -46.569096, -145.91649, 46.569096, 732, 839, 0, 0, 0, 0, 464, 794)
+}
+point_count = 3
+
+[node name="TutoWin" type="Control" unique_id=2097801665]
+layout_mode = 3
+anchor_left = 0.1
+anchor_top = 0.05
+anchor_right = 0.9
+anchor_bottom = 0.95
+offset_left = -43.0
+offset_top = -3.0
+offset_right = -43.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_dwx31")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=783304229]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_eib25")
+region_rect = Rect2(130.37988, 124.51316, 824.6771, 832.25684)
+patch_margin_left = 69
+patch_margin_top = 93
+patch_margin_right = 72
+patch_margin_bottom = 97
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+metadata/_edit_lock_ = true
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1489846653]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_td6sf")
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 40
+metadata/_edit_lock_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=592522288]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/separation = 30
+
+[node name="Title" type="Label" parent="MarginContainer/VBoxContainer" unique_id=718368502]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 44
+text = "Bienvenue dans Samudri Raja !"
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1752453974]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+text = "A la fin du XVe siecle du calendrier grégorien, le commerce était florissant dans l'océan indien. De l'Asie aux côtes de l'Afrique de l'est s'échangeaient, épice, soie, coton et d'autres biens. Mais une puissance venue d'un lointain continent vient perturber cet équilibre. Vous incarnez un⋅e marchand⋅e de Calicut, le plus grand port commercant d'Inde, sous l'égide du râja. "
+autowrap_mode = 2
+
+[node name="Encouragements" type="Label" parent="MarginContainer" unique_id=973635179]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_font_sizes/font_size = 34
+text = "Cherchez à obtenir le plus d'or ! Si vous le pouvez.."
+
+[node name="PititeFenetre" type="NinePatchRect" parent="." unique_id=169314880]
+layout_mode = 0
+offset_left = 54.19998
+offset_top = 264.0
+offset_right = 374.59995
+offset_bottom = 482.0
+theme = ExtResource("1_td6sf")
+texture = ExtResource("3_uufjo")
+region_rect = Rect2(0, 1.4840889, 952, 248.51591)
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 12
+patch_margin_bottom = 12
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="Instructions1" type="Label" parent="PititeFenetre" unique_id=704450876]
+layout_mode = 0
+offset_left = 30.399963
+offset_top = 251.0
+offset_right = 323.39996
+offset_bottom = 466.0
+text = "À chaque tour, les villes marchandes proposent d'acheter ou de vendre un certain stock de marchandise"
+autowrap_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PititeFenetre" unique_id=981276813]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="PititeFenetre/MarginContainer" unique_id=1374915387]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PititeFenetre/MarginContainer/HBoxContainer2" unique_id=18937407]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TutoVilleUp" type="TextureRect" parent="PititeFenetre/MarginContainer/HBoxContainer2/VBoxContainer" unique_id=102211231]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("4_hnps2")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Label2" type="Label" parent="PititeFenetre/MarginContainer/HBoxContainer2/VBoxContainer" unique_id=292592124]
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+text = "Acheter"
+horizontal_alignment = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="PititeFenetre/MarginContainer/HBoxContainer2" unique_id=173110616]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TutoVilleUp2" type="TextureRect" parent="PititeFenetre/MarginContainer/HBoxContainer2/VBoxContainer2" unique_id=1697318566]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("5_vgprg")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Label3" type="Label" parent="PititeFenetre/MarginContainer/HBoxContainer2/VBoxContainer2" unique_id=1361124609]
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+text = "Vendre"
+horizontal_alignment = 1
+
+[node name="PititeFenetre4" type="NinePatchRect" parent="." unique_id=619537413]
+layout_mode = 0
+offset_left = 59.0
+offset_top = 689.0
+offset_right = 356.0
+offset_bottom = 859.0
+theme = ExtResource("1_td6sf")
+texture = ExtResource("3_uufjo")
+region_rect = Rect2(0, 1.4840889, 952, 248.51591)
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 12
+patch_margin_bottom = 12
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="PititeFenetre4" unique_id=1759648781]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="Label" type="Label" parent="PititeFenetre4/MarginContainer" unique_id=186030086]
+layout_mode = 2
+size_flags_vertical = 1
+text = "ATTENTION ! Chaque expedition a un prix ! Gardes, durée, quantité de marchandises augmentent le coût du voyage"
+autowrap_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="PititeFenetre4" unique_id=1348208873]
+layout_mode = 1
+offset_left = -28.0
+offset_top = -33.0
+offset_right = 37.0
+offset_bottom = 19.0
+texture = ExtResource("7_q4yes")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="PititeFenetre2" type="NinePatchRect" parent="." unique_id=753142514]
+layout_mode = 0
+offset_left = 413.5999
+offset_top = 265.0
+offset_right = 821.5999
+offset_bottom = 691.0
+theme = ExtResource("1_td6sf")
+texture = ExtResource("3_uufjo")
+region_rect = Rect2(0, 1.4840889, 952, 248.51591)
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 12
+patch_margin_bottom = 12
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="PititeFenetre2" unique_id=287653724]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+
+[node name="TradeBox" type="VBoxContainer" parent="PititeFenetre2/MarginContainer" unique_id=713936056]
+z_index = 5
+layout_mode = 2
+
+[node name="Title" type="Label" parent="PititeFenetre2/MarginContainer/TradeBox" unique_id=1299683468]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_31pau")
+text = "Marchandises"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PititeFenetre2/MarginContainer/TradeBox" unique_id=716614791]
+custom_minimum_size = Vector2(0, 374.49)
+layout_mode = 2
+theme_override_constants/separation = 35
+alignment = 1
+
+[node name="Control" type="Control" parent="PititeFenetre2/MarginContainer/TradeBox/HBoxContainer" unique_id=1470407966]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PititeFenetre2/MarginContainer/TradeBox/HBoxContainer" unique_id=925085136]
+layout_mode = 2
+size_flags_horizontal = 2
+theme_override_constants/separation = -20
+alignment = 1
+
+[node name="Control" type="Control" parent="PititeFenetre2/MarginContainer/TradeBox/HBoxContainer/VBoxContainer" unique_id=1969516993]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5
+
+[node name="TextureRect" type="TextureRect" parent="PititeFenetre2/MarginContainer/TradeBox/HBoxContainer/VBoxContainer" unique_id=1431637410]
+propagate_maximum_size = true
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("7_6t4qw")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PititeFenetre2/MarginContainer/TradeBox/HBoxContainer/VBoxContainer" unique_id=1644913426]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="TradeButtonSubtract" type="TextureButton" parent="PititeFenetre2/MarginContainer/TradeBox/HBoxContainer/VBoxContainer/HBoxContainer" unique_id=1503141550]
+unique_name_in_owner = true
+modulate = Color(0.6, 0.6, 0.6, 1)
+custom_minimum_size = Vector2(30, 0)
+custom_maximum_size = Vector2(40, -1)
+layout_mode = 2
+size_flags_vertical = 4
+disabled = true
+texture_normal = ExtResource("8_6t4qw")
+stretch_mode = 5
+
+[node name="TradeLabel" type="Label" parent="PititeFenetre2/MarginContainer/TradeBox/HBoxContainer/VBoxContainer/HBoxContainer" unique_id=389074110]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(20, 0)
+custom_maximum_size = Vector2(20, -1)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_31pau")
+theme_override_font_sizes/font_size = 24
+text = "70"
+horizontal_alignment = 1
+
+[node name="TradeButtonAdd" type="TextureButton" parent="PititeFenetre2/MarginContainer/TradeBox/HBoxContainer/VBoxContainer/HBoxContainer" unique_id=1589331916]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(30, 0)
+custom_maximum_size = Vector2(40, -1)
+layout_mode = 2
+size_flags_vertical = 4
+texture_normal = ExtResource("9_0kj7n")
+stretch_mode = 5
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="PititeFenetre2/MarginContainer/TradeBox/HBoxContainer" unique_id=1908120945]
+custom_minimum_size = Vector2(147.995, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+alignment = 1
+
+[node name="LabelStock" type="Label" parent="PititeFenetre2/MarginContainer/TradeBox/HBoxContainer/VBoxContainer2" unique_id=1867129196]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_31pau")
+text = "100 chevaux à vendre"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="TradeProgressBar" type="TextureProgressBar" parent="PititeFenetre2/MarginContainer/TradeBox/HBoxContainer/VBoxContainer2" unique_id=1542604368]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(50.43, 160)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+value = 70.0
+fill_mode = 3
+texture_over = ExtResource("10_ugmxk")
+texture_progress = ExtResource("11_2ohqj")
+
+[node name="LabelShipping" type="Label" parent="PititeFenetre2/MarginContainer/TradeBox/HBoxContainer/VBoxContainer2" unique_id=1210406704]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_31pau")
+text = "Cargo 70"
+horizontal_alignment = 1
+
+[node name="PititeFenetre3" type="NinePatchRect" parent="." unique_id=1194649646]
+layout_mode = 0
+offset_left = 1009.0
+offset_top = 307.0
+offset_right = 1491.2
+offset_bottom = 781.0
+theme = ExtResource("1_td6sf")
+texture = ExtResource("3_uufjo")
+region_rect = Rect2(0, 1.4840889, 952, 248.51591)
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 12
+patch_margin_bottom = 12
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="PititeFenetre3" unique_id=1151245847]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="GuardBox" type="VBoxContainer" parent="PititeFenetre3/MarginContainer2" unique_id=2140516253]
+z_index = 5
+layout_mode = 2
+
+[node name="Title" type="Label" parent="PititeFenetre3/MarginContainer2/GuardBox" unique_id=1196623783]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_31pau")
+text = "Les mers sont dangeureuses ! Chaque expedition comporte un risque de se perdre, avec sa cargaison. Engagez des gardes pour réduire ce risque"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PititeFenetre3/MarginContainer2/GuardBox" unique_id=1095089892]
+layout_mode = 2
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PititeFenetre3/MarginContainer2/GuardBox/HBoxContainer" unique_id=1698423526]
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="PititeFenetre3/MarginContainer2/GuardBox/HBoxContainer/VBoxContainer" unique_id=239077667]
+custom_maximum_size = Vector2(200, 200)
+propagate_maximum_size = true
+layout_mode = 2
+texture = ExtResource("12_0kj7n")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PititeFenetre3/MarginContainer2/GuardBox/HBoxContainer/VBoxContainer" unique_id=799426641]
+custom_maximum_size = Vector2(-1, 40)
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="GuardButtonSubtract" type="TextureButton" parent="PititeFenetre3/MarginContainer2/GuardBox/HBoxContainer/VBoxContainer/HBoxContainer" unique_id=1166996326]
+unique_name_in_owner = true
+modulate = Color(0.6, 0.6, 0.6, 1)
+custom_minimum_size = Vector2(30, 0)
+custom_maximum_size = Vector2(40, -1)
+layout_mode = 2
+disabled = true
+texture_normal = ExtResource("8_6t4qw")
+stretch_mode = 4
+
+[node name="GuardLabel" type="Label" parent="PititeFenetre3/MarginContainer2/GuardBox/HBoxContainer/VBoxContainer/HBoxContainer" unique_id=2043638439]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(20, 0)
+custom_maximum_size = Vector2(20, -1)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_31pau")
+theme_override_font_sizes/font_size = 24
+text = "3"
+horizontal_alignment = 1
+
+[node name="GuardButtonAdd" type="TextureButton" parent="PititeFenetre3/MarginContainer2/GuardBox/HBoxContainer/VBoxContainer/HBoxContainer" unique_id=1790693105]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(30, 0)
+custom_maximum_size = Vector2(40, -1)
+layout_mode = 2
+texture_normal = ExtResource("9_0kj7n")
+stretch_mode = 4
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="PititeFenetre3/MarginContainer2/GuardBox/HBoxContainer" unique_id=1262123047]
+layout_mode = 2
+alignment = 1
+
+[node name="GuardProgressBar" type="TextureProgressBar" parent="PititeFenetre3/MarginContainer2/GuardBox/HBoxContainer/VBoxContainer2" unique_id=1673044857]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(50, 200)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+value = 25.0
+fill_mode = 3
+texture_over = ExtResource("10_ugmxk")
+texture_progress = ExtResource("13_ugmxk")
+
+[node name="PercentLabel" type="Label" parent="PititeFenetre3/MarginContainer2/GuardBox/HBoxContainer/VBoxContainer2" unique_id=1882058857]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_31pau")
+text = "25% de risque"
+horizontal_alignment = 1
+
+[node name="Town" parent="." unique_id=2064836468 instance=ExtResource("14_2ohqj")]
+layout_mode = 0
+offset_left = 846.0
+offset_top = 647.0
+offset_right = 948.0
+offset_bottom = 698.0
+theme = ExtResource("15_37cl2")
+icon_texture = ExtResource("15_2ohqj")
+town_name = "Calicut"
+index = 1
+
+[node name="Town2" parent="." unique_id=724178390 instance=ExtResource("14_2ohqj")]
+layout_mode = 0
+offset_left = 1311.0
+offset_top = 217.0
+offset_right = 1413.0
+offset_bottom = 268.0
+theme = ExtResource("15_37cl2")
+icon_texture = ExtResource("16_37cl2")
+town_name = "Malacca"
+index = 11
+color = Color(0.44705883, 0.65882355, 1, 1)
+
+[node name="Town3" parent="." unique_id=1328892733 instance=ExtResource("14_2ohqj")]
+layout_mode = 0
+offset_left = 402.0
+offset_top = 726.0
+offset_right = 504.0
+offset_bottom = 777.0
+theme = ExtResource("15_37cl2")
+icon_texture = ExtResource("16_37cl2")
+town_name = "Chaul"
+index = 3
+color = Color(0, 0.39607844, 0, 1)
+
+[node name="ExpeditionPath" type="Path2D" parent="." unique_id=181635252]
+unique_name_in_owner = true
+curve = SubResource("Curve2D_m1knj")
+script = ExtResource("18_absto")
+color = Color(0.44705883, 0.65882355, 1, 1)
+metadata/_custom_type_script = "uid://dpup24da6v5sc"
+
+[node name="ExpeditionToken" parent="ExpeditionPath" unique_id=1765521543 instance=ExtResource("19_dwx31")]
+unique_name_in_owner = true
+z_index = 1
+position = Vector2(1057.8903, 249.8298)
+rotation = -0.2268928
+progress = 635.72784
+rotates = false
+
+[node name="ExpeditionPath2" type="Path2D" parent="." unique_id=1656166864]
+unique_name_in_owner = true
+position = Vector2(0, -4)
+curve = SubResource("Curve2D_vtgqc")
+script = ExtResource("18_absto")
+maritime_path = false
+color = Color(0, 0.39607844, 0, 1)
+metadata/_custom_type_script = "uid://dpup24da6v5sc"
+
+[node name="ExpeditionTokenTerre" parent="ExpeditionPath2" unique_id=423781584 instance=ExtResource("21_vtgqc")]
+unique_name_in_owner = true
+z_index = 1
+position = Vector2(901, 719)
+rotates = false
+
+[node name="Start" type="TextureButton" parent="." unique_id=305224562]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 1266.0
+offset_top = 796.0
+offset_right = 1428.0
+offset_bottom = 930.0
+texture_normal = ExtResource("21_m1knj")
+texture_pressed = ExtResource("21_m1knj")
+texture_hover = ExtResource("21_m1knj")
+texture_disabled = ExtResource("21_m1knj")
+ignore_texture_size = true
+stretch_mode = 5

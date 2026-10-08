@@ -1,0 +1,7 @@
+[gd_resource type="Theme" format=3 uid="uid://c8cltoc1bmqnh"]
+
+[ext_resource type="FontFile" uid="uid://c3v83r2x1hqbg" path="res://assets/Indira_K.ttf" id="1_atj0u"]
+
+[resource]
+Label/font_sizes/font_size = 26
+Label/fonts/font = ExtResource("1_atj0u")

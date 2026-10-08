@@ -89,8 +89,8 @@ func popup(type := 0, res := 0):
 	$TradeHBox.position.y = 0
 	$TradeHBox.modulate.a = 1
 	var tween = create_tween()
-	var new_pos = -80 if !reverse_popup else 60
-	tween.tween_property($TradeHBox, "position:y", new_pos, 0.5).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_SPRING)
+	var new_pos = -70 if !reverse_popup else 50
+	tween.tween_property($TradeHBox, "position:x", new_pos, 0.5).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_SPRING)
 	_bubble_displayed=true
 	match res:
 		Merchandise.Type.PEPPER:	$TradeHBox/TextureButton/TextureRect.texture = load("res://assets/poivre.png")

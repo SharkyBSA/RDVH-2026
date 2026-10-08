@@ -27,7 +27,7 @@ func _ready() -> void:
 	expedition2.delta_res={
 		Merchandise.Type.GOLD:9,
 		Merchandise.Type.SPICE:2.3}
-	
+	$Town.popup(1,Merchandise.Type.PEPPER)
 	expedition1.draw_fail()
 	expedition2.draw_fail()
 	print("Expedition 1 succeed:",expedition1.will_succeed)

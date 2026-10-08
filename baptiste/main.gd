@@ -10,6 +10,7 @@ extends Node
 @onready var ath: Ath = %Ath
 @onready var trade_window: TradeWindow = %TradeWindow
 @onready var event_win: EventWindow = %EventWindow
+@onready var tuto_win: TutoWin = %TutoWin
 
 func _ready() -> void:
 	player.inventory_modified.connect(ath.set_ressource_amount)
@@ -20,6 +21,12 @@ func _ready() -> void:
 		get_tree().change_scene_to_file("res://baptiste/menu.tscn")
 		)
 	prepare_turn()
+	if not OS.is_debug_build():
+		tuto_win.appear()
+		
+	ath.help_btn_pressed.connect(func()->void:
+		if not tuto_win.visible:
+			tuto_win.appear())
 	Volumes.music_changed.connect(music_volume)
 
 func _on_player_updated(inv):
