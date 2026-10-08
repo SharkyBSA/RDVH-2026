@@ -27,7 +27,7 @@ metadata/_custom_type_script = "uid://dji1gvea14ls8"
 script = ExtResource("1_pmwtw")
 target_town = Array[int]([10, 6])
 type = 3
-text = "Un message de l'ouest. Horreur.. les ports africains "
+text = "Un message de l'ouest. Horreur.. deux autres villes sont tombes entre les mains des envahisseurs. Nul navire ne peut approcher de ces port sans une solide escorte, et de la chance. Est-ce que cette conquete s'arretera la ?"
 threat_increase = 25
 metadata/_custom_type_script = "uid://dji1gvea14ls8"
 
@@ -35,7 +35,7 @@ metadata/_custom_type_script = "uid://dji1gvea14ls8"
 script = ExtResource("1_pmwtw")
 target_town = Array[int]([4])
 type = 3
-text = "Un message du sud. Nos emissaires rapportent que le port de Colombo est tombe ! Une immense flotte serait en route en direction de nos cotes. Mais notre flotte est grande, immense et nous suarons faire face !"
+text = "Un message du sud. Nos émissaires rapportent que le port de Colombo est tombé ! Une immense flotte serait en route en direction de nos côtes. Mais notre flotte est grande, immense et nous saurons faire face !"
 threat_increase = 10
 metadata/_custom_type_script = "uid://dji1gvea14ls8"
 
@@ -43,7 +43,7 @@ metadata/_custom_type_script = "uid://dji1gvea14ls8"
 script = ExtResource("1_pmwtw")
 target_all_town = true
 type = 2
-text = "La flotte portugaise est à nos portes ! Après une terrible bataille, notre ville est prise, et des lois sont instaurées, imposant que chaque bateau soit escorté. Et leurs gardes ne sont pas gratuits.. "
+text = "La flotte portugaise est à nos portes ! Après une terrible bataille, notre flotte, que nous pensions invincible est coulée. Les vainqueurs clament que le commerce des mers est le leur à present, et ils imposent que tout navire qui partira devra être escorté par leurs hommes. Hommes qui demandent paiement.."
 increase_min_guards = 4
 threat_increase = 10
 guard_cost_increase = 10.0
@@ -52,7 +52,7 @@ metadata/_custom_type_script = "uid://dji1gvea14ls8"
 [sub_resource type="Resource" id="Resource_ephac"]
 script = ExtResource("1_pmwtw")
 target_all_town = true
-text = "Nos voisins de Goa sont encore libres, et nous aideront à commercer sur ces mers. Nous pouvons encore compter sur des amis !"
+text = "Nos voisins de Goa sont encore libres, et nous aideront à commercer. Nous pouvons encore compter sur des amis !"
 threat_increase = -5
 metadata/_custom_type_script = "uid://dji1gvea14ls8"
 
@@ -60,7 +60,7 @@ metadata/_custom_type_script = "uid://dji1gvea14ls8"
 script = ExtResource("1_pmwtw")
 target_town = Array[int]([11, 8, 13])
 type = 3
-text = "Les forteresses portugaises se multiplient, de nombreux ports sont dorénavant difficiles d'accès sans protection, et beaucoup de navires ne reviennent jamais."
+text = "La conquête portuagaise continue, et d'autres forteresses s'élèvent. De nombreux ports sont dorénavant difficiles d'accès sans protection, et beaucoup de navires ne reviennent jamais."
 threat_increase = 15
 guard_cost_increase = 5.0
 metadata/_custom_type_script = "uid://dji1gvea14ls8"
@@ -90,7 +90,7 @@ metadata/_custom_type_script = "uid://dji1gvea14ls8"
 script = ExtResource("1_pmwtw")
 target_town = Array[int]([3, 14, 12])
 type = 3
-text = "Tant de ports sont sous controle portugais, il est presque impossible de rentrer dans un port sans escorte. Ou plutot sans payer leurs gardes pour qu'il laissent passer nos bateaux"
+text = "La colonisation il est presque impossible de rentrer dans un port sans escorte. Ou plutôt sans payer leurs gardes pour qu'il laissent passer nos bateaux"
 threat_increase = 25
 metadata/_custom_type_script = "uid://dji1gvea14ls8"
 
@@ -98,7 +98,7 @@ metadata/_custom_type_script = "uid://dji1gvea14ls8"
 script = ExtResource("1_pmwtw")
 target_all_town = true
 type = 2
-text = "Les années se font longues depuis que les Portugais bloquent le commerce. D'autres ports tombent sous leur joug, et ils interdisent le commerce de nombreux biens. Nous devons être prudents."
+text = "La colonisation de l'océan est presque totale, et le commerce de certaines marchandises, comme les épices est interdit par les colons. En échanger est très cher, et risqué"
 threat_increase = 10
 guard_cost_increase = 5.0
 metadata/_custom_type_script = "uid://dji1gvea14ls8"
@@ -106,11 +106,11 @@ metadata/_custom_type_script = "uid://dji1gvea14ls8"
 [sub_resource type="Resource" id="Resource_v8v2l"]
 script = ExtResource("1_pmwtw")
 type = 4
-text = "En quelques années, ces hommes venus de loin se sont emparés de tout le commerce de cet océan. Il n'est pratiquement plus possible que de commercer avec eux. Aujourd'hui, c'est au tour de nos voisins de Goa de tomber sous leur joug.. Nous sommes seuls."
+text = "En quelques années, ces hommes venus de loin se sont emparés de tout le commerce de l'océan. Il n'est pratiquement plus possible que de commercer avec eux. Aujourd'hui, c'est au tour de nos voisins de Goa de tomber sous leur joug.. Nous sommes seuls."
 guard_cost_increase = 5.0
 metadata/_custom_type_script = "uid://dji1gvea14ls8"
 
 [resource]
 script = ExtResource("2_j6330")
-events = Array[ExtResource("1_pmwtw")]([null, null, null, null, SubResource("Resource_f5qxn"), null, null, null, null, SubResource("Resource_j6330"), null, null, null, null, null, null, SubResource("Resource_0lpg8"), SubResource("Resource_pmwtw"), SubResource("Resource_hr52c"), null, null, SubResource("Resource_f100b"), SubResource("Resource_ephac"), null, SubResource("Resource_byyj6"), SubResource("Resource_lngip"), null, null, SubResource("Resource_blqop"), null, SubResource("Resource_a2xay"), null, null, SubResource("Resource_p65io"), null, null, null, null, null, SubResource("Resource_v8v2l")])
+events = Array[ExtResource("1_pmwtw")]([null, null, null, null, SubResource("Resource_f5qxn"), null, null, null, null, SubResource("Resource_j6330"), null, null, null, null, null, null, SubResource("Resource_0lpg8"), SubResource("Resource_pmwtw"), null, SubResource("Resource_hr52c"), null, SubResource("Resource_f100b"), SubResource("Resource_ephac"), null, SubResource("Resource_byyj6"), SubResource("Resource_lngip"), null, null, SubResource("Resource_blqop"), null, SubResource("Resource_a2xay"), null, null, SubResource("Resource_p65io"), null, null, null, null, null, SubResource("Resource_v8v2l")])
 metadata/_custom_type_script = "uid://drfbg3jb0nf5x"
