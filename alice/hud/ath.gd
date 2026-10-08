@@ -15,6 +15,7 @@ class_name Ath
 @onready var year_lbl: Label = %YearLbl
 @onready var turn_lbl: Label = %TurnLbl
 @onready var pausebtn: TextureButton = %Pausebtn
+@onready var help_btn: TextureButton = %HelpBtn
 
 @onready var resource_labels : Dictionary[int, Label]={
 
@@ -31,9 +32,11 @@ var once = true
 
 signal next_turn
 signal pause_btn_pressed
+signal help_btn_pressed
 
 func _ready() -> void:
 	pausebtn.pressed.connect(pause_btn_pressed.emit)
+	help_btn.pressed.connect(help_btn_pressed.emit)
 	pass_button_animation()
 
 func update_all(inventory : Dictionary):

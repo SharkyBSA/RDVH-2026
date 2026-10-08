@@ -533,7 +533,7 @@ rotates = false
 
 [node name="ExpeditionPath2" type="Path2D" parent="." unique_id=1656166864]
 unique_name_in_owner = true
-position = Vector2(0, -1)
+position = Vector2(0, -4)
 curve = SubResource("Curve2D_vtgqc")
 script = ExtResource("18_absto")
 maritime_path = false
@@ -547,6 +547,7 @@ position = Vector2(901, 719)
 rotates = false
 
 [node name="Start" type="TextureButton" parent="." unique_id=305224562]
+unique_name_in_owner = true
 layout_mode = 0
 offset_left = 1266.0
 offset_top = 796.0
@@ -555,5 +556,6 @@ offset_bottom = 930.0
 texture_normal = ExtResource("21_m1knj")
 texture_pressed = ExtResource("21_m1knj")
 texture_hover = ExtResource("21_m1knj")
+texture_disabled = ExtResource("21_m1knj")
 ignore_texture_size = true
 stretch_mode = 5

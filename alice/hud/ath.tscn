@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://co8rr00k4the8" path="res://assets/Trading_interface/TimerV1.png" id="12_3yqlp"]
 [ext_resource type="Texture2D" uid="uid://coklit0uuntf5" path="res://assets/icons/esclave.png" id="12_ewyhu"]
 [ext_resource type="Texture2D" uid="uid://cgcgodju812pw" path="res://assets/Trading_interface/OptionV1.png" id="13_7kn40"]
+[ext_resource type="Texture2D" uid="uid://bf0xyb6bdfpj3" path="res://assets/Trading_interface/TutoV1.png" id="14_ewyhu"]
 
 [node name="Ath" type="Control" unique_id=2026785200]
 layout_mode = 3
@@ -320,6 +321,7 @@ stretch_mode = 5
 [node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer" unique_id=1995052107]
 layout_mode = 2
 size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.8
 mouse_filter = 0
 mouse_force_pass_scroll_events = false
 theme_override_constants/separation = -50
@@ -346,6 +348,18 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_g56sb")
 text = "Tour : 0"
 
+[node name="HelpBtn" type="TextureButton" parent="HBoxContainer" unique_id=2031115098]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.7
+mouse_force_pass_scroll_events = false
+texture_normal = ExtResource("14_ewyhu")
+texture_pressed = ExtResource("14_ewyhu")
+texture_hover = ExtResource("14_ewyhu")
+ignore_texture_size = true
+stretch_mode = 5
+
 [node name="Pausebtn" type="TextureButton" parent="HBoxContainer" unique_id=1356520887]
 unique_name_in_owner = true
 layout_mode = 2
@@ -355,5 +369,10 @@ texture_normal = ExtResource("13_7kn40")
 texture_pressed = ExtResource("13_7kn40")
 ignore_texture_size = true
 stretch_mode = 5
+
+[node name="Spacer" type="Control" parent="HBoxContainer" unique_id=41914605]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.1
 
 [connection signal="pressed" from="HBoxContainer/NextTurnBtn" to="." method="_on_next_turn_btn_pressed"]
