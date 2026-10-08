@@ -88,6 +88,7 @@ stream = ExtResource("2_kq56l")
 volume_db = -2.0
 
 [node name="Credit" type="Button" parent="VBoxContainer" unique_id=1950465978]
+visible = false
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 size_flags_horizontal = 4

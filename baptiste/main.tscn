@@ -790,7 +790,6 @@ mouse_filter = 2
 
 [node name="TutoWin" parent="UI" unique_id=2097801665 instance=ExtResource("33_fp81k")]
 unique_name_in_owner = true
-visible = false
 z_index = 40
 layout_mode = 1
 
