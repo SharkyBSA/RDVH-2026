@@ -21,7 +21,9 @@ func _ready() -> void:
 		get_tree().change_scene_to_file("res://baptiste/menu.tscn")
 		)
 	prepare_turn()
-	tuto_win.appear()
+	if not OS.is_debug_build():
+		tuto_win.appear()
+		
 	ath.help_btn_pressed.connect(func()->void:
 		if not tuto_win.visible:
 			tuto_win.appear())

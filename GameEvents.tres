@@ -5,11 +5,13 @@
 
 [sub_resource type="Resource" id="Resource_f5qxn"]
 script = ExtResource("1_pmwtw")
+target_all_town = true
 text = "Il y a quelques années, un navire est arrivé au port de Calicut. Son navigateur, Vasco de Gama, prétendait arriver du royaume du Portugal part la mer. Nous l'avions alors chassé. Aujourd'hui, il est de retour avec des cadeaux, et notre souverain, le râja, lui a accordé le droit de faire du commerce ici"
 metadata/_custom_type_script = "uid://dji1gvea14ls8"
 
 [sub_resource type="Resource" id="Resource_j6330"]
 script = ExtResource("1_pmwtw")
+target_all_town = true
 text = "Pour permettre ses nouvelles conquêtes, le râja a décidé d'augmenter les taxes sur le commerce d'épices et de poivre. En acheter coûtera plus cher à présent"
 metadata/_custom_type_script = "uid://dji1gvea14ls8"
 
@@ -21,29 +23,61 @@ text = "Un message de l'ouest. Des hommes en armes sont venus depuis le royaume 
 threat_increase = 25
 metadata/_custom_type_script = "uid://dji1gvea14ls8"
 
+[sub_resource type="Resource" id="Resource_pmwtw"]
+script = ExtResource("1_pmwtw")
+target_town = Array[int]([10, 6])
+type = 3
+text = "Un message de l'ouest. Horreur.. les ports africains "
+threat_increase = 25
+metadata/_custom_type_script = "uid://dji1gvea14ls8"
+
+[sub_resource type="Resource" id="Resource_hr52c"]
+script = ExtResource("1_pmwtw")
+target_town = Array[int]([4])
+type = 3
+text = "Un message du sud. Nos emissaires rapportent que le port de Colombo est tombe ! Une immense flotte serait en route en direction de nos cotes. Mais notre flotte est grande, immense et nous suarons faire face !"
+threat_increase = 10
+metadata/_custom_type_script = "uid://dji1gvea14ls8"
+
 [sub_resource type="Resource" id="Resource_f100b"]
 script = ExtResource("1_pmwtw")
+target_all_town = true
 type = 2
 text = "La flotte portugaise est à nos portes ! Après une terrible bataille, notre ville est prise, et des lois sont instaurées, imposant que chaque bateau soit escorté. Et leurs gardes ne sont pas gratuits.. "
 increase_min_guards = 4
+threat_increase = 10
 guard_cost_increase = 10.0
 metadata/_custom_type_script = "uid://dji1gvea14ls8"
 
 [sub_resource type="Resource" id="Resource_ephac"]
 script = ExtResource("1_pmwtw")
+target_all_town = true
 text = "Nos voisins de Goa sont encore libres, et nous aideront à commercer sur ces mers. Nous pouvons encore compter sur des amis !"
 threat_increase = -5
 metadata/_custom_type_script = "uid://dji1gvea14ls8"
 
 [sub_resource type="Resource" id="Resource_byyj6"]
 script = ExtResource("1_pmwtw")
-type = 1
+target_town = Array[int]([11, 8, 13])
+type = 3
 text = "Les forteresses portugaises se multiplient, de nombreux ports sont dorénavant difficiles d'accès sans protection, et beaucoup de navires ne reviennent jamais."
 threat_increase = 15
 guard_cost_increase = 5.0
 metadata/_custom_type_script = "uid://dji1gvea14ls8"
 
-[sub_resource type="Resource" id="Resource_pmwtw"]
+[sub_resource type="Resource" id="Resource_lngip"]
+script = ExtResource("1_pmwtw")
+target_all_town = true
+type = 1
+threat_increase = 10
+sell_price_modifier_increase = Dictionary[int, float]({
+4: 0.2,
+5: 0.3,
+7: 0.2
+})
+metadata/_custom_type_script = "uid://dji1gvea14ls8"
+
+[sub_resource type="Resource" id="Resource_blqop"]
 script = ExtResource("1_pmwtw")
 target_town = Array[int]([7])
 type = 3
@@ -52,11 +86,20 @@ threat_increase = 30
 guard_cost_increase = 5.0
 metadata/_custom_type_script = "uid://dji1gvea14ls8"
 
+[sub_resource type="Resource" id="Resource_a2xay"]
+script = ExtResource("1_pmwtw")
+target_town = Array[int]([3, 14, 12])
+type = 3
+text = "Tant de ports sont sous controle portugais, il est presque impossible de rentrer dans un port sans escorte. Ou plutot sans payer leurs gardes pour qu'il laissent passer nos bateaux"
+threat_increase = 25
+metadata/_custom_type_script = "uid://dji1gvea14ls8"
+
 [sub_resource type="Resource" id="Resource_p65io"]
 script = ExtResource("1_pmwtw")
-type = 1
+target_all_town = true
+type = 2
 text = "Les années se font longues depuis que les Portugais bloquent le commerce. D'autres ports tombent sous leur joug, et ils interdisent le commerce de nombreux biens. Nous devons être prudents."
-threat_increase = 25
+threat_increase = 10
 guard_cost_increase = 5.0
 metadata/_custom_type_script = "uid://dji1gvea14ls8"
 
@@ -69,5 +112,5 @@ metadata/_custom_type_script = "uid://dji1gvea14ls8"
 
 [resource]
 script = ExtResource("2_j6330")
-events = Array[ExtResource("1_pmwtw")]([null, null, null, null, SubResource("Resource_f5qxn"), null, null, null, null, SubResource("Resource_j6330"), null, null, null, null, null, null, SubResource("Resource_0lpg8"), null, null, null, SubResource("Resource_f100b"), SubResource("Resource_ephac"), null, null, SubResource("Resource_byyj6"), null, null, null, SubResource("Resource_pmwtw"), null, null, null, null, SubResource("Resource_p65io"), null, null, null, null, null, SubResource("Resource_v8v2l")])
+events = Array[ExtResource("1_pmwtw")]([null, null, null, null, SubResource("Resource_f5qxn"), null, null, null, null, SubResource("Resource_j6330"), null, null, null, null, null, null, SubResource("Resource_0lpg8"), SubResource("Resource_pmwtw"), SubResource("Resource_hr52c"), null, null, SubResource("Resource_f100b"), SubResource("Resource_ephac"), null, SubResource("Resource_byyj6"), SubResource("Resource_lngip"), null, null, SubResource("Resource_blqop"), null, SubResource("Resource_a2xay"), null, null, SubResource("Resource_p65io"), null, null, null, null, null, SubResource("Resource_v8v2l")])
 metadata/_custom_type_script = "uid://drfbg3jb0nf5x"

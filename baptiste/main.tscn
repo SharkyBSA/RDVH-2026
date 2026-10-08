@@ -208,7 +208,6 @@ sell_factor = Dictionary[int, float]({
 sfx = Array[AudioStreamMP3]([ExtResource("4_4hl6o"), ExtResource("5_2vfub"), ExtResource("6_ui1tf"), ExtResource("7_m42f4")])
 start_town = true
 color = Color(0, 0, 0.7, 1)
-reverse_popup = true
 
 [node name="Goa" parent="UI/TownManager" unique_id=811356729 instance=ExtResource("2_eos35")]
 z_index = 0
@@ -300,6 +299,7 @@ sell_factor = Dictionary[int, float]({
 7: 0.5
 })
 sfx = Array[AudioStreamMP3]([ExtResource("8_51cql")])
+reverse_popup = true
 
 [node name="Patna" parent="UI/TownManager" unique_id=85137416 instance=ExtResource("2_eos35")]
 z_index = 0
@@ -334,7 +334,6 @@ sell_factor = Dictionary[int, float]({
 7: 0.5
 })
 sfx = Array[AudioStreamMP3]([ExtResource("4_4hl6o"), ExtResource("5_2vfub"), ExtResource("6_ui1tf"), ExtResource("7_m42f4")])
-reverse_popup = true
 
 [node name="Aden" parent="UI/TownManager" unique_id=376978946 instance=ExtResource("2_eos35")]
 z_index = 0
@@ -558,6 +557,7 @@ sell_factor = Dictionary[int, float]({
 })
 sfx = Array[AudioStreamMP3]([ExtResource("8_o3h7a"), ExtResource("9_eubu7"), ExtResource("10_hm3xc"), ExtResource("11_vvw5h")])
 color = Color(0, 0.39607844, 0, 1)
+reverse_popup = true
 
 [node name="Timor" parent="UI/TownManager" unique_id=520961299 instance=ExtResource("2_eos35")]
 z_index = 0
@@ -634,6 +634,7 @@ sell_factor = Dictionary[int, float]({
 })
 sfx = Array[AudioStreamMP3]([ExtResource("13_5bulh"), ExtResource("14_i3sme"), ExtResource("15_5bbsv"), ExtResource("16_7s21p")])
 color = Color(0, 0.39607844, 0, 1)
+reverse_popup = true
 
 [node name="Syriam2" parent="UI/TownManager" unique_id=1318445323 instance=ExtResource("2_eos35")]
 z_index = 0
@@ -672,6 +673,7 @@ sell_factor = Dictionary[int, float]({
 })
 sfx = Array[AudioStreamMP3]([ExtResource("13_5bulh"), ExtResource("14_i3sme"), ExtResource("15_5bbsv"), ExtResource("16_7s21p")])
 color = Color(0, 0.39607844, 0, 1)
+reverse_popup = true
 
 [node name="Paths" type="Control" parent="UI" unique_id=2111951668]
 z_index = 10

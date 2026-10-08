@@ -98,7 +98,7 @@ text = "Bienvenue dans Samudri Raja !"
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 0
-text = "A la fin du XVe siecle du calendrier gregorien, le commerce etait florissant dans l'ocean indien. De l'Asie aux cotes de l'afrique de l'ouest, s'echangeaient, epice, soie, coton et d'autres biens. Mais une puissance venue d'un lointain continent vient perturber cet equilibre"
+text = "A la fin du XVe siecle du calendrier grégorien, le commerce était florissant dans l'océan indien. De l'Asie aux côtes de l'Afrique de l'est s'échangeaient, épice, soie, coton et d'autres biens. Mais une puissance venue d'un lointain continent vient perturber cet équilibre. Vous incarnez un⋅e marchand⋅e de Calicut, le plus grand port commercant d'Inde, sous l'égide du râja. "
 autowrap_mode = 2
 
 [node name="Encouragements" type="Label" parent="MarginContainer" unique_id=973635179]
@@ -106,7 +106,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
 theme_override_font_sizes/font_size = 34
-text = "Cherchez a obtenir le plus d'or ! Si vous le pouvez.."
+text = "Cherchez à obtenir le plus d'or ! Si vous le pouvez.."
 
 [node name="PititeFenetre" type="NinePatchRect" parent="." unique_id=169314880]
 layout_mode = 0
@@ -130,7 +130,7 @@ offset_left = 30.399963
 offset_top = 251.0
 offset_right = 323.39996
 offset_bottom = 466.0
-text = "A chaque tour, les villes marchandes proposent d'acheter ou de vendre un certain stock de marchandise"
+text = "À chaque tour, les villes marchandes proposent d'acheter ou de vendre un certain stock de marchandise"
 autowrap_mode = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="PititeFenetre" unique_id=981276813]
@@ -214,7 +214,7 @@ theme_override_constants/margin_bottom = 20
 [node name="Label" type="Label" parent="PititeFenetre4/MarginContainer" unique_id=186030086]
 layout_mode = 2
 size_flags_vertical = 1
-text = "ATTENTION ! Chaque expedition a un cout ! Gardes, duree, quantite de marchandise augmentent le cout du voyage"
+text = "ATTENTION ! Chaque expedition a un prix ! Gardes, durée, quantité de marchandises augmentent le coût du voyage"
 autowrap_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="PititeFenetre4" unique_id=1348208873]
@@ -404,7 +404,7 @@ custom_minimum_size = Vector2(100, 50)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("6_31pau")
-text = "Les mers sont dangeureuses ! Chaque expedition comporte un rique de se perdre.. ou pire. Engagez des gardes pour reduire ce risque"
+text = "Les mers sont dangeureuses ! Chaque expedition comporte un risque de se perdre, avec sa cargaison. Engagez des gardes pour réduire ce risque"
 horizontal_alignment = 1
 autowrap_mode = 2
 
