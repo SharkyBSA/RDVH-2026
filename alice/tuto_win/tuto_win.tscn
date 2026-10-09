@@ -98,7 +98,7 @@ text = "Bienvenue dans Samudri Raja !"
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 0
-text = "A la fin du XVe siecle du calendrier grégorien, le commerce était florissant dans l'océan indien. De l'Asie aux côtes de l'Afrique de l'est s'échangeaient, épice, soie, coton et d'autres biens. Mais une puissance venue d'un lointain continent vient perturber cet équilibre. Vous incarnez un⋅e marchand⋅e de Calicut, le plus grand port commercant d'Inde, sous l'égide du râja. "
+text = "A la fin du XVe siecle du calendrier grégorien, le commerce était florissant dans l'océan indien. De l'Asie aux côtes de l'Afrique de l'est s'échangeaient, épice, soie, coton et d'autres biens. Mais une puissance venue d'un lointain continent vient perturber cet équilibre. Vous incarnez un.e marchand.e de Calicut, le plus grand port commercant d'Inde, sous l'égide du râja. "
 autowrap_mode = 2
 
 [node name="Encouragements" type="Label" parent="MarginContainer" unique_id=973635179]

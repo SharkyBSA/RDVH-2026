@@ -6,13 +6,13 @@
 [sub_resource type="Resource" id="Resource_f5qxn"]
 script = ExtResource("1_pmwtw")
 target_all_town = true
-text = "Il y a quelques années, un navire est arrivé au port de Calicut. Son navigateur, Vasco de Gama, prétendait arriver du royaume du Portugal part la mer. Nous l'avions alors chassé. Aujourd'hui, il est de retour avec des cadeaux, et notre souverain, le râja, lui a accordé le droit de faire du commerce ici"
+text = "Il y a quelques années, un navire est arrivé au port de Calicut. Son navigateur, Vasco de Gama, prétendait arriver du royaume du Portugal par la mer. Nous l'avions alors chassé. Aujourd'hui, il est de retour avec des cadeaux, et notre souverain, le râja, lui a accordé le droit de faire du commerce ici."
 metadata/_custom_type_script = "uid://dji1gvea14ls8"
 
 [sub_resource type="Resource" id="Resource_j6330"]
 script = ExtResource("1_pmwtw")
 target_all_town = true
-text = "Pour permettre ses nouvelles conquêtes, le râja a décidé d'augmenter les taxes sur le commerce d'épices et de poivre. En acheter coûtera plus cher à présent"
+text = "Pour permettre ses nouvelles conquêtes, le râja a décidé d'augmenter les taxes sur le commerce d'épices et de poivre. En acheter coûtera plus cher à présent."
 metadata/_custom_type_script = "uid://dji1gvea14ls8"
 
 [sub_resource type="Resource" id="Resource_0lpg8"]
